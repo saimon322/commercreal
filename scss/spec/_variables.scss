@@ -1,0 +1,23 @@
+// Grid breakpoints for media queries
+$grid-breakpoints: (
+    xxs: 0px,
+    xs: 375px,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1430px,
+);
+
+// Font variables
+$bebas: 'Bebas Neue', sans-serif;
+$raleway: 'Raleway', sans-serif;
+
+// Color variables
+$base: #f1d299;
+$base-bg: #edd09a;
+$gray: #8d9aa8;
+$pfont: #999999;
+$blue: #003f46;
+$black: #1b1b1b;
+$blue-bg: rgba(0, 60, 70, 0.75);

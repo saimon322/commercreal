@@ -1,0 +1,62 @@
+/*font Variables*/
+$bebas: 'Bebas Neue', sans-serif;
+$raleway: 'Raleway', sans-serif;
+/*Color Variables*/
+
+$base: #f1d299;
+$dip: #f1d299;
+$gray: #8d9aa8;
+$pfont: #999999;
+$blue: #003f46;
+$blue-bg: rgba(0, 60, 70, 0.75);
+
+
+// Mixins
+@mixin transition($property: all, $duration: 400ms, $animate: linear, $delay:0s){
+    transition: $property $duration $animate $delay; 
+}
+
+// Placeholder Mixins
+@mixin placeholder {
+  &.placeholder { @content; }
+  &:-moz-placeholder { @content; }
+  &::-moz-placeholder { @content; }
+  &::-webkit-input-placeholder { @content; }
+}
+
+.col-md-offset-right-1,.col-lg-offset-right-1{
+    margin-right: 8.33333333%;
+}
+
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700,900');
+
+@font-face {
+    font-display: swap;
+    font-style: normal;
+    font-weight: 300;
+    font-family: 'Bebas Neue';
+    src: url('fonts/BebasNeue/bebasneuebook.woff2') format('woff2'),
+        url('fonts/BebasNeue/bebasneuebook.ttf') format('ttf'),
+        url('fonts/BebasNeue/bebasneuebook.woff') format('woff');
+}
+
+@font-face {
+    font-display: swap;
+    font-style: normal;
+    font-weight: 400;
+    font-family: 'Bebas Neue';
+    src: url('fonts/BebasNeue/bebasneueregular.woff2') format('woff2'),
+        url('fonts/BebasNeue/bebasneueregular.ttf') format('ttf'),
+        url('fonts/BebasNeue/bebasneueregular.woff') format('woff');
+}
+
+@font-face {
+    font-display: swap;
+    font-style: normal;
+    font-weight: 700;
+    font-family: 'Bebas Neue';
+    src: url('fonts/BebasNeue/bebasneuerboldwoff2') format('woff2'),
+        url('fonts/BebasNeue/bebasneuebold.ttf') format('ttf'),
+        url('fonts/BebasNeue/bebasneuebold.woff') format('woff');
+}

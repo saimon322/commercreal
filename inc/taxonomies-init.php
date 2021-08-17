@@ -1,0 +1,92 @@
+<?php
+
+add_action('init', 'init_taxonomies');
+function init_taxonomies()
+{
+    register_taxonomy('projects_cats', ['projects'], [
+        'label'             => 'Категории',
+        'labels'            => [
+            'name'                  => 'Категории',
+            'singular_name'         => 'Категория',
+            'all_items'             => 'Все категории',
+            'edit_item'             => 'Изменить категорию',
+            'view_item'             => 'Просмотр категории',
+            'update_item'           => 'Обновить категорию',
+            'add_new_item'          => 'Добавить новую категорию',
+            'new_item_name'         => 'Название новой категории',
+            'search_items'          => 'Искать категорию',
+            'popular_items'         => 'Популярные категории',
+            'add_or_remove_items'   => 'Добавить или удалить категории',
+            'choose_from_most_used' => 'Выбрать из часто используемых категорий',
+            'not_found'             => 'Категорий не найдено',
+            'back_to_items'         => '← Назад к категориям',
+        ],
+        'description'       => '',
+        'public'            => true,
+        'hierarchical'      => false,
+        'rewrite'           => false,
+        'capabilities'      => array(),
+        'meta_box_cb'       => 'post_categories_meta_box',
+        'show_admin_column' => false,
+        'show_in_rest'      => null,
+        'rest_base'         => null,
+    ]);
+    
+    register_taxonomy('services-cats', ['services'], [
+        'label'             => 'Категории',
+        'labels'            => [
+            'name'                  => 'Категории',
+            'singular_name'         => 'Категория',
+            'all_items'             => 'Все категории',
+            'edit_item'             => 'Изменить категорию',
+            'view_item'             => 'Просмотр категории',
+            'update_item'           => 'Обновить категорию',
+            'add_new_item'          => 'Добавить новую категорию',
+            'new_item_name'         => 'Название новой категории',
+            'search_items'          => 'Искать категорию',
+            'popular_items'         => 'Популярные категории',
+            'add_or_remove_items'   => 'Добавить или удалить категории',
+            'choose_from_most_used' => 'Выбрать из часто используемых категорий',
+            'not_found'             => 'Категорий не найдено',
+            'back_to_items'         => '← Назад к категориям',
+        ],
+        'description'       => '',
+        'public'            => true,
+        'hierarchical'      => false,
+        'rewrite'           => true,
+        'capabilities'      => array(),
+        'meta_box_cb'       => 'post_categories_meta_box',
+        'show_admin_column' => false,
+        'show_in_rest'      => true,
+        'rest_base'         => true,
+    ]);
+    
+    register_taxonomy('services-tags', ['services'], [
+        'label'             => 'Теги',
+        'labels'            => [
+            'name'                  => 'Теги',
+            'singular_name'         => 'Тег',
+            'all_items'             => 'Все теги',
+            'edit_item'             => 'Изменить тег',
+            'view_item'             => 'Просмотр теги',
+            'update_item'           => 'Обновить тег',
+            'add_new_item'          => 'Добавить новый тег',
+            'new_item_name'         => 'Название нового тега',
+            'search_items'          => 'Искать тег',
+            'popular_items'         => 'Популярные теги',
+            'add_or_remove_items'   => 'Добавить или удалить тег',
+            'choose_from_most_used' => 'Выбрать из часто используемых тегов',
+            'not_found'             => 'Тегов не найдено',
+            'back_to_items'         => '← Назад к тегам',
+        ],
+        'description'       => '',
+        'public'            => true,
+        'hierarchical'      => false,
+        'rewrite'           => true,
+        'capabilities'      => array(),
+//        'meta_box_cb'       => 'post_categories_meta_box',
+        'show_admin_column' => true,
+        'show_in_rest'      => true,
+        'rest_base'         => true,
+    ]);
+}

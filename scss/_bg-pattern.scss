@@ -1,0 +1,90 @@
+.bg-pattern-section {
+	padding-top: 160px;
+
+    @include media-down(md) {
+        padding-top: 100px;
+    }
+
+    @include media-down(xs) {
+        padding-top: 70px;
+    }
+    
+    .bg-pattern:after {
+        top: -160px;
+
+        @media (max-width: 1300px) {
+            top: -200px;
+        }
+
+        @include media-down(lg) {
+            top: -140px;
+        }
+
+        @include media-down(sm) {
+            top: -100px;
+        }
+    }
+}
+
+.bg-pattern {
+    position: relative !important;
+
+    @include media-down(sm) {
+        position: initial;
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        z-index: 1;
+        right: 12px;
+        top: 0;
+        display: block;
+        width: 20px;
+        height: 365px;
+        background: url(../img/icon/pattern.png) center / contain no-repeat;
+        pointer-events: none;
+
+        @include media-down(sm) {
+            right: -20px;
+            top: -30px;
+            transform: rotate(90deg);
+            transform-origin: top left;
+        }
+
+        @include media-down(xs) {
+            height: calc(100vw - 20px);
+        }
+    }
+}
+
+
+.bg-pattern-2 {
+    @include media-down(md) {
+        position: initial;
+    }
+
+    &:after {
+        right: 0;
+        transform: rotate(90deg);
+        transform-origin: top left;
+
+        @include media-down(md) {
+            right: -20px;
+        }
+
+        @include media-down(xs) {
+            height: calc(100vw - 20px);
+        }
+    }
+}
+
+.bg-pattern-top-0 {
+    padding-top: 0 !important;
+
+    .container {
+        &:after {
+            top: 0;
+        }
+    }
+}
