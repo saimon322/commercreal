@@ -1,6 +1,6 @@
 <?php $terms = wp_get_post_terms(get_the_ID(), 'projects_cats'); ?>
 <!--================Project Details Area =================-->
-<section class="project_breadcrumb_area" style="background: url(<?php the_field('baner'); ?>) no-repeat scroll center center;">
+<section class="project_breadcrumb_area" style="background-image: url(<?php the_field('baner'); ?>);">
     <div class="container">
         <?php get_template_part('template-parts/breadcrumbs/breadcrumb-projects', null,
             array(
@@ -32,7 +32,7 @@
 <section class="project_details_area">
     <div class="container">
         <div class="back_btn">
-            <a href="<?php echo get_the_permalink(23); ?>"><i class="ion-grid"></i> К проектам</a>
+            <i class="ion-grid"></i> Об объекте
         </div>
         <div class="row">
             <?php if (have_rows('characteristics')):
@@ -56,15 +56,6 @@
                                         <a href="<?php the_sub_field('file'); ?>" download>Скачать</a>
                                     </h5>
                                     <?php break;
-                                case 'broker': ?>
-                                    <h5>Брокер: <?php the_sub_field('broker_name'); ?></h5>
-                                    <?php if ($phone = get_sub_field('phone')): ?>
-                                        <a href="tel: <?php echo $phone; ?>"><?php echo $phone; ?></a>
-                                    <?php endif; ?>
-                                    <?php if ($email = get_sub_field('email')): ?>
-                                        <a href="mailto: <?php echo $email; ?>"><?php echo $email; ?></a>
-                                    <?php endif;
-                                    break;
                             endswitch;
                             $counter++;
                         endwhile; ?>

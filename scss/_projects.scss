@@ -332,6 +332,9 @@
 
 /* Project Details css
 ============================================================================================ */
+.back_btn{
+  color: #fff;
+}
 .project_details_area{
 	padding-top: 115px;
 	padding-bottom: 115px;
@@ -353,12 +356,15 @@
 .pd_item{
 	h5{
 		font-size: 14px;
-		color: #fff;
+		color: $pfont;
 		margin-bottom: 15px;
 		span{
-			color: $pfont;
+			color: #fff;
 			font-weight: normal;
 		}
+        a{
+          color: $base-bg;
+        }
 		&:last-child{
 			margin-bottom: 0px;
 		}
@@ -400,7 +406,7 @@
 	.villa_text{
 		margin-bottom: 70px;
 		h2{
-			color: #fff;
+			color: $base-bg;
 			font-size: 36px;
 			margin-bottom: 60px;
 		}

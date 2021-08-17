@@ -2,7 +2,7 @@
 ============================================================================================ */
 .home_slider {
     position: relative;
-    overflow: hidden;
+    overflow: hidden !important;
 
     .page_lines {
         z-index: auto;
