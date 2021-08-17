@@ -110,6 +110,30 @@
                 endswitch;
             endwhile;
         endif; ?>
+        <div class="acf-block">
+            <div class="contact-card">
+                <div class="contact-card__image">
+                    <img src="https://commercreal.com/wp-content/themes/commerc-real/img/team/team-1.jpg" class="w-100">
+                </div>
+                <div class="contact-card__content">
+                    <div class="contact-card__headline">
+                        По вопросам <span>сопровождения и аренды</span>
+                    </div>
+                    <div class="contact-card__name">
+                        Андрей Кийатов<br>
+                        Andrey Kiiatov
+                    </div>
+                    <div class="contact-card__position">
+                        ССO<br>
+                        Коммерческий директор
+                    </div>
+                    <div class="contact-card__contacts">
+                        <a class="contact-card__phone" href="tel: 89210770330">8-921-077-033-0</a>
+                        <a class="contact-card__email" href="mailto:сommercreal@gmail.com">сommercreal@gmail.com</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 <!--================End Project Villa Area =================-->
@@ -120,7 +144,9 @@
         <?php $prevthumbnail = get_the_post_thumbnail_url($prevPost->ID, 'full');
         $prev_url            = get_permalink($prevPost->ID); ?>
         <div class="prev">
-            <div class="prev_next_area__cover" style="background: url(<?php echo $prevthumbnail; ?>) scroll center center;"></div>
+            <div class="prev-hover">
+                <div class="prev_next_area__cover" style="background: url(<?php echo $prevthumbnail; ?>) scroll center center;"></div>
+            </div>
             <a href="<?php echo $prev_url; ?>">Предыдущий проект</a>
         </div>
     <?php endif;
@@ -129,7 +155,9 @@
         <?php $nextthumbnail = get_the_post_thumbnail_url($nextPost->ID, 'full');
         $next_url            = get_permalink($nextPost->ID); ?>
         <div class="next">
-            <div class="prev_next_area__cover" style="background: url(<?php echo $nextthumbnail; ?>) scroll center center;"></div>
+            <div class="next-hover">
+                <div class="prev_next_area__cover" style="background: url(<?php echo $nextthumbnail; ?>) scroll center center;"></div>
+            </div>
             <a href="<?php echo $next_url; ?>">Следующий проект</a>
         </div>
     <?php endif; ?>

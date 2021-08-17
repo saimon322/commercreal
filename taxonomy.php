@@ -1,7 +1,4 @@
-<?php
-get_header();
-$wp_query->set('posts_per_page', 1);
-?>
+<?php get_header(); ?>
     <!--================Breadcrumb Area =================-->
     <section class="breadcrumb_link">
         <div class="container">
@@ -18,6 +15,6 @@ if (get_query_var('taxonomy') === 'services-cats'):
 endif;
 
 get_template_part('template-parts/taxonomy/taxonomy', 'services');
-get_template_part('template-parts/sections/section', 'form-1');
+get_template_part('template-parts/sections/section', 'form-3');
 
 get_footer();
