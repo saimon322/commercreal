@@ -2674,7 +2674,6 @@ i:before {
       -ms-flex: 0 0 50%;
           flex: 0 0 50%;
   max-width: 50%;
-  background: url(../img/next-bg.jpg) no-repeat scroll center center;
   background-size: cover;
   padding: 48px 0px;
 }

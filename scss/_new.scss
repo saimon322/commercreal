@@ -83,6 +83,7 @@ ul.custom-ul {
 ul.custom-ul li {
   padding: 5px 0;
   list-style: none;
+  font-size: 16px;
 }
 
 ul.custom-ul li:before {
@@ -302,12 +303,27 @@ ul.custom-ul li:hover:before {
   position: relative;
 }
 
-.prev_next_area__cover {
+.prev_next_area .prev-hover {
   position: absolute;
   width: 100%;
   height: 100%;
   top: 0;
   right: 0;
+  background-color: #867125;
+}
+
+.prev_next_area .next-hover {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background-color: #0f3d48;
+}
+
+.prev_next_area__cover {
+  height: 100%;
+  opacity: 0.6;
 }
 
 .prev_next_area .prev .prev_next_area__cover {
@@ -324,6 +340,26 @@ ul.custom-ul li:hover:before {
 
 .contact-page {
   padding-top: 140px;
+}
+
+.press_form__form .btn {
+  border: 2px solid #f1d299;
+  line-height: initial;
+  padding-top: 3px;
+}
+
+.about_map_area .green-btn {
+  padding: 3px 0 0 0;
+  line-height: normal;
+  border: 2px solid #edd09a;
+}
+
+.page-template-tpl-projects .our_projects_area {
+  padding-top: 0;
+}
+
+.about_studio_area.bg-pattern-section .bg-pattern:after {
+  top: -115px;
 }
 
 /*
