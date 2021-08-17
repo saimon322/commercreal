@@ -1,0 +1,32 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700,900');
+
+@font-face {
+    font-display: swap;
+    font-style: normal;
+    font-weight: 300;
+    font-family: 'Bebas Neue';
+    src: url('../fonts/BebasNeue/bebasneuebook.woff2') format('woff2'),
+        url('../fonts/BebasNeue/bebasneuebook.ttf') format('ttf'),
+        url('../fonts/BebasNeue/bebasneuebook.woff') format('woff');
+}
+
+@font-face {
+    font-display: swap;
+    font-style: normal;
+    font-weight: 400;
+    font-family: 'Bebas Neue';
+    src: url('../fonts/BebasNeue/bebasneueregular.woff2') format('woff2'),
+        url('../fonts/BebasNeue/bebasneueregular.ttf') format('ttf'),
+        url('../fonts/BebasNeue/bebasneueregular.woff') format('woff');
+}
+
+@font-face {
+    font-display: swap;
+    font-style: normal;
+    font-weight: bold;
+    font-family: 'Bebas Neue';
+    src: url('../fonts/BebasNeue/bebasneuebold.woff2') format('woff2'),
+        url('../fonts/BebasNeue/bebasneuebold.ttf') format('ttf'),
+        url('../fonts/BebasNeue/bebasneuebold.woff') format('woff');
+}
