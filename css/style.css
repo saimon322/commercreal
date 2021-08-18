@@ -1595,7 +1595,7 @@ i:before {
 ============================================================================================ */
 .home_slider {
   position: relative;
-  overflow: hidden;
+  overflow: hidden !important;
 }
 .home_slider .page_lines {
   z-index: auto;
@@ -1797,11 +1797,16 @@ i:before {
 
 .tp-parallax-wrap:nth-child(2) {
   top: auto !important;
-  bottom: -2.1vmin !important;
+  bottom: -15px;
+}
+@media (max-width: 991px) {
+  .tp-parallax-wrap:nth-child(2) {
+    bottom: -10px;
+  }
 }
 @media (max-width: 767px) {
   .tp-parallax-wrap:nth-child(2) {
-    bottom: -1.5vmin !important;
+    bottom: -5px;
   }
   .tp-parallax-wrap:nth-child(2) .tp-caption {
     font-size: 45px !important;
@@ -1893,6 +1898,7 @@ i:before {
   }
 }
 .intes_studio_area .studio_img .years_text .years_text_inner {
+  padding-top: 20px;
   position: relative;
   text-align: center;
   text-transform: uppercase;
@@ -1901,6 +1907,7 @@ i:before {
   font-size: 105px;
   line-height: 0.7;
   font-weight: bold;
+  margin-left: -10px;
 }
 .intes_studio_area .studio_img .years_text .years_text_inner h2 {
   font-size: 48px;
@@ -2955,7 +2962,7 @@ i:before {
   display: block;
   width: 100%;
   height: 100%;
-  background: rgba(0, 60, 70, 0.5);
+  background: rgba(0, 60, 70, 0.75);
   pointer-events: none;
 }
 @media (max-width: 1199px) {
@@ -2998,6 +3005,7 @@ i:before {
 .about_studio_area .ab_studio_text {
   font-size: 16px;
   color: #fff;
+  text-transform: uppercase;
   letter-spacing: 1.6px;
   margin-right: 12px;
   position: relative;
@@ -3120,6 +3128,8 @@ i:before {
   transition: all 300ms ease;
 }
 .team_item img {
+  -webkit-filter: sepia(100%) hue-rotate(135deg);
+          filter: sepia(100%) hue-rotate(135deg);
   -webkit-transition: all 300ms ease;
   -o-transition: all 300ms ease;
   transition: all 300ms ease;
@@ -3129,7 +3139,7 @@ i:before {
   z-index: 2;
   left: 16px;
   bottom: 10px;
-  opacity: 0;
+  opacity: 1;
   -webkit-transition: all 400ms ease;
   -o-transition: all 400ms ease;
   transition: all 400ms ease;
@@ -3149,7 +3159,7 @@ i:before {
   -webkit-transform: translateY(10px);
       -ms-transform: translateY(10px);
           transform: translateY(10px);
-  opacity: 0;
+  opacity: 1;
   -webkit-transition: all 500ms ease;
   -o-transition: all 500ms ease;
   transition: all 500ms ease;
@@ -3166,20 +3176,11 @@ i:before {
   margin-right: 0px;
 }
 .team_item:hover:before {
-  opacity: 1;
+  opacity: 0;
 }
 .team_item:hover img {
-  -webkit-filter: grayscale(1);
-          filter: grayscale(1);
-}
-.team_item:hover .hover {
-  opacity: 1;
-}
-.team_item:hover .hover .list {
-  opacity: 1;
-  -webkit-transform: translateY(0);
-      -ms-transform: translateY(0);
-          transform: translateY(0);
+  -webkit-filter: none;
+          filter: none;
 }
 
 .about_studio_area .ab_studio_text {
@@ -5257,6 +5258,10 @@ ul.custom-ul li:hover:before {
 .prev_next_area .next .prev_next_area__cover {
   -webkit-filter: sepia(100%) hue-rotate(135deg) brightness(85%);
           filter: sepia(100%) hue-rotate(135deg) brightness(85%);
+}
+
+.contact-page {
+  padding-top: 140px;
 }
 
 /*
