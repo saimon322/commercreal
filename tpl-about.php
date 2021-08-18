@@ -55,7 +55,7 @@ if ($main_video): ?>
 <section class="meet_team_area">
     <div class="container bg-pattern bg-pattern-3">
         <div class="team_inner">
-            <h4>Meet Our Team</h4>
+            <h4>Наша команда</h4>
             <div class="team_slider owl-carousel">
                 <div class="item">
                     <div class="team_item">
@@ -136,7 +136,7 @@ if ($main_video): ?>
                 <h6 class="s_title">Наши филиалы в России</h6>
                 <div class="s_content--text">
                     <h2>группа компаний <span>Commerc Real</span></h2>
-                    <p>Мы специализируемся на развитии северо-западного региона России.   Но вы можете обратиться в нашу группу компаний из любого города,  мы с удовольствием встретимся с вами в удобном для вас месте. </p>
+                    <p>Мы специализируемся на развитии северо-западного региона России.  Но вы можете обратиться в нашу группу компаний из любого города,  мы с удовольствием встретимся с вами в удобном для вас месте. </p>
                 </div>
                 <button class="btn green-btn mb-4" data-toggle="modal" data-target="#modal-form">НАПИШИТЕ НАМ</button>
                 <button class="btn green-btn" data-toggle="modal" data-target="#modal-form">ЗАКАЗАТЬ ЗВОНОК</button>
