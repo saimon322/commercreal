@@ -205,10 +205,14 @@
 
 .tp-parallax-wrap:nth-child(2) {
     top: auto !important;
-    bottom: -2.1vmin !important;
+    bottom: -15px;
+
+    @include media-down(md) {
+        bottom: -10px;
+    }
 
     @include media-down(sm) {
-        bottom: -1.5vmin !important;
+        bottom: -5px;
 
         .tp-caption {
             font-size: 45px !important;

@@ -74,6 +74,19 @@
   }
 }
 
+
+.section-pad-bot {
+    padding-bottom: 120px;
+  
+    @include media-down(md) {
+      padding-bottom: 100px;
+    }
+  
+    @include media-down(sm) {
+      padding-bottom: 70px;
+    }
+  }
+
 ul.custom-ul {
   text-align: left;
   color: #fff;

@@ -165,10 +165,10 @@
 </section>
 
 <section class="intes_studio_area bg-pattern-section">
-    <div class="since_text">
-        <h5><?php the_field('about_desc'); ?></h5>
-    </div>
     <div class="container bg-pattern">
+        <div class="since_text">
+            <h5><?php the_field('about_desc'); ?></h5>
+        </div>
         <div class="row">
             <?php $img = get_field('about_img');
             if ($img): ?>
