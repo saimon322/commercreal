@@ -2985,8 +2985,8 @@ i:before {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  -webkit-filter: grayscale(1);
-          filter: grayscale(1);
+  -webkit-filter: grayscale(100%) sepia(100%) hue-rotate(117deg) contrast(140%);
+          filter: grayscale(100%) sepia(100%) hue-rotate(117deg) contrast(140%);
 }
 @media (max-width: 767px) {
   .about_banner_video--desktop {
@@ -3138,7 +3138,7 @@ i:before {
   position: absolute;
   z-index: 2;
   left: 16px;
-  bottom: 10px;
+  bottom: 16px;
   opacity: 1;
   -webkit-transition: all 400ms ease;
   -o-transition: all 400ms ease;
@@ -3153,7 +3153,7 @@ i:before {
   font-size: 14px;
   font-weight: normal;
   color: #fff;
-  margin-bottom: 20px;
+  margin-bottom: 0;
 }
 .team_item .hover .list {
   -webkit-transform: translateY(10px);
@@ -4948,7 +4948,8 @@ label {
   height: 500px;
 }
 
-.prev_next_area .prev, .prev_next_area .next {
+.prev_next_area .prev,
+.prev_next_area .next {
   background-size: cover !important;
 }
 
@@ -4999,6 +5000,20 @@ label {
 @media (max-width: 767px) {
   .section-pad {
     padding: 70px 0;
+  }
+}
+
+.section-pad-bot {
+  padding-bottom: 120px;
+}
+@media (max-width: 991px) {
+  .section-pad-bot {
+    padding-bottom: 100px;
+  }
+}
+@media (max-width: 767px) {
+  .section-pad-bot {
+    padding-bottom: 70px;
   }
 }
 
@@ -5216,7 +5231,9 @@ ul.custom-ul li:hover:before {
   height: auto;
 }
 
-.acf-block.block-video iframe, .acf-block.block-video object, .acf-block.block-video embed {
+.acf-block.block-video iframe,
+.acf-block.block-video object,
+.acf-block.block-video embed {
   position: absolute;
   top: 0;
   left: 0;
