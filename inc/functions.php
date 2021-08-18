@@ -46,6 +46,15 @@ function flexible_content_layout_title($title, $field, $layout, $i)
     return $title;
 }
 
+function tcb_pre_get_posts( $query ) {
+    if ( ! is_tax() )
+       return;
+
+       $query->set( 'posts_per_page', -1 );
+}
+
+add_action( 'pre_get_posts', 'tcb_pre_get_posts', 1 );
+
 function send_mail()
 {
     
