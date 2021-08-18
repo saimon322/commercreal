@@ -55,7 +55,7 @@ if ($main_video): ?>
 <section class="meet_team_area">
     <div class="container bg-pattern bg-pattern-3">
         <div class="team_inner">
-            <h4>Наша команда</h4>
+            <h6 class="s_title">Наша команда</h6>
             <div class="team_slider owl-carousel">
                 <div class="item">
                     <div class="team_item">
