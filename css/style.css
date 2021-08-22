@@ -352,20 +352,17 @@ i:before {
 ============================================================================================ */
 .custom-logo-link {
   display: block;
-  width: 50px;
-  height: 50px;
+  height: 32px;
   margin-top: -5px;
 }
 @media (min-width: 992px) {
   .custom-logo-link {
-    width: 70px;
-    height: 70px;
+    height: 48px;
     margin: 0;
   }
 }
 
 .custom-logo {
-  width: 100%;
   height: 100%;
 }
 
@@ -1314,7 +1311,6 @@ i:before {
 /* Project Breadcrumb css
 ============================================================================================ */
 .project_breadcrumb_area {
-  background: url(../img/banner/project-banner-1.jpg) no-repeat scroll center center;
   background-size: cover;
   height: 100vh;
   position: relative;
@@ -1344,17 +1340,17 @@ i:before {
   -o-transition: all 250ms ease 0s;
   transition: all 250ms ease 0s;
 }
-.project_breadcrumb_area .breadcrumb_inner .breadcrumb_link a:before {
+.project_breadcrumb_area .breadcrumb_inner .breadcrumb_link a:hover {
+  color: #f1d299;
+}
+.project_breadcrumb_area .breadcrumb_inner .breadcrumb_link:before {
   content: "";
   width: 86px;
   height: 6px;
   background: #f1d299;
   position: absolute;
-  top: -26px;
-  left: 0px;
-}
-.project_breadcrumb_area .breadcrumb_inner .breadcrumb_link a:hover {
-  color: #f1d299;
+  bottom: 40px;
+  left: 0;
 }
 .project_breadcrumb_area .bread_bottom_text {
   position: absolute;
@@ -1499,7 +1495,7 @@ i:before {
 /* End Single Banner Image css
 ============================================================================================ */
 .bg-pattern-section {
-  padding-top: 160px;
+  padding-top: 90px;
 }
 @media (max-width: 991px) {
   .bg-pattern-section {
@@ -2458,6 +2454,10 @@ i:before {
 ============================================================================================ */
 /* Project Details css
 ============================================================================================ */
+.back_btn {
+  color: #fff;
+}
+
 .project_details_area {
   padding-top: 115px;
   padding-bottom: 115px;
@@ -2480,12 +2480,15 @@ i:before {
 
 .pd_item h5 {
   font-size: 14px;
-  color: #fff;
+  color: #999999;
   margin-bottom: 15px;
 }
 .pd_item h5 span {
-  color: #999999;
+  color: #fff;
   font-weight: normal;
+}
+.pd_item h5 a {
+  color: #edd09a;
 }
 .pd_item h5:last-child {
   margin-bottom: 0px;
@@ -2523,7 +2526,7 @@ i:before {
   margin-bottom: 70px;
 }
 .project_villa_area .villa_text h2 {
-  color: #fff;
+  color: #edd09a;
   font-size: 36px;
   margin-bottom: 60px;
 }
@@ -4525,8 +4528,8 @@ i:before {
 }
 .s_blog_text_inner .blog_main_text .s_blog_tag a {
   display: inline-block;
-  border: 1px solid #8d9aa8;
-  color: #8d9aa8;
+  border: 1px solid #f1d299;
+  color: #999999;
   font-size: 14px;
   line-height: 28px;
   padding: 0px 16px;
@@ -4820,8 +4823,8 @@ label {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  -webkit-filter: grayscale(100%) sepia(100%) hue-rotate(117deg) contrast(140%);
-          filter: grayscale(100%) sepia(100%) hue-rotate(117deg) contrast(140%);
+  -webkit-filter: grayscale(100%) sepia(100%) hue-rotate(129deg) contrast(140%);
+          filter: grayscale(100%) sepia(100%) hue-rotate(129deg) contrast(140%);
 }
 .contact-card__image:after {
   content: "";
@@ -4830,8 +4833,8 @@ label {
   top: 0;
   width: 100%;
   height: 100%;
-  background: #003f46;
-  opacity: 0.5;
+  background: #22567be0;
+  opacity: 0.2;
 }
 .contact-card__content {
   -webkit-box-flex: 1;
@@ -4947,8 +4950,7 @@ label {
   height: 500px;
 }
 
-.prev_next_area .prev,
-.prev_next_area .next {
+.prev_next_area .prev, .prev_next_area .next {
   background-size: cover !important;
 }
 
@@ -5025,6 +5027,7 @@ ul.custom-ul {
 ul.custom-ul li {
   padding: 5px 0;
   list-style: none;
+  font-size: 16px;
 }
 
 ul.custom-ul li:before {
@@ -5230,9 +5233,7 @@ ul.custom-ul li:hover:before {
   height: auto;
 }
 
-.acf-block.block-video iframe,
-.acf-block.block-video object,
-.acf-block.block-video embed {
+.acf-block.block-video iframe, .acf-block.block-video object, .acf-block.block-video embed {
   position: absolute;
   top: 0;
   left: 0;
@@ -5258,12 +5259,27 @@ ul.custom-ul li:hover:before {
   position: relative;
 }
 
-.prev_next_area__cover {
+.prev_next_area .prev-hover {
   position: absolute;
   width: 100%;
   height: 100%;
   top: 0;
   right: 0;
+  background-color: #867125;
+}
+
+.prev_next_area .next-hover {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background-color: #0f3d48;
+}
+
+.prev_next_area__cover {
+  height: 100%;
+  opacity: 0.6;
 }
 
 .prev_next_area .prev .prev_next_area__cover {
@@ -5278,6 +5294,26 @@ ul.custom-ul li:hover:before {
 
 .contact-page {
   padding-top: 140px;
+}
+
+.press_form__form .btn {
+  border: 2px solid #f1d299;
+  line-height: initial;
+  padding-top: 3px;
+}
+
+.about_map_area .green-btn {
+  padding: 3px 0 0 0;
+  line-height: normal;
+  border: 2px solid #edd09a;
+}
+
+.page-template-tpl-projects .our_projects_area {
+  padding-top: 0;
+}
+
+.about_studio_area.bg-pattern-section .bg-pattern:after {
+  top: -115px;
 }
 
 /*
