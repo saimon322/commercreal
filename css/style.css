@@ -353,12 +353,10 @@ i:before {
 .custom-logo-link {
   display: block;
   height: 32px;
-  margin-top: -5px;
 }
 @media (min-width: 992px) {
   .custom-logo-link {
     height: 48px;
-    margin: 0;
   }
 }
 

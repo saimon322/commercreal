@@ -4,11 +4,9 @@
 .custom-logo-link{
     display: block;
     height: 32px;
-    margin-top: -5px;
 
     @media(min-width: 992px){
         height: 48px;
-        margin: 0;
     }
 }
 
