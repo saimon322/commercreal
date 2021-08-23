@@ -1507,7 +1507,7 @@ i:before {
 /* End Single Banner Image css
 ============================================================================================ */
 .bg-pattern-section {
-  padding-top: 90px;
+  padding-top: 160px;
 }
 @media (max-width: 991px) {
   .bg-pattern-section {
@@ -2048,7 +2048,7 @@ i:before {
   }
 }
 .spec_item img {
-  height: 110px;
+  height: 80px;
   -webkit-transition: 0.25s;
   -o-transition: 0.25s;
   transition: 0.25s;
@@ -3001,19 +3001,7 @@ i:before {
   height: 620px;
   position: relative;
   overflow: hidden;
-  padding: 0 !important;
-}
-.about_banner:before {
-  content: "";
-  position: absolute;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  display: block;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 60, 70, 0.75);
-  pointer-events: none;
+  background: #003f46;
 }
 @media (max-width: 1199px) {
   .about_banner {
@@ -3035,8 +3023,7 @@ i:before {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  -webkit-filter: grayscale(100%) sepia(100%) hue-rotate(117deg) contrast(140%);
-          filter: grayscale(100%) sepia(100%) hue-rotate(117deg) contrast(140%);
+  mix-blend-mode: luminosity;
 }
 @media (max-width: 767px) {
   .about_banner_video--desktop {
@@ -3162,27 +3149,13 @@ i:before {
 
 .team_item {
   position: relative;
-}
-.team_item:before {
-  content: "";
-  position: absolute;
-  z-index: 1;
-  left: 0px;
-  top: 0px;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 60, 70, 0.75);
-  opacity: 0;
-  -webkit-transition: all 300ms ease;
-  -o-transition: all 300ms ease;
-  transition: all 300ms ease;
+  background: #003f46;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
 }
 .team_item img {
-  -webkit-filter: sepia(100%) hue-rotate(135deg);
-          filter: sepia(100%) hue-rotate(135deg);
-  -webkit-transition: all 300ms ease;
-  -o-transition: all 300ms ease;
-  transition: all 300ms ease;
+  mix-blend-mode: luminosity;
 }
 .team_item .hover {
   position: absolute;
@@ -3225,12 +3198,8 @@ i:before {
 .team_item .hover .list li:last-child {
   margin-right: 0px;
 }
-.team_item:hover:before {
-  opacity: 0;
-}
-.team_item:hover img {
-  -webkit-filter: none;
-          filter: none;
+.team_item:hover {
+  background: transparent;
 }
 
 .about_studio_area .ab_studio_text {
@@ -4800,6 +4769,12 @@ i:before {
 .right_contact_form .contact_us_form .form-group .order_s_btn {
   font-size: 14px;
   color: #fff;
+  margin-top: 50px;
+}
+@media (max-width: 991px) {
+  .right_contact_form .contact_us_form .form-group .order_s_btn {
+    margin-top: 0;
+  }
 }
 .right_contact_form .contact_us_form .form-group .order_s_btn:hover {
   color: #f1d299;
@@ -4974,8 +4949,22 @@ label {
     font-size: 18px;
   }
 }
+.contacts-info__days {
+  font-size: 24px;
+  line-height: 1.2;
+}
+@media (max-width: 767px) {
+  .contacts-info__days {
+    font-size: 18px;
+  }
+}
 .contacts-info__btns {
-  margin-top: 50px;
+  margin-top: 120px;
+}
+@media (max-width: 991px) {
+  .contacts-info__btns {
+    margin-top: 50px;
+  }
 }
 @media (max-width: 767px) {
   .contacts-info__btns {
@@ -5362,14 +5351,4 @@ ul.custom-ul li:hover:before {
 .page-template-tpl-projects .our_projects_area {
   padding-top: 0;
 }
-
-.about_studio_area.bg-pattern-section .bg-pattern:after {
-  top: -115px;
-}
-
-/*
-.project_breadcrumb_area {
-  background-size: cover !important;
-  max-height: 100vh !important;
-}*/
 /*# sourceMappingURL=style.css.map */
