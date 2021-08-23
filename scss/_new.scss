@@ -238,12 +238,6 @@ a.press_img_item:hover span {
   margin-bottom: 0;
 }
 
-@media screen and (max-width: 650px) {
-  .footer_area .footer_widgets .f_widgets_item:first-child {
-    display: none;
-  }
-}
-
 ul.custom-ul li:hover:before {
   background-image: url(/wp-content/themes/commerc-real/scss/../img/icon/list-style-hover.svg);
   background-size: 21px 21px;

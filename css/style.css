@@ -1117,6 +1117,15 @@ i:before {
   margin-left: 85px;
 }
 
+.f_logo {
+  color: #fff;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-size: 24px;
+  line-height: 1;
+}
+
 .f_title {
   margin-bottom: 25px;
 }
@@ -1131,12 +1140,18 @@ i:before {
   max-width: 270px;
 }
 .f_contact a {
+  font-family: "Bebas Neue", sans-serif;
   display: block;
-  font-size: 14px;
-  line-height: 24px;
-  color: #999999;
+  font-size: 16px;
+  line-height: 1.2;
   font-weight: normal;
   margin-bottom: 15px;
+  -webkit-transition: all 250ms ease 0s;
+  -o-transition: all 250ms ease 0s;
+  transition: all 250ms ease 0s;
+}
+.f_contact a:not(:hover) {
+  color: #999999;
 }
 .f_contact a:last-child {
   margin-bottom: 0px;
@@ -1154,17 +1169,16 @@ i:before {
 }
 .f_link .list li a {
   font-size: 14px;
-  color: #999999;
   font-weight: normal;
   -webkit-transition: all 250ms ease 0s;
   -o-transition: all 250ms ease 0s;
   transition: all 250ms ease 0s;
 }
+.f_link .list li a:not(:hover) {
+  color: #999999;
+}
 .f_link .list li:last-child {
   margin-bottom: 0px;
-}
-.f_link .list li:hover a {
-  color: #fff;
 }
 
 .footer_copyright {
@@ -1984,6 +1998,11 @@ i:before {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+}
+.spec_item--container {
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
 }
 .spec_item h4 {
   font-size: 30px;
@@ -5175,11 +5194,6 @@ a.press_img_item:hover span {
   margin-bottom: 0;
 }
 
-@media screen and (max-width: 650px) {
-  .footer_area .footer_widgets .f_widgets_item:first-child {
-    display: none;
-  }
-}
 ul.custom-ul li:hover:before {
   background-image: url(/wp-content/themes/commerc-real/scss/../img/icon/list-style-hover.svg);
   background-size: 21px 21px;
