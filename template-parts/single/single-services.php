@@ -3,7 +3,11 @@
 <section class="image_banner_area" style="background: url(<?php the_field('baner'); ?>) no-repeat scroll center center;">
     <div class="container">
         <div class="single_banner_text">
-            <h1><?php the_title(); ?></h1>
+            <?php if ($headline = get_field('headline_h1')): ?>
+                <h1><?= $headline; ?></h1>
+            <?php else: ?>
+                <h1><?php the_title(); ?></h1>
+            <?php endif; ?>
         </div>
     </div>
 </section>
