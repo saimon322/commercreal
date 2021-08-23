@@ -39,6 +39,7 @@
             font-size: 14px;
             color: $gray;
             font-weight: normal;
+            transition: .25s;
 
             @include placeholder {
                 font-size: 14px;
@@ -271,6 +272,7 @@ label {
         font-family: $bebas;
         font-size: 1.5rem;
         line-height: 1;
+        transition: .25s;
     }
 
     &__email {
@@ -278,6 +280,7 @@ label {
         font-family: $bebas;
         font-size: 0.9rem;
         line-height: 1;
+        transition: .25s;
     }
 }
 

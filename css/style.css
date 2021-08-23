@@ -1688,6 +1688,9 @@ i:before {
     font-size: 18px;
   }
 }
+.home_slider .rev_slider .tp-mask-wrap {
+  overflow: unset !important;
+}
 @media (max-width: 1199px) {
   .home_slider .rev_slider .tp-bullets {
     opacity: 1 !important;
@@ -1839,7 +1842,7 @@ i:before {
   left: 0px;
   top: 0;
   color: #fff;
-  font-size: 15px;
+  font-size: 17px;
   letter-spacing: 0.7px;
   -webkit-writing-mode: vertical-lr;
       -ms-writing-mode: tb-lr;
@@ -1848,6 +1851,11 @@ i:before {
       -ms-transform: rotate(180deg);
           transform: rotate(180deg);
   white-space: nowrap;
+}
+@media (max-width: 767px) {
+  .since_text h5 {
+    font-size: 15px;
+  }
 }
 
 .intes_studio_area .studio_img {
@@ -2476,7 +2484,7 @@ i:before {
   -webkit-box-shadow: none;
           box-shadow: none;
   outline: none;
-  border: 2px solid #f1d299;
+  border: 1px solid #edd09a;
   margin-bottom: 10px;
   background: transparent;
   color: #fff;
@@ -4649,6 +4657,9 @@ i:before {
   font-size: 14px;
   color: #8d9aa8;
   font-weight: normal;
+  -webkit-transition: 0.25s;
+  -o-transition: 0.25s;
+  transition: 0.25s;
 }
 .comment_from .form-group input.placeholder {
   font-size: 14px;
@@ -4907,12 +4918,18 @@ label {
   font-family: "Bebas Neue", sans-serif;
   font-size: 1.5rem;
   line-height: 1;
+  -webkit-transition: 0.25s;
+  -o-transition: 0.25s;
+  transition: 0.25s;
 }
 .contact-card__email {
   color: #999999;
   font-family: "Bebas Neue", sans-serif;
   font-size: 0.9rem;
   line-height: 1;
+  -webkit-transition: 0.25s;
+  -o-transition: 0.25s;
+  transition: 0.25s;
 }
 
 .contacts-info {
@@ -5332,7 +5349,6 @@ ul.custom-ul li:hover:before {
 }
 
 .press_form__form .btn {
-  border: 2px solid #f1d299;
   line-height: initial;
   padding-top: 3px;
 }
