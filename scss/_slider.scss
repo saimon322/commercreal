@@ -81,6 +81,10 @@
             }
         }
 
+        .tp-mask-wrap {
+            overflow: unset !important;
+        }
+
         .tp-bullets {
             @include media-down(lg) {
                 opacity: 1 !important;

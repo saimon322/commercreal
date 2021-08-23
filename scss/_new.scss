@@ -238,12 +238,6 @@ a.press_img_item:hover span {
   margin-bottom: 0;
 }
 
-@media screen and (max-width: 650px) {
-  .footer_area .footer_widgets .f_widgets_item:first-child {
-    display: none;
-  }
-}
-
 ul.custom-ul li:hover:before {
   background-image: url(/wp-content/themes/commerc-real/scss/../img/icon/list-style-hover.svg);
   background-size: 21px 21px;
@@ -356,7 +350,6 @@ ul.custom-ul li:hover:before {
 }
 
 .press_form__form .btn {
-  border: 2px solid #f1d299;
   line-height: initial;
   padding-top: 3px;
 }
@@ -370,13 +363,3 @@ ul.custom-ul li:hover:before {
 .page-template-tpl-projects .our_projects_area {
   padding-top: 0;
 }
-
-.about_studio_area.bg-pattern-section .bg-pattern:after {
-  top: -115px;
-}
-
-/*
-.project_breadcrumb_area {
-  background-size: cover !important;
-  max-height: 100vh !important;
-}*/

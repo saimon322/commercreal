@@ -3,7 +3,7 @@
     <div class="footer_widgets row m0">
         <aside class="f_widgets_item">
             <div class="f_logo">
-                <?php the_custom_logo(); ?>
+                COMMERC REAL
             </div>
         </aside>
         <aside class="f_widgets_item">

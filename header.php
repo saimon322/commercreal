@@ -35,7 +35,9 @@
     <!--================Header Menu Area =================-->
     <header class="header_menu_area">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <?php the_custom_logo(); ?>
+            <a class="custom-logo-link" href="index.html">
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/main-logo.png" alt="" class="custom-logo">
+            </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span></span>
                 <span></span>

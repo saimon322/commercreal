@@ -592,7 +592,15 @@
 
     $('#pp-nav').remove().appendTo('.animsition').prepend('<div class="pp-nav-up icon-chevron-up"></div>').append('<div class="pp-nav-down icon-chevron-down"></div>').addClass('white right-boxed hidden-xs');
 
-
+    
+    $('.spec_wrapper').hover(function () {
+        $('.spec_wrapper').removeClass('col-lg-3 col-lg-4 col-lg-6');
+        $('.spec_wrapper').not($(this)).addClass('col-lg-3');
+        $(this).addClass('col-lg-6');
+    }, function () {
+        $('.spec_wrapper').removeClass('col-lg-3 col-lg-4 col-lg-6');
+        $('.spec_wrapper').addClass('col-lg-4');
+    });
 
 })(jQuery)
 
@@ -637,6 +645,7 @@ const initCounters = () => {
         };
         window.requestAnimationFrame(step);
     }
+    
 };
 
 window.addEventListener('DOMContentLoaded', initCounters);

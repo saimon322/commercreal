@@ -27,26 +27,63 @@ if ($main_video): ?>
 <section class="speciallization_area section-pad">
     <div class="container">
         <h6 class="s_title">Наши преимущества</h6>
-        <div class="row">
-            <div class="col-lg-4 col-sm-6">
-                <div class="spec_item">
-                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/icon/spec-1.png" alt="">
-                    <h4>Только уникальные объекты</h4>
-                    <p>Мы предлагаем вам коммерческую недвижимость представленную только у нас. Каждый из них полностью подготовлен к запуску или уже приносить прибыль. </p>
+        <div class="specs">
+            <div class="row m0 text-center specs-header">
+                <div class="col-lg-4 col-sm-6 spec_wrapper">
+                    <div class="spec_item">
+                        <a href="<?php echo get_term_link(13); ?>" class="spec_item__top">
+                            <img src="<?= get_template_directory_uri(); ?>/img/icon/spec-1.svg" alt="">
+                            <h4>DEVELOPER</h4>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 spec_wrapper">
+                    <div class="spec_item">
+                        <a href="<?php echo get_term_link(15); ?>" class="spec_item__top">
+                            <img src="<?= get_template_directory_uri(); ?>/img/icon/spec-2.svg" alt="">
+                            <h4>СОБСТВЕННИК</h4>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 spec_wrapper">
+                    <div class="spec_item">
+                        <a href="<?php echo get_term_link(14); ?>" class="spec_item__top">
+                            <img src="<?= get_template_directory_uri(); ?>/img/icon/spec-3.svg" alt="">
+                            <h4>RETAILER</h4>
+                        </a>
+                    </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-sm-6">
-                <div class="spec_item">
-                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/icon/spec-2.png" alt="">
-                    <h4>Индивидуальные условия</h4>
-                    <p>Мы работаем только на особых, договорных условиях. Идеально подходящих вам и выгодных для нас.  </p>
+            <div class="row text-left specs-content">
+                <div class="col-lg-4 col-sm-6">
+                    <div class="spec_item">
+                        <a href="<?php echo get_term_link(13); ?>" class="spec_item__top">
+                            <img src="<?= get_template_directory_uri(); ?>/img/icon/spec-1.svg" alt="">
+                            <h4>DEVELOPER</h4>
+                        </a>
+                        <p>Вы занимаетесь созданием новых объектов недвижимости и вам требуется решить ряд коммерческих задач. Сотрудничество лучший способ создать максимально эффективный проект.</p>
+                        <a class="view_btn" href="<?php echo get_term_link(13); ?>">Последние проекты</a>
+                    </div>
                 </div>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-                <div class="spec_item">
-                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/icon/spec-3.png" alt="">
-                    <h4>Услуги высшего качества</h4>
-                    <p>Мы стремимся к сервису наивысшего уровня. Наша первая задача чтобы вы отдыхали, а недвижимость приносила вам прибыл. </p>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="spec_item">
+                        <a href="<?php echo get_term_link(15); ?>" class="spec_item__top">
+                            <img src="<?= get_template_directory_uri(); ?>/img/icon/spec-2.svg" alt="">
+                            <h4>СОБСТВЕННИК</h4>
+                        </a>
+                        <p>Вы строите торговые центры или владеете коммерческой недвижимостью и ваша цель достичь максимальных экономических результатов мы с удовольствием сделаем это за вас.</p>
+                        <a class="view_btn" href="<?php echo get_term_link(15); ?>">Последние проекты</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="spec_item">
+                        <a href="<?php echo get_term_link(14); ?>" class="spec_item__top">
+                            <img src="<?= get_template_directory_uri(); ?>/img/icon/spec-3.svg" alt="">
+                            <h4>RETAILER</h4>
+                        </a>
+                        <p>Вы имеете собственный бизнес или развиваете сетевую ритейл-компанию, и выходе в конкретный город или регион, ищите подходящие именно вам варианты помещений.</p>
+                        <a class="view_btn" href="<?php echo get_term_link(14); ?>">Последние проекты</a>
+                    </div>
                 </div>
             </div>
         </div>

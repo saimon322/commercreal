@@ -39,6 +39,7 @@
             font-size: 14px;
             color: $gray;
             font-weight: normal;
+            transition: .25s;
 
             @include placeholder {
                 font-size: 14px;
@@ -150,6 +151,11 @@
             .order_s_btn {
                 font-size: 14px;
                 color: #fff;
+                margin-top: 50px;
+
+                @include media-down(md) {
+                    margin-top: 0;
+                }
 
                 &:hover {
                     color: $base;
@@ -271,6 +277,7 @@ label {
         font-family: $bebas;
         font-size: 1.5rem;
         line-height: 1;
+        transition: .25s;
     }
 
     &__email {
@@ -278,6 +285,7 @@ label {
         font-family: $bebas;
         font-size: 0.9rem;
         line-height: 1;
+        transition: .25s;
     }
 }
 
@@ -321,8 +329,21 @@ label {
         }
     }
 
+    &__days {
+        font-size: 24px;
+        line-height: 1.2;
+
+        @include media-down(sm) {
+            font-size: 18px;
+        }
+    }
+
     &__btns {
-        margin-top: 50px;
+        margin-top: 120px;
+
+        @include media-down(md) {
+            margin-top: 50px;            
+        }
 
         @include media-down(sm) {
             margin-top: 30px;
