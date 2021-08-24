@@ -45,6 +45,7 @@ h2 span,
 h3 span,
 h4 span {
   color: #f1d299;
+  white-space: nowrap;
 }
 
 h5 {
@@ -343,9 +344,15 @@ i:before {
   text-transform: uppercase;
   font-weight: bold;
   font-size: 24px;
+  padding: 0 10px;
 }
 .green-btn:hover {
   background: #f1d299;
+}
+@media (max-width: 767px) {
+  .green-btn {
+    font-size: 20px;
+  }
 }
 
 /* Home Full Menu css
@@ -2999,9 +3006,6 @@ i:before {
 ============================================================================================ */
 .about_banner {
   height: 620px;
-  position: relative;
-  overflow: hidden;
-  background: #003f46;
 }
 @media (max-width: 1199px) {
   .about_banner {
@@ -3017,6 +3021,13 @@ i:before {
   .about_banner {
     height: 300px;
   }
+}
+.about_banner_wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  background: #003f46;
 }
 .about_banner_video {
   width: 100%;
@@ -3082,7 +3093,6 @@ i:before {
 }
 
 .meet_team_area {
-  padding-top: 120px;
   padding-bottom: 138px;
 }
 
@@ -3194,6 +3204,12 @@ i:before {
 .team_item .hover .list li a {
   font-size: 16px;
   color: #fff;
+  -webkit-transition: all 250ms ease 0s;
+  -o-transition: all 250ms ease 0s;
+  transition: all 250ms ease 0s;
+}
+.team_item .hover .list li a:hover {
+  color: #f1d299;
 }
 .team_item .hover .list li:last-child {
   margin-right: 0px;
@@ -3266,6 +3282,112 @@ i:before {
 }
 .about_office_area .btn {
   padding: 0;
+}
+
+@media (max-width: 991px) {
+  .presentation {
+    padding: 50px 0 70px;
+  }
+}
+.presentation__img {
+  height: 100%;
+}
+.presentation__img:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  right: 0;
+  top: 50%;
+  width: 333px;
+  height: 333px;
+  -webkit-transform: translate(40%, -50%);
+      -ms-transform: translate(40%, -50%);
+          transform: translate(40%, -50%);
+  background: url(../img/texture.png) no-repeat center center;
+  background-size: contain;
+}
+@media (max-width: 991px) {
+  .presentation__img:after {
+    width: 200px;
+    height: 200px;
+  }
+}
+@media (max-width: 767px) {
+  .presentation__img:after {
+    display: none;
+  }
+}
+.presentation__img img {
+  width: 100%;
+}
+@media (max-width: 1199px) {
+  .presentation__img img {
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+.presentation__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 320px;
+  margin-left: auto;
+}
+@media (max-width: 767px) {
+  .presentation__content {
+    width: 100%;
+    padding: 0 20px;
+    margin-top: 30px;
+  }
+}
+.presentation__icon {
+  width: 90px;
+  margin: 50px auto;
+}
+@media (max-width: 767px) {
+  .presentation__icon {
+    width: 50px;
+    margin: 30px auto;
+  }
+}
+.presentation__icon img {
+  width: 100%;
+}
+
+.about_map_area {
+  overflow: hidden;
+}
+.about_map_area .row {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.about_map_area .s_content--text {
+  margin-bottom: 100px;
+}
+@media (max-width: 767px) {
+  .about_map_area .s_content--text {
+    margin-bottom: 50px;
+  }
+}
+@media (min-width: 768px) {
+  .about_map_area svg {
+    height: 700px;
+    width: auto;
+  }
+}
+@media (min-width: 1200px) {
+  .about_map_area svg {
+    height: 900px;
+  }
 }
 
 /* Clients css
@@ -5000,28 +5122,10 @@ label {
   background-size: cover !important;
 }
 
-.about_map_area {
-  margin-top: 100px;
-}
-
-.about_map_area .s_content {
-  margin-top: 75px;
-}
-
-.about_map_area .s_content--text {
-  margin-top: 100px;
-  margin-bottom: 100px;
-}
-
 .projects_form .press_img_title {
   opacity: 0.8;
 }
 
-@media screen and (max-width: 768px) {
-  .about_map_area .s_content {
-    margin-bottom: 100px;
-  }
-}
 .speciallization_area.ab_spec.services_block {
   padding-bottom: 0;
 }
@@ -5340,12 +5444,6 @@ ul.custom-ul li:hover:before {
 .press_form__form .btn {
   line-height: initial;
   padding-top: 3px;
-}
-
-.about_map_area .green-btn {
-  padding: 3px 0 0 0;
-  line-height: normal;
-  border: 2px solid #edd09a;
 }
 
 .page-template-tpl-projects .our_projects_area {

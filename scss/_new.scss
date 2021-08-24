@@ -21,27 +21,8 @@
   background-size: cover !important;
 }
 
-.about_map_area {
-  margin-top: 100px;
-}
-
-.about_map_area .s_content {
-  margin-top: 75px;
-}
-
-.about_map_area .s_content--text {
-  margin-top: 100px;
-  margin-bottom: 100px;
-}
-
 .projects_form .press_img_title {
   opacity: 0.8;
-}
-
-@media screen and (max-width: 768px) {
-  .about_map_area .s_content {
-    margin-bottom: 100px;
-  }
 }
 
 .speciallization_area.ab_spec.services_block {
@@ -352,12 +333,6 @@ ul.custom-ul li:hover:before {
 .press_form__form .btn {
   line-height: initial;
   padding-top: 3px;
-}
-
-.about_map_area .green-btn {
-  padding: 3px 0 0 0;
-  line-height: normal;
-  border: 2px solid #edd09a;
 }
 
 .page-template-tpl-projects .our_projects_area {

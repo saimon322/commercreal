@@ -302,7 +302,6 @@
         if (testSlider.length) {
             testSlider.owlCarousel({
                 loop: true,
-                margin: 30,
                 items: 2,
                 nav: true,
                 dots: false,
