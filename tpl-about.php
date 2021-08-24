@@ -6,16 +6,19 @@ $options = get_field('contacts', 'options');
 <?php $main_video = get_field('main_video');
 if ($main_video): ?>
     <section class="about_banner">
-        <video class="about_banner_video about_banner_video--desktop"
-               autoplay muted loop preload playsinline poster="<?php echo $main_video['poster_desktop']; ?>">
-            <source src="<?php echo $main_video['desktop']; ?>" type='video/mp4'>
-        </video>
-        <video class="about_banner_video about_banner_video--mobile"
-               autoplay muted loop preload playsinline poster="<?php echo $main_video['poster_mobile']; ?>">
-            <source src="<?php echo $main_video['mobile']; ?>" type='video/mp4'>
-        </video>
+        <div class="about_banner_wrapper">
+            <video class="about_banner_video about_banner_video--desktop"
+                autoplay muted loop preload playsinline poster="<?php echo $main_video['poster_desktop']; ?>">
+                <source src="<?php echo $main_video['desktop']; ?>" type='video/mp4'>
+            </video>
+            <video class="about_banner_video about_banner_video--mobile"
+                autoplay muted loop preload playsinline poster="<?php echo $main_video['poster_mobile']; ?>">
+                <source src="<?php echo $main_video['mobile']; ?>" type='video/mp4'>
+            </video>
+        </div>
     </section>
 <?php endif; ?>
+
 <section class="about_studio_area bg-pattern-section">
     <div class="container bg-pattern">
         <div class="ab_studio_text ab_studio_text_big">
@@ -24,6 +27,7 @@ if ($main_video): ?>
         </div>
     </div>
 </section>
+
 <section class="speciallization_area section-pad">
     <div class="container">
         <h6 class="s_title">Наши преимущества</h6>
@@ -89,6 +93,7 @@ if ($main_video): ?>
         </div>
     </div>
 </section>
+
 <section class="meet_team_area">
     <div class="container bg-pattern bg-pattern-3">
         <div class="team_inner">
@@ -166,6 +171,7 @@ if ($main_video): ?>
         </div>
     </div>
 </section>
+
 <section class="about_map_area">
     <div class="container">
         <div class="row">
