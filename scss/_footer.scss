@@ -7,6 +7,9 @@
 	padding-top: 120px;
 	.footer_widgets{
 		padding-bottom: 100px;
+        @include media-down(sm) {
+            padding-bottom: 30px;
+        }
 		.f_widgets_item{
 			flex: 0 0 20%;
 			max-width: 20%;
@@ -33,6 +36,14 @@
 		}
 	}
 }
+.f_logo {
+    color: #fff;
+    font-family: $bebas;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-size: 24px;
+    line-height: 1;
+}
 .f_widgets_item{
 	
 }
@@ -48,12 +59,17 @@
 .f_contact{
 	max-width: 270px;
 	a{
+        font-family: $bebas;
 		display: block;
-		font-size: 14px;
-		line-height: 24px;
-		color: $pfont;
+		font-size: 16px;
+		line-height: 1.2;
 		font-weight: normal;
 		margin-bottom: 15px;
+        @include transition;
+        &:not(:hover) {
+		    color: $pfont;
+        }
+
 		&:last-child{
 			margin-bottom: 0px;
 		}
@@ -72,18 +88,14 @@
 			margin-bottom: 10px;
 			a{
 				font-size: 14px;
-				color: $pfont;
-				
 				font-weight: normal;
 				@include transition;
+                &:not(:hover) {
+                    color: $pfont;
+                }
 			}
 			&:last-child{
 				margin-bottom: 0px;
-			}
-			&:hover{
-				a{
-					color: #fff;
-				}
 			}
 		}
 	}
@@ -96,6 +108,11 @@
 	display: flex;
     justify-content: space-between;
 	padding: 48px 0px;
+
+    @include media-down(sm) {
+        padding: 20px 0;
+    }
+    
 	.left_text{
 		display: inline-flex;
 		width: 50%;

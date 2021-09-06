@@ -2,11 +2,24 @@
 ============================================================================================ */
 .home_slider {
     position: relative;
+    overflow: hidden !important;
+
+    .page_lines {
+        z-index: auto;
+        display: block;
+    
+        .line {
+            z-index: 7;
+            background: rgba(255,255,255,.15);
+            width: 1px;
+        }
+    }
 
     .rev_slider {
         position: relative;
 
         li {
+            z-index: 6!important;
             .slotholder {
                 &:before {
                     content: '';
@@ -66,6 +79,10 @@
                     font-size: 18px;
                 }
             }
+        }
+
+        .tp-mask-wrap {
+            overflow: unset !important;
         }
 
         .tp-bullets {
@@ -142,6 +159,10 @@
     z-index: -1;
     height: 100%;
 
+    @include media-down(md) {
+        display: none !important;
+    }
+
     .line {
         position: absolute;
         left: 0;
@@ -152,12 +173,6 @@
         &+.line {
             left: auto;
             right: 0px;
-        }
-    }
-
-    &.white_br {
-        .line {
-            background-color: #f8f8f8;
         }
     }
 }
@@ -176,11 +191,39 @@
     filter: grayscale(1);
 }
 
+.tp-parallax-wrap {
+    left: calc(50% - 580px) !important;
+
+    @include media-down(lg) {
+        left: calc(50% - 460px) !important;
+    }
+
+    @include media-down(md) {
+        left: calc(50% - 340px) !important;
+    }
+
+    @include media-down(sm) {
+        left: 20px !important;
+    }
+}
+
 .tp-parallax-wrap:nth-child(2) {
     top: auto !important;
-    bottom: -2.1vmin !important;
+    bottom: -15px;
+
+    @include media-down(md) {
+        bottom: -10px;
+    }
+
+    @include media-down(sm) {
+        bottom: -5px;
+
+        .tp-caption {
+            font-size: 45px !important;
+        }
+    }
 
     * {
-        position: static!important;
+        position: static !important;
     }
 }

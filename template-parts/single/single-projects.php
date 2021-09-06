@@ -1,6 +1,6 @@
 <?php $terms = wp_get_post_terms(get_the_ID(), 'projects_cats'); ?>
 <!--================Project Details Area =================-->
-<section class="project_breadcrumb_area" style="background: url(<?php the_field('baner'); ?>) no-repeat scroll center center;">
+<section class="project_breadcrumb_area" style="background-image: url(<?php the_field('baner'); ?>);">
     <div class="container">
         <?php get_template_part('template-parts/breadcrumbs/breadcrumb-projects', null,
             array(
@@ -32,7 +32,7 @@
 <section class="project_details_area">
     <div class="container">
         <div class="back_btn">
-            <a href="<?php echo get_the_permalink(23); ?>"><i class="ion-grid"></i> К проектам</a>
+            <i class="ion-grid"></i> Об объекте
         </div>
         <div class="row">
             <?php if (have_rows('characteristics')):
@@ -56,15 +56,6 @@
                                         <a href="<?php the_sub_field('file'); ?>" download>Скачать</a>
                                     </h5>
                                     <?php break;
-                                case 'broker': ?>
-                                    <h5>Брокер: <?php the_sub_field('broker_name'); ?></h5>
-                                    <?php if ($phone = get_sub_field('phone')): ?>
-                                        <a href="tel: <?php echo $phone; ?>"><?php echo $phone; ?></a>
-                                    <?php endif; ?>
-                                    <?php if ($email = get_sub_field('email')): ?>
-                                        <a href="mailto: <?php echo $email; ?>"><?php echo $email; ?></a>
-                                    <?php endif;
-                                    break;
                             endswitch;
                             $counter++;
                         endwhile; ?>
@@ -119,6 +110,30 @@
                 endswitch;
             endwhile;
         endif; ?>
+        <div class="acf-block">
+            <div class="contact-card">
+                <div class="contact-card__image">
+                    <img src="https://commercreal.com/wp-content/themes/commerc-real/img/team/team-1.jpg" class="w-100">
+                </div>
+                <div class="contact-card__content">
+                    <div class="contact-card__headline">
+                        По вопросам <span>сопровождения и аренды</span>
+                    </div>
+                    <div class="contact-card__name">
+                        Андрей Кийатов<br>
+                        Andrey Kiiatov
+                    </div>
+                    <div class="contact-card__position">
+                        ССO<br>
+                        Коммерческий директор
+                    </div>
+                    <div class="contact-card__contacts">
+                        <a class="contact-card__phone" href="tel: 89210770330">8-921-077-033-0</a>
+                        <a class="contact-card__email" href="mailto:сommercreal@gmail.com">сommercreal@gmail.com</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 <!--================End Project Villa Area =================-->
@@ -129,7 +144,9 @@
         <?php $prevthumbnail = get_the_post_thumbnail_url($prevPost->ID, 'full');
         $prev_url            = get_permalink($prevPost->ID); ?>
         <div class="prev">
-            <div class="prev_next_area__cover" style="background: url(<?php echo $prevthumbnail; ?>) scroll center center;"></div>
+            <div class="prev-hover">
+                <div class="prev_next_area__cover" style="background: url(<?php echo $prevthumbnail; ?>) scroll center center;"></div>
+            </div>
             <a href="<?php echo $prev_url; ?>">Предыдущий проект</a>
         </div>
     <?php endif;
@@ -138,7 +155,9 @@
         <?php $nextthumbnail = get_the_post_thumbnail_url($nextPost->ID, 'full');
         $next_url            = get_permalink($nextPost->ID); ?>
         <div class="next">
-            <div class="prev_next_area__cover" style="background: url(<?php echo $nextthumbnail; ?>) scroll center center;"></div>
+            <div class="next-hover">
+                <div class="prev_next_area__cover" style="background: url(<?php echo $nextthumbnail; ?>) scroll center center;"></div>
+            </div>
             <a href="<?php echo $next_url; ?>">Следующий проект</a>
         </div>
     <?php endif; ?>

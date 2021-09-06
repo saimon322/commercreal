@@ -3,7 +3,11 @@
 <section class="image_banner_area" style="background: url(<?php the_field('baner'); ?>) no-repeat scroll center center;">
     <div class="container">
         <div class="single_banner_text">
-            <h1><?php the_title(); ?></h1>
+            <?php if ($headline = get_field('headline_h1')): ?>
+                <h1><?= $headline; ?></h1>
+            <?php else: ?>
+                <h1><?php the_title(); ?></h1>
+            <?php endif; ?>
         </div>
     </div>
 </section>
@@ -46,31 +50,28 @@
                             <?php endforeach; ?>
                         </ul>
                     </aside>
-                    <aside class="row services-contacts">
-                        <div class="col-5">
-                            <div class="services-contacts__image">
-                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/team/team-1.jpg" class="w-100">
-                                <div class="hover"></div>
-                            </div>
+                    <div class="contact-card">
+                        <div class="contact-card__image">
+                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/team/team-1.jpg" class="w-100">
                         </div>
-                        <div class="col-7">
-                            <div class="services-contacts__headline">
+                        <div class="contact-card__content">
+                            <div class="contact-card__headline">
                                 По вопросам <span>сопровождения и аренды</span>
                             </div>
-                            <div class="services-contacts__name">
-                                <span>Андрей Кийатов</span>
-                                <span>Andrey Kiiatov</span>
+                            <div class="contact-card__name">
+                                Андрей Кийатов<br>
+                                Andrey Kiiatov
                             </div>
-                            <div class="services-contacts__position">
-                                ССO <br>
+                            <div class="contact-card__position">
+                                ССO<br>
                                 Коммерческий директор
                             </div>
-                            <div class="services-contacts__contacts">
-                                <a class="tel" href="tel: 89210770330">8-921-077-033-0</a>
-                                <a class="mail" href="mailto: СOMMERCREAL@GMAIL.COM">СOMMERCREAL@GMAIL.COM</a>
+                            <div class="contact-card__contacts">
+                                <a class="contact-card__phone" href="tel: 89210770330">8-921-077-033-0</a>
+                                <a class="contact-card__email" href="mailto:сommercreal@gmail.com">сommercreal@gmail.com</a>
                             </div>
                         </div>
-                    </aside>
+                    </div>
                 </div>
             </div>
             <?php $post_objects = get_field('related_services');

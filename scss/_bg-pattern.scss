@@ -12,16 +12,12 @@
     .bg-pattern:after {
         top: -160px;
 
-        @media (max-width: 1300px) {
-            top: -200px;
-        }
-
-        @include media-down(lg) {
-            top: -140px;
+        @include media-down(md) {
+            top: -100px;
         }
 
         @include media-down(sm) {
-            top: -100px;
+            top: -40px;
         }
     }
 }
@@ -29,15 +25,11 @@
 .bg-pattern {
     position: relative !important;
 
-    @include media-down(sm) {
-        position: initial;
-    }
-
     &:after {
         content: '';
         position: absolute;
         z-index: 1;
-        right: 12px;
+        right: 10px;
         top: 0;
         display: block;
         width: 20px;
@@ -53,17 +45,13 @@
         }
 
         @include media-down(xs) {
-            height: calc(100vw - 20px);
+            max-height: calc(100vw - 20px);
         }
     }
 }
 
 
 .bg-pattern-2 {
-    @include media-down(md) {
-        position: initial;
-    }
-
     &:after {
         right: 0;
         transform: rotate(90deg);
@@ -72,19 +60,20 @@
         @include media-down(md) {
             right: -20px;
         }
-
-        @include media-down(xs) {
-            height: calc(100vw - 20px);
-        }
     }
 }
 
-.bg-pattern-top-0 {
-    padding-top: 0 !important;
+.bg-pattern-3 {
+    &:after {
+        left: 20px;
+        bottom: -40px;
+        right: auto;
+        top: auto;
+        transform: rotate(-90deg) translateY(100%);
+        transform-origin: bottom left;
 
-    .container {
-        &:after {
-            top: 0;
+        @include media-down(xs) {
+            left: 0;
         }
     }
 }

@@ -1,4 +1,4 @@
-;(function ($) {
+; (function ($) {
     "use strict";
 
 
@@ -18,8 +18,7 @@
                     $(".header_menu_area, .mobile_menu").removeClass("navbar_fixed");
                 }
             });
-        }
-        ;
+        };
     };
     navbarFixed();
 
@@ -41,6 +40,7 @@
     /*-------------------------------------------------------------------------------
       Ajax Forms
     -------------------------------------------------------------------------------*/
+
 
 
     if ($('.js-form').length) {
@@ -90,14 +90,11 @@
         overlay: false,
         overlayClass: 'animsition-overlay-slide',
         overlayParentElement: 'body',
-        transition: function (url) {
-            window.location.href = url;
-        }
+        transition: function (url) { window.location.href = url; }
     });
 
 
     /*----------------------------------------------------*/
-
     /*  Main Slider js
     /*----------------------------------------------------*/
     function photography_slider() {
@@ -170,10 +167,8 @@
             })
         }
     }
-
     photography_slider();
     /*----------------------------------------------------*/
-
     /*  Main Slider js
     /*----------------------------------------------------*/
     function full_page_slider() {
@@ -240,7 +235,6 @@
             })
         }
     }
-
     full_page_slider();
 
 
@@ -264,7 +258,6 @@
 
 
     /*----------------------------------------------------*/
-
     /*  Explor Room Slider
     /*----------------------------------------------------*/
     function fillter_slider() {
@@ -275,6 +268,7 @@
                 items: 4,
                 nav: true,
                 autoplay: true,
+                autoplayHoverPause: true,
                 smartSpeed: 1500,
                 dots: true,
                 navContainer: '.fillter_slider',
@@ -297,11 +291,9 @@
             })
         }
     }
-
     fillter_slider();
 
     /*----------------------------------------------------*/
-
     /*  Explor Room Slider
     /*----------------------------------------------------*/
     function testimonials_slider() {
@@ -310,7 +302,6 @@
         if (testSlider.length) {
             testSlider.owlCarousel({
                 loop: true,
-                margin: 30,
                 items: 2,
                 nav: true,
                 dots: false,
@@ -329,10 +320,10 @@
                     }
                 }
             })
-            testSlider.on('changed.owl.carousel', function (event) {
+            testSlider.on('changed.owl.carousel', function(event) {
                 activeSlide = event.item.index;
             })
-            testSlider.find('.item').on('click', function () {
+            testSlider.find('.item').on('click', function() {
                 const index = parseInt($(this).parent().index());
                 console.log(index + ' ' + activeSlide);
                 if (index != activeSlide) {
@@ -341,11 +332,9 @@
             })
         }
     }
-
     testimonials_slider();
 
     /*----------------------------------------------------*/
-
     /*  Explor Room Slider
     /*----------------------------------------------------*/
     function team_slider() {
@@ -356,6 +345,7 @@
                 items: 4,
                 nav: true,
                 autoplay: true,
+                autoplayHoverPause: true,
                 smartSpeed: 1500,
                 dots: true,
                 navContainerClass: 'team_slider',
@@ -378,11 +368,9 @@
             })
         }
     }
-
     team_slider();
 
     /*----------------------------------------------------*/
-
     /*  Villa Slider
     /*----------------------------------------------------*/
     function villa_slider() {
@@ -393,6 +381,7 @@
                 items: 1,
                 nav: true,
                 autoplay: true,
+                autoplayHoverPause: true,
                 smartSpeed: 1500,
                 dots: true,
                 navContainer: '.villa_slider',
@@ -401,11 +390,9 @@
             })
         }
     }
-
     villa_slider();
 
     /*----------------------------------------------------*/
-
     /*  Villa Slider
     /*----------------------------------------------------*/
     function single_slider() {
@@ -416,6 +403,7 @@
                 items: 1,
                 nav: true,
                 autoplay: true,
+                autoplayHoverPause: true,
                 smartSpeed: 1500,
                 dots: true,
                 navContainer: '.blog_g_slider',
@@ -424,12 +412,10 @@
             })
         }
     }
-
     single_slider();
 
 
     /*----------------------------------------------------*/
-
     /*  Explor Room Slider
     /*----------------------------------------------------*/
     function clients_slider() {
@@ -443,12 +429,13 @@
                 nav: false,
                 dots: false,
                 autoplay: true,
+                autoplayHoverPause: true,
                 smartSpeed: 1000,
             })
         }
     }
-
     clients_slider();
+
 
 
     /*----------------------------------------------------*/
@@ -482,13 +469,16 @@
                 if (index == 2 || index == 4 || index == 6) {   /* 2, 4, 6, - sections with white bacgkgrounds */
                     $('.full_header, .full_footer').removeClass('content-white');
                     $('#pp-nav').removeClass('white');
-                } else {
+                }
+                else {
                     $('.full_header, .full_footer').addClass('content-white');
                     $('#pp-nav').addClass('white');
                 }
 
             }
         });
+
+
 
 
         /*-------------------------------------------------------------------------------
@@ -499,10 +489,12 @@
             var scrollTop = $(this).scrollTop();
             if (scrollTop > 0) {
                 $('.full_header, .full_footer').removeClass('content-white');
-            } else {
+            }
+            else {
                 $('.full_header, .full_footer').addClass('content-white');
             }
         });
+
 
 
         /*-------------------------------------------------------------------------------
@@ -517,8 +509,7 @@
         $('.pp-nav-down').on('click', function () {
             $.fn.pagepiling.moveSectionDown();
         });
-    }
-    ;
+    };
 
 
     function latest_project() {
@@ -563,7 +554,6 @@
             });
         }
     }
-
     latest_project();
 
 
@@ -576,6 +566,8 @@
             }
         });
     });
+
+
 
 
     $('.navbar-toggle').on('click', function () {
@@ -599,8 +591,18 @@
 
     $('#pp-nav').remove().appendTo('.animsition').prepend('<div class="pp-nav-up icon-chevron-up"></div>').append('<div class="pp-nav-down icon-chevron-down"></div>').addClass('white right-boxed hidden-xs');
 
+    
+    $('.spec_wrapper').hover(function () {
+        $('.spec_wrapper').removeClass('col-lg-3 col-lg-4 col-lg-6');
+        $('.spec_wrapper').not($(this)).addClass('col-lg-3');
+        $(this).addClass('col-lg-6');
+    }, function () {
+        $('.spec_wrapper').removeClass('col-lg-3 col-lg-4 col-lg-6');
+        $('.spec_wrapper').addClass('col-lg-4');
+    });
 
 })(jQuery)
+
 
 
 // Counter numbers
@@ -642,44 +644,7 @@ const initCounters = () => {
         };
         window.requestAnimationFrame(step);
     }
+    
 };
 
 window.addEventListener('DOMContentLoaded', initCounters);
-
-
-(function ($) {
-    'use strict';
-
-    $('.form-contact').submit(function () {
-
-        let formData = $(this).serialize();
-
-        if (!$('body').hasClass('loading')) {
-            $.ajax({
-                type: "POST",
-                url: ajax_data.ajax_url,
-                data: {
-                    action: ajax_data.action,
-                    message_data: formData,
-                    nonce: ajax_data.nonce,
-                },
-                success: function (data) {
-
-                    $('#success').modal('show');
-                    $('#modal-form').modal('hide');
-
-                    setTimeout(function tick() {
-                        $('#success').modal('hide')
-                    }, 2000);
-                },
-                error: function (jqXHR, text, error) {
-                    console.log(error);
-                }
-            });
-        }
-
-        return false;
-
-    });
-
-})(jQuery);

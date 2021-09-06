@@ -1,7 +1,6 @@
 /* Project Breadcrumb css
 ============================================================================================ */
 .project_breadcrumb_area{
-	background: url(../img/banner/project-banner-1.jpg) no-repeat scroll center center;
 	background-size: cover;
 	height: 100vh;
 	position: relative;
@@ -18,25 +17,24 @@
 			a{
 				font-size: 18px;
 				color: #fff;
-				
 				font-weight: normal;
 				text-transform: uppercase;
 				letter-spacing: 1.8px;
 				position: relative;
 				@include transition;
-				&:before{
-					content: "";
-					width: 86px;
-					height: 6px;
-					background: $base;
-					position: absolute;
-					top: -26px;
-					left: 0px;
-				}
 				&:hover{
 					color: $base;
 				}
 			}
+          &:before{
+              content: "";
+              width: 86px;
+              height: 6px;
+              background: $base;
+              position: absolute;
+              bottom: 40px;
+              left: 0;
+          }
 		}
 	}
 	.bread_bottom_text{

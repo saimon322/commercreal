@@ -19,17 +19,19 @@ $options = get_field('contacts', 'options');
                             Московский пр-т 174  офис. 14
                         </div>
                         <div class="contacts-info__time">
-                            с 10:00 - 18:00<br>
+                            с 10:00 - 18:00
+                        </div>
+                        <div class="contacts-info__days">
                             ПН-ПТ
                         </div>
                         <div class="contacts-info__btns">
-                            <a href="tel:<?php echo $options['phone']; ?>"
-                                class="btn green-btn">
-                                <?php echo $options['phone']; ?>
-                            </a>
                             <a href="mailto:<?php echo $options['email']; ?>"
                                 class="btn green-btn">
                                 <?php echo $options['email']; ?>
+                            </a>
+                            <a href="tel:<?php echo $options['phone']; ?>"
+                                class="btn green-btn">
+                                <?php echo $options['phone']; ?>
                             </a>
                         </div>                        
                     </div>

@@ -6,20 +6,11 @@
 		height: 100%;
 		overflow: visible;
 	}
-	.section.slider .forcefullwidth_wrapper_tp_banner {
-		
-	}
-	.full_slider_inner {
-		
-	}
 	.scrollable-content{
 		overflow: hidden;
 	}
 	.full_testimonials_area .main_title {
 		margin-bottom: 60px;
-	}
-	.animations .clients_slider {
-		padding-top: 70px;
 	}
 	.pagepiling .pp-scrollable {
 		overflow-y: auto;
@@ -31,9 +22,6 @@
 	}
 }
 @media(max-width: 1370px){
-	.since_text {
-		left: 0px;
-	}
 	.full_spec_area .main_title {
 		margin-top: 100px;
 		margin-bottom: 20px;
@@ -45,6 +33,8 @@
 		left: 0px;
 		top: 0px;
 		transform: rotate(0deg);
+        writing-mode: inherit;
+        white-space: unset;
 	}
 	.since_text {
 		left: 0px;
@@ -64,7 +54,6 @@
 	}
 	
 	.since_text {
-		max-width: 930px;
 		margin: 0px auto 20px;
 	}
 	.footer_area .footer_widgets .f_widgets_item:nth-child(5) .f_link {
@@ -79,9 +68,6 @@
 	.projects_item .hover .project_text {
 		left: 20px;
 		bottom: 40px;
-	}
-	.our_projects_area .projects_tt {
-		padding-bottom: 90px;
 	}
 	.breadcrumb_link {
 		padding-top: 170px;
@@ -233,22 +219,18 @@
 	.page_lines {
 		display: none;
 	}
-	.intes_studio_area {
-		padding-top: 100px;
-	}
 	.studio_text {
 		margin-left: 0px;
 		margin-top: 50px;
 	}
-	.since_text {
-		max-width: 690px;
-		margin: 0px auto 20px;
-	}
-	.studio_text p {
-		margin-bottom: 60px;
-	}
+    .spec_item__top {
+        margin-bottom: 20px;
+    }
 	.speciallization_area .spec_item{
 		margin-bottom: 30px;
+	}
+	.spec_item .view_btn {
+		margin-top: 0;
 	}
 	.speciallization_area .row{
 		margin-bottom: -30px;
@@ -316,8 +298,8 @@
 		padding-top: 80px;
 		padding-bottom: 20px;
 	}
-	.our_projects_area .projects_tt {
-		padding-bottom: 100px;
+	.our_projects_area {
+		padding-top: 100px;
 	}
 	.blog_grid_inner {
 		padding-left: 15px;
@@ -405,18 +387,6 @@
 	.full_testimonials_area .testimonials_slider .owl-prev, .testimonials_slider .owl-next {
 		top: -103px !important;
 	}
-	.vertical-centred .contact_area .left_contact_details{
-		margin-top: 120px;
-	}
-	.left_contact_details h1 {
-		margin-bottom: 50px;
-	}
-	.left_contact_details .map_btn {
-		margin-top: 55px;
-	}
-	.right_contact_form{
-		margin-bottom: 70px;
-	}
 	#full_page_slider .left_ar, #full_page_slider .right_ar {
 		height: 40px;
 		width: 40px;
@@ -429,17 +399,6 @@
 	}
 	.side_menu .menu-footer {
 		bottom: 55px;
-	}
-	.contact_area2 .left_contact_details .map_btn {
-		margin-top: 60px;
-		margin-bottom: 50px;
-	}
-	.contact_area2 {
-		padding-top: 100px;
-		padding-bottom: 0px;
-	}
-	.banner_map .mapBox {
-		min-height: 400px;
 	}
 	.fillter_slider .owl-next {
 		right: 5px;
@@ -483,10 +442,6 @@
 	.blog_grid_inner .pagination_dotted {
 		padding-top: 80px;
 		padding-bottom: 20px;
-	}
-	.since_text {
-		max-width: 510px;
-		margin: 0px auto 20px;
 	}
 	.blog_side_inner .blog_side_item .media{
 		display: block;
@@ -557,9 +512,6 @@
 	.side_menu .copy {
 		margin-top: 13px;
 	}
-	.clients_slider {
-		padding-top: 70px;
-	}
 	#full_page_slider ul li .left_ar {
 		right: 120px !important;
 	}
@@ -610,10 +562,6 @@
 	
 }
 @media(max-width: 575px){
-	.intes_studio_area .studio_img .years_text::before {
-		right: auto;
-		left: 0px;
-	}
 	.intes_studio_area .studio_img::after {
 		display: none;
 	}
@@ -624,14 +572,7 @@
 	.intes_studio_area .studio_img .years_text {
 		right: auto;
 		left: 50%;
-		transform: translateX(-50%) translateY(-50%);
-	}
-	.intes_studio_area .studio_img .years_text .years_text_inner {
-		right: -27px;
-	}
-	.since_text {
-		padding-left: 15px;
-		max-width: 100%;
+		transform: translateX(-50%);
 	}
 	.fillter_slider .owl-prev, .fillter_slider .owl-next {
 		font-size: 50px;
@@ -644,22 +585,16 @@
 		font-size: 26px;
 	}
 	.footer_area {
-		padding-left: 50px;
-		padding-right: 50px;
-		padding-top: 70px;
-	}
-	.intes_studio_area {
-		padding-top: 70px;
+		padding: 50px 50px 0;
 	}
 	.speciallization_area {
 		padding-top: 70px;
 	}
+    .speciallization_area .s_title {
+        margin-bottom: 30px;
+    }
 	.latest_project {
 		padding-top: 70px;
-	}
-	.our_press_area {
-		padding-top: 70px;
-		padding-bottom: 70px;
 	}
 	.clients_area {
 		padding-top: 70px;
@@ -734,11 +669,11 @@
 	.related_post {
 		margin-top: 0px;
 	}
+	.our_projects_area {
+		padding-top: 70px;
+	}
 	.full_project_area .main_title {
 		margin-bottom: 65px;
-	}
-	.about_studio_area {
-		padding-top: 70px;
 	}
 	.about_studio_area .ab_studio_text h5 {
 		font-size: 24px;
@@ -749,7 +684,6 @@
 		padding-bottom: 70px;
 	}
 	.meet_team_area {
-		padding-top: 70px;
 		padding-bottom: 70px;
 	}
 }

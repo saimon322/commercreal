@@ -81,7 +81,7 @@
 }
 
 .green-btn {
-    color: #fff;
+    color: #fff !important;
     background-color: #003f46;
     border: 1px solid #edd09a;
     width: 100%;
@@ -89,7 +89,13 @@
     text-transform: uppercase;
     font-weight: bold;
     font-size: 24px;
+    padding: 0 10px;
+    
 	&:hover{
 		background: $base;
 	}
+
+    @include media-down(sm) {
+        font-size: 20px;
+    }
 }

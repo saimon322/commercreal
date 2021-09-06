@@ -35,7 +35,9 @@
     <!--================Header Menu Area =================-->
     <header class="header_menu_area">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <?php the_custom_logo(); ?>
+            <a class="custom-logo-link" href="/">
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/main-logo.svg" alt="" class="custom-logo">
+            </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span></span>
                 <span></span>
@@ -57,7 +59,7 @@
     <header class="full_header dark_menu mobile_menu">
         <div class="float-left">
             <a class="custom-logo-link" href="/">
-                <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo-white.svg" alt="" class="custom-logo">
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/main-logo.png" alt="" class="custom-logo">
             </a>
             <a class="phone" href="tel:3689565656"><i class="lnr lnr-phone-handset"></i> (+070) 3689 56 56 56</a>
         </div>

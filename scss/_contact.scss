@@ -1,71 +1,80 @@
 /* Blog Comment Form css
 ============================================================================================ */
-.comment_form{
-	background: #ebf0f4;
-	padding: 130px 0px;
+.comment_form {
+    background: #ebf0f4;
+    padding: 130px 0px;
 }
-.fomment_form_inner{
-	
+
+.fomment_form_inner {}
+
+.comment_title {
+    padding-bottom: 45px;
+
+    h2 {
+        font-size: 24px;
+        color: $base;
+        margin-bottom: 12px;
+    }
+
+    p {
+        font-size: 14px;
+        font-weight: normal;
+        color: $gray;
+        margin-bottom: 0px;
+    }
 }
-.comment_title{
-	padding-bottom: 45px;
-	h2{
-		font-size: 24px;
-		color: $base;
-		margin-bottom: 12px;
-	}
-	p{
-		font-size: 14px;
-		font-weight: normal;
-		color: $gray;
-		margin-bottom: 0px;
-	}
-}
-.comment_from{
-	.form-group{
-		margin-bottom: 30px;
-		input{
-			height: 50px;
-			border: 1px solid #bcc5ce;
-			border-radius: 0px;
-			padding: 0px 15px;
-			background: #fff;
-			outline: none;
-			box-shadow: none;
-			font-size: 14px;
-			color: $gray;
-			font-weight: normal;
-			@include placeholder{
-				font-size: 14px;
-				color: $gray;
-				
-				font-weight: normal;
-			}
-		}
-		textarea{
-			height: 216px;
-			border: 1px solid #bcc5ce;
-			border-radius: 0px;
-			padding: 15px 15px;
-			background: #fff;
-			outline: none;
-			box-shadow: none;
-			font-size: 14px;
-			color: $gray;
-			resize: none;
-			font-weight: normal;
-			@include placeholder{
-				font-size: 14px;
-				color: $gray;
-				
-				font-weight: normal;
-			}
-		}
-		&:last-child{
-			margin-bottom: 0px;
-			margin-top: 17px;
-		}
-	}
+
+.comment_from {
+    .form-group {
+        margin-bottom: 30px;
+
+        input {
+            height: 50px;
+            border: 1px solid #bcc5ce;
+            border-radius: 0px;
+            padding: 0px 15px;
+            background: #fff;
+            outline: none;
+            box-shadow: none;
+            font-size: 14px;
+            color: $gray;
+            font-weight: normal;
+            transition: .25s;
+
+            @include placeholder {
+                font-size: 14px;
+                color: $gray;
+
+                font-weight: normal;
+            }
+        }
+
+        textarea {
+            height: 216px;
+            border: 1px solid #bcc5ce;
+            border-radius: 0px;
+            padding: 15px 15px;
+            background: #fff;
+            outline: none;
+            box-shadow: none;
+            font-size: 14px;
+            color: $gray;
+            resize: none;
+            font-weight: normal;
+
+            @include placeholder {
+                font-size: 14px;
+                color: $gray;
+
+                font-weight: normal;
+            }
+        }
+
+        &:last-child {
+            margin-bottom: 0px;
+            margin-top: 17px;
+        }
+    }
 }
 
 .p_star {
@@ -77,9 +86,10 @@
     background: #fff;
 }
 
-.p_star input:valid + .placeholder {
+.p_star input:valid+.placeholder {
     display: none;
 }
+
 //.p_star input:focus + .placeholder{
 //    display: none;
 //}
@@ -94,128 +104,255 @@
 .p_star .placeholder::before {
     content: attr(data-placeholder);
     color: $gray;
-	
-	font-weight: normal;
-	font-size: 14px;
+
+    font-weight: normal;
+    font-size: 14px;
 }
 
 .p_star .placeholder::after {
     content: " *";
-    color: tomato; 
+    color: tomato;
 }
 
+.right_contact_form {
+    h4 {
+        font-size: 18px;
+        color: #fff;
+    }
 
-/* End Blog Comment Form css
-============================================================================================ */
+    .contact_us_form {
+        .form-group {
+            input {
+                border-bottom-color: #3c3c3c;
 
-/* End Blog Comment Form css
-============================================================================================ */
-.banner_map{
-	.mapBox{
-		min-height: 620px;
-	}
+                @include placeholder {
+                    color: $pfont;
+                }
+
+                &:focus {
+                    border-bottom-color: #fff;
+                    color: #fff;
+                }
+            }
+
+            textarea {
+                border-bottom-color: #3c3c3c;
+
+                @include placeholder {
+                    color: $pfont;
+                }
+
+                &:focus {
+                    border-bottom-color: #fff;
+                    color: #fff;
+                }
+            }
+
+            .order_s_btn {
+                font-size: 14px;
+                color: #fff;
+                margin-top: 50px;
+
+                @include media-down(md) {
+                    margin-top: 0;
+                }
+
+                &:hover {
+                    color: $base;
+                }
+
+                &:focus {
+                    border: none;
+                    outline: none;
+                    box-shadow: none;
+                }
+            }
+
+            &:last-child {
+                margin-top: 62px;
+            }
+        }
+    }
 }
 
-
-.contact_area2{
-	padding-top: 145px;
-	padding-bottom: 160px;
-	.left_contact_details{
-		h1{
-			font-size: 48px;
-			color: #fff;
-			font-weight: bold;
-			margin-bottom: 85px;
-		}
-		h2{
-			font-size: 30px;
-			font-weight: normal;
-			color: $gray;
-			margin-bottom: 25px;
-			span{
-				color: $pfont;
-			}
-		}
-		p{
-			font-size: 14px;
-			line-height: 24px;
-			color: $pfont;
-			font-weight: normal;
-			margin-bottom: 25px;
-		}
-		a{
-			font-size: 14px;
-			line-height: 24px;
-			color: $pfont;
-			font-weight: normal;
-			margin-bottom: 25px;
-		}
-		.map_btn{
-			color: #0099cc;
-			font-weight: bold;
-			margin-bottom: 0px;
-			margin-top: 100px;
-			@include transition;
-			&:hover{
-				color: $base;
-			}
-		}
-	}
-	.right_contact_form{
-		h4{
-			font-size: 18px;
-			color: #fff;
-		}
-		.contact_us_form{
-			.form-group{
-				input{
-					border-bottom-color: #3c3c3c;
-					@include placeholder{
-						color: $pfont;
-					}
-					&:focus{
-						border-bottom-color: #fff;
-						color: #fff;
-					}
-				}
-				textarea{
-					border-bottom-color: #3c3c3c;
-					@include placeholder{
-						color: $pfont;
-					}
-					&:focus{
-						border-bottom-color: #fff;
-						color: #fff;
-					}
-				}
-				.order_s_btn{
-					font-size: 14px;
-					color: #fff;
-					&:hover{
-						color: $base;
-					}
-					&:focus{
-						border: none;
-						outline: none;
-						box-shadow: none;
-					}
-				}
-				&:last-child{
-					margin-top: 62px;
-				}
-			}
-		}
-	}
-}
-
-.success-message, .error-message {
+.success-message,
+.error-message {
     display: none;
     margin-top: 5px;
-	padding-left: 15px; 
-}
-label{
-	margin-top: 8px;
+    padding-left: 15px;
 }
 
-/* End Blog Comment Form css
-============================================================================================ */
+label {
+    margin-top: 8px;
+}
+
+.contact-main {
+    padding: 150px 0 80px;
+
+    @include media-down(md) {
+        padding: 100px 0 50px;
+    }
+
+    @include media-down(sm) {
+        padding: 50px 0 25px;
+    }
+}
+
+.contact-cards {
+    padding-top: 80px;
+
+    @include media-down(md) {
+        padding-top: 50px;
+    }
+
+    @include media-down(sm) {
+        padding-top: 25px;
+    }
+
+    .contact-card {
+        margin-bottom: 50px;
+    }
+}
+
+.contact-card {
+    display: flex;
+
+    &__image {
+        flex-shrink: 0;
+        width: 100px;
+        height: 140px;
+        position: relative;
+        margin-right: 20px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: grayscale(100%) sepia(100%) hue-rotate(129deg) contrast(140%);
+        }
+    
+        &:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: #22567be0;
+            opacity: 0.2;
+        }
+    }
+
+    &__content {
+        flex: 1 1 0;
+        max-width: 170px;
+    }
+
+    &__headline {
+        height: 72px;
+        font-family: $bebas;
+        font-size: 1.5rem;
+        line-height: 1;
+        color: #fff;
+        margin-bottom: 15px;
+
+        span {
+            color: #EDD09A;
+        }
+    }
+
+    &__name {
+        font-size: 1rem;
+        line-height: 1.2;
+        color: #fff;
+        margin-bottom: 20px;
+    }
+
+    &__position {
+        font-size: 0.8rem;
+        margin-bottom: 25px;
+    }
+
+    &__phone {
+        font-family: $bebas;
+        font-size: 1.5rem;
+        line-height: 1;
+        transition: .25s;
+    }
+
+    &__email {
+        color: $pfont;
+        font-family: $bebas;
+        font-size: 0.9rem;
+        line-height: 1;
+        transition: .25s;
+    }
+}
+
+.contacts-info {
+    max-width: 350px;
+
+    @include media-down(md) {
+        max-width: 100%;
+    }
+
+    h1 {
+        margin-bottom: 80px;
+
+        @include media-down(md) {
+            margin-bottom: 50px;
+        }
+
+        @include media-down(sm) {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__address {
+        font-size: 24px;
+        line-height: 1.2;
+        color: #fff;
+        margin-bottom: 10px;
+
+        @include media-down(sm) {
+            font-size: 18px;
+        }
+    }
+
+    &__time {
+        font-family: $bebas;
+        font-size: 24px;
+        line-height: 1.2;
+
+        @include media-down(sm) {
+            font-size: 18px;
+        }
+    }
+
+    &__days {
+        font-size: 24px;
+        line-height: 1.2;
+
+        @include media-down(sm) {
+            font-size: 18px;
+        }
+    }
+
+    &__btns {
+        margin-top: 120px;
+
+        @include media-down(md) {
+            margin-top: 50px;            
+        }
+
+        @include media-down(sm) {
+            margin-top: 30px;
+        }
+    }
+
+    .btn {
+        padding: 0;
+        margin-bottom: 20px;
+        line-height: 28px;
+    }
+}

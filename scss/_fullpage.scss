@@ -352,55 +352,21 @@
 }
 
 
-.left_contact_details{
-	h1{
-		font-size: 60px;
-		margin-bottom: 80px;
-	}
-	h2{
-		font-size: 30px;
-		color: #666666;
-		margin-bottom: 12px;
-		span{
-			color: #fff;
-			font-weight: 700;
-		}
-	}
-	p{
-		font-size: 14px;
-		color: #fff;
-		line-height: 24px;
-		margin-bottom: 10px;
-	}
-	a{
-		display: block;
-		font-size: 14px;
-		color: #fff;
-		line-height: 24px;
-		margin-bottom: 20px;
-	}
-	.map_btn{
-		margin-bottom: 0px;
-		margin-top: 110px;
-		color: #00ccff;
-		display: inline-block;
-		i{
-			padding-left: 2px;
-		}
-		&:hover{
-			color: $base;
-		}
-	}
-}
-
-
 .right_contact_form{
 	h4{
 		color: #fff;
 		font-weight: bold;
 		font-size: 18px;
 		margin-bottom: 80px;
-		margin-top: 30px;
+		margin-top: 20px;
+
+        @include media-down(md) {
+            margin-bottom: 50px;
+        }
+
+        @include media-down(sm) {
+            margin-bottom: 30px;
+        }
 	}
 	.contact_us_form{
 		.form-group{

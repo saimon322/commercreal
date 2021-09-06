@@ -1,7 +1,22 @@
 <?php get_header(); ?>
-
 <section class="home_slider">
     <?php if (have_rows('main_slider')): ?>
+        <div class="page_lines">
+            <div class="container">
+                <div class="row m0">
+                    <div class="col-lg-4">
+                        <div class="line"></div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="line"></div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="line"></div>
+                        <div class="line"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <?php $count = count(get_field('main_slider')); ?>
         <?php $counter = 1; ?>
         <div id="home_full_slider" class="rev_slider fullscreenbanner" data-version="5.3.1.6">
@@ -108,70 +123,6 @@
                                     <?php echo get_sub_field('subtitle'); ?>
                                 </div>
                             <?php endif; ?>
-                            <div class="tp-caption tp-shape tp-shapewrapper tp-resizeme line_1"
-                                 data-x="['left']" data-hoffset="['0']"
-                                 data-y="['top','top','top','top']" data-voffset="['-50']"
-                                 data-width="2"
-                                 data-height="5000px"
-                                 data-whitespace="nowrap"
-                                 data-type="shape"
-                                 data-responsive_offset="on"
-                                 data-frames='[{"from":"x:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;","speed":1000,"to":"o:1;","delay":500,"ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"}]'
-                                 data-textAlign="['left','left','left','left']"
-                                 data-paddingtop="[0,0,0,0]"
-                                 data-paddingright="[0,0,0,0]"
-                                 data-paddingbottom="[0,0,0,0]"
-                                 data-paddingleft="[0,0,0,0]"
-                                 style="background-color:rgba(255, 255, 255, .10);">
-                            </div>
-                            <div class="tp-caption tp-shape tp-shapewrapper tp-resizeme line_2"
-                                 data-x="['left']" data-hoffset="['397']"
-                                 data-y="['top','top','top','top']" data-voffset="['-50']"
-                                 data-width="2"
-                                 data-height="5000px"
-                                 data-whitespace="nowrap"
-                                 data-type="shape"
-                                 data-responsive_offset="on"
-                                 data-frames='[{"from":"x:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;","speed":1000,"to":"o:1;","delay":500,"ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"}]'
-                                 data-textAlign="['left','left','left','left']"
-                                 data-paddingtop="[0,0,0,0]"
-                                 data-paddingright="[0,0,0,0]"
-                                 data-paddingbottom="[0,0,0,0]"
-                                 data-paddingleft="[0,0,0,0]"
-                                 style="background-color:rgba(255, 255, 255, .10);">
-                            </div>
-                            <div class="tp-caption tp-shape tp-shapewrapper tp-resizeme line_3"
-                                 data-x="['left']" data-hoffset="['795']"
-                                 data-y="['top','top','top','top']" data-voffset="['-50']"
-                                 data-width="2"
-                                 data-height="5000px"
-                                 data-whitespace="nowrap"
-                                 data-type="shape"
-                                 data-responsive_offset="on"
-                                 data-frames='[{"from":"x:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;","speed":1000,"to":"o:1;","delay":500,"ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"}]'
-                                 data-textAlign="['left','left','left','left']"
-                                 data-paddingtop="[0,0,0,0]"
-                                 data-paddingright="[0,0,0,0]"
-                                 data-paddingbottom="[0,0,0,0]"
-                                 data-paddingleft="[0,0,0,0]"
-                                 style="background-color:rgba(255, 255, 255, .10);">
-                            </div>
-                            <div class="tp-caption tp-shape tp-shapewrapper tp-resizeme line_4"
-                                 data-x="['left']" data-hoffset="['1168']"
-                                 data-y="['top','top','top','top']" data-voffset="['-50']"
-                                 data-width="2"
-                                 data-height="5000px"
-                                 data-whitespace="nowrap"
-                                 data-type="shape"
-                                 data-responsive_offset="on"
-                                 data-frames='[{"from":"x:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;","speed":1000,"to":"o:1;","delay":500,"ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"}]'
-                                 data-textAlign="['left','left','left','left']"
-                                 data-paddingtop="[0,0,0,0]"
-                                 data-paddingright="[0,0,0,0]"
-                                 data-paddingbottom="[0,0,0,0]"
-                                 data-paddingleft="[0,0,0,0]"
-                                 style="background-color:rgba(255, 255, 255, .10);">
-                            </div>
                             <div class="tp-caption tp-shape tp-shapewrapper tp-resizeme text_2"
                                  data-x="['left']" data-hoffset="['0','0','15','15','15']"
                                  data-y="['top','top','top','top']" data-voffset="['325','230','160','160','110']"
@@ -210,12 +161,11 @@
         </div>
     <?php endif; ?>
 </section>
-
 <section class="intes_studio_area bg-pattern-section">
-    <div class="since_text">
-        <h5><?php the_field('about_desc'); ?></h5>
-    </div>
     <div class="container bg-pattern">
+        <div class="since_text">
+            <h5><?php the_field('about_desc'); ?></h5>
+        </div>
         <div class="row">
             <?php $img = get_field('about_img');
             if ($img): ?>
@@ -259,35 +209,63 @@
 <section class="speciallization_area">
     <div class="container">
         <h6 class="s_title">Услуги</h6>
-        <div class="row m0 text-center">
-            <div class="col-lg-4 col-sm-6">
-                <div class="spec_item">
-                    <a href="#" class="spec_item__top">
-                        <img src="<?= get_template_directory_uri(); ?>/img/icon/spec-1.svg" alt="">
-                        <h4>DEVELOPER</h4>
-                    </a>
-                    <p>Вы занимаетесь созданием новых объектов  недвижимости и вам требуется решить ряд коммерческих задач. Сотрудничество лучший способ создать максимально эффективный проект.</p>
-                    <a class="view_btn" href="#">Последние проекты</a>
+        <div class="specs">
+            <div class="row m0 text-center specs-header">
+                <div class="col-lg-4 col-sm-6 spec_wrapper">
+                    <div class="spec_item">
+                        <a href="<?php echo get_term_link(13); ?>" class="spec_item__top">
+                            <img src="<?= get_template_directory_uri(); ?>/img/icon/spec-1.svg" alt="">
+                            <h4>DEVELOPER</h4>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 spec_wrapper">
+                    <div class="spec_item">
+                        <a href="<?php echo get_term_link(15); ?>" class="spec_item__top">
+                            <img src="<?= get_template_directory_uri(); ?>/img/icon/spec-2.svg" alt="">
+                            <h4>СОБСТВЕННИК</h4>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 spec_wrapper">
+                    <div class="spec_item">
+                        <a href="<?php echo get_term_link(14); ?>" class="spec_item__top">
+                            <img src="<?= get_template_directory_uri(); ?>/img/icon/spec-3.svg" alt="">
+                            <h4>RETAILER</h4>
+                        </a>
+                    </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-sm-6">
-                <div class="spec_item">
-                    <a href="#" class="spec_item__top">
-                        <img src="<?= get_template_directory_uri(); ?>/img/icon/spec-2.svg" alt="">
-                        <h4>СОБСТВЕННИК</h4>
-                    </a>
-                    <p>Вы строите торговые центры или владеете коммерческой недвижимостью и ваша цель достичь максимальных экономических результатов мы с удовольствием сделаем это за вас.</p>
-                    <a class="view_btn" href="#">Последние проекты</a>
+            <div class="row text-left specs-content">
+                <div class="col-lg-4 col-sm-6">
+                    <div class="spec_item">
+                        <a href="<?php echo get_term_link(13); ?>" class="spec_item__top">
+                            <img src="<?= get_template_directory_uri(); ?>/img/icon/spec-1.svg" alt="">
+                            <h4>DEVELOPER</h4>
+                        </a>
+                        <p>Вы занимаетесь созданием новых объектов недвижимости и вам требуется решить ряд коммерческих задач. Сотрудничество лучший способ создать максимально эффективный проект.</p>
+                        <a class="view_btn" href="<?php echo get_term_link(13); ?>">Последние проекты</a>
+                    </div>
                 </div>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-                <div class="spec_item">
-                    <a href="#" class="spec_item__top">
-                        <img src="<?= get_template_directory_uri(); ?>/img/icon/spec-3.svg" alt="">
-                        <h4>RETAILER</h4>
-                    </a>
-                    <p>Вы имеете собственный бизнес или развиваете сетевую ритейл-компанию, и выходе в конкретный город или регион, ищите подходящие именно вам варианты помещений.</p>
-                    <a class="view_btn" href="#">Последние проекты</a>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="spec_item">
+                        <a href="<?php echo get_term_link(15); ?>" class="spec_item__top">
+                            <img src="<?= get_template_directory_uri(); ?>/img/icon/spec-2.svg" alt="">
+                            <h4>СОБСТВЕННИК</h4>
+                        </a>
+                        <p>Вы строите торговые центры или владеете коммерческой недвижимостью и ваша цель достичь максимальных экономических результатов мы с удовольствием сделаем это за вас.</p>
+                        <a class="view_btn" href="<?php echo get_term_link(15); ?>">Последние проекты</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="spec_item">
+                        <a href="<?php echo get_term_link(14); ?>" class="spec_item__top">
+                            <img src="<?= get_template_directory_uri(); ?>/img/icon/spec-3.svg" alt="">
+                            <h4>RETAILER</h4>
+                        </a>
+                        <p>Вы имеете собственный бизнес или развиваете сетевую ритейл-компанию, и выходе в конкретный город или регион, ищите подходящие именно вам варианты помещений.</p>
+                        <a class="view_btn" href="<?php echo get_term_link(14); ?>">Последние проекты</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -298,7 +276,6 @@
 <?php get_template_part('template-parts/sections/section', 'form-2'); ?>
 
 <?php get_template_part('template-parts/sections/section', 'clients'); ?>
-
 <div class="page_lines">
     <div class="container">
         <div class="row m0">
@@ -315,5 +292,4 @@
         </div>
     </div>
 </div>
-
 <?php get_footer(); ?>
