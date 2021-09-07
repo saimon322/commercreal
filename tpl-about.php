@@ -27,67 +27,30 @@ if ($main_video): ?>
         </div>
     </div>
 </section>
-
+            
 <section class="speciallization_area section-pad">
     <div class="container">
         <h6 class="s_title">Наши преимущества</h6>
-        <div class="specs">
-            <div class="row m0 text-center specs-header">
-                <div class="col-lg-4 col-sm-6 spec_wrapper">
-                    <div class="spec_item">
-                        <a href="<?php echo get_term_link(13); ?>" class="spec_item__top">
-                            <img src="<?= get_template_directory_uri(); ?>/img/icon/spec-1.svg" alt="">
-                            <h4>DEVELOPER</h4>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6 spec_wrapper">
-                    <div class="spec_item">
-                        <a href="<?php echo get_term_link(15); ?>" class="spec_item__top">
-                            <img src="<?= get_template_directory_uri(); ?>/img/icon/spec-2.svg" alt="">
-                            <h4>СОБСТВЕННИК</h4>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6 spec_wrapper">
-                    <div class="spec_item">
-                        <a href="<?php echo get_term_link(14); ?>" class="spec_item__top">
-                            <img src="<?= get_template_directory_uri(); ?>/img/icon/spec-3.svg" alt="">
-                            <h4>RETAILER</h4>
-                        </a>
-                    </div>
+        <div class="row">
+            <div class="col-lg-4 col-sm-6">
+                <div class="spec_item">
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/icon/spec-4.svg" alt="">
+                    <h4>Только уникальные объекты</h4>
+                    <p>Мы предлагаем вам коммерческую недвижимость представленную только  у нас. Каждый из них полностью подготовлен к запуску или уже приносить прибыль. </p>
                 </div>
             </div>
-            <div class="row text-left specs-content">
-                <div class="col-lg-4 col-sm-6">
-                    <div class="spec_item">
-                        <a href="<?php echo get_term_link(13); ?>" class="spec_item__top">
-                            <img src="<?= get_template_directory_uri(); ?>/img/icon/spec-1.svg" alt="">
-                            <h4>DEVELOPER</h4>
-                        </a>
-                        <p>Вы занимаетесь созданием новых объектов недвижимости и вам требуется решить ряд коммерческих задач. Сотрудничество лучший способ создать максимально эффективный проект.</p>
-                        <a class="view_btn" href="<?php echo get_term_link(13); ?>">Последние проекты</a>
-                    </div>
+            <div class="col-lg-4 col-sm-6">
+                <div class="spec_item">
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/icon/spec-5.svg" alt="">
+                    <h4>Индивидуальные условия</h4>
+                    <p>Мы работаем только на особых, договорных условиях. Идеально подходящих вам и выгодных для нас.  </p>
                 </div>
-                <div class="col-lg-4 col-sm-6">
-                    <div class="spec_item">
-                        <a href="<?php echo get_term_link(15); ?>" class="spec_item__top">
-                            <img src="<?= get_template_directory_uri(); ?>/img/icon/spec-2.svg" alt="">
-                            <h4>СОБСТВЕННИК</h4>
-                        </a>
-                        <p>Вы строите торговые центры или владеете коммерческой недвижимостью и ваша цель достичь максимальных экономических результатов мы с удовольствием сделаем это за вас.</p>
-                        <a class="view_btn" href="<?php echo get_term_link(15); ?>">Последние проекты</a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <div class="spec_item">
-                        <a href="<?php echo get_term_link(14); ?>" class="spec_item__top">
-                            <img src="<?= get_template_directory_uri(); ?>/img/icon/spec-3.svg" alt="">
-                            <h4>RETAILER</h4>
-                        </a>
-                        <p>Вы имеете собственный бизнес или развиваете сетевую ритейл-компанию, и выходе в конкретный город или регион, ищите подходящие именно вам варианты помещений.</p>
-                        <a class="view_btn" href="<?php echo get_term_link(14); ?>">Последние проекты</a>
-                    </div>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <div class="spec_item">
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/icon/spec-6.svg" alt="">
+                    <h4>Услуги высшего качества</h4>
+                    <p>Мы стремимся к сервису наивысшего уровня. Наша первая задача чтобы вы отдыхали, а недвижимость приносила вам прибыл. </p>
                 </div>
             </div>
         </div>
@@ -172,6 +135,28 @@ if ($main_video): ?>
     </div>
 </section>
 
+<section class="presentation">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-md-6">
+                            <div class="presentation__img">
+                                <img src="<?= get_template_directory_uri(); ?>/img/presentation.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="presentation__content">
+                            <h2>Презентация</h2>
+                            <p class="mt-4">
+                                Мы расскажем все о наших лучших проектах, принципах работы, и плюсах работы с нами.
+                            </p>
+                            <div class="presentation__icon">
+                                <img src="<?= get_template_directory_uri(); ?>/img/icon/presentation.png">
+                            </div>
+                            <button class="btn btn" download>Скачать PDF</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
 <section class="about_map_area">
     <div class="container">
         <div class="row">
@@ -181,8 +166,8 @@ if ($main_video): ?>
                     <h2>группа компаний <span>Commerc Real</span></h2>
                     <p>Мы специализируемся на развитии северо-западного региона России.  Но вы можете обратиться в нашу группу компаний из любого города,  мы с удовольствием встретимся с вами в удобном для вас месте. </p>
                 </div>
-                <button class="btn green-btn mb-4" data-toggle="modal" data-target="#modal-form">НАПИШИТЕ НАМ</button>
-                <button class="btn green-btn" data-toggle="modal" data-target="#modal-form">ЗАКАЗАТЬ ЗВОНОК</button>
+                <button class="btn btn mb-4" data-toggle="modal" data-target="#modal-form">НАПИШИТЕ НАМ</button>
+                <button class="btn btn" data-toggle="modal" data-target="#modal-form">ЗАКАЗАТЬ ЗВОНОК</button>
             </div>
             <div class="col-12 col-md-8">
                 <svg width="100%" height="100%" viewBox="0 0 1168 898" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">

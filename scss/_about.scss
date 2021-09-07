@@ -1,4 +1,5 @@
 .about_banner {
+    padding-top: 88px;
     height: 620px;
 
     @include media-down(lg) {
@@ -7,6 +8,7 @@
 
     @include media-down(md) {
         height: 400px;
+        padding-top: 76px;
     }
 
     @include media-down(sm) {
@@ -266,10 +268,6 @@
 
     .signature2 {
         max-width: 50%;
-    }
-
-    .btn {
-        padding: 0;
     }
 }
 

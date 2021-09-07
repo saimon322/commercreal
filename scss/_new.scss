@@ -122,10 +122,8 @@ ul.custom-ul li:before {
   max-width: 35%;
 }
 
-.about_office_area .green-btn {
+.about_office_area .btn {
   margin-top: 21px;
-  font-size: 17px;
-  border-radius: 0;
 }
 
 .signatures-container {
@@ -324,15 +322,6 @@ ul.custom-ul li:hover:before {
   filter: sepia(100%) hue-rotate(
                   135deg
   ) brightness(85%);
-}
-
-.contact-page {
-  padding-top: 140px;
-}
-
-.press_form__form .btn {
-  line-height: initial;
-  padding-top: 3px;
 }
 
 .page-template-tpl-projects .our_projects_area {
