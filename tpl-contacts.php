@@ -26,11 +26,11 @@ $options = get_field('contacts', 'options');
                         </div>
                         <div class="contacts-info__btns">
                             <a href="mailto:<?php echo $options['email']; ?>"
-                                class="btn green-btn">
+                                class="btn btn">
                                 <?php echo $options['email']; ?>
                             </a>
                             <a href="tel:<?php echo $options['phone']; ?>"
-                                class="btn green-btn">
+                                class="btn btn">
                                 <?php echo $options['phone']; ?>
                             </a>
                         </div>                        
@@ -50,7 +50,7 @@ $options = get_field('contacts', 'options');
                                 <textarea class="form-control" name="message" id="message" rows="1" placeholder="Сообщение" required></textarea>
                             </div>
                             <div class="form-group col-md-12">
-                                <button type="submit" value="submit" class="btn order_s_btn form-control">Отправить <i class="ion-ios-play"></i></button>
+                                <button type="submit" value="submit" class="order_s_btn form-control">Отправить <i class="ion-ios-play"></i></button>
                             </div>
                             <div class="success-message"><i class="fa fa-check text-primary"></i> Thank you!. Your message is successfully sent...</div>
                             <div class="error-message">We're sorry, but something went wrong</div>

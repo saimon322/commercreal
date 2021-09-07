@@ -24,7 +24,7 @@
                             <input type="text" name="phone" placeholder="Номер телефона">
                             <input type="text" name="name" placeholder="Ваше имя">
                             <input type="email" name="email" placeholder="Электронная почта">
-                            <button type="submit" class="btn green-btn">Заказать</button>
+                            <button type="submit" class="btn btn">Заказать</button>
                         </form>
                     </div>
                 </div>

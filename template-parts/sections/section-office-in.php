@@ -19,7 +19,7 @@
                     <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/pod2.png" class="signature2">
                 </div>
                 <p>P.S. "В нашем офисе вас ждет натуральный бразильский кофе и швейцарский шоколад."</p>
-                <button class="btn green-btn" data-toggle="modal" data-target="#modal-form">НАЗНАЧИТЬ ВСТРЕЧУ</button>
+                <button class="btn btn" data-toggle="modal" data-target="#modal-form">НАЗНАЧИТЬ ВСТРЕЧУ</button>
             </div>
         </div>
     </div>

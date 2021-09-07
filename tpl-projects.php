@@ -33,8 +33,8 @@ get_header();
                         <p><?= $map_text; ?></p>
                     <?php endif; ?>
                 </div>
-                <button class="btn green-btn mb-4" data-toggle="modal" data-target="#modal-form">НАПИШИТЕ НАМ</button>
-                <button class="btn green-btn" data-toggle="modal" data-target="#modal-form">ЗАКАЗАТЬ ЗВОНОК</button>
+                <button class="btn btn mb-4" data-toggle="modal" data-target="#modal-form">НАПИШИТЕ НАМ</button>
+                <button class="btn btn" data-toggle="modal" data-target="#modal-form">ЗАКАЗАТЬ ЗВОНОК</button>
             </div>
             <div class="col-12 col-md-8">
                 <?php the_field('map_svg'); ?>
