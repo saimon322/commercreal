@@ -28,7 +28,7 @@ if ($main_video): ?>
     </div>
 </section>
             
-<section class="speciallization_area section-pad">
+<section class="speciallization_area advantages section-pad">
     <div class="container">
         <h6 class="s_title">Наши преимущества</h6>
         <div class="row">
@@ -136,26 +136,26 @@ if ($main_video): ?>
 </section>
 
 <section class="presentation">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12 col-md-6">
-                            <div class="presentation__img">
-                                <img src="<?= get_template_directory_uri(); ?>/img/presentation.jpg" alt="">
-                            </div>
-                        </div>
-                        <div class="presentation__content">
-                            <h2>Презентация</h2>
-                            <p class="mt-4">
-                                Мы расскажем все о наших лучших проектах, принципах работы, и плюсах работы с нами.
-                            </p>
-                            <div class="presentation__icon">
-                                <img src="<?= get_template_directory_uri(); ?>/img/icon/presentation.png">
-                            </div>
-                            <button class="btn btn" download>Скачать PDF</button>
-                        </div>
-                    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-6">
+                <div class="presentation__img">
+                    <img src="<?= get_template_directory_uri(); ?>/img/presentation.jpg" alt="">
                 </div>
-            </section>
+            </div>
+            <div class="presentation__content">
+                <h2>Презентация</h2>
+                <p class="mt-4">
+                    Мы расскажем все о наших лучших проектах, принципах работы, и плюсах работы с нами.
+                </p>
+                <div class="presentation__icon">
+                    <img src="<?= get_template_directory_uri(); ?>/img/icon/presentation.png">
+                </div>
+                <button class="btn btn" download>Скачать PDF</button>
+            </div>
+        </div>
+    </div>
+</section>
 
 <section class="about_map_area">
     <div class="container">
