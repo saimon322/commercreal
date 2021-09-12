@@ -1,7 +1,7 @@
 /* Home Full Slider css
 ============================================================================================ */
-.home_slider {
-    position: relative;
+.home_slider{
+	position: relative;
     overflow: hidden !important;
 
     .page_lines {
@@ -15,11 +15,23 @@
         }
     }
 
-    .rev_slider {
-        position: relative;
+	.rev_slider{
+		position: relative;
 
-        li {
-            z-index: 6!important;
+        &--swap {
+            li {
+                opacity: 0 !important;
+
+                .slotholder:before {
+                    opacity: 0;
+                }
+            }
+        }
+
+		li{
+            transition: opacity .5s;
+			z-index: 6 !important;
+
             .slotholder {
                 &:before {
                     content: '';
@@ -37,6 +49,10 @@
 
             &.active-revslide .slotholder:before {
                 opacity: 1;
+            }
+
+            &.processing-revslide  {
+                opacity: 1 !important;
             }
 
             .slider_text_box {
@@ -79,11 +95,7 @@
                     font-size: 18px;
                 }
             }
-        }
-
-        .tp-mask-wrap {
-            overflow: unset !important;
-        }
+		}
 
         .tp-bullets {
             @include media-down(lg) {
@@ -101,7 +113,7 @@
                 opacity: 1;
             }
         }
-    }
+	}
 
     .social_icon {
         position: absolute;
@@ -128,20 +140,6 @@
                     margin-bottom: 0px;
                 }
             }
-        }
-    }
-
-    .year {
-        position: absolute;
-        left: 75px;
-        z-index: 25;
-        top: 35%;
-        transform: translateY(-50%);
-        color: #fff;
-
-        a {
-            color: #fff;
-            font-size: 14px;
         }
     }
 }

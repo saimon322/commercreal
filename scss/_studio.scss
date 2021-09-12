@@ -53,23 +53,7 @@
                 transform: translate(-50%, -50%) rotate(45deg);
                 background: linear-gradient(-45deg, rgb(0,63,70) 0%, rgba(0,63,70,0) 100%);
 			}
-            &:after{
-                content: "";
-                position: absolute;
-                z-index: -1;
-                left: 50%;
-                top: 50%;
-                width: 333px;
-                height: 333px;
-                transform: translate(-50%, -50%);
-                background: url(../img/texture.png) no-repeat scroll center center;
-                @include media-down(xs) {
-                    width: calc(100vw - 40px);
-                    height: calc(100vw - 40px);
-                    background-size: contain;
-                }
-            }
-			.years_text_inner{
+			&_inner{
                 padding-top: 20px;
 				position: relative;
                 text-align: center;
@@ -91,6 +75,11 @@
                     font-weight: bold;
 				}
 			}
+            .diamond {
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+            }
 		}
 	}
 }

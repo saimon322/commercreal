@@ -20,9 +20,10 @@
 	width: 100%;
 	z-index: 30;
 	top: 0px;
-	.navbar.navbar-expand-lg{
+	.navbar{
+        height: 70px;
 		background: transparent !important;
-		padding: 45px 75px 0px 75px;
+		padding: 20px 75px 0px 75px;
 		.navbar-brand{
 			img{
 				display: inline-block;
@@ -31,7 +32,6 @@
 				}
 			}
 		}
-		.navbar-collapse{}
 		.nav.navbar-nav{
 			display: block;
 			width: 100%;
@@ -96,21 +96,8 @@
         .admin-bar & {
             top: -38px;
         }
-		.navbar.navbar-expand-lg{
-			padding-top: 0px !important;
-			.nav.navbar-nav{
-				& > li{
-					& > a{
-						line-height: 70px;
-						transition: all 0ms ease;
-					}
-					&:hover{
-						a{
-							color: $base;
-						}
-					}
-				}
-			}
+		.navbar{
+			padding-top: 0px;
 		}
 	}
 	&.white_menu{
@@ -126,7 +113,7 @@
 			-webkit-transition: transform 500ms ease, background 500ms ease;
 			box-shadow: 0px 3px 16px 0px rgba(0,0,0,0.1);
 			z-index: 99999;
-			.navbar.navbar-expand-lg{
+			.navbar{
 				.navbar-brand{
 					img{
 						display: none;
@@ -162,10 +149,6 @@
 			}
 		}
 	}
-}
-
-.navbar.navbar-expand-lg {
-    padding-top: 20px !important;
 }
 
 .menu_gap{
@@ -620,14 +603,20 @@
 
 .sub-menu {
     position: absolute;
-    left: 0;
+    right: -100px;
     top: 35px;
-    width: 720px;
+    width: 750px;
     background: #262626;
     opacity: 0;
     visibility: hidden;
     transform: translateY(-20px);
     transition: .25s;
+
+    @include media-up(xl) {
+        right: auto;
+        left: 0;
+        width: 860px;
+    }
 }
 
 .sub-menu-list {
@@ -636,7 +625,7 @@
 
 .sub-menu-item {
     flex: 1 1 0;
-    padding: 20px 0 20px 10px;
+    padding: 20px 10px;
     color: #fff;
 
     h5 {
@@ -649,6 +638,10 @@
         font-size: 12px;
         list-style: none;
         padding: 0;
+
+        @include media-up(xl) {
+            font-size: 14px;
+        }
     }
 }
 
@@ -659,6 +652,11 @@
     padding: 5px;
     background: $blue;
     transition: .25s;
+
+    @include media-up(xl) {
+        height: 130px;
+        padding: 10px;
+    }
 
     h5 {
         position: relative;

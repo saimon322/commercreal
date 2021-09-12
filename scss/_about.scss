@@ -278,17 +278,10 @@
     &__img {
         height: 100%;
         
-        &:after{
-            content: "";
-            position: absolute;
-            z-index: -1;
+        .diamond {
             right: 0;
             top: 50%;
-            width: 333px;
-            height: 333px;
             transform: translate(40%, -50%);
-            background: url(../img/texture.png) no-repeat center center;
-            background-size: contain;
 
             @include media-down(md) {
                 width: 200px;

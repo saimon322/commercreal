@@ -567,9 +567,6 @@
         });
     });
 
-
-
-
     $('.navbar-toggle').on('click', function () {
         $('body').removeClass('menu-is-closed').addClass('menu-is-opened');
     });
@@ -600,6 +597,22 @@
         $('.spec_wrapper').removeClass('col-lg-3 col-lg-4 col-lg-6');
         $('.spec_wrapper').addClass('col-lg-4');
     });
+
+    AOS.init({
+        duration: 500,
+        once: false,
+        mirror: true,
+    });
+    
+    let linesCount = $('.diamond line').length;
+    $('.diamond line').each(function() {
+        let index = $(this).index();
+        let delay = index * 0.05;
+        if (index * 2 > linesCount) {
+            delay = (index - 8) * 0.1;
+        }
+        $(this).css({'animation-delay': delay + 's'});
+    })
 
 })(jQuery)
 
