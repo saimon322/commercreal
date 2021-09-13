@@ -57,6 +57,7 @@ h6 {
 }
 
 .container {
+  position: relative;
   padding: 0 20px;
 }
 
@@ -5433,6 +5434,41 @@ ul.custom-ul li:hover:before {
 @keyframes dash {
   to {
     stroke-dashoffset: 0;
+  }
+}
+
+.pattern {
+  position: absolute;
+  z-index: 1;
+  right: 20px;
+  top: -50px;
+  display: block;
+  width: 365px;
+  pointer-events: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media (max-width: 991px) {
+  .pattern {
+    right: -20px;
+  }
+}
+@media (max-width: 767px) {
+  .pattern {
+    right: 0;
+    top: -30px;
+  }
+}
+@media (max-width: 575px) {
+  .pattern {
+    max-width: calc(100vw - 20px);
   }
 }
 /*# sourceMappingURL=style.css.map */

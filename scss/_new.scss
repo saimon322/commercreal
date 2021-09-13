@@ -351,3 +351,29 @@ ul.custom-ul li:hover:before {
         }
     }
 }
+
+.pattern {
+    position: absolute;
+    z-index: 1;
+    right: 20px;
+    top: -50px;
+    display: block;
+    width: 365px;
+    pointer-events: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include media-down(md) {
+        right: -20px;
+    }
+
+    @include media-down(sm) {
+        right: 0;
+        top: -30px;
+    }
+
+    @include media-down(xs) {
+        max-width: calc(100vw - 20px);
+    }
+}
