@@ -1546,39 +1546,6 @@ i:before {
   }
 }
 
-.bg-pattern-2:after {
-  right: 0;
-  -webkit-transform: rotate(90deg);
-      -ms-transform: rotate(90deg);
-          transform: rotate(90deg);
-  -webkit-transform-origin: top left;
-      -ms-transform-origin: top left;
-          transform-origin: top left;
-}
-@media (max-width: 991px) {
-  .bg-pattern-2:after {
-    right: -20px;
-  }
-}
-
-.bg-pattern-3:after {
-  left: 20px;
-  bottom: -40px;
-  right: auto;
-  top: auto;
-  -webkit-transform: rotate(-90deg) translateY(100%);
-      -ms-transform: rotate(-90deg) translateY(100%);
-          transform: rotate(-90deg) translateY(100%);
-  -webkit-transform-origin: bottom left;
-      -ms-transform-origin: bottom left;
-          transform-origin: bottom left;
-}
-@media (max-width: 575px) {
-  .bg-pattern-3:after {
-    left: 0;
-  }
-}
-
 /* Home Full Slider css
 ============================================================================================ */
 .home_slider {
@@ -1694,28 +1661,55 @@ i:before {
 .home_slider .rev_slider .tp-bullet.selected {
   opacity: 1;
 }
-.home_slider .social_icon {
+.home_slider .socials {
   position: absolute;
   left: 75px;
   z-index: 25;
   bottom: 70px;
   color: #fff;
 }
-.home_slider .social_icon ul li {
+@media (max-width: 1429px) {
+  .home_slider .socials {
+    display: none;
+  }
+}
+.home_slider .socials ul li {
   margin-bottom: 20px;
 }
-.home_slider .social_icon ul li a {
+.home_slider .socials ul li a {
   color: #fff;
   font-size: 18px;
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;
 }
-.home_slider .social_icon ul li a:hover {
+.home_slider .socials ul li a:hover {
   color: #f1d299;
 }
-.home_slider .social_icon ul li:last-child {
+.home_slider .socials ul li:last-child {
   margin-bottom: 0px;
+}
+.home_slider .contacts {
+  position: absolute;
+  right: 75px;
+  z-index: 25;
+  bottom: 70px;
+  color: #fff;
+}
+@media (max-width: 1429px) {
+  .home_slider .contacts {
+    display: none;
+  }
+}
+.home_slider .contacts a {
+  color: #fff;
+  font-size: 18px;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.home_slider .contacts a:hover {
+  color: #f1d299;
 }
 
 .layout {

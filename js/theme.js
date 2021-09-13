@@ -614,6 +614,40 @@
         $(this).css({'animation-delay': delay + 's'});
     })
 
+
+// Patterns animation
+    const initPatterns = () => {
+        const patterns = $('.pattern');
+
+        if (patterns) {
+            const widthTo = patterns.eq(0).width();
+            patterns.css({width: '100%'});
+            const widthFrom = patterns.eq(0).width();
+            const widthDiff = widthFrom - widthTo;
+            const scrollPatterns = () => {
+                const scrollTop = window.pageYOffset;
+                const winHeight = window.innerHeight;
+                patterns.each(function(){
+                    const pattern = $(this);
+                    const elTop = pattern.offset().top;
+                    const index = 1 - (scrollTop + winHeight - elTop) / winHeight * 1.5;
+                    if (index > 0 && index < 1) {
+                        const newWidth = widthTo + widthDiff * index;
+                        // pattern.css({width: newWidth + 'px'});
+                        TweenLite.to(pattern, 0.5, {
+                            width: newWidth
+                        });
+                    }
+                })
+            };
+
+            scrollPatterns();
+            window.addEventListener('scroll', scrollPatterns);
+        }
+    };
+    
+    initPatterns();
+
 })(jQuery)
 
 
@@ -661,37 +695,3 @@ const initCounters = () => {
 };
 
 window.addEventListener('DOMContentLoaded', initCounters);
-
-
-// Patterns animation
-const initPatterns = () => {
-    const patterns = $('.pattern');
-
-    if (patterns) {
-        const widthTo = patterns.eq(0).width();
-        patterns.css({width: '100%'});
-        const widthFrom = patterns.eq(0).width();
-        const widthDiff = widthFrom - widthTo;
-        const scrollPatterns = () => {
-            const scrollTop = window.pageYOffset;
-            const winHeight = window.innerHeight;
-            patterns.each(function(){
-                const pattern = $(this);
-                const elTop = pattern.offset().top;
-                const index = 1 - (scrollTop + winHeight - elTop) / winHeight * 1.5;
-                if (index > 0 && index < 1) {
-                    const newWidth = widthTo + widthDiff * index;
-                    // pattern.css({width: newWidth + 'px'});
-                    TweenLite.to(pattern, 0.5, {
-                        width: newWidth
-                    });
-                }
-            })
-        };
-
-        scrollPatterns();
-        window.addEventListener('scroll', scrollPatterns);
-    }
-};
-
-window.addEventListener('DOMContentLoaded', initPatterns);

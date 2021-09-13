@@ -49,31 +49,3 @@
         }
     }
 }
-
-
-.bg-pattern-2 {
-    &:after {
-        right: 0;
-        transform: rotate(90deg);
-        transform-origin: top left;
-
-        @include media-down(md) {
-            right: -20px;
-        }
-    }
-}
-
-.bg-pattern-3 {
-    &:after {
-        left: 20px;
-        bottom: -40px;
-        right: auto;
-        top: auto;
-        transform: rotate(-90deg) translateY(100%);
-        transform-origin: bottom left;
-
-        @include media-down(xs) {
-            left: 0;
-        }
-    }
-}

@@ -1,4 +1,8 @@
-<?php get_header(); ?>
+<?php /* Главная */
+get_header();
+$options = get_field('contacts', 'options');
+?>
+
 <section class="home_slider">
     <?php if (have_rows('main_slider')): ?>
         <div class="page_lines">
@@ -160,6 +164,11 @@
             </ul>
         </div>
     <?php endif; ?>
+    <div class="contacts">
+        <a href="mailto:<?php echo $options['email']; ?>">
+            <?php echo $options['email']; ?>
+        </a>
+    </div>
 </section>
 <section class="intes_studio_area bg-pattern-section">
     <div class="container bg-pattern">
@@ -176,9 +185,9 @@
                         if ($years): ?>
                             <div class="years_text">
                                 <div class="years_text_inner">
-                                    <h1><?php echo $years['about_year_1']; ?></h1>
-                                    <h2><?php echo $years['about_year_2']; ?></h2>
-                                    <h4><?php echo $years['about_year_3']; ?></h4>
+                                    <h1 data-aos="fade-up" data-aos-delay="100"><?php echo $years['about_year_1']; ?></h1>
+                                    <h2 data-aos="fade-up" data-aos-delay="200"><?php echo $years['about_year_2']; ?></h2>
+                                    <h4 data-aos="fade-up" data-aos-delay="300"><?php echo $years['about_year_3']; ?></h4>
                                 </div>
                                 <div class="diamond" data-aos>
                                     <svg viewBox="0 0 234 228" fill="none" xmlns="http://www.w3.org/2000/svg">

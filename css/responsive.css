@@ -44,9 +44,6 @@
 	.home_slider .year {
 		display: none;
 	}
-	.home_slider .social_icon {
-		display: none;
-	}
 }
 @media(max-width: 1199px){
 	.home_slider .rev_slider ul li .line_1, .home_slider .rev_slider ul li .line_2, .home_slider .rev_slider ul li .line_3, .home_slider .rev_slider ul li .line_4{
