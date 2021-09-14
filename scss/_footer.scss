@@ -58,28 +58,21 @@
 }
 .f_contact{
 	max-width: 270px;
+    font-size: 14px;
+    line-height: 24px;
+    color: $pfont;
+    font-weight: normal;
+    margin-bottom: 15px;
 	a{
         font-family: $bebas;
 		display: block;
 		font-size: 16px;
 		line-height: 1.2;
 		font-weight: normal;
-		margin-bottom: 15px;
         @include transition;
         &:not(:hover) {
 		    color: $pfont;
         }
-
-		&:last-child{
-			margin-bottom: 0px;
-		}
-	}
-	p{
-		font-size: 14px;
-		line-height: 24px;
-		color: $pfont;
-		font-weight: normal;
-		margin-bottom: 15px;
 	}
 }
 .f_link{

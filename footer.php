@@ -12,8 +12,17 @@
                     <h3>Контакты</h3>
                 </div>
                 <?php echo $options['address']; ?>
-                <!--<a href="mailto:<?php /*echo $options['email']; */ ?>"><?php /*echo $options['email']; */ ?></a>
-                <a href="tel:<?php /*echo $options['phone']; */ ?>"><?php /*echo $options['phone']; */ ?></a>-->
+                <br>
+                <a href="mailto:<?php echo $options['email']; ?>">
+                    <?php echo $options['email']; ?>
+                </a>
+                <a href="tel:<?php echo $options['phone']; ?>">
+                    <?php echo $options['phone']; ?>
+                </a>
+                <br>
+                Время работы:
+                <p><?php echo $options['work_time']; ?></p>
+                <p><?php echo $options['work_days']; ?></p>
             </div>
         </aside>
         <?php wp_nav_menu([

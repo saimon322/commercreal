@@ -152,7 +152,7 @@ $options = get_field('contacts', 'options');
     <?php endif; ?>
     <?php $options = get_field('contacts', 'options'); ?>
     <?php if ($options['socials']): ?>
-        <div class="social_icon">
+        <div class="socials">
             <ul class="list">
                 <?php foreach ($options['socials'] as $social): ?>
                     <li>
@@ -170,8 +170,11 @@ $options = get_field('contacts', 'options');
         </a>
     </div>
 </section>
-<section class="intes_studio_area bg-pattern-section">
-    <div class="container bg-pattern">
+<section class="intes_studio_area pattern-section">
+    <div class="container">
+        <?php get_template_part('template-parts/animation/pattern', null, array(
+            'type' => ' pattern--vertical'
+        )); ?>
         <div class="since_text">
             <h5><?php the_field('about_desc'); ?></h5>
         </div>
@@ -179,53 +182,21 @@ $options = get_field('contacts', 'options');
             <?php $img = get_field('about_img');
             if ($img): ?>
                 <div class="col-lg-7">
-                    <div class="studio_img">
-                        <img src="<?php echo $img; ?>" alt="">
-                        <?php $years = get_field('about_years');
-                        if ($years): ?>
-                            <div class="years_text">
-                                <div class="years_text_inner">
-                                    <h1 data-aos="fade-up" data-aos-delay="100"><?php echo $years['about_year_1']; ?></h1>
-                                    <h2 data-aos="fade-up" data-aos-delay="200"><?php echo $years['about_year_2']; ?></h2>
-                                    <h4 data-aos="fade-up" data-aos-delay="300"><?php echo $years['about_year_3']; ?></h4>
+                    <div class="studio_img_wrapper">
+                        <div class="studio_img">
+                            <img src="<?php echo $img; ?>" alt="">
+                            <?php $years = get_field('about_years');
+                            if ($years): ?>
+                                <div class="years_text">
+                                    <div class="years_text_inner">
+                                        <h1 data-aos="fade-up" data-aos-delay="200"><?php echo $years['about_year_1']; ?></h1>
+                                        <h2 data-aos="fade-up" data-aos-delay="300"><?php echo $years['about_year_2']; ?></h2>
+                                        <h4 data-aos="fade-up" data-aos-delay="400"><?php echo $years['about_year_3']; ?></h4>
+                                    </div>
+                                    <?php get_template_part('template-parts/animation/diamond', null, array()); ?>
                                 </div>
-                                <div class="diamond" data-aos>
-                                    <svg viewBox="0 0 234 228" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <line x1="113" y1="0.5" x2="119" y2="0.5" stroke="#F1D299"/>
-                                        <line x1="106" y1="7.5" x2="127" y2="7.5" stroke="#F1D299"/>
-                                        <line x1="98" y1="15.5" x2="134" y2="15.5" stroke="#F1D299"/>
-                                        <line x1="90" y1="22.5" x2="142" y2="22.5" stroke="#F1D299"/>
-                                        <line x1="83" y1="30.5" x2="150" y2="30.5" stroke="#F1D299"/>
-                                        <line x1="75" y1="38.5" x2="158" y2="38.5" stroke="#F1D299"/>
-                                        <line x1="68" y1="45.5" x2="165" y2="45.5" stroke="#F1D299"/>
-                                        <line x1="60" y1="53.5" x2="172" y2="53.5" stroke="#F1D299"/>
-                                        <line x1="53" y1="61.5" x2="180" y2="61.5" stroke="#F1D299"/>
-                                        <line x1="44" y1="69.5" x2="188" y2="69.5" stroke="#F1D299"/>
-                                        <line x1="37" y1="76.5" x2="195" y2="76.5" stroke="#F1D299"/>
-                                        <line x1="30" y1="84.5" x2="203" y2="84.5" stroke="#F1D299"/>
-                                        <line x1="24" y1="91.5" x2="210" y2="91.5" stroke="#F1D299"/>
-                                        <line x1="15" y1="98.5" x2="218" y2="98.5" stroke="#F1D299"/>
-                                        <line x1="7" y1="106.5" x2="226" y2="106.5" stroke="#F1D299"/>
-                                        <line x1="0" y1="113.5" x2="234" y2="113.5" stroke="#F1D299"/>
-                                        <line x1="4" y1="120.5" x2="230" y2="120.5" stroke="#F1D299"/>
-                                        <line x1="12" y1="128.5" x2="222" y2="129.905" stroke="#F1D299"/>
-                                        <line x1="21" y1="135.5" x2="212" y2="135.5" stroke="#F1D299"/>
-                                        <line x1="28" y1="142.5" x2="206" y2="142.5" stroke="#F1D299"/>
-                                        <line x1="35" y1="150.5" x2="198" y2="150.5" stroke="#F1D299"/>
-                                        <line x1="42" y1="157.5" x2="191" y2="157.5" stroke="#F1D299"/>
-                                        <line x1="51" y1="165.5" x2="183" y2="165.5" stroke="#F1D299"/>
-                                        <line x1="59" y1="173.5" x2="174" y2="173.5" stroke="#F1D299"/>
-                                        <line x1="67" y1="182.5" x2="167" y2="182.5" stroke="#F1D299"/>
-                                        <line x1="74" y1="189.5" x2="160" y2="189.5" stroke="#F1D299"/>
-                                        <line x1="82" y1="197.5" x2="152" y2="197.5" stroke="#F1D299"/>
-                                        <line x1="90" y1="205.5" x2="143" y2="205.5" stroke="#F1D299"/>
-                                        <line x1="98" y1="212.5" x2="135" y2="212.5" stroke="#F1D299"/>
-                                        <line x1="106" y1="220.5" x2="128" y2="220.5" stroke="#F1D299"/>
-                                        <line x1="113" y1="227.5" x2="120" y2="227.5" stroke="#F1D299"/>
-                                    </svg>
-                                </div>
-                            </div>
-                        <?php endif; ?>
+                            <?php endif; ?>
+                        </div>
                     </div>
                 </div>
             <?php endif; ?>

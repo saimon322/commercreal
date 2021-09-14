@@ -275,13 +275,22 @@
         padding: 50px 0 70px;
     }
 
+    &__wrapper {
+        overflow: hidden;
+        padding: 15px 0;
+
+        & > div {
+            padding: 0;
+        }
+    }
+
     &__img {
         height: 100%;
         
         .diamond {
             right: 0;
             top: 50%;
-            transform: translate(40%, -50%);
+            transform: translate(50%, -50%);
 
             @include media-down(md) {
                 width: 200px;
@@ -340,20 +349,94 @@
     }
 
     .s_content--text {
+        width: 280px;
         margin-bottom: 100px;
 
         @include media-down(sm) {
+            width: 100%;
             margin-bottom: 50px;
         }
     }
 
-    svg {
-        @media (min-width: 768px) {
-            height: 700px;
-            width: auto;            
+    .pattern {
+        top: 0;
+
+        @include media-down(sm) {
+            top: 30px;
         }
-        @media (min-width: 1200px) {
-            height: 900px;
+    }
+}
+
+.about-map {
+    position: relative;
+    z-index: -10;
+    left: -100px;
+    width: 1280px;
+
+    @include media-down(md) {
+        width: 900px;
+    }
+
+    @include media-down(sm) {
+        width: 700px;
+        overflow: hidden;
+    }
+
+    &__bg {
+        width: 100%;
+    }
+
+    &__point {
+        position: absolute;
+        text-align: center;
+        transform: translateY(-700%);
+        transition: transform 0.8s cubic-bezier(0.32, 0, 0.67, 0);
+
+        @include media-down(sm) {
+            margin-left: -10px;
         }
+
+        p {
+            margin-bottom: 5px;
+            color: #FFFFFF;
+            font-weight: 500;
+            font-size: 18px;
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.8);
+
+            @include media-down(md) {
+                font-size: 13px;
+            }
+        }
+
+        img {
+            width: 30px;
+
+            @include media-down(md) {
+                width: 20px;
+            }
+        }
+    }   
+
+    &.aos-animate .about-map__point {
+        animation: easeOutBounce 0.8s forwards;
+    }
+
+    @keyframes easeOutBounce {
+        0% {
+            transform: translateY(-700%);
+        }
+    
+        60% {
+            transform: translateY(-100%);
+        }
+    
+        80% {
+            transform: translateY(-120%);
+        }
+    
+        100% {
+            transform: translateY(-100%);
+        }
+    
     }
 }

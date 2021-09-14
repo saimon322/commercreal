@@ -604,49 +604,57 @@
         mirror: true,
     });
     
-    let linesCount = $('.diamond line').length;
-    $('.diamond line').each(function() {
-        let index = $(this).index();
-        let delay = index * 0.03;
-        if (index * 2 > linesCount) {
-            delay = (index - 10) * 0.08;
-        }
-        $(this).css({'animation-delay': delay + 's'});
-    })
-
-
-// Patterns animation
-    const initPatterns = () => {
-        const patterns = $('.pattern');
-
-        if (patterns) {
-            const widthTo = patterns.eq(0).width();
-            patterns.css({width: '100%'});
-            const widthFrom = patterns.eq(0).width();
-            const widthDiff = widthFrom - widthTo;
-            const scrollPatterns = () => {
-                const scrollTop = window.pageYOffset;
-                const winHeight = window.innerHeight;
-                patterns.each(function(){
-                    const pattern = $(this);
-                    const elTop = pattern.offset().top;
-                    const index = 1 - (scrollTop + winHeight - elTop) / winHeight * 1.5;
-                    if (index > 0 && index < 1) {
-                        const newWidth = widthTo + widthDiff * index;
-                        // pattern.css({width: newWidth + 'px'});
-                        TweenLite.to(pattern, 0.5, {
-                            width: newWidth
-                        });
-                    }
-                })
-            };
-
-            scrollPatterns();
-            window.addEventListener('scroll', scrollPatterns);
-        }
-    };
+    // Diamond lines animation
+    const diamond = $('.diamond');
+    if (diamond) {
+        const lines = $('.diamond svg').length;
+        $('.diamond svg').each(function() {
+            let index = $(this).index();
+            let delay = 0.3 + Math.abs(index - lines / 2) * 0.05;
+            $(this).css({'transition-delay': delay + 's'});
+        })
+    }
     
-    initPatterns();
+    // Map points animation
+    const map = $('.about-map');
+    if (map) {
+        $('.about-map__point').each(function() {
+            let index = $(this).index();
+            let delay = 0.5 + index * 0.2;
+            $(this).css({'animation-delay': delay + 's'});
+        })
+    }
+
+
+    // Patterns animation
+    const patterns = $('.pattern');
+    if (patterns) {
+        const widthTo = patterns.eq(0).width();
+        patterns.css({width: '100%'});
+        const widthFrom = patterns.eq(0).width();
+        const widthDiff = widthFrom - widthTo;
+        const scrollPatterns = function(start){
+            const scrollTop = window.pageYOffset;
+            const winHeight = window.innerHeight;
+            patterns.each(function(){
+                const pattern = $(this);
+                const elTop = pattern.offset().top;
+                const index = 1 - (scrollTop + winHeight - elTop) / winHeight * 1.1;
+                if (index > 0 && index < 1) {
+                    const newWidth = widthTo + widthDiff * index;
+                    TweenLite.to(pattern, 0.5, {
+                        width: newWidth
+                    });
+                }
+                if (start == 'init' && index < 0) {
+                    patterns.css({width: widthTo});
+                }
+            })
+        };
+
+        scrollPatterns('init');
+        window.addEventListener('scroll', scrollPatterns);
+    }
 
 })(jQuery)
 

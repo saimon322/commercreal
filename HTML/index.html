@@ -70,13 +70,15 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="nav navbar-nav">
-                        <li><a href="/">Главная</a></li>
-                        <li class="menu-item">
-                            <a href="" class="active">Услуги</a>
-                            <div class="sub-menu">
-                                <div class="sub-menu-list">
-                                    <div class="sub-menu-item">
-                                        <h5>DEVELOPER</h5>
+                        <li><a href="/" class="active">Главная</a></li>
+                        <li class="mega-menu-item">
+                            <a href="#">Услуги</a>
+                            <div class="mega-menu">
+                                <div class="mega-menu__list">
+                                    <div class="mega-menu__item">
+                                        <a href="#">
+                                            <h5>DEVELOPER</h5>
+                                        </a>
                                         <ul>
                                             <li>- Разработка коммерческой концепции</li>
                                             <li>- Brokerage</li>
@@ -84,16 +86,20 @@
                                             <li>- Финансовое управление</li>
                                         </ul>
                                     </div>
-                                    <div class="sub-menu-item">
-                                        <h5>СОБСТВЕННИК</h5>
+                                    <div class="mega-menu__item">
+                                        <a href="#">
+                                            <h5>СОБСТВЕННИК</h5>
+                                        </a>
                                         <ul>
                                             <li>- Создание успешного ТРЦ</li>
                                             <li>- Разработка концепции МФК</li>
                                             <li>- Повышение эффективности действующего ТРЦ</li>
                                         </ul>
                                     </div>
-                                    <div class="sub-menu-item">
-                                        <h5>АРЕНДАТОР</h5>
+                                    <div class="mega-menu__item">
+                                        <a href="#">
+                                            <h5>АРЕНДАТОР</h5>
+                                        </a>
                                         <ul>
                                             <li>- Разработка стратегии развития</li>
                                             <li>- Подбор площадок для развития сети</li>
@@ -102,30 +108,40 @@
                                         </ul>
                                     </div>
                                 </div>
-                                <div class="sub-menu-list">
-                                    <a href="#" class="sub-menu-project">
+                                <div class="mega-menu__list">
+                                    <a href="#" class="mega-menu__project">
                                         <h5>Brokerage на выгодных условиях</h5>
                                         <img src="../img/menu-1.jpg" alt="">
                                     </a>
-                                    <a href="#" class="sub-menu-project">
+                                    <a href="#" class="mega-menu__project">
                                         <h5>Развивающийся ТРЦ<br> без ваших усилий</h5>
                                         <img src="../img/menu-2.jpg" alt="">
                                     </a>
-                                    <a href="#" class="sub-menu-project">
+                                    <a href="#" class="mega-menu__project">
                                         <h5>Уникальные условия сотрудничества</h5>
                                         <img src="../img/menu-3.jpg" alt="">
                                     </a>
                                 </div>
-                                <a href="#" class="btn sub-menu-btn">Полный список услуг</a>
+                                <a href="#" class="btn mega-menu__btn">Полный список услуг</a>
                             </div>
                         </li>
                         <li><a href="about-us.html">О нас</a></li>
                         <li><a href="">Проекты</a></li>
+                        <li>
+                            <a href="#">Новости</a>
+                            <ul class="sub-menu">
+                                <li><a href="#">Все новости</a></li>
+                                <li><a href="#">Developer</a></li>
+                                <li><a href="#">Аренда</a></li>
+                                <li><a href="#">Продажа</a></li>
+                                <li><a href="#">Собственник</a></li>
+                            </ul>
+                        </li>
                         <li><a href="contact.html">Контакты</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li class="active"><a href="#">Eng</a></li>
-                        <li><a href="#">Fra</a></li>
+                        <li><a href="#">Ru</a></li>
                     </ul>
                 </div>
             </nav>
@@ -150,8 +166,7 @@
             <span class="close-menu lnr lnr-cross right-boxed"></span>
             <div class="menu-lang right-boxed">
                 <a href="" class="active">Eng</a>
-                <a href="">Fra</a>
-                <a href="">ger</a>
+                <a href="">Ru</a>
             </div>
             <ul class="menu-list right-boxed">
                 <li class="active"><a href="index.html">Главная</a></li>
@@ -165,6 +180,16 @@
                 </li>
                 <li><a href="about-us.html">О нас</a></li>
                 <li><a href="index.html">Проекты</a></li>
+                <li>
+                    <a href="index.html">Новости <i class="ion-chevron-down"></i></a>
+                    <ul class="list">
+                        <li><a href="#">Все новости</a></li>
+                        <li><a href="#">Developer</a></li>
+                        <li><a href="#">Аренда</a></li>
+                        <li><a href="#">Продажа</a></li>
+                        <li><a href="#">Собственник</a></li>
+                    </ul>
+                </li>
                 <li><a href="contact.html">Контакты</a></li>
             </ul>
             <div class="menu-footer right-boxed">
@@ -414,53 +439,66 @@
             </div>
         </section>
 
-        <section class="intes_studio_area bg-pattern-section">
-            <div class="container bg-pattern"><div class="since_text"><h5>Сайт филиала компании Commerc Real в г.Калининград</h5>
+        <section class="intes_studio_area pattern-section">
+            <div class="container">
+                <div class="pattern pattern--vertical">
+                    <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M18.1018 10.0566L10.0566 2.01131L2.01132 10.0566L10.0566 18.1018L18.1018 10.0566ZM10.0566 0L9.59009e-06 10.0566L10.0566 20.1131L20.1131 10.0566L10.0566 0Z" fill="#F1D299"/></svg>
+                    <svg width="38" height="12" viewBox="0 0 38 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M28.0488 9.23619L36.0989 1.18602L37.1046 2.19168L28.0882 11.2081L18.8241 2.6566L9.55998 11.2081L0.543584 2.19168L1.54924 1.18602L9.59941 9.23619L18.8241 0.7211L28.0488 9.23619Z" fill="#F1D299"/></svg>
+                    <svg width="30" height="3" viewBox="0 0 30 3" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M0.55725 0.955502L29.0015 0.955502V2.37772L0.55725 2.37772V0.955502Z" fill="#F1D299"/></svg>
+                    <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M18.1018 10.0566L10.0566 2.01131L2.01132 10.0566L10.0566 18.1018L18.1018 10.0566ZM10.0566 0L9.59009e-06 10.0566L10.0566 20.1131L20.1131 10.0566L10.0566 0Z" fill="#F1D299"/></svg>
+                    <svg width="38" height="12" viewBox="0 0 38 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M28.0488 9.23619L36.0989 1.18602L37.1046 2.19168L28.0882 11.2081L18.8241 2.6566L9.55998 11.2081L0.543584 2.19168L1.54924 1.18602L9.59941 9.23619L18.8241 0.7211L28.0488 9.23619Z" fill="#F1D299"/></svg>
+                    <svg width="30" height="3" viewBox="0 0 30 3" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M0.55725 0.955502L29.0015 0.955502V2.37772L0.55725 2.37772V0.955502Z" fill="#F1D299"/></svg>
+                    <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M18.1018 10.0566L10.0566 2.01131L2.01132 10.0566L10.0566 18.1018L18.1018 10.0566ZM10.0566 0L9.59009e-06 10.0566L10.0566 20.1131L20.1131 10.0566L10.0566 0Z" fill="#F1D299"/></svg>
+                    <svg width="38" height="12" viewBox="0 0 38 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M28.0488 9.23619L36.0989 1.18602L37.1046 2.19168L28.0882 11.2081L18.8241 2.6566L9.55998 11.2081L0.543584 2.19168L1.54924 1.18602L9.59941 9.23619L18.8241 0.7211L28.0488 9.23619Z" fill="#F1D299"/></svg>
+                    <svg width="30" height="3" viewBox="0 0 30 3" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M0.55725 0.955502L29.0015 0.955502V2.37772L0.55725 2.37772V0.955502Z" fill="#F1D299"/></svg>
+                </div>
+                <div class="since_text">
+                    <h5>Сайт филиала компании Commerc Real в г.Калининград</h5>
                 </div>
                 <div class="row">
                     <div class="col-lg-7">
-                        <div class="studio_img">
-                            <img src="../img/studio-1.jpg" alt="">
-                            <div class="years_text">
-                                <div class="years_text_inner">
-                                    <h1 data-aos="fade-up" data-aos-delay="100">12</h1>
-                                    <h2 data-aos="fade-up" data-aos-delay="200">лет</h2>
-                                    <h4 data-aos="fade-up" data-aos-delay="300">работы</h4>
-                                </div>
-                                <div class="diamond" data-aos>
-                                    <svg viewBox="0 0 234 228" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <line x1="113" y1="0.5" x2="119" y2="0.5" stroke="#F1D299"/>
-                                        <line x1="106" y1="7.5" x2="127" y2="7.5" stroke="#F1D299"/>
-                                        <line x1="98" y1="15.5" x2="134" y2="15.5" stroke="#F1D299"/>
-                                        <line x1="90" y1="22.5" x2="142" y2="22.5" stroke="#F1D299"/>
-                                        <line x1="83" y1="30.5" x2="150" y2="30.5" stroke="#F1D299"/>
-                                        <line x1="75" y1="38.5" x2="158" y2="38.5" stroke="#F1D299"/>
-                                        <line x1="68" y1="45.5" x2="165" y2="45.5" stroke="#F1D299"/>
-                                        <line x1="60" y1="53.5" x2="172" y2="53.5" stroke="#F1D299"/>
-                                        <line x1="53" y1="61.5" x2="180" y2="61.5" stroke="#F1D299"/>
-                                        <line x1="44" y1="69.5" x2="188" y2="69.5" stroke="#F1D299"/>
-                                        <line x1="37" y1="76.5" x2="195" y2="76.5" stroke="#F1D299"/>
-                                        <line x1="30" y1="84.5" x2="203" y2="84.5" stroke="#F1D299"/>
-                                        <line x1="24" y1="91.5" x2="210" y2="91.5" stroke="#F1D299"/>
-                                        <line x1="15" y1="98.5" x2="218" y2="98.5" stroke="#F1D299"/>
-                                        <line x1="7" y1="106.5" x2="226" y2="106.5" stroke="#F1D299"/>
-                                        <line x1="0" y1="113.5" x2="234" y2="113.5" stroke="#F1D299"/>
-                                        <line x1="4" y1="120.5" x2="230" y2="120.5" stroke="#F1D299"/>
-                                        <line x1="12" y1="128.5" x2="222" y2="129.905" stroke="#F1D299"/>
-                                        <line x1="21" y1="135.5" x2="212" y2="135.5" stroke="#F1D299"/>
-                                        <line x1="28" y1="142.5" x2="206" y2="142.5" stroke="#F1D299"/>
-                                        <line x1="35" y1="150.5" x2="198" y2="150.5" stroke="#F1D299"/>
-                                        <line x1="42" y1="157.5" x2="191" y2="157.5" stroke="#F1D299"/>
-                                        <line x1="51" y1="165.5" x2="183" y2="165.5" stroke="#F1D299"/>
-                                        <line x1="59" y1="173.5" x2="174" y2="173.5" stroke="#F1D299"/>
-                                        <line x1="67" y1="182.5" x2="167" y2="182.5" stroke="#F1D299"/>
-                                        <line x1="74" y1="189.5" x2="160" y2="189.5" stroke="#F1D299"/>
-                                        <line x1="82" y1="197.5" x2="152" y2="197.5" stroke="#F1D299"/>
-                                        <line x1="90" y1="205.5" x2="143" y2="205.5" stroke="#F1D299"/>
-                                        <line x1="98" y1="212.5" x2="135" y2="212.5" stroke="#F1D299"/>
-                                        <line x1="106" y1="220.5" x2="128" y2="220.5" stroke="#F1D299"/>
-                                        <line x1="113" y1="227.5" x2="120" y2="227.5" stroke="#F1D299"/>
-                                    </svg>
+                        <div class="studio_img_wrapper">
+                            <div class="studio_img">
+                                <img src="../img/studio-1.jpg" alt="">
+                                <div class="years_text">
+                                    <div class="years_text_inner">
+                                        <h1 data-aos="fade-up" data-aos-delay="200">12</h1>
+                                        <h2 data-aos="fade-up" data-aos-delay="300">лет</h2>
+                                        <h4 data-aos="fade-up" data-aos-delay="400">работы</h4>
+                                    </div>
+                                    <div class="diamond" data-aos>
+                                        <svg viewBox="0 0 234 1" xmlns="http://www.w3.org/2000/svg"><line x1="113" y1="0" x2="119" y2="0" stroke="#F1D299"/></svg>
+                                        <svg viewBox="0 0 234 1" xmlns="http://www.w3.org/2000/svg"><line x1="106" y1="0" x2="127" y2="0" stroke="#F1D299"/></svg>
+                                        <svg viewBox="0 0 234 1" xmlns="http://www.w3.org/2000/svg"><line x1="98" y1="0" x2="134" y2="0" stroke="#F1D299"/></svg>
+                                        <svg viewBox="0 0 234 1" xmlns="http://www.w3.org/2000/svg"><line x1="90" y1="0" x2="142" y2="0" stroke="#F1D299"/></svg>
+                                        <svg viewBox="0 0 234 1" xmlns="http://www.w3.org/2000/svg"><line x1="83" y1="0" x2="150" y2="0" stroke="#F1D299"/></svg>
+                                        <svg viewBox="0 0 234 1" xmlns="http://www.w3.org/2000/svg"><line x1="75" y1="0" x2="158" y2="0" stroke="#F1D299"/></svg>
+                                        <svg viewBox="0 0 234 1" xmlns="http://www.w3.org/2000/svg"><line x1="68" y1="0" x2="165" y2="0" stroke="#F1D299"/></svg>
+                                        <svg viewBox="0 0 234 1" xmlns="http://www.w3.org/2000/svg"><line x1="60" y1="0" x2="172" y2="0" stroke="#F1D299"/></svg>
+                                        <svg viewBox="0 0 234 1" xmlns="http://www.w3.org/2000/svg"><line x1="53" y1="0" x2="180" y2="0" stroke="#F1D299"/></svg>
+                                        <svg viewBox="0 0 234 1" xmlns="http://www.w3.org/2000/svg"><line x1="44" y1="0" x2="188" y2="0" stroke="#F1D299"/></svg>
+                                        <svg viewBox="0 0 234 1" xmlns="http://www.w3.org/2000/svg"><line x1="37" y1="0" x2="195" y2="0" stroke="#F1D299"/></svg>
+                                        <svg viewBox="0 0 234 1" xmlns="http://www.w3.org/2000/svg"><line x1="30" y1="0" x2="203" y2="0" stroke="#F1D299"/></svg>
+                                        <svg viewBox="0 0 234 1" xmlns="http://www.w3.org/2000/svg"><line x1="24" y1="0" x2="210" y2="0" stroke="#F1D299"/></svg>
+                                        <svg viewBox="0 0 234 1" xmlns="http://www.w3.org/2000/svg"><line x1="15" y1="0" x2="218" y2="0" stroke="#F1D299"/></svg>
+                                        <svg viewBox="0 0 234 1" xmlns="http://www.w3.org/2000/svg"><line x1="7" y1="0" x2="226" y2="0" stroke="#F1D299"/></svg>
+                                        <svg viewBox="0 0 234 1" xmlns="http://www.w3.org/2000/svg"><line x1="0" y1="0" x2="234" y2="0" stroke="#F1D299"/></svg>
+                                        <svg viewBox="0 0 234 1" xmlns="http://www.w3.org/2000/svg"><line x1="4" y1="0" x2="230" y2="0" stroke="#F1D299"/></svg>
+                                        <svg viewBox="0 0 234 1" xmlns="http://www.w3.org/2000/svg"><line x1="12" y1="0" x2="222" y2="0" stroke="#F1D299"/></svg>
+                                        <svg viewBox="0 0 234 1" xmlns="http://www.w3.org/2000/svg"><line x1="21" y1="0" x2="212" y2="0" stroke="#F1D299"/></svg>
+                                        <svg viewBox="0 0 234 1" xmlns="http://www.w3.org/2000/svg"><line x1="28" y1="0" x2="206" y2="0" stroke="#F1D299"/></svg>
+                                        <svg viewBox="0 0 234 1" xmlns="http://www.w3.org/2000/svg"><line x1="35" y1="0" x2="198" y2="0" stroke="#F1D299"/></svg>
+                                        <svg viewBox="0 0 234 1" xmlns="http://www.w3.org/2000/svg"><line x1="42" y1="0" x2="191" y2="0" stroke="#F1D299"/></svg>
+                                        <svg viewBox="0 0 234 1" xmlns="http://www.w3.org/2000/svg"><line x1="51" y1="0" x2="183" y2="0" stroke="#F1D299"/></svg>
+                                        <svg viewBox="0 0 234 1" xmlns="http://www.w3.org/2000/svg"><line x1="59" y1="0" x2="174" y2="0" stroke="#F1D299"/></svg>
+                                        <svg viewBox="0 0 234 1" xmlns="http://www.w3.org/2000/svg"><line x1="67" y1="0" x2="167" y2="0" stroke="#F1D299"/></svg>
+                                        <svg viewBox="0 0 234 1" xmlns="http://www.w3.org/2000/svg"><line x1="74" y1="0" x2="160" y2="0" stroke="#F1D299"/></svg>
+                                        <svg viewBox="0 0 234 1" xmlns="http://www.w3.org/2000/svg"><line x1="82" y1="0" x2="152" y2="0" stroke="#F1D299"/></svg>
+                                        <svg viewBox="0 0 234 1" xmlns="http://www.w3.org/2000/svg"><line x1="90" y1="0" x2="143" y2="0" stroke="#F1D299"/></svg>
+                                        <svg viewBox="0 0 234 1" xmlns="http://www.w3.org/2000/svg"><line x1="98" y1="0" x2="135" y2="0" stroke="#F1D299"/></svg>
+                                        <svg viewBox="0 0 234 1" xmlns="http://www.w3.org/2000/svg"><line x1="106" y1="0" x2="128" y2="0" stroke="#F1D299"/></svg>
+                                        <svg viewBox="0 0 234 1" xmlns="http://www.w3.org/2000/svg"><line x1="113" y1="0" x2="120" y2="0" stroke="#F1D299"/></svg>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -920,7 +958,7 @@
                 <div class="right_text">
                     <ul class="list">
                         <li class="active"><a href="#">Eng</a></li>
-                        <li><a href="#">Fra</a></li>
+                        <li><a href="#">Ru</a></li>
                     </ul>
                 </div>
             </div>
@@ -968,7 +1006,7 @@
     <script src="../vendors/animsition/js/animsition.min.js"></script>
     <script src="../vendors/aos/aos.js"></script>
     <script src="../vendors/gsap/TweenMax.min.js"></script>
-    <script src="../js/smoothscroll.js"></script>
+    <!-- <script src="../js/smoothscroll.js"></script> -->
     <!-- Scroll plugin js -->
 
     <script src="../js/theme.js"></script>
