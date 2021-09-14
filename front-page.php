@@ -286,10 +286,9 @@ $options = get_field('contacts', 'options');
         </div>
     </div>
 </section>
-
 <?php get_template_part('template-parts/sections/section', 'latest-projects'); ?>
 <?php get_template_part('template-parts/sections/section', 'form-2'); ?>
-
+<?php get_template_part('template-parts/sections/section', 'blog'); ?>
 <?php get_template_part('template-parts/sections/section', 'clients'); ?>
 <div class="page_lines">
     <div class="container">

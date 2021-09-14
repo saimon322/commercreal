@@ -259,8 +259,7 @@
             transform: translate(50%, -50%);
 
             @include media-down(md) {
-                width: 200px;
-                height: 200px;
+                right: 90px;
             }
 
             @include media-down(sm) {
@@ -300,6 +299,7 @@
     }
 
     &__content {
+        height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -314,12 +314,12 @@
     }
 
     &__icon {
-        width: 90px;
-        margin: 50px auto;
+        width: 160px;
+        margin: 30px auto;
 
         @include media-down(sm) {
-            width: 50px;
-            margin: 30px auto;
+            width: 120px;
+            margin: 20px auto;
         }
 
         img {

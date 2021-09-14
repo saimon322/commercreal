@@ -197,7 +197,7 @@ if ($main_video): ?>
                     Мы расскажем все о наших лучших проектах, принципах работы, и плюсах работы с нами.
                 </p>
                 <div class="presentation__icon">
-                    <img src="<?= get_template_directory_uri(); ?>/img/icon/presentation.png">
+                    <img src="<?= get_template_directory_uri(); ?>/img/icon/presentation.svg">
                 </div>
                 <button class="btn btn" download>Скачать PDF</button>
             </div>
@@ -214,5 +214,7 @@ if ($main_video): ?>
 </section>
 
 <?php get_template_part('template-parts/sections/section', 'clients'); ?>
+
+<?php get_template_part('template-parts/sections/section', 'blog'); ?>
 
 <?php get_footer(); ?>

@@ -43,6 +43,7 @@
                 <span></span>
                 <span></span>
             </button>
+            
             <?php wp_nav_menu([
                 'theme_location'  => 'top-menu',
                 'menu'            => '',
@@ -54,6 +55,7 @@
                 'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
                 'walker'          => new Header_Walker_Nav_Menu(),
             ]); ?>
+            
         </nav>
     </header>
     <header class="full_header dark_menu mobile_menu">

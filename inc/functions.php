@@ -46,14 +46,16 @@ function flexible_content_layout_title($title, $field, $layout, $i)
     return $title;
 }
 
-function tcb_pre_get_posts( $query ) {
-    if ( ! is_tax() )
-       return;
-
-       $query->set( 'posts_per_page', -1 );
+function tcb_pre_get_posts($query)
+{
+    if ( ! is_tax()) {
+        return;
+    }
+    
+    $query->set('posts_per_page', -1);
 }
 
-add_action( 'pre_get_posts', 'tcb_pre_get_posts', 1 );
+add_action('pre_get_posts', 'tcb_pre_get_posts', 1);
 
 function send_mail()
 {
@@ -96,3 +98,39 @@ function send_mail()
 
 add_action('wp_ajax_send_mail', 'send_mail');
 add_action('wp_ajax_nopriv_send_mail', 'send_mail');
+
+
+function init_services_menu()
+{
+    if (function_exists('acf_add_options_sub_page')) {
+        acf_add_options_sub_page(array(
+            'page_title'  => __('Подменю услуг'),
+            'menu_title'  => __('Подменю услуг'),
+            'parent_slug' => 'themes.php',
+        ));
+    }
+}
+
+add_action('acf/init', 'init_services_menu');
+
+
+function get_post_primary_category($post_id = null)
+{
+    $post_id = is_null($post_id) ? get_the_ID() : $post_id; 
+    $primary_term_id = yoast_get_primary_term_id('category', $post_id);
+    
+    if ($primary_term_id) {
+        return get_term($primary_term_id);
+    }
+    
+    return null;
+}
+
+function get_post_primary_category_name()
+{
+    if ($cat = get_post_primary_category()) {
+        return $cat->name;
+    }
+    
+    return null;
+}

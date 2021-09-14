@@ -34,8 +34,6 @@
     width: 100%;
 }
 
-.comment_form {}
-
 .contacts-hr {
     border-color: #525252;
     margin-top: 7rem;
@@ -70,25 +68,31 @@
 ul.custom-ul {
     text-align: left;
     color: #fff;
-    padding-left: 15px;
-}
+    padding: 0;
 
-ul.custom-ul li {
-    padding: 5px 0;
-    list-style: none;
-    font-size: 16px;
-}
+    li {
+        position: relative;
+        padding: 7px 0 7px 30px;
+        list-style: none;
+        font-size: 16px;
 
-ul.custom-ul li:before {
-    content: '';
-    position: relative;
-    top: 5px;
-    right: 10px;
-    display: inline-block;
-    height: 20px;
-    width: 20px;
-    background-image: url(/wp-content/themes/commerc-real/scss/../img/icon/list-style.svg);
-    background-size: 20px 20px;
+        &:before {
+            content: '';
+            position: absolute;
+            top: 8px;
+            left: 0;
+            display: inline-block;
+            height: 20px;
+            width: 20px;
+            background-image: url(/wp-content/themes/commerc-real/scss/../img/icon/list-style.svg);
+            background-size: 20px 20px;
+        }
+
+        &:hover:before {
+            background-image: url(/wp-content/themes/commerc-real/scss/../img/icon/list-style-hover.svg);
+            background-size: 21px 21px;
+        }
+    }
 }
 
 .speciallization_area .container .row>div {
@@ -128,12 +132,6 @@ ul.custom-ul li:before {
 .signatures-container {
     margin-top: 40px;
     margin-bottom: 50px;
-}
-
-@media screen and (max-width: 767px) {
-    ul.custom-ul {
-        padding-left: 24px;
-    }
 }
 
 .press_img {
@@ -216,11 +214,6 @@ a.press_img_item:hover span {
     margin-bottom: 0;
 }
 
-ul.custom-ul li:hover:before {
-    background-image: url(/wp-content/themes/commerc-real/scss/../img/icon/list-style-hover.svg);
-    background-size: 21px 21px;
-}
-
 .single-services .about_office_area {
     background-color: #292929;
     padding: 60px 0;
@@ -278,14 +271,6 @@ ul.custom-ul li:hover:before {
     padding-bottom: 50px;
 }
 
-.blog_g_item .press_img img {
-    filter: sepia(100%) hue-rotate(135deg);
-}
-
-.blog_g_item:hover .press_img img {
-    filter: none;
-}
-
 .prev_next_area>div {
     position: relative;
 }
@@ -323,4 +308,23 @@ ul.custom-ul li:hover:before {
 
 .page-template-tpl-projects .our_projects_area {
     padding-top: 0;
+}
+
+.blog_g_item .press_img {
+    position: relative;
+    height: 250px;
+    display: block;
+    background: #003f46;
+    transition: 0.3s;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        mix-blend-mode: luminosity;
+    }
+}
+
+.blog_g_item:hover .press_img {
+    background: transparent;
 }
