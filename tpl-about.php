@@ -152,7 +152,7 @@ if ($main_video): ?>
                 <button class="btn btn" data-toggle="modal" data-target="#modal-form">ЗАКАЗАТЬ ЗВОНОК</button>
             </div>
             <div class="col-12 col-md-8">
-                <div class="about-map" data-aos data-aos-offset="300">
+                <div class="about-map" data-aos data-aos-offset="200">
                     <img src="<?= get_template_directory_uri(); ?>/img/about-map.png" alt="" class="about-map__bg">
                     <div class="about-map__points">
                         <div class="about-map__point" style="left: 32%; top: 54%;">
