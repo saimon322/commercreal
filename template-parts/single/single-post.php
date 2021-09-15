@@ -22,10 +22,8 @@ get_template_part('template-parts/breadcrumb', 'breadcrumb',
                                 <a class="tag" href="<?= get_term_link($primary_cat->term_id); ?>"><?= $primary_cat->name; ?></a>
                             <?php endif; ?>
                         </div>
-                        <?php if ($banner = get_field('banner')): ?>
-                            <img class="blog_main_img" src="<?= $banner; ?>">
-                        <?php endif;
-                        the_content(); ?>
+                        <img class="blog_main_img" src="<?= get_the_post_thumbnail_url();?>">
+                        <?php the_content(); ?>
                     </div>
                     <?php if ($related_news = get_field('related_news')): ?>
                         <div class="related_post">

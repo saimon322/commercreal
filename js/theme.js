@@ -646,13 +646,10 @@
                         width: newWidth
                     });
                 }
-                if (start == 'init' && index < 0) {
-                    patterns.css({width: widthTo});
-                }
             })
         };
 
-        scrollPatterns('init');
+        scrollPatterns();
         window.addEventListener('scroll', scrollPatterns);
     }
 

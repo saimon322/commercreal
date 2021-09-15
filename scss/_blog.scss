@@ -56,6 +56,7 @@
         font-size: 18px;
         line-height: 21px;
         color: #838383;
+        margin-bottom: 30px;
 	}
 }
 .search_wd{
@@ -84,13 +85,15 @@
 	.list{
 		li{
 			a{
-				font-size: 14px;
 				color: $pfont;
-				
-				border-bottom: 1px solid #3c3c3c;
+                font-weight: bold;
+                font-size: 14px;				
+				border-bottom: 1px solid $base;
 				display: block;
-				padding: 15px 0px;
+				padding-bottom: 10px;
+                margin-bottom: 20px;
 				@include transition;
+
 				span{
 					float: right;
 				}
@@ -100,15 +103,9 @@
 					padding-top: 0px;
 				}
 			}
-			&:last-child{
-				a{
-					padding-bottom: 0px;
-					border-bottom: none;
-				}
-			}
 			&:hover{
 				a{
-					color: $base;
+					color: #fff;
 				}
 			}
 		}
@@ -118,11 +115,17 @@
 .r_post_img {
     width: 79px;
     height: 55px;
+    overflow: hidden;
+
+    &:hover img {
+        transform: scale(1.1);
+    }
 
     img {
         width: 100%;
         height: 100%;
         object-fit: cover;
+        transition: transform .25s;
     }
 }
 
@@ -130,16 +133,17 @@
 	.media{
 		margin-top: 18px;
 		padding-bottom: 18px;
-		border-bottom: 1px solid #3c3c3c;
+		border-bottom: 1px solid $base;
 		.d-flex{
 			padding-right: 20px;
 		}
 		.media-body{
 			h4{
-				font-size: 14px;
-				line-height: 20px;
-				color: $pfont;
+                font-family: $raleway;
+				font-size: 13px;
+                letter-spacing: 0.1px;
 				@include transition;
+                
 				&:hover{
 					color: $base;
 				}
@@ -157,20 +161,24 @@
 .tags_wd{
 	.tag_list{
 		a{
+            min-width: 85px;
 			display: inline-block;
-			border: 1px solid #3c3c3c;
-			color: $pfont;
-			padding: 0px 14px;
-			margin-right: 6px;
+            font-family: $bebas;
+            font-weight: bold;
+            font-size: 15px;
+            text-transform: uppercase;
+			border: 1px solid $base;
+			color: $base;
+			padding: 2px 14px 0;
+			margin-right: 10px;
 			margin-bottom: 10px;
 			line-height: 28px;
 			@include transition;
 			vertical-align: middle;
 			text-align: center;
+
 			&:hover{
-				background: $base;
-				border-color: $base;
-				color: #fff;
+				background: $blue;
 			}
 		}
 	}
@@ -184,6 +192,11 @@
     &_img {
         width: 300px;
         height: 193px;
+        overflow: hidden;
+
+        &:hover img {
+            transform: scale(1.1);
+        }
 
         @include media-down(sm) {
             width: 100%;
@@ -193,6 +206,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+            transition: transform .5s;
         }
     }
     
@@ -202,11 +216,10 @@
 		}
 		.media-body{
 			.tag{
-				text-transform: uppercase;
 				font-weight: bold;
-				color: $pfont;
-				font-size: 14px;
-				margin-bottom: 15px;
+				color: #838383;
+				font-size: 12px;
+				margin-bottom: 20px;
 				display: inline-block;
 				@include transition;
 				&:hover{
@@ -214,11 +227,12 @@
 				}
 			}
 			h4{
+                font-family: $raleway;
 				color: #fff;
-				line-height: 30px;
-				font-size: 24px;
+				font-size: 20px;
 				margin-bottom: 20px;
 				@include transition;
+                
 				&:hover{
 					color: $base;
 				}
@@ -278,6 +292,7 @@
         color: $pfont;
         transition: .25s;
         background: none !important;
+        box-shadow: none !important;
 
         &:hover {
             color: $base;
@@ -558,6 +573,7 @@
     &__title {
         font-size: 18px;
         font-weight: bold;
+        line-height: 1.2;
 
         @include media-down(sm) {
             font-size: 14px;
