@@ -92,6 +92,9 @@
         overlayParentElement: 'body',
         transition: function (url) { window.location.href = url; }
     });
+    $('.animsition').on('animsition.inEnd', function(){
+        $('.animsition').addClass('fade-in');
+    })
 
 
     /*----------------------------------------------------*/
@@ -653,9 +656,118 @@
         window.addEventListener('scroll', scrollPatterns);
     }
 
+    // Stage slider
+    if ($('.stage-slider').length) {
+        const stageSlider = $('.stage-slider').owlCarousel({
+            loop: true,
+            items: 1,
+            nav: false,
+            dots: false,
+        })
+        $('.stage-slider').on('click', function(){
+            stageSlider.trigger('next.owl.carousel');
+        })
+    }
+
+    // Stage lopue
+    const stageLoupe = document.querySelector('.stage-loupe');
+    if (stageLoupe) {
+        const el = stageLoupe.querySelector('.stage-loupe__el');
+        const img = stageLoupe.querySelector('.stage-loupe__img img');
+
+        const elW = el.offsetWidth,
+              elH = el.offsetHeight,
+              wrapperW = stageLoupe.offsetWidth,
+              wrapperH = stageLoupe.offsetHeight,
+              diffW = wrapperW - elW,
+              diffH = wrapperH - elH;
+              
+        let startX = 0,
+            startY = 0,
+            moveX = 0,
+            moveY = 0;
+              
+        img.style.width = `${wrapperW}px`;
+        img.style.height = `${wrapperH}px`;
+
+        el.onmousedown = dragStart;
+        el.addEventListener("touchstart", dragStart, false);
+    
+        function dragStart(e) {
+            e = e || window.event;
+            e.preventDefault();
+            if (e.touches) {
+                e = e.touches[0];
+                el.addEventListener("touchmove", dragMove, false);
+                el.addEventListener("touchend", dragStop, false);
+            } else {
+                document.onmousemove = dragMove;
+                document.onmouseup = dragStop;
+            }
+            startX = e.clientX - moveX;
+            startY = e.clientY - moveY;
+        }
+    
+        function dragMove(e) {
+            e = e || window.event;
+            e.preventDefault();
+            if (e.touches) {
+                e = e.touches[0];
+            }
+            moveX = e.clientX - startX;
+            moveY = e.clientY - startY;
+            moveEl();
+        }
+    
+        function dragStop() {
+            calcBorders();
+            document.onmouseup = null;
+            document.onmousemove = null;
+        }
+
+        function calcBorders() {
+            let overflow = false;
+            let posLeft = el.offsetLeft + moveX;
+            let posTop = el.offsetTop + moveY;
+
+            if (posLeft < 0) {
+                moveX -= posLeft;
+                overflow = true;
+            }
+            if (posTop < 0) {
+                moveY -= posTop;
+                overflow = true;
+            }
+            if (posLeft > diffW) {
+                moveX -= (posLeft - diffW);
+                overflow = true;
+            }
+            if (posTop > diffH) {
+                moveY -= (posTop - diffH);
+                overflow = true;
+            }
+            
+            overflow && animateEl();
+        }
+
+        function moveEl() {
+            el.style.transform = `translate(${moveX}px, ${moveY}px`;
+            img.style.transform = `translate(${-moveX}px, ${-moveY}px`;
+        }
+
+        function animateEl() {
+            const speed = 250;
+            el.style.transition = `transform ${speed}ms`;
+            img.style.transition = `transform ${speed}ms`;
+            setTimeout(() => {
+                el.style.transition = null;
+                img.style.transition = null;
+            }, speed);
+            moveEl();
+        }
+    }
+
 })(jQuery)
-
-
 
 // Counter numbers
 const initCounters = () => {

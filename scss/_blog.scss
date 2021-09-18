@@ -580,3 +580,28 @@
         }
     }
 }
+
+.blog_g_item .press_img {
+    position: relative;
+    height: 250px;
+    display: block;
+    background: #003f46;
+    transition: 0.3s;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        mix-blend-mode: luminosity;
+        filter: brightness(0.5);
+        transition: 0.3s;
+    }
+}
+
+.blog_g_item:hover .press_img {
+    background: transparent;
+
+    img {
+        filter: none;
+    }
+}
