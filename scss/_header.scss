@@ -412,8 +412,17 @@
 		transition: all .5s .9s ease;
 		opacity: 0;
 		font-size: 14px;
-        a {
-            color: #fff;
+        a{
+            margin-left: 3px;
+            font-size: 14px;
+            line-height: 24px;
+            font-family: $bebas;
+            font-weight: bold;
+            letter-spacing: 1px;
+            @include transition;
+            &:not(:hover) {
+                color: #fff;
+            }
         }
 	}
 	&.dark_s_menu{
