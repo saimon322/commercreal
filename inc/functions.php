@@ -134,3 +134,8 @@ function get_post_primary_category_name()
     
     return null;
 }
+
+function str_prepos($text) {
+    $text = preg_replace('/\x20([а-яА-ЯёЁыЫa-zA-Z]{1,4})\x20/i', ' \\1&nbsp;', $text);
+    return $text;
+}
