@@ -680,20 +680,32 @@
         const el = stageLoupe.querySelector('.stage-loupe__el');
         const img = stageLoupe.querySelector('.stage-loupe__img img');
 
-        const elW = el.offsetWidth,
-              elH = el.offsetHeight,
-              wrapperW = stageLoupe.offsetWidth,
-              wrapperH = stageLoupe.offsetHeight,
-              diffW = wrapperW - elW,
-              diffH = wrapperH - elH;
-              
-        let startX = 0,
+        let elW, elH, 
+            wrapperW, wrapperH, 
+            diffW, diffH,
+            startX, startY, 
+            moveX, moveY;
+
+        const loupeInit = () => {
+            elW = el.offsetWidth,
+            elH = el.offsetHeight,
+            wrapperW = stageLoupe.offsetWidth,
+            wrapperH = stageLoupe.offsetHeight,
+            diffW = wrapperW - elW,
+            diffH = wrapperH - elH,
+            startX = 0,
             startY = 0,
             moveX = 0,
             moveY = 0;
-              
-        img.style.width = `${wrapperW}px`;
-        img.style.height = `${wrapperH}px`;
+                  
+            img.style.width = `${wrapperW}px`;
+            img.style.height = `${wrapperH}px`;    
+            
+            moveEl();
+        }
+        
+        loupeInit();
+        window.addEventListener('resize', loupeInit);
 
         el.onmousedown = dragStart;
         el.addEventListener("touchstart", dragStart, false);
