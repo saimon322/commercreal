@@ -371,6 +371,13 @@
 	.contact_us_form{
 		.form-group{
 			margin-bottom: 20px;
+
+            input.not-empty, 
+            textarea.not-empty {
+                border-color: #7d7d7d;
+                color: #fff;
+            }
+
 			input{
 				border-radius: 0px;
 				background: transparent;
@@ -382,7 +389,9 @@
 				
 				font-size: 14px;
 				outline: none;
-				box-shadow: none;
+                box-shadow: 0 0 0 30px $black inset !important;
+                -webkit-box-shadow: 0 0 0 30px $black inset !important;
+                
 				@include placeholder{
 					color: $pfont;
 					font-size: 14px;
@@ -394,13 +403,17 @@
 						color: #fff;
 					}
 				}
+                &:-webkit-autofill {
+                 -webkit-text-fill-color: #fff !important;
+                }
 			}
+
 			textarea{
 				border-radius: 0px;
 				background: transparent;
 				border: none;
-				border-bottom: 2px solid #525252;
-				padding: 5px 0px;
+				border: 2px solid #525252;
+				padding: 10px;
 				height: 160px;
 				color: $pfont;
 				

@@ -32,7 +32,7 @@
             'walker'         => new Footer_Walker_Nav_Menu(),
         ]); ?>
     </div>
-    <div class="footer_copyright">
+    <div class="footer_bottom">
         <div class="left_text">
             <?php echo $options['copyright']; ?>
         </div>

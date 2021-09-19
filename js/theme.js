@@ -606,6 +606,12 @@
         once: false,
         mirror: true,
     });
+
+    // Forms inputs
+    $("input, textarea").change(function () {
+        let e = $(this);
+        e.val().length > 0 ? (e.addClass("not-empty")) : (e.removeClass("not-empty"));
+    })
     
     // Diamond lines animation
     const diamond = $('.diamond');
@@ -627,7 +633,6 @@
             $(this).css({'animation-delay': delay + 's'});
         })
     }
-
 
     // Patterns animation
     const patterns = $('.pattern');

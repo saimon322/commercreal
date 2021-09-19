@@ -95,16 +95,16 @@
 		margin-bottom: 28px;
 		margin-top: 140px;
 	}
-	.footer_copyright {
+	.footer_bottom {
 		display: block;
 		text-align: center;
 	}
-	.footer_copyright .left_text {
+	.footer_bottom .left_text {
 		width: 100%;
 		display: block;
 		margin-bottom: 20px;
 	}
-	.footer_copyright .right_text {
+	.footer_bottom .right_text {
 		width: 100%;
 		display: block;
 		margin-top: 20px;
@@ -700,7 +700,7 @@
 		padding-left: 15px;
 		padding-right: 15px;
 	}
-	.footer_copyright .middle_text .list li {
+	.footer_bottom .middle_text .list li {
 		margin-right: 12px;
 	}
 	.isotope_fillter li {
