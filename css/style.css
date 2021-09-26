@@ -1826,7 +1826,6 @@ nav li:hover .mega-menu {
 .stage-loupe__bg {
   width: 100%;
   height: 100%;
-  background: #003f46;
   pointer-events: none;
 }
 .stage-loupe__bg img {
@@ -1837,9 +1836,6 @@ nav li:hover .mega-menu {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  -webkit-filter: brightness(0.5);
-          filter: brightness(0.5);
-  mix-blend-mode: luminosity;
 }
 .stage-loupe__el {
   position: absolute;
@@ -1914,9 +1910,23 @@ nav li:hover .mega-menu {
   transition: transform 0.25s, -webkit-transform 0.25s;
 }
 
-.stage-mini {
+.stage-minies {
   width: 100%;
-  height: 25%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.stage-mini {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 0px;
+          flex: 1 1 0;
+  width: 100%;
   position: relative;
   background: #003f46;
   padding: 10px 15px;

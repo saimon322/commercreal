@@ -170,6 +170,7 @@ $options = get_field('contacts', 'options');
         </a>
     </div>
 </section>
+
 <section class="intes_studio_area pattern-section">
     <div class="container">
         <?php get_template_part('template-parts/animation/pattern', null, array(
@@ -289,14 +290,16 @@ $options = get_field('contacts', 'options');
 
 <section class="stages_area">
     <div class="container">
-        <h6 class="s_title">Этапы работы с нами</h6>
+        <h6 class="s_title"><?php the_field('stages_subtitle'); ?></h6>
         <div class="row">
             <div class="col-sm-4">
+                <!-- Loupe stage -->
+                <?php $stage1 = get_field('stage_1'); ?>
                 <div class="stage">
                     <div class="stage__main">
                         <div class="stage-loupe">
                             <div class="stage-loupe__bg">
-                                <img src="<?= get_template_directory_uri(); ?>/img/stages/stage-1.jpg" alt="">
+                                <img src="<?= $stage1['img']; ?>" alt="">
                             </div>
                             <div class="stage-loupe__el">
                                 <div class="stage-loupe__icon">
@@ -304,52 +307,60 @@ $options = get_field('contacts', 'options');
                                 </div>
 
                                 <div class="stage-loupe__img">
-                                    <img src="<?= get_template_directory_uri(); ?>/img/stages/stage-1-color.jpg" alt="">
+                                    <img src="<?= $stage1['img_color']; ?>" alt="">
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="stage__content">
                         <h2 class="stage__title">
-                            Аудит<br> вашего бизнеса
+                            <?= $stage1['title']; ?>
                         </h2>
                         <div class="stage__text">
-                            <?php echo str_prepos('Мы оказываем полный спектр аналитических услуг для Вашего бизнеса и комерческой недвижимости. Когда  необходимо, чтобы бизнес оптимально функционировал и соответствовал  требованиям современного рынка - детальный анализ поможет Вам определить сильные стороны, на  которые следует обратить внимание конечного потребителя и устранить существующие недостатки.'); ?>
+                            <?php echo str_prepos($stage1['text']); ?>
                         </div>
                     </div>
                 </div>
             </div>
+
             <div class="col-sm-4">
+                <!-- Minies stage -->
+                <?php $stage2 = get_field('stage_2'); ?>
                 <div class="stage">
-                    <div class="stage__main">
-                        <div class="stage-mini">
-                            <img src="<?= get_template_directory_uri(); ?>/img/stages/stage-mini-1.jpg" alt="">
-                            <h3 class="stage-mini__title">Высокий и долгосрочный доход</h3>
-                        </div>
-                        <div class="stage-mini">
-                            <img src="<?= get_template_directory_uri(); ?>/img/stages/stage-mini-2.jpg" alt="">
-                            <h3>Концепция развития</h3>
-                        </div>
-                        <div class="stage-mini stage-mini--white">
-                            <img src="<?= get_template_directory_uri(); ?>/img/stages/stage-mini-3.jpg" alt="">
-                            <h3 class="stage-mini__title">Арендные отношения</h3>
-                        </div>
-                        <div class="stage-mini">
-                            <img src="<?= get_template_directory_uri(); ?>/img/stages/stage-mini-4.jpg" alt="">
-                            <h3 class="stage-mini__title">Выявление преимуществ</h3>
+                    <div class="stage__main">                        
+                        <div class="stage-minies">
+                            <div class="stage-mini">
+                                <img src="<?= get_template_directory_uri(); ?>/img/stages/stage-mini-1.jpg" alt="">
+                                <h3>Высокий и долгосрочный доход</h3>
+                            </div>
+                            <div class="stage-mini">
+                                <img src="<?= get_template_directory_uri(); ?>/img/stages/stage-mini-2.jpg" alt="">
+                                <h3>Концепция развития</h3>
+                            </div>
+                            <div class="stage-mini stage-mini--white">
+                                <img src="<?= get_template_directory_uri(); ?>/img/stages/stage-mini-3.jpg" alt="">
+                                <h3>Арендные отношения</h3>
+                            </div>
+                            <div class="stage-mini">
+                                <img src="<?= get_template_directory_uri(); ?>/img/stages/stage-mini-4.jpg" alt="">
+                                <h3>Выявление преимуществ</h3>
+                            </div>
                         </div>
                     </div>
                     <div class="stage__content">
                         <h2 class="stage__title">
-                            Создание<br> коммерческой концепции
+                            <?= $stage2['title']; ?>
                         </h2>
                         <div class="stage__text">
-                            <?php echo str_prepos('Мы создаем для Вашего бизнеса или торговой недвижимости целостную коммерческую концепцию.  Комплекс услуг включает  подробную финансовую стратегию, детальный план арендных отношений и их реализацию, выявление приемушеств бизнеса и стратегию их развития, а так же  оптимальный маркетинговый план.'); ?>
+                            <?= str_prepos($stage2['text']); ?>
                         </div>
                     </div>
                 </div>
             </div>
+
             <div class="col-sm-4">
+                <!-- Slider stage -->
+                <?php $stage3 = get_field('stage_3'); ?>
                 <div class="stage">
                     <div class="stage__main">
                         <div class="stage-slider owl-carousel">
@@ -375,10 +386,10 @@ $options = get_field('contacts', 'options');
                     </div>
                     <div class="stage__content">
                         <h2 class="stage__title">
-                            Модернизация<br> и развитие
+                            <?= $stage3['title']; ?>
                         </h2>
-                        <div class="stage__text">                            
-                            <?php echo str_prepos('Непрерывное развитие Вашего бизнеса - главное правило финансового успеха и стабильности. Мы помогаем Вам в этом или полностью берем ответственность на себя. Модернизация начинается с анилитики бизнеса и заключается в последующем полноценном ведении ТРЦ. Мы следим за исполнением коммерческого плана и стадиями развития Вашего проекта. В результатае вы получаете доходный бизнес.'); ?>
+                        <div class="stage__text">
+                            <?= str_prepos($stage3['text']); ?>
                         </div>
                     </div>
                 </div>

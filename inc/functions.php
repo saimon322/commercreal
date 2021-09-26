@@ -136,6 +136,8 @@ function get_post_primary_category_name()
 }
 
 function str_prepos($text) {
-    $text = preg_replace('/\x20([а-яА-ЯёЁыЫa-zA-Z]{1,4})\x20/i', ' \\1&nbsp;', $text);
+    $text = preg_replace('!\s+!', ' ', $text);
+    $text = preg_replace('/\x20([а-яА-ЯёЁыЫa-zA-Z]{1,8})\x20/i', ' \\1&nbsp;', $text);
+    $text = preg_replace('/&nbsp;([а-яА-ЯёЁыЫa-zA-Z]{1,8})\x20/i', '&nbsp;\\1&nbsp;', $text);
     return $text;
 }
