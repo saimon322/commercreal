@@ -37,7 +37,10 @@ h4 {
 
     span {
         color: $base;
-        white-space: nowrap;
+
+        @include media-up(md) {
+            white-space: nowrap;            
+        }
     }
 }
 
@@ -50,6 +53,7 @@ h6 {
 }
 
 .container {
+    position: relative;
     padding: 0 20px;
 }
 
@@ -59,6 +63,10 @@ h6 {
 
 .p0 {
     padding: 0px;
+}
+
+img {
+    max-width: 100%;
 }
 
 #success {

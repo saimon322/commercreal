@@ -130,31 +130,6 @@
 
     .contact_us_form {
         .form-group {
-            input {
-                border-bottom-color: #3c3c3c;
-
-                @include placeholder {
-                    color: $pfont;
-                }
-
-                &:focus {
-                    border-bottom-color: #fff;
-                    color: #fff;
-                }
-            }
-
-            textarea {
-                border-bottom-color: #3c3c3c;
-
-                @include placeholder {
-                    color: $pfont;
-                }
-
-                &:focus {
-                    border-bottom-color: #fff;
-                    color: #fff;
-                }
-            }
 
             .order_s_btn {
                 font-size: 14px;

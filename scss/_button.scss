@@ -1,17 +1,21 @@
 .btn {
-    color: #fff !important;
-    background-color: #003f46;
-    border: 1px solid #edd09a;
+    color: $base !important;
+    background-color: $blue;
+    border: 3px solid $base;
+    background: $blue;
     width: 100%;
     font-family: $bebas;
     text-transform: uppercase;
     font-weight: bold;
     font-size: 24px;
+    line-height: 28px;
     padding: 3px 10px 0;
+    border-radius: 0;
     cursor: pointer;
     
 	&:hover{
 		background: $base;
+        color: $blue !important;
 	}
 
     @include media-down(sm) {

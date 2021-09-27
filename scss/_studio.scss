@@ -24,75 +24,77 @@
         }
 	}
 }
-.intes_studio_area{
-	.studio_img{
-		width: 100%;
-		max-width: 387px;
-		height: 100%;
-		position: relative;
-		img{
-			width: 100%;
-			position: relative;
-			z-index: 2;
-		}
-		.years_text{
-			position: absolute;
-			right: 0px;
-            transform: translateX(50%);
-			top: 30%;
-			z-index: 2;
-			&:before{
-				content: "";
-                position: absolute;
-                z-index: -1;
-                left: 50%;
-                top: 50%;
-				width: 175px;
-				height: 175px;
-				border: 5px solid $base;
-                transform: translate(-50%, -50%) rotate(45deg);
-                background: linear-gradient(-45deg, rgb(0,63,70) 0%, rgba(0,63,70,0) 100%);
-			}
-            &:after{
-                content: "";
-                position: absolute;
-                z-index: -1;
-                left: 50%;
-                top: 50%;
-                width: 333px;
-                height: 333px;
-                transform: translate(-50%, -50%);
-                background: url(../img/texture.png) no-repeat scroll center center;
-                @include media-down(xs) {
-                    width: calc(100vw - 40px);
-                    height: calc(100vw - 40px);
-                    background-size: contain;
-                }
+
+.studio_img_wrapper {
+    @include media-up(md) {
+        overflow: hidden;
+    }
+}
+
+.studio_img{
+    width: 100%;
+    max-width: 387px;
+    height: 100%;
+    position: relative;
+
+    img{
+        width: 100%;
+        position: relative;
+        z-index: 2;
+    }
+
+    .years_text{
+        position: absolute;
+        right: 0px;
+        transform: translateX(50%);
+        top: 30%;
+        z-index: 2;
+
+        &:before{
+            content: "";
+            position: absolute;
+            z-index: -1;
+            left: 50%;
+            top: 50%;
+            width: 175px;
+            height: 175px;
+            border: 5px solid $base;
+            transform: translate(-50%, -50%) rotate(45deg);
+            background: linear-gradient(-45deg, rgb(0,63,70) 0%, rgba(0,63,70,0) 100%);
+        }
+
+        &_inner{
+            padding-top: 20px;
+            position: relative;
+            text-align: center;
+            text-transform: uppercase;
+
+            h1{
+                font-size: 105px;
+                line-height: 0.7;
+                font-weight: bold;
+                margin-left: -10px;
             }
-			.years_text_inner{
-                padding-top: 20px;
-				position: relative;
-                text-align: center;
-                text-transform: uppercase;
-				h1{
-					font-size: 105px;
-                    line-height: 0.7;
-                    font-weight: bold;
-                    margin-left: -10px;
-				}
-				h2{
-					font-size: 48px;
-                    line-height: 0.8;
-                    font-weight: bold;
-				}
-				h4{
-					font-size: 22px;
-                    line-height: 0.8;
-                    font-weight: bold;
-				}
-			}
-		}
-	}
+
+            h2{
+                font-size: 48px;
+                line-height: 0.8;
+                font-weight: bold;
+            }
+
+            h4{
+                font-size: 22px;
+                line-height: 0.8;
+                font-weight: bold;
+            }
+        }
+        
+        .diamond {
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
 }
 
 
@@ -149,6 +151,13 @@
 		margin-bottom: 70px;
 	}
 }
+.advantages .spec_item {
+    padding-right: 30px;
+
+    @include media-down(sm) {
+        padding-right: 0;
+    }
+}
 .specs-header {
     flex-wrap: nowrap;
 
@@ -177,11 +186,6 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding-right: 30px;
-
-    @include media-down(sm) {
-        padding-right: 0;
-    }
 
 	h4{
 		font-size: 30px;

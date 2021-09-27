@@ -15,14 +15,13 @@ $options = get_field('contacts', 'options');
                     <div class="contacts-info">
                         <h1>Контакты</h1>
                         <div class="contacts-info__address">
-                            Калининград<br>
-                            Московский пр-т 174  офис. 14
+                            <?php echo $options['address']; ?>
                         </div>
                         <div class="contacts-info__time">
-                            с 10:00 - 18:00
+                            <?php echo $options['work_time']; ?>
                         </div>
                         <div class="contacts-info__days">
-                            ПН-ПТ
+                            <?php echo $options['work_days']; ?>
                         </div>
                         <div class="contacts-info__btns">
                             <a href="mailto:<?php echo $options['email']; ?>"

@@ -2566,7 +2566,8 @@ var waitForCurrentImages = function(nextli,opt,callback) {
 //////////////////////////////////////
 //	-	CALL TO SWAP THE SLIDES -  //
 /////////////////////////////////////
-var swapSlide = function(container) {	
+var swapSlide = function(container) {
+    jQuery('.rev_slider').addClass('.rev_slider--swap');
 
 
 	var opt = container[0].opt;
@@ -2888,7 +2889,7 @@ var swapSlideProgress = function(defimg,container) {
 //	GIVE FREE THE TRANSITIOSN			//
 //////////////////////////////////////////
 var letItFree = function(container,nextsh,actsh,nextli,actli,mtl) {
-	
+    jQuery('.rev_slider').removeClass('.rev_slider--swap');	
 
 	var opt = container[0].opt;
 	if (opt.sliderType==="carousel") {

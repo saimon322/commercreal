@@ -6,7 +6,7 @@ function init_taxonomies()
     register_taxonomy('projects_cats', ['projects'], [
         'label'             => 'Категории',
         'labels'            => [
-            'name'                  => 'Категории',
+            'name'                  => 'Категории проекты',
             'singular_name'         => 'Категория',
             'all_items'             => 'Все категории',
             'edit_item'             => 'Изменить категорию',
@@ -35,7 +35,7 @@ function init_taxonomies()
     register_taxonomy('services-cats', ['services'], [
         'label'             => 'Категории',
         'labels'            => [
-            'name'                  => 'Категории',
+            'name'                  => 'Категории услуги',
             'singular_name'         => 'Категория',
             'all_items'             => 'Все категории',
             'edit_item'             => 'Изменить категорию',

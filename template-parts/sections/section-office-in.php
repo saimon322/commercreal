@@ -2,7 +2,10 @@
     <div class="container">
         <h6 class="s_title">Офис в Калининграде</h6>
     </div>
-    <div class="container bg-pattern">
+    <div class="container">
+        <?php get_template_part('template-parts/animation/pattern', null, array(
+            'type' => ' pattern--vertical'
+        )); ?>
         <div class="row">
             <div class="col-12 col-md-6">
                 <div class="about_office_area__img">

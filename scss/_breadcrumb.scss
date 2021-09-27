@@ -6,6 +6,16 @@
 	position: relative;
 	overflow: hidden;
 	z-index: 2;
+    &:before {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background: $blue-bg-5;
+    }
 	.breadcrumb_inner{
 		position: relative;
 		height: 100vh;

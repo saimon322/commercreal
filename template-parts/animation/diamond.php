@@ -1,0 +1,33 @@
+<div class="diamond" data-aos>
+    <svg viewBox="0 0 234 1" xmlns="http://www.w3.org/2000/svg"><line x1="113" y1="0" x2="119" y2="0" stroke="#F1D299"/></svg>
+    <svg viewBox="0 0 234 1" xmlns="http://www.w3.org/2000/svg"><line x1="106" y1="0" x2="127" y2="0" stroke="#F1D299"/></svg>
+    <svg viewBox="0 0 234 1" xmlns="http://www.w3.org/2000/svg"><line x1="98" y1="0" x2="134" y2="0" stroke="#F1D299"/></svg>
+    <svg viewBox="0 0 234 1" xmlns="http://www.w3.org/2000/svg"><line x1="90" y1="0" x2="142" y2="0" stroke="#F1D299"/></svg>
+    <svg viewBox="0 0 234 1" xmlns="http://www.w3.org/2000/svg"><line x1="83" y1="0" x2="150" y2="0" stroke="#F1D299"/></svg>
+    <svg viewBox="0 0 234 1" xmlns="http://www.w3.org/2000/svg"><line x1="75" y1="0" x2="158" y2="0" stroke="#F1D299"/></svg>
+    <svg viewBox="0 0 234 1" xmlns="http://www.w3.org/2000/svg"><line x1="68" y1="0" x2="165" y2="0" stroke="#F1D299"/></svg>
+    <svg viewBox="0 0 234 1" xmlns="http://www.w3.org/2000/svg"><line x1="60" y1="0" x2="172" y2="0" stroke="#F1D299"/></svg>
+    <svg viewBox="0 0 234 1" xmlns="http://www.w3.org/2000/svg"><line x1="53" y1="0" x2="180" y2="0" stroke="#F1D299"/></svg>
+    <svg viewBox="0 0 234 1" xmlns="http://www.w3.org/2000/svg"><line x1="44" y1="0" x2="188" y2="0" stroke="#F1D299"/></svg>
+    <svg viewBox="0 0 234 1" xmlns="http://www.w3.org/2000/svg"><line x1="37" y1="0" x2="195" y2="0" stroke="#F1D299"/></svg>
+    <svg viewBox="0 0 234 1" xmlns="http://www.w3.org/2000/svg"><line x1="30" y1="0" x2="203" y2="0" stroke="#F1D299"/></svg>
+    <svg viewBox="0 0 234 1" xmlns="http://www.w3.org/2000/svg"><line x1="24" y1="0" x2="210" y2="0" stroke="#F1D299"/></svg>
+    <svg viewBox="0 0 234 1" xmlns="http://www.w3.org/2000/svg"><line x1="15" y1="0" x2="218" y2="0" stroke="#F1D299"/></svg>
+    <svg viewBox="0 0 234 1" xmlns="http://www.w3.org/2000/svg"><line x1="7" y1="0" x2="226" y2="0" stroke="#F1D299"/></svg>
+    <svg viewBox="0 0 234 1" xmlns="http://www.w3.org/2000/svg"><line x1="0" y1="0" x2="234" y2="0" stroke="#F1D299"/></svg>
+    <svg viewBox="0 0 234 1" xmlns="http://www.w3.org/2000/svg"><line x1="4" y1="0" x2="230" y2="0" stroke="#F1D299"/></svg>
+    <svg viewBox="0 0 234 1" xmlns="http://www.w3.org/2000/svg"><line x1="12" y1="0" x2="222" y2="0" stroke="#F1D299"/></svg>
+    <svg viewBox="0 0 234 1" xmlns="http://www.w3.org/2000/svg"><line x1="21" y1="0" x2="212" y2="0" stroke="#F1D299"/></svg>
+    <svg viewBox="0 0 234 1" xmlns="http://www.w3.org/2000/svg"><line x1="28" y1="0" x2="206" y2="0" stroke="#F1D299"/></svg>
+    <svg viewBox="0 0 234 1" xmlns="http://www.w3.org/2000/svg"><line x1="35" y1="0" x2="198" y2="0" stroke="#F1D299"/></svg>
+    <svg viewBox="0 0 234 1" xmlns="http://www.w3.org/2000/svg"><line x1="42" y1="0" x2="191" y2="0" stroke="#F1D299"/></svg>
+    <svg viewBox="0 0 234 1" xmlns="http://www.w3.org/2000/svg"><line x1="51" y1="0" x2="183" y2="0" stroke="#F1D299"/></svg>
+    <svg viewBox="0 0 234 1" xmlns="http://www.w3.org/2000/svg"><line x1="59" y1="0" x2="174" y2="0" stroke="#F1D299"/></svg>
+    <svg viewBox="0 0 234 1" xmlns="http://www.w3.org/2000/svg"><line x1="67" y1="0" x2="167" y2="0" stroke="#F1D299"/></svg>
+    <svg viewBox="0 0 234 1" xmlns="http://www.w3.org/2000/svg"><line x1="74" y1="0" x2="160" y2="0" stroke="#F1D299"/></svg>
+    <svg viewBox="0 0 234 1" xmlns="http://www.w3.org/2000/svg"><line x1="82" y1="0" x2="152" y2="0" stroke="#F1D299"/></svg>
+    <svg viewBox="0 0 234 1" xmlns="http://www.w3.org/2000/svg"><line x1="90" y1="0" x2="143" y2="0" stroke="#F1D299"/></svg>
+    <svg viewBox="0 0 234 1" xmlns="http://www.w3.org/2000/svg"><line x1="98" y1="0" x2="135" y2="0" stroke="#F1D299"/></svg>
+    <svg viewBox="0 0 234 1" xmlns="http://www.w3.org/2000/svg"><line x1="106" y1="0" x2="128" y2="0" stroke="#F1D299"/></svg>
+    <svg viewBox="0 0 234 1" xmlns="http://www.w3.org/2000/svg"><line x1="113" y1="0" x2="120" y2="0" stroke="#F1D299"/></svg>
+</div>

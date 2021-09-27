@@ -1,4 +1,8 @@
-<?php get_header(); ?>
+<?php /* Главная */
+get_header();
+$options = get_field('contacts', 'options');
+?>
+
 <section class="home_slider">
     <?php if (have_rows('main_slider')): ?>
         <div class="page_lines">
@@ -148,7 +152,7 @@
     <?php endif; ?>
     <?php $options = get_field('contacts', 'options'); ?>
     <?php if ($options['socials']): ?>
-        <div class="social_icon">
+        <div class="socials">
             <ul class="list">
                 <?php foreach ($options['socials'] as $social): ?>
                     <li>
@@ -160,9 +164,18 @@
             </ul>
         </div>
     <?php endif; ?>
+    <div class="contacts">
+        <a href="mailto:<?php echo $options['email']; ?>">
+            <?php echo $options['email']; ?>
+        </a>
+    </div>
 </section>
-<section class="intes_studio_area bg-pattern-section">
-    <div class="container bg-pattern">
+
+<section class="intes_studio_area pattern-section">
+    <div class="container">
+        <?php get_template_part('template-parts/animation/pattern', null, array(
+            'type' => ' pattern--vertical'
+        )); ?>
         <div class="since_text">
             <h5><?php the_field('about_desc'); ?></h5>
         </div>
@@ -170,18 +183,21 @@
             <?php $img = get_field('about_img');
             if ($img): ?>
                 <div class="col-lg-7">
-                    <div class="studio_img">
-                        <img src="<?php echo $img; ?>" alt="">
-                        <?php $years = get_field('about_years');
-                        if ($years): ?>
-                            <div class="years_text">
-                                <div class="years_text_inner">
-                                    <h1><?php echo $years['about_year_1']; ?></h1>
-                                    <h2><?php echo $years['about_year_2']; ?></h2>
-                                    <h4><?php echo $years['about_year_3']; ?></h4>
+                    <div class="studio_img_wrapper">
+                        <div class="studio_img">
+                            <img src="<?php echo $img; ?>" alt="">
+                            <?php $years = get_field('about_years');
+                            if ($years): ?>
+                                <div class="years_text">
+                                    <div class="years_text_inner">
+                                        <h1 data-aos="fade-up" data-aos-delay="200"><?php echo $years['about_year_1']; ?></h1>
+                                        <h2 data-aos="fade-up" data-aos-delay="300"><?php echo $years['about_year_2']; ?></h2>
+                                        <h4 data-aos="fade-up" data-aos-delay="400"><?php echo $years['about_year_3']; ?></h4>
+                                    </div>
+                                    <?php get_template_part('template-parts/animation/diamond', null, array()); ?>
                                 </div>
-                            </div>
-                        <?php endif; ?>
+                            <?php endif; ?>
+                        </div>
                     </div>
                 </div>
             <?php endif; ?>
@@ -272,10 +288,120 @@
     </div>
 </section>
 
-<?php get_template_part('template-parts/sections/section', 'latest-projects'); ?>
-<?php get_template_part('template-parts/sections/section', 'form-2'); ?>
+<section class="stages_area">
+    <div class="container">
+        <h6 class="s_title"><?php the_field('stages_subtitle'); ?></h6>
+        <div class="row">
+            <div class="col-sm-4">
+                <!-- Loupe stage -->
+                <?php $stage1 = get_field('stage_1'); ?>
+                <div class="stage">
+                    <div class="stage__main">
+                        <div class="stage-loupe">
+                            <div class="stage-loupe__bg">
+                                <img src="<?= $stage1['img']; ?>" alt="">
+                            </div>
+                            <div class="stage-loupe__el">
+                                <div class="stage-loupe__icon">
+                                    <img src="<?= get_template_directory_uri(); ?>/img/icon/stages-loupe.png" alt="">
+                                </div>
+
+                                <div class="stage-loupe__img">
+                                    <img src="<?= $stage1['img_color']; ?>" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="stage__content">
+                        <h2 class="stage__title">
+                            <?= $stage1['title']; ?>
+                        </h2>
+                        <div class="stage__text">
+                            <?php echo str_prepos($stage1['text']); ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-4">
+                <!-- Minies stage -->
+                <?php $stage2 = get_field('stage_2'); ?>
+                <div class="stage">
+                    <div class="stage__main">                        
+                        <div class="stage-minies">
+                            <div class="stage-mini">
+                                <img src="<?= get_template_directory_uri(); ?>/img/stages/stage-mini-1.jpg" alt="">
+                                <h3>Высокий и долгосрочный доход</h3>
+                            </div>
+                            <div class="stage-mini">
+                                <img src="<?= get_template_directory_uri(); ?>/img/stages/stage-mini-2.jpg" alt="">
+                                <h3>Концепция развития</h3>
+                            </div>
+                            <div class="stage-mini stage-mini--white">
+                                <img src="<?= get_template_directory_uri(); ?>/img/stages/stage-mini-3.jpg" alt="">
+                                <h3>Арендные отношения</h3>
+                            </div>
+                            <div class="stage-mini">
+                                <img src="<?= get_template_directory_uri(); ?>/img/stages/stage-mini-4.jpg" alt="">
+                                <h3>Выявление преимуществ</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="stage__content">
+                        <h2 class="stage__title">
+                            <?= $stage2['title']; ?>
+                        </h2>
+                        <div class="stage__text">
+                            <?= str_prepos($stage2['text']); ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-4">
+                <!-- Slider stage -->
+                <?php $stage3 = get_field('stage_3'); ?>
+                <div class="stage">
+                    <div class="stage__main">
+                        <div class="stage-slider owl-carousel">
+                            <div class="stage-slider__item">
+                                <img src="<?= get_template_directory_uri(); ?>/img/stages/stage-2.jpg" alt="">
+                            </div>
+                            <div class="stage-slider__item">
+                                <img src="<?= get_template_directory_uri(); ?>/img/stages/stage-3.jpg" alt="">
+                            </div>
+                            <div class="stage-slider__item">
+                                <img src="<?= get_template_directory_uri(); ?>/img/stages/stage-4.jpg" alt="">
+                            </div>
+                            <div class="stage-slider__item">
+                                <img src="<?= get_template_directory_uri(); ?>/img/stages/stage-5.jpg" alt="">
+                            </div>
+                            <div class="stage-slider__item">
+                                <img src="<?= get_template_directory_uri(); ?>/img/stages/stage-6.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="stage__icon stage__icon--right">
+                            <img src="<?= get_template_directory_uri(); ?>/img/icon/stages-corner.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="stage__content">
+                        <h2 class="stage__title">
+                            <?= $stage3['title']; ?>
+                        </h2>
+                        <div class="stage__text">
+                            <?= str_prepos($stage3['text']); ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 <?php get_template_part('template-parts/sections/section', 'clients'); ?>
+<?php get_template_part('template-parts/sections/section', 'latest-projects'); ?>
+<?php get_template_part('template-parts/sections/section', 'form-2'); ?>
+<?php get_template_part('template-parts/sections/section', 'blog'); ?>
 <div class="page_lines">
     <div class="container">
         <div class="row m0">

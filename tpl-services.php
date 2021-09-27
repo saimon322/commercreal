@@ -10,8 +10,9 @@ get_header();
 </section>
 <!--================End Breadcrumb Area =================-->
 <!--================About Studio Area =================-->
-<section class="about_studio_area bg-pattern-section">
-    <div class="container bg-pattern bg-pattern-2">
+<section class="about_studio_area pattern-section">
+    <div class="container">
+        <?php get_template_part('template-parts/animation/pattern'); ?>
         <div class="ab_studio_text">
             <p>Мы специализируемся на торговой недвижимости в регионах России и оказываем полный спектр услуг в данном сегменте.</p>
             <p>Мы предлагаем только уникальные и профессиональные решения в секторе коммерческой недвижимости и индивидуальный подход к каждому проекту.</p>
