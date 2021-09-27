@@ -6,7 +6,7 @@
                 <div class="press_img_item">
                     <h2 class="press_img_title">Только для вас</h2>
                     <div class="press_img">
-                        <img class="img-fluid" src="<?php echo get_stylesheet_directory_uri(); ?>/img/pexels-august-de-richelieu-4427901.png">
+                        <img class="img-fluid" src="<?php echo get_stylesheet_directory_uri(); ?>/img/press-2.jpg">
                     </div>
                 </div>
             </div>

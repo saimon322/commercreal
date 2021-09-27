@@ -641,23 +641,28 @@
         patterns.css({width: '100%'});
         const widthFrom = patterns.eq(0).width();
         const widthDiff = widthFrom - widthTo;
-        const scrollPatterns = function(start){
+        const winHeight = window.innerHeight;
+        const scrollPatterns = function(state){
             const scrollTop = window.pageYOffset;
-            const winHeight = window.innerHeight;
             patterns.each(function(){
                 const pattern = $(this);
                 const elTop = pattern.offset().top;
                 const index = 1 - (scrollTop + winHeight - elTop) / winHeight * 1.1;
+
                 if (index > 0 && index < 1) {
                     const newWidth = widthTo + widthDiff * index;
                     TweenLite.to(pattern, 0.5, {
                         width: newWidth
                     });
                 }
+                
+                if (state == 'init' && index < 0) {
+                    patterns.css({width: widthTo + 'px'});
+                }
             })
         };
 
-        scrollPatterns();
+        scrollPatterns('init');
         window.addEventListener('scroll', scrollPatterns);
     }
 

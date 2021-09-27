@@ -1,33 +1,39 @@
 <section class="clients_area">
     <div class="container">
         <div class="main_title">
-            <h2><span>+<span class="counter-number">1784</span></span> счастливых клиентов</h2>
+            <?php $clients_title = get_field('clients_title', 'options'); ?>
+            <h2>
+                <span>
+                    <?= $clients_title['sign']; ?>
+                    <span class="counter-number">
+                        <?= $clients_title['number']; ?>
+                    </span>
+                </span>
+                <?= $clients_title['text']; ?>
+            </h2>
         </div>
     </div>
-    <div class="testimonials_slider owl-carousel">
-        <div class="item">
-            <div class="test_item">
-                <div class="test_item__img">
-                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/test-1.jpg" alt="">
+
+    <?php if( have_rows('reviews', 'options') ): ?>
+        <div class="testimonials_slider owl-carousel">
+        <?php while( have_rows('reviews', 'options') ): the_row(); ?>
+            <div class="item">
+                <div class="test_item">
+                    <div class="test_item__img">
+                        <img src="<?= get_sub_field('photo'); ?>" alt="">
+                    </div>
+                    <div class="test_item__content">
+                        <h4>
+                            <span><?= get_sub_field('name'); ?></span> / 
+                            <?= get_sub_field('post'); ?>
+                        </h4>
+                        <?= get_sub_field('text'); ?>
+                    </div>
                 </div>
-                <div class="test_item__content">
-                    <h4><span>Иванов Иван</span> / Директор филиала</h4>
-                    <p>Sed elit quam, iaculis sed semper sit amet udin vitae nibh. Rubino staveuo at magna akal semperFusce commodo molestie luctus.Lorem ipsum ulicon Dolor tusima olatiup.</p>
-                </div>
-            </div>
+            </div>   
+        <?php endwhile; ?>
         </div>
-        <div class="item">
-            <div class="test_item">
-                <div class="test_item__img">
-                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/test-2.jpg" alt="">
-                </div>
-                <div class="test_item__content">
-                    <h4><span>Иванов Иван</span> / Директор филиала</h4>
-                    <p>Paras stalor ed elit quam, iaculis sed semper sit amet udin vitae nibh. at magna akal semperFusce commodo molestie luctus.Lorem ipsum vitalun Dolor tusima olatiup aculis sed semper sit ame</p>
-                </div>
-            </div>
-        </div>
-    </div>
+    <?php endif; ?>
 
     <div class="clients_block">
         <div class="container">

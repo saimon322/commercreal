@@ -3968,7 +3968,7 @@ nav li:hover .mega-menu {
 ============================================================================================ */
 .clients_area {
   padding-top: 130px;
-  background: url(../img/teckture-bg.jpg) repeat scroll center center;
+  background: url(../img/texture-bg.jpg) repeat;
   padding-bottom: 130px;
 }
 .clients_area .main_title {
