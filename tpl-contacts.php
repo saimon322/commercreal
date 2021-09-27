@@ -15,22 +15,21 @@ $options = get_field('contacts', 'options');
                     <div class="contacts-info">
                         <h1>Контакты</h1>
                         <div class="contacts-info__address">
-                            Калининград<br>
-                            Московский пр-т 174  офис. 14
+                            <?php echo $options['address']; ?>
                         </div>
                         <div class="contacts-info__time">
-                            с 10:00 - 18:00
+                            <?php echo $options['work_time']; ?>
                         </div>
                         <div class="contacts-info__days">
-                            ПН-ПТ
+                            <?php echo $options['work_days']; ?>
                         </div>
                         <div class="contacts-info__btns">
                             <a href="mailto:<?php echo $options['email']; ?>"
-                                class="btn green-btn">
+                                class="btn btn">
                                 <?php echo $options['email']; ?>
                             </a>
                             <a href="tel:<?php echo $options['phone']; ?>"
-                                class="btn green-btn">
+                                class="btn btn">
                                 <?php echo $options['phone']; ?>
                             </a>
                         </div>                        
@@ -39,7 +38,7 @@ $options = get_field('contacts', 'options');
                 <div class="col-lg-7">
                     <div class="right_contact_form">
                         <h4>Связаться с нами</h4>
-                        <form class="row contact_us_form ">
+                        <form class="row contact_us_form form-contact">
                             <div class="form-group col-md-6">
                                 <input type="text" class="form-control" id="name" name="name" placeholder="Имя" required>
                             </div>
@@ -50,7 +49,7 @@ $options = get_field('contacts', 'options');
                                 <textarea class="form-control" name="message" id="message" rows="1" placeholder="Сообщение" required></textarea>
                             </div>
                             <div class="form-group col-md-12">
-                                <button type="submit" value="submit" class="btn order_s_btn form-control">Отправить <i class="ion-ios-play"></i></button>
+                                <button type="submit" value="submit" class="order_s_btn form-control">Отправить <i class="ion-ios-play"></i></button>
                             </div>
                             <div class="success-message"><i class="fa fa-check text-primary"></i> Thank you!. Your message is successfully sent...</div>
                             <div class="error-message">We're sorry, but something went wrong</div>

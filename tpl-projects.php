@@ -10,8 +10,9 @@ get_header();
 </section>
 <!--================End Breadcrumb Area =================-->
 <!--================About Studio Area =================-->
-<section class="about_studio_area bg-pattern-section">
-    <div class="container bg-pattern bg-pattern-2">
+<section class="about_studio_area pattern-section">
+    <div class="container">
+        <?php get_template_part('template-parts/animation/pattern'); ?>
         <div class="ab_studio_text">
             <?php the_content(); ?>
         </div>
@@ -33,8 +34,8 @@ get_header();
                         <p><?= $map_text; ?></p>
                     <?php endif; ?>
                 </div>
-                <button class="btn green-btn mb-4" data-toggle="modal" data-target="#modal-form">НАПИШИТЕ НАМ</button>
-                <button class="btn green-btn" data-toggle="modal" data-target="#modal-form">ЗАКАЗАТЬ ЗВОНОК</button>
+                <button class="btn btn mb-4" data-toggle="modal" data-target="#modal-form">НАПИШИТЕ НАМ</button>
+                <button class="btn btn" data-toggle="modal" data-target="#modal-form">ЗАКАЗАТЬ ЗВОНОК</button>
             </div>
             <div class="col-12 col-md-8">
                 <?php the_field('map_svg'); ?>

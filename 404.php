@@ -13,6 +13,17 @@ get_header();
         <div class="container">
             <div class="single_banner_text">
                 <h3>404 - СТРАНИЦА НЕ НАЙДЕНА</h3>
+                <span class="h4">Приносим свои извинения, произошла техническая ошибка. <br> Вы можете вернуться на главную страницу сайта или на последнею на которой ВЫ были.</span>
+                <div class="row mt-5">
+                    <div class="col-6">
+                        <a href="/" rel="nofollow" class="btn"><?php _e('Главная'); ?></a>
+                    </div>
+                    <?php if (isset($_SERVER['HTTP_REFERER'])): ?>
+                        <div class="col-6">
+                            <a href="<?= $_SERVER['HTTP_REFERER']; ?>" rel="nofollow" class="btn"><?php _e('Предыдущая страница'); ?></a>
+                        </div>
+                    <?php endif; ?>
+                </div>
             </div>
         </div>
         <div id="jarallax-container-0" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; overflow: hidden; pointer-events: none; z-index: -100;">

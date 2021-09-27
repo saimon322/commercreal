@@ -1,41 +1,72 @@
-/* Footer css
-============================================================================================ */
 .footer_area{
 	background: $black;
 	padding-left: 76px;
 	padding-right: 76px;
 	padding-top: 120px;
-	.footer_widgets{
-		padding-bottom: 100px;
-        @include media-down(sm) {
-            padding-bottom: 30px;
-        }
-		.f_widgets_item{
-			flex: 0 0 20%;
-			max-width: 20%;
-			&:nth-child(2){
-				.f_contact{
-					margin-left: -56px;
-				}
-			}
-			&:nth-child(3){
-				.f_link{
-					margin-left: 75px;
-				}
-			}
-			&:nth-child(4){
-				.f_link{
-					margin-left: 95px;
-				}
-			}
-			&:nth-child(5){
-				.f_link{
-					margin-left: 85px;
-				}
-			}
-		}
-	}
 }
+.footer_widgets{
+    position: relative;
+    padding-bottom: 100px;
+    justify-content: space-between;
+    @include media-down(sm) {
+        padding: 50px 0 30px;
+    }
+}
+.f_widgets_item{
+    @include media-up(xxl) {
+        flex: 0 0 20%;
+        max-width: 20%;   
+    }
+
+    @include media-down(lg) {
+        flex: 0 0 20%;
+        max-width: 20%;
+    }
+
+    @include media-down(md) {
+		flex: auto;
+		width: 33.33%;
+        max-width: unset;
+		margin-bottom: 30px;
+    }
+
+    @include media-only(md) {        
+        &:nth-child(4) {
+            margin-left: 33%;
+
+            .f_link {
+                margin-left: 0px !important;
+            }
+        }
+    }
+
+    @include media-down(sm) {
+        flex: unset;
+        max-width: unset;
+        width: 50%;
+        
+        &:nth-child(even) {
+            padding-right: 20px;
+        }
+
+        &:first-child {
+            width: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        
+        .f_link {
+            margin-left: 0 !important;
+        }
+    }
+
+    @media (max-width: 350px) {
+        width: 100%;
+        padding-right: 0 !important;
+    }
+}
+
 .f_logo {
     color: #fff;
     font-family: $bebas;
@@ -44,9 +75,7 @@
     font-size: 24px;
     line-height: 1;
 }
-.f_widgets_item{
-	
-}
+
 .f_title{
 	margin-bottom: 25px;
 	h3{
@@ -56,30 +85,24 @@
 		margin-bottom: 0px;
 	}
 }
+
 .f_contact{
 	max-width: 270px;
+    font-size: 14px;
+    line-height: 24px;
+    color: $pfont;
+    font-weight: normal;
+    margin-bottom: 15px;
 	a{
         font-family: $bebas;
 		display: block;
 		font-size: 16px;
 		line-height: 1.2;
 		font-weight: normal;
-		margin-bottom: 15px;
         @include transition;
         &:not(:hover) {
 		    color: $pfont;
         }
-
-		&:last-child{
-			margin-bottom: 0px;
-		}
-	}
-	p{
-		font-size: 14px;
-		line-height: 24px;
-		color: $pfont;
-		font-weight: normal;
-		margin-bottom: 15px;
 	}
 }
 .f_link{
@@ -102,7 +125,7 @@
 }
 
 
-.footer_copyright{
+.footer_bottom{
 	overflow: hidden;
 	border-top: 2px solid #282828;
 	display: flex;
@@ -123,15 +146,22 @@
 			color: $pfont;
 			font-weight: normal;
 			margin-bottom: 0px;
-			a{
-				color: #fff;
-				font-weight: bold;
-			}
+            a{
+                margin-left: 3px;
+                font-size: 14px;
+                line-height: 24px;
+                font-family: $bebas;
+                font-weight: bold;
+                letter-spacing: 1px;
+                @include transition;
+                &:not(:hover) {
+                    color: #fff;
+                }
+            }
 		}
 	}
 	.middle_text{
         flex-shrink: 0;
-		max-width: 500px;
 		// width: 100%;
 		text-align: center;
 		.list{
@@ -144,17 +174,14 @@
 				a{
 					font-size: 14px;
 					line-height: 24px;
-					color: $pfont;
 					font-weight: normal;
 					@include transition;
+                    &:not(:hover) {
+                        color: #fff;
+                    }
 				}
 				&:last-child{
 					margin-right: 0px;
-				}
-				&:hover{
-					a{
-						color: #fff;
-					}
 				}
 			}
 		}
@@ -186,78 +213,3 @@
 		}
 	}
 }
-
-
-
-.white_f{
-	background: #fff;
-	.f_title{
-		h3{
-			color: $base;
-		}
-	}
-	.f_contact{
-		a{
-			color: $gray;
-		}
-		p{
-			color: $gray;
-		}
-	}
-	.f_link{
-		.list{
-			li{
-				a{
-					color: $gray;
-				}
-				&:hover{
-					a{
-						color: $base;
-					}
-				}
-			}
-		}
-	}
-	.footer_copyright{
-		border-top: 2px solid #f0f0f0;
-		.left_text{
-			p{
-				color: $gray;
-				a{
-					color: $base;
-				}
-			}
-		}
-		.middle_text{
-			.list{
-				li{
-					a{
-						color: $gray;
-					}
-					&:hover{
-						a{
-							color: $base;
-						}
-					}
-				}
-			}
-		}
-		.right_text{
-			.list{
-				li{
-					a{
-						color: $gray;
-					}
-					&:hover, &.active{
-						a{
-							color: $base;
-						}
-					}
-				}
-			}
-		}
-	}
-}
-
-/* End Footer css
-============================================================================================ */

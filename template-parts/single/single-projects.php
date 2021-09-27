@@ -139,10 +139,14 @@
 <!--================End Project Villa Area =================-->
 <!--================Prev Next Area =================-->
 <section class="prev_next_area">
-    <?php $prevPost = get_previous_post();
-    if ($prevPost): ?>
-        <?php $prevthumbnail = get_the_post_thumbnail_url($prevPost->ID, 'full');
-        $prev_url            = get_permalink($prevPost->ID); ?>
+    <?php
+    
+    $prevPost = get_previous_post();
+    $prevPost = empty($prevPost) ? get_random_post_from_cpt('projects') : $prevPost;
+    
+    if ($prevPost):
+        $prevthumbnail = get_the_post_thumbnail_url($prevPost->ID, 'full');
+        $prev_url   = get_permalink($prevPost->ID); ?>
         <div class="prev">
             <div class="prev-hover">
                 <div class="prev_next_area__cover" style="background: url(<?php echo $prevthumbnail; ?>) scroll center center;"></div>

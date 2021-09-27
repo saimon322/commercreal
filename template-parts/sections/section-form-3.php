@@ -6,7 +6,7 @@
                 <div class="press_img_item">
                     <h2 class="press_img_title">Только для вас</h2>
                     <div class="press_img">
-                        <img class="img-fluid" src="<?php echo get_stylesheet_directory_uri(); ?>/img/pexels-august-de-richelieu-4427901.png">
+                        <img class="img-fluid" src="<?php echo get_stylesheet_directory_uri(); ?>/img/press-2.jpg">
                     </div>
                 </div>
             </div>
@@ -19,7 +19,7 @@
                             <input type="text" name="phone" placeholder="Номер телефона">
                             <input type="text" name="name" placeholder="Ваше имя">
                             <input type="email" name="email" placeholder="Электронная почта">
-                            <button type="submit" class="btn green-btn">Индивидуальное предложение</button>
+                            <button type="submit" class="btn btn">Индивидуальное предложение</button>
                         </form>
                     </div>
                 </div>

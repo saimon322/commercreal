@@ -6,7 +6,7 @@
             <div class="row m0 text-center specs-header">
                 <div class="col-lg-4 col-sm-6 spec_wrapper">
                     <div class="spec_item">
-                        <a href="<?php echo get_term_link(13); ?>" class="spec_item__top">
+                        <a href="<?= get_term_link(13); ?>" class="spec_item__top">
                             <img src="<?= get_template_directory_uri(); ?>/img/icon/spec-1.svg" alt="">
                             <h4>DEVELOPER</h4>
                         </a>
@@ -14,7 +14,7 @@
                 </div>
                 <div class="col-lg-4 col-sm-6 spec_wrapper">
                     <div class="spec_item">
-                        <a href="<?php echo get_term_link(15); ?>" class="spec_item__top">
+                        <a href="<?= get_term_link(15); ?>" class="spec_item__top">
                             <img src="<?= get_template_directory_uri(); ?>/img/icon/spec-2.svg" alt="">
                             <h4>СОБСТВЕННИК</h4>
                         </a>
@@ -22,7 +22,7 @@
                 </div>
                 <div class="col-lg-4 col-sm-6 spec_wrapper">
                     <div class="spec_item">
-                        <a href="<?php echo get_term_link(14); ?>" class="spec_item__top">
+                        <a href="<?= get_term_link(14); ?>" class="spec_item__top">
                             <img src="<?= get_template_directory_uri(); ?>/img/icon/spec-3.svg" alt="">
                             <h4>RETAILER</h4>
                         </a>
@@ -32,7 +32,7 @@
             <div class="row text-left specs-content">
                 <div class="col-lg-4 col-sm-6">
                     <div class="spec_item">
-                        <a href="<?php echo get_term_link(13); ?>" class="spec_item__top">
+                        <a href="<?= get_term_link(13); ?>" class="spec_item__top">
                             <img src="<?= get_template_directory_uri(); ?>/img/icon/spec-1.svg" alt="">
                             <h4>DEVELOPER</h4>
                         </a>
@@ -51,7 +51,7 @@
                 </div>
                 <div class="col-lg-4 col-sm-6">
                     <div class="spec_item">
-                        <a href="<?php echo get_term_link(15); ?>" class="spec_item__top">
+                        <a href="<?= get_term_link(15); ?>" class="spec_item__top">
                             <img src="<?= get_template_directory_uri(); ?>/img/icon/spec-2.svg" alt="">
                             <h4>СОБСТВЕННИК</h4>
                         </a>
@@ -72,7 +72,7 @@
                 </div>
                 <div class="col-lg-4 col-sm-6">
                     <div class="spec_item">
-                        <a href="<?php echo get_term_link(14); ?>" class="spec_item__top">
+                        <a href="<?= get_term_link(14); ?>" class="spec_item__top">
                             <img src="<?= get_template_directory_uri(); ?>/img/icon/spec-3.svg" alt="">
                             <h4>RETAILER</h4>
                         </a>

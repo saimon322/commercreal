@@ -229,7 +229,7 @@
     left: 0;
     top: 0;
     z-index: 1;
-    color: $blue;
+    color: #fff;
     padding: 10px 15px;
     font-size: 48px;
     font-weight: bold;
@@ -316,13 +316,6 @@
             color: #fff;
             font-size: 14px;
             padding: 5px;
-        }
-
-        .btn {
-            border: 0;
-            padding: 0;
-            border-radius: 0;
-            line-height: 1.3;
         }
     }
 }

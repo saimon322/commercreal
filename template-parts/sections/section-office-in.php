@@ -2,7 +2,10 @@
     <div class="container">
         <h6 class="s_title">Офис в Калининграде</h6>
     </div>
-    <div class="container bg-pattern">
+    <div class="container">
+        <?php get_template_part('template-parts/animation/pattern', null, array(
+            'type' => ' pattern--vertical'
+        )); ?>
         <div class="row">
             <div class="col-12 col-md-6">
                 <div class="about_office_area__img">
@@ -19,7 +22,7 @@
                     <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/pod2.png" class="signature2">
                 </div>
                 <p>P.S. "В нашем офисе вас ждет натуральный бразильский кофе и швейцарский шоколад."</p>
-                <button class="btn green-btn" data-toggle="modal" data-target="#modal-form">НАЗНАЧИТЬ ВСТРЕЧУ</button>
+                <button class="btn btn" data-toggle="modal" data-target="#modal-form">НАЗНАЧИТЬ ВСТРЕЧУ</button>
             </div>
         </div>
     </div>

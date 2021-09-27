@@ -92,6 +92,9 @@
         overlayParentElement: 'body',
         transition: function (url) { window.location.href = url; }
     });
+    $('.animsition').on('animsition.inEnd', function(){
+        $('.animsition').addClass('fade-in');
+    })
 
 
     /*----------------------------------------------------*/
@@ -567,9 +570,6 @@
         });
     });
 
-
-
-
     $('.navbar-toggle').on('click', function () {
         $('body').removeClass('menu-is-closed').addClass('menu-is-opened');
     });
@@ -601,9 +601,195 @@
         $('.spec_wrapper').addClass('col-lg-4');
     });
 
+    AOS.init({
+        duration: 500,
+        once: false,
+        mirror: true,
+    });
+
+    // Forms inputs
+    $("input, textarea").change(function () {
+        let e = $(this);
+        e.val().length > 0 ? (e.addClass("not-empty")) : (e.removeClass("not-empty"));
+    })
+    
+    // Diamond lines animation
+    const diamond = $('.diamond');
+    if (diamond) {
+        const lines = $('.diamond svg').length;
+        $('.diamond svg').each(function() {
+            let index = $(this).index();
+            let delay = 0.3 + Math.abs(index - lines / 2) * 0.05;
+            $(this).css({'transition-delay': delay + 's'});
+        })
+    }
+    
+    // Map points animation
+    const map = $('.about-map');
+    if (map) {
+        $('.about-map__point').each(function() {
+            let index = $(this).index();
+            let delay = 0.5 + index * 0.2;
+            $(this).css({'animation-delay': delay + 's'});
+        })
+    }
+
+    // Patterns animation
+    const patterns = $('.pattern');
+    if (patterns) {
+        const widthTo = patterns.eq(0).width();
+        patterns.css({width: '100%'});
+        const widthFrom = patterns.eq(0).width();
+        const widthDiff = widthFrom - widthTo;
+        const winHeight = window.innerHeight;
+        const scrollPatterns = function(state){
+            const scrollTop = window.pageYOffset;
+            patterns.each(function(){
+                const pattern = $(this);
+                const elTop = pattern.offset().top;
+                const index = 1 - (scrollTop + winHeight - elTop) / winHeight * 1.1;
+
+                if (index > 0 && index < 1) {
+                    const newWidth = widthTo + widthDiff * index;
+                    TweenLite.to(pattern, 0.5, {
+                        width: newWidth
+                    });
+                }
+                
+                if (state == 'init' && index < 0) {
+                    patterns.css({width: widthTo + 'px'});
+                }
+            })
+        };
+
+        scrollPatterns('init');
+        window.addEventListener('scroll', scrollPatterns);
+    }
+
+    // Stage slider
+    if ($('.stage-slider').length) {
+        const stageSlider = $('.stage-slider').owlCarousel({
+            loop: true,
+            items: 1,
+            nav: false,
+            dots: false,
+        })
+        $('.stage-slider').on('click', function(){
+            stageSlider.trigger('next.owl.carousel');
+        })
+    }
+
+    // Stage lopue
+    const stageLoupe = document.querySelector('.stage-loupe');
+    if (stageLoupe) {
+        const el = stageLoupe.querySelector('.stage-loupe__el');
+        const img = stageLoupe.querySelector('.stage-loupe__img img');
+
+        let elW, elH, 
+            wrapperW, wrapperH, 
+            diffW, diffH,
+            startX, startY, 
+            moveX, moveY;
+
+        const loupeInit = () => {
+            elW = el.offsetWidth,
+            elH = el.offsetHeight,
+            wrapperW = stageLoupe.offsetWidth,
+            wrapperH = stageLoupe.offsetHeight,
+            diffW = wrapperW - elW,
+            diffH = wrapperH - elH,
+            startX = 0,
+            startY = 0,
+            moveX = 0,
+            moveY = 0;
+                  
+            img.style.width = `${wrapperW}px`;
+            img.style.height = `${wrapperH}px`;    
+            
+            moveEl();
+        }
+        
+        loupeInit();
+        window.addEventListener('resize', loupeInit);
+
+        el.onmousedown = dragStart;
+        el.addEventListener("touchstart", dragStart, false);
+    
+        function dragStart(e) {
+            e = e || window.event;
+            e.preventDefault();
+            if (e.touches) {
+                e = e.touches[0];
+                el.addEventListener("touchmove", dragMove, false);
+                el.addEventListener("touchend", dragStop, false);
+            } else {
+                document.onmousemove = dragMove;
+                document.onmouseup = dragStop;
+            }
+            startX = e.clientX - moveX;
+            startY = e.clientY - moveY;
+        }
+    
+        function dragMove(e) {
+            e = e || window.event;
+            e.preventDefault();
+            if (e.touches) {
+                e = e.touches[0];
+            }
+            moveX = e.clientX - startX;
+            moveY = e.clientY - startY;
+            moveEl();
+        }
+    
+        function dragStop() {
+            calcBorders();
+            document.onmouseup = null;
+            document.onmousemove = null;
+        }
+
+        function calcBorders() {
+            let overflow = false;
+            let posLeft = el.offsetLeft + moveX;
+            let posTop = el.offsetTop + moveY;
+
+            if (posLeft < 0) {
+                moveX -= posLeft;
+                overflow = true;
+            }
+            if (posTop < 0) {
+                moveY -= posTop;
+                overflow = true;
+            }
+            if (posLeft > diffW) {
+                moveX -= (posLeft - diffW);
+                overflow = true;
+            }
+            if (posTop > diffH) {
+                moveY -= (posTop - diffH);
+                overflow = true;
+            }
+            
+            overflow && animateEl();
+        }
+
+        function moveEl() {
+            el.style.transform = `translate(${moveX}px, ${moveY}px`;
+            img.style.transform = `translate(${-moveX}px, ${-moveY}px`;
+        }
+
+        function animateEl() {
+            const speed = 250;
+            el.style.transition = `transform ${speed}ms`;
+            img.style.transition = `transform ${speed}ms`;
+            setTimeout(() => {
+                el.style.transition = null;
+                img.style.transition = null;
+            }, speed);
+            moveEl();
+        }
+    }
+
 })(jQuery)
-
-
 
 // Counter numbers
 const initCounters = () => {

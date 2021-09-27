@@ -1,5 +1,6 @@
 <section class="our_press_area">
-    <div class="container bg-pattern bg-pattern-2">
+    <div class="container">
+        <?php get_template_part('template-parts/animation/pattern'); ?>
         <h6 class="s_title"><?php the_field('offer_subtitle'); ?></h6>
         <div class="row">
             <?php $img = get_field('offer_img');
@@ -24,7 +25,7 @@
                             <input type="text" name="phone" placeholder="Номер телефона">
                             <input type="text" name="name" placeholder="Ваше имя">
                             <input type="email" name="email" placeholder="Электронная почта">
-                            <button type="submit" class="btn green-btn">Заказать</button>
+                            <button type="submit" class="btn btn">Заказать</button>
                         </form>
                     </div>
                 </div>

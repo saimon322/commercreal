@@ -1,5 +1,11 @@
-/* Blog Comment Form css
-============================================================================================ */
+.contact-page {
+    padding-top: 88px;
+
+    @include media-down(md) {
+        padding-top: 76px;
+    }
+}
+
 .comment_form {
     background: #ebf0f4;
     padding: 130px 0px;
@@ -26,7 +32,9 @@
 
 .comment_from {
     .form-group {
-        margin-bottom: 30px;
+        &:not(:last-child) {
+            margin-bottom: 30px;            
+        }
 
         input {
             height: 50px;
@@ -122,43 +130,19 @@
 
     .contact_us_form {
         .form-group {
-            input {
-                border-bottom-color: #3c3c3c;
-
-                @include placeholder {
-                    color: $pfont;
-                }
-
-                &:focus {
-                    border-bottom-color: #fff;
-                    color: #fff;
-                }
-            }
-
-            textarea {
-                border-bottom-color: #3c3c3c;
-
-                @include placeholder {
-                    color: $pfont;
-                }
-
-                &:focus {
-                    border-bottom-color: #fff;
-                    color: #fff;
-                }
-            }
 
             .order_s_btn {
                 font-size: 14px;
-                color: #fff;
                 margin-top: 50px;
+                border: 0;
+                cursor: pointer;
 
                 @include media-down(md) {
                     margin-top: 0;
                 }
 
                 &:hover {
-                    color: $base;
+                    color: $base !important;
                 }
 
                 &:focus {
@@ -294,6 +278,7 @@ label {
 
     @include media-down(md) {
         max-width: 100%;
+        margin-bottom: 30px;
     }
 
     h1 {
@@ -339,7 +324,7 @@ label {
     }
 
     &__btns {
-        margin-top: 120px;
+        margin-top: 90px;
 
         @include media-down(md) {
             margin-top: 50px;            
@@ -351,8 +336,8 @@ label {
     }
 
     .btn {
-        padding: 0;
-        margin-bottom: 20px;
-        line-height: 28px;
+        &:not(:last-child) {
+            margin-bottom: 20px;            
+        }
     }
 }
