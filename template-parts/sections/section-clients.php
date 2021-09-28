@@ -17,25 +17,23 @@
     <?php if( have_rows('reviews', 'options') ): ?>
         <div class="testimonials_slider owl-carousel">
         <?php while( have_rows('reviews', 'options') ): the_row(); ?>
-            <div class="item">
-                <div class="test_item">
-                    <div class="test_item__img">
-                        <img src="<?= get_sub_field('photo'); ?>" alt="">
-                    </div>
-                    <div class="test_item__content">
-                        <?php $data = get_sub_field('data'); ?>
-                        <h3 class="test_item__name">
-                            <?= $data['name']; ?>
-                        </h3>
-                        <h4 class="test_item__post">
-                            <?= $data['post']; ?>
-                        </h4>
-                        <div class="test-item__text">
-                            <?= get_sub_field('text'); ?>
-                        </div>
+            <div class="test_item">
+                <div class="test_item__img">
+                    <img src="<?= get_sub_field('photo'); ?>" alt="">
+                </div>
+                <div class="test_item__content">
+                    <?php $data = get_sub_field('data'); ?>
+                    <h3 class="test_item__name">
+                        <?= $data['name']; ?>
+                    </h3>
+                    <h4 class="test_item__post">
+                        <?= $data['post']; ?>
+                    </h4>
+                    <div class="test-item__text">
+                        <?= get_sub_field('text'); ?>
                     </div>
                 </div>
-            </div>   
+            </div>
         <?php endwhile; ?>
         </div>
     <?php endif; ?>

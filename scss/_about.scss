@@ -130,6 +130,7 @@
 
 .team_item {
     position: relative;
+    min-height: 24px;
     padding-top: 140%;
     background: $blue;
     transition: .3s;
@@ -167,9 +168,7 @@
         }
 
         .list {
-            transform: translateY(10px);
-            opacity: 1;
-            transition: all 500ms ease;
+            height: 24px;
 
             li {
                 display: inline-block;

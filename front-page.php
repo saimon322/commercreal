@@ -154,13 +154,13 @@ $options = get_field('contacts', 'options');
     <?php if ($options['socials']): ?>
         <div class="socials">
             <ul class="list">
-                <?php foreach ($options['socials'] as $social): ?>
-                    <li>
-                        <a href="<?php echo esc_url($link); ?>" target="_blank">
-                            <i class="ion-social-<?php echo strtolower($social['type']); ?>"></i>
-                        </a>
-                    </li>
-                <?php endforeach; ?>
+            <?php foreach ($options['socials'] as $social): ?>
+                <li>
+                    <a href="<?php echo esc_url($social['link']); ?>" target="_blank" rel="noopener noreferrer">
+                        <i class="ion-social-<?php echo strtolower($social['type']); ?>"></i>
+                    </a>
+                </li>
+            <?php endforeach; ?>
             </ul>
         </div>
     <?php endif; ?>
@@ -317,7 +317,7 @@ $options = get_field('contacts', 'options');
                             <?= $stage1['title']; ?>
                         </h2>
                         <div class="stage__text">
-                            <?php echo str_prepos($stage1['text']); ?>
+                            <?= $stage1['text']; ?>
                         </div>
                     </div>
                 </div>
@@ -327,24 +327,18 @@ $options = get_field('contacts', 'options');
                 <!-- Minies stage -->
                 <?php $stage2 = get_field('stage_2'); ?>
                 <div class="stage">
-                    <div class="stage__main">                        
+                    <div class="stage__main">
                         <div class="stage-minies">
-                            <div class="stage-mini">
-                                <img src="<?= get_template_directory_uri(); ?>/img/stages/stage-mini-1.jpg" alt="">
-                                <h3>Высокий и долгосрочный доход</h3>
-                            </div>
-                            <div class="stage-mini">
-                                <img src="<?= get_template_directory_uri(); ?>/img/stages/stage-mini-2.jpg" alt="">
-                                <h3>Концепция развития</h3>
-                            </div>
-                            <div class="stage-mini stage-mini--white">
-                                <img src="<?= get_template_directory_uri(); ?>/img/stages/stage-mini-3.jpg" alt="">
-                                <h3>Арендные отношения</h3>
-                            </div>
-                            <div class="stage-mini">
-                                <img src="<?= get_template_directory_uri(); ?>/img/stages/stage-mini-4.jpg" alt="">
-                                <h3>Выявление преимуществ</h3>
-                            </div>
+                            <?php 
+                            if( have_rows('stage_2') ): while( have_rows('stage_2') ): the_row(); 
+                                if( have_rows('substages') ):  while( have_rows('substages') ): the_row(); ?>
+                                    <?php $is_white = get_sub_field('is_white') ? ' stage-mini--white' : ''; ?>
+                                    <div class="stage-mini<?= $is_white; ?>">
+                                        <img src="<?= get_sub_field('img'); ?>" alt="">
+                                        <h3><?= get_sub_field('title'); ?></h3>
+                                    </div>
+                                <?php endwhile; endif;
+                            endwhile; endif; ?>
                         </div>
                     </div>
                     <div class="stage__content">
@@ -352,7 +346,7 @@ $options = get_field('contacts', 'options');
                             <?= $stage2['title']; ?>
                         </h2>
                         <div class="stage__text">
-                            <?= str_prepos($stage2['text']); ?>
+                            <?= $stage2['text']; ?>
                         </div>
                     </div>
                 </div>
@@ -389,7 +383,7 @@ $options = get_field('contacts', 'options');
                             <?= $stage3['title']; ?>
                         </h2>
                         <div class="stage__text">
-                            <?= str_prepos($stage3['text']); ?>
+                            <?= $stage3['text']; ?>
                         </div>
                     </div>
                 </div>
@@ -400,7 +394,7 @@ $options = get_field('contacts', 'options');
 
 <?php get_template_part('template-parts/sections/section', 'clients'); ?>
 <?php get_template_part('template-parts/sections/section', 'latest-projects'); ?>
-<?php get_template_part('template-parts/sections/section', 'form-2'); ?>
+<?php get_template_part('template-parts/sections/section', 'form-1'); ?>
 <?php get_template_part('template-parts/sections/section', 'blog'); ?>
 <div class="page_lines">
     <div class="container">
