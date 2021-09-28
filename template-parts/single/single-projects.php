@@ -56,6 +56,11 @@
                                         <a href="<?php the_sub_field('file'); ?>" download>Скачать</a>
                                     </h5>
                                     <?php break;
+                                case 'broker': ?>
+                                    <h5>Брокер проекта: <span><?php the_sub_field('broker_name'); ?></span></h5>
+                                    <h5>Тел: <span><a href="tel: <?php the_sub_field('phone'); ?>"><?php the_sub_field('phone'); ?></a></span></h5>
+                                    <h5>Email: <span><a href="mailto: <?php the_sub_field('email'); ?>"><?php the_sub_field('email'); ?></a></span></h5>
+                                    <?php break;
                             endswitch;
                             $counter++;
                         endwhile; ?>

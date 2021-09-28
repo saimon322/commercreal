@@ -33,18 +33,18 @@
                 $cats_slugs = terms_slugs_to_string($terms);
                 $cats_names = terms_names_to_string($terms); ?>
                 <div class="item <?php echo $cats_slugs; ?>">
-                    <div class="projects_item">
+                    <a href="<?php echo get_the_permalink(); ?>" class="projects_item">
                         <?php the_post_thumbnail('project-thumb', ['class' => 'img-fluid']); ?>
                         <div class="hover">
-                            <a href="<?php echo get_the_permalink(); ?>"><i class="ion-android-arrow-forward"></i></a>
+                            <i class="ion-android-arrow-forward"></i>
                             <div class="project_text">
                                 <?php if ($cats_names): ?>
                                     <h5><?php echo $cats_names; ?></h5>
                                 <?php endif; ?>
-                                <a href="<?php echo get_the_permalink(); ?>"><h4><?php the_title(); ?></h4></a>
+                                <h4><?php the_title(); ?></h4>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
             <?php endwhile; ?>
         <?php endif;

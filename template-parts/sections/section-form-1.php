@@ -23,8 +23,8 @@
                         <h3><span>Заказать индивидуальную подборку</span> актуальных объектов </h3>
                         <p>Мы предоставляем нашим клиентам только уникальные предложения и условия сотрудничества.</p>
                         <form class="press_form__form form-contact">
-                            <input type="text" name="phone" placeholder="Номер телефона">
-                            <input type="text" name="name" placeholder="Ваше имя">
+                            <input type="text" name="phone" required placeholder="Номер телефона">
+                            <input type="text" name="name" required placeholder="Ваше имя">
                             <input type="email" name="email" placeholder="Электронная почта">
                             <button type="submit" class="btn btn">Заказать</button>
                         </form>

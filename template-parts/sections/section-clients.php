@@ -51,6 +51,14 @@
                     </a>
                 </div>
             <?php endwhile; ?>
+            <?php while( have_rows('partners', 'options') ): the_row(); ?>
+                <div class="item">
+                    <a href="<?= get_sub_field('link'); ?>" target="_blank" rel="noopener noreferrer">
+                        <img src="<?= get_sub_field('logo'); ?>" alt="">
+                    </a>
+                </div>
+            <?php endwhile; ?>
+            </div>
         <?php endif; ?>
     </div>
 </section>
