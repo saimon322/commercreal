@@ -2688,6 +2688,7 @@ nav li:hover .mega-menu {
 }
 
 .projects_item {
+  display: block;
   position: relative;
   height: 100%;
 }
@@ -5714,7 +5715,13 @@ label {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  max-width: 370px;
   margin-bottom: 50px;
+}
+@media (min-width: 992px) {
+  .contact-card {
+    max-width: 400px;
+  }
 }
 .contact-card__image {
   -webkit-box-flex: 1;
@@ -6215,5 +6222,10 @@ a.press_img_item:hover span {
 
 .page-template-tpl-projects .our_projects_area {
   padding-top: 0;
+}
+
+.page404 {
+  max-width: 800px;
+  margin: 0 auto;
 }
 /*# sourceMappingURL=style.css.map */

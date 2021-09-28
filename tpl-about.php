@@ -148,7 +148,7 @@ if ($main_video): ?>
             <h6 class="s_title">Наши награды</h6>
             <div class="team_slider owl-carousel">
                 <div class="team_item">
-                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/awards/award-1.jpg" alt="">
+                    <img src="<?= get_template_directory_uri(); ?>/img/awards/award-1.jpg" alt="">
                     <div class="hover">
                         <h5>Лучшее предприятие<br> России 2020</h5>
                         <ul class="list">
@@ -156,9 +156,8 @@ if ($main_video): ?>
                         </ul>
                     </div>
                 </div>
-            </div>
                 <div class="team_item">
-                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/awards/award-2.jpg" alt="">
+                    <img src="<?= get_template_directory_uri(); ?>/img/awards/award-2.jpg" alt="">
                     <div class="hover">
                         <h5>Лучшая услуга<br> России 2020</h5>
                         <ul class="list">
@@ -166,9 +165,8 @@ if ($main_video): ?>
                         </ul>
                     </div>
                 </div>
-            </div>
                 <div class="team_item">
-                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/awards/award-3.jpg" alt="">
+                    <img src="<?= get_template_directory_uri(); ?>/img/awards/award-3.jpg" alt="">
                     <div class="hover">
                         <h5>За вклад в развитие<br> региона 2016</h5>
                         <ul class="list">
@@ -176,9 +174,8 @@ if ($main_video): ?>
                         </ul>
                     </div>
                 </div>
-            </div>
                 <div class="team_item">
-                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/awards/award-4.jpg" alt="">
+                    <img src="<?= get_template_directory_uri(); ?>/img/awards/award-4.jpg" alt="">
                     <div class="hover">
                         <h5>Лучший стратегический <br> партнёр 2017</h5>
                         <ul class="list">
@@ -187,9 +184,9 @@ if ($main_video): ?>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="awards_text">
-            <p>Качество наших услуг для нас являться самым важным. Мы делаем все, чтобы Вы осталась довольны сотрудничеством с  нами.  </p>
+            <div class="awards_text">
+                <p>Качество наших услуг для нас являться самым важным. Мы делаем все, чтобы Вы осталась довольны сотрудничеством с  нами.  </p>
+            </div>
         </div>
     </div>
 </section>
