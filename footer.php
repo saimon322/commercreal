@@ -39,13 +39,13 @@
         <div class="middle_text">
             <?php if ($options['socials']): ?>
                 <ul class="list">
-                <?php foreach ($options['socials'] as $social): ?>
-                    <li>
-                        <a href="<?php echo esc_url($social['link']); ?>" target="_blank" rel="noopener noreferrer">
-                            <?php echo $social['type']; ?>
-                        </a>
-                    </li>
-                <?php endforeach; ?>
+                    <?php foreach ($options['socials'] as $social): ?>
+                        <li>
+                            <a href="<?php echo esc_url($social['link']); ?>" target="_blank">
+                                <?php echo $social['type']; ?>
+                            </a>
+                        </li>
+                    <?php endforeach; ?>
                 </ul>
             <?php endif; ?>
         </div>
