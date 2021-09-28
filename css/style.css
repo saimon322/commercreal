@@ -2283,10 +2283,18 @@ nav li:hover .mega-menu {
   position: static !important;
 }
 
-.speciallization_area .row {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+@media (min-width: 768px) and (max-width: 991px) {
+  .speciallization_area .row {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.services-content .row {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
 .bg_color {

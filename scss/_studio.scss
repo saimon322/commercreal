@@ -1,5 +1,11 @@
 .speciallization_area .row {
-    justify-content: center;
+    @include media-only(md) {
+        justify-content: center;
+    }
+}
+
+.services-content .row {
+    justify-content: flex-start;
 }
 
 .bg_color{
