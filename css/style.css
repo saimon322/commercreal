@@ -5337,6 +5337,7 @@ nav li:hover .mega-menu {
   -o-transition: all 250ms ease 0s;
   transition: all 250ms ease 0s;
   margin-right: 6px;
+  margin-bottom: 6px;
 }
 .s_blog_text_inner .blog_main_text .s_blog_tag a:hover {
   background: #f1d299;

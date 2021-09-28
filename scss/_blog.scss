@@ -476,6 +476,7 @@
 				box-shadow: none;
 				@include transition;
 				margin-right: 6px;
+				margin-bottom: 6px;
 				&:hover{
 					background: $base;
 					border-color: $base;
