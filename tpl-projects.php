@@ -4,7 +4,7 @@ get_header();
 <!--================Breadcrumb Area =================-->
 <section class="breadcrumb_link">
     <div class="container">
-        <a href="#">Главная</a>
+        <a href="/">Главная</a>
         <a class="active" href="#">Проекты</a>
     </div>
 </section>
@@ -45,6 +45,6 @@ get_header();
 </section>
 <?php
 get_template_part('template-parts/sections/section', 'our-projects');
-get_template_part('template-parts/sections/section', 'form-1');
+get_template_part('template-parts/sections/section', 'form-2');
 get_footer();
 ?>

@@ -78,6 +78,7 @@ function commerc_real_scripts()
     wp_enqueue_script('aos-js', get_template_directory_uri() . '/vendors/aos/aos.js', array(), _S_VERSION, true);
     wp_enqueue_script('gsap-js', get_template_directory_uri() . '/vendors/gsap/TweenMax.min.js', array(), _S_VERSION, true);
     wp_enqueue_script('smoothscroll-js', get_template_directory_uri() . '/js/smoothscroll.js', array(), _S_VERSION, true);
+    wp_enqueue_script('ajax-js', get_template_directory_uri() . '/js/ajax.js', array(), _S_VERSION, true);
     wp_enqueue_script('theme-js', get_template_directory_uri() . '/js/theme.js', array(), _S_VERSION, true);
     
     // 360 pannellum

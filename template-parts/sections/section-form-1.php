@@ -1,12 +1,19 @@
 <section class="our_press_area">
     <div class="container">
-        <h6 class="s_title">Актуальные объекты</h6>
+        <?php get_template_part('template-parts/animation/pattern'); ?>
+        <?php $form = get_field('block_form', 'option') ?>
+        <h6 class="s_title">
+            <?= $form['title']; ?>
+        </h6>
+        <div class="our_press_area_text">
+            <?= $form['text']; ?>
+        </div>
         <div class="row">
             <div class="col-lg-6">
                 <div class="press_img_item">
-                    <h2 class="press_img_title">Только для вас</h2>
+                    <h2 class="press_img_title"><?= $form['img_text']; ?></h2>
                     <div class="press_img">
-                        <img class="img-fluid" src="<?php echo get_stylesheet_directory_uri(); ?>/img/press-2.jpg">
+                        <img class="img-fluid" src="<?= $form['img_1']; ?>" alt="">
                     </div>
                 </div>
             </div>

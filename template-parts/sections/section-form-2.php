@@ -1,26 +1,26 @@
 <section class="our_press_area">
     <div class="container">
-        <?php get_template_part('template-parts/animation/pattern'); ?>
-        <h6 class="s_title"><?php the_field('offer_subtitle'); ?></h6>
+        <?php $form = get_field('block_form', 'option') ?>
+        <h6 class="s_title">
+            <?= $form['title']; ?>
+        </h6>
+        <div class="our_press_area_text">
+            <?= $form['text']; ?>
+        </div>
         <div class="row">
-            <?php $img = get_field('offer_img');
-            if ($img): ?>
-                <div class="col-lg-6">
-                    <div class="press_img_item">
-                        <h2 class="press_img_title"><?php the_field('offer_caption'); ?></h2>
-                        <div class="press_img">
-                            <img class="img-fluid" src="<?php echo $img; ?>" alt="">
-                        </div>
+            <div class="col-lg-6">
+                <div class="press_img_item">
+                    <h2 class="press_img_title"><?= $form['img_text']; ?></h2>
+                    <div class="press_img">
+                        <img class="img-fluid" src="<?= $form['img_2']; ?>" alt="">
                     </div>
                 </div>
-            <?php endif; ?>
+            </div>
             <div class="col-lg-6">
                 <div class="press_content">
                     <div class="press_form">
-                        <h3>
-                            <?php the_field('offer_title'); ?>
-                        </h3>
-                        <?php the_field('offer_text'); ?>
+                        <h3><span>Заказать индивидуальную подборку</span> актуальных объектов </h3>
+                        <p>Мы предоставляем нашим клиентам только уникальные предложения и условия сотрудничества.</p>
                         <form class="press_form__form form-contact">
                             <input type="text" name="phone" placeholder="Номер телефона">
                             <input type="text" name="name" placeholder="Ваше имя">

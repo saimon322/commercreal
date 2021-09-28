@@ -198,10 +198,22 @@ a.press_img_item:hover span {
     }
 
     .s_title {
+        margin-bottom: 50px;
+
+        @include media-down(sm) {
+            margin-bottom: 20px;
+        }
+    }
+
+    &_text {
         margin-bottom: 80px;
 
         @include media-down(sm) {
             margin-bottom: 40px;
+        }
+
+        p {
+            margin-bottom: 5px;
         }
     }
 }

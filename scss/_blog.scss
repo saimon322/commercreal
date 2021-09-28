@@ -361,10 +361,18 @@
 .s_blog_text_inner{
 	.blog_main_text{
 		padding-bottom: 65px;
-		h4{
-			font-size: 48px;
-			color: #fff;
-			margin-bottom: 20px;
+		h1, h2, h3, h4 {
+			span {
+				white-space: inherit;
+			}
+		}
+		h2, h3, h4 {
+			margin-top: 30px;
+		}
+		ul, ol {
+			li {
+				margin-bottom: 15px;
+			}
 		}
 		.date{
 			margin-bottom: 60px;
@@ -399,7 +407,6 @@
 			font-size: 16px;
 			line-height: 30px;
 			color: $pfont;
-			margin-bottom: 0px;
 		}
 		img{
 			margin: 65px 0;
@@ -579,6 +586,10 @@
             font-size: 14px;
         }
     }
+}
+
+.blog_g_item {
+	margin-bottom: 30px;
 }
 
 .blog_g_item .press_img {
