@@ -260,7 +260,7 @@ $options = get_field('contacts', 'options');
                             <h4>DEVELOPER</h4>
                         </a>
                         <p>Вы занимаетесь созданием новых объектов недвижимости и вам требуется решить ряд коммерческих задач. Сотрудничество лучший способ создать максимально эффективный проект.</p>
-                        <a class="view_btn" href="<?php echo get_term_link(13); ?>">Последние проекты</a>
+                        <a class="view_btn" href="/proekty/">Последние проекты</a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-sm-6">
@@ -270,7 +270,7 @@ $options = get_field('contacts', 'options');
                             <h4>СОБСТВЕННИК</h4>
                         </a>
                         <p>Вы строите торговые центры или владеете коммерческой недвижимостью и ваша цель достичь максимальных экономических результатов мы с удовольствием сделаем это за вас.</p>
-                        <a class="view_btn" href="<?php echo get_term_link(15); ?>">Последние проекты</a>
+                        <a class="view_btn" href="/proekty/">Последние проекты</a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-sm-6">
@@ -280,7 +280,7 @@ $options = get_field('contacts', 'options');
                             <h4>RETAILER</h4>
                         </a>
                         <p>Вы имеете собственный бизнес или развиваете сетевую ритейл-компанию, и выходе в конкретный город или регион, ищите подходящие именно вам варианты помещений.</p>
-                        <a class="view_btn" href="<?php echo get_term_link(14); ?>">Последние проекты</a>
+                        <a class="view_btn" href="/proekty/">Последние проекты</a>
                     </div>
                 </div>
             </div>
