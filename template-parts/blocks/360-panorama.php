@@ -7,12 +7,12 @@
     
     <div class="panorama" id="panorama-<?= $args['index']; ?>"></div>
     <script>
-        window.onload = function () {
+        jQuery(document).ready(function (){
             pannellum.viewer('panorama-<?= $args['index']; ?>', {
                 "type": "equirectangular",
                 "autoLoad": true,
                 "panorama": "<?= $args['img']; ?>"
             });
-        }
+        });
     </script>
 </div>
