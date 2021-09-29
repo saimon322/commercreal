@@ -29,7 +29,7 @@
                     <h4 class="test_item__post">
                         <?= $data['post']; ?>
                     </h4>
-                    <div class="test-item__text">
+                    <div class="test_item__text">
                         <?= get_sub_field('text'); ?>
                     </div>
                 </div>

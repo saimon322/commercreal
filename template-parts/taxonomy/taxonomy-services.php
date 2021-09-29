@@ -1,4 +1,3 @@
-<!--================Our Projects Area =================-->
 <section class="our_projects_area">
     <div class="blog_grid_inner">
         <div class="row blog_inner_fillter">
@@ -24,4 +23,3 @@
         </div>
     </div>
 </section>
-<!--================End Our Projects Area =================-->
