@@ -20,11 +20,12 @@
 		position: relative;
 		height: 100vh;
 		.breadcrumb_link{
+			padding-top: 20px;
 			position: absolute;
 			left: 0px;
-			top: 40%;
-			transform: translateY(-50%);
-			a{
+			top: 50%;
+
+			a {
 				font-size: 18px;
 				color: #fff;
 				font-weight: normal;
@@ -36,15 +37,16 @@
 					color: $base;
 				}
 			}
-          &:before{
-              content: "";
-              width: 86px;
-              height: 6px;
-              background: $base;
-              position: absolute;
-              bottom: 40px;
-              left: 0;
-          }
+
+			&:before{
+					content: "";
+					width: 86px;
+					height: 6px;
+					background: $base;
+					position: absolute;
+					top: 0;
+					left: 0;
+			}
 		}
 	}
 	.bread_bottom_text{

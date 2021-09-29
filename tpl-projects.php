@@ -1,16 +1,15 @@
 <?php /* Template Name: Проекты */
 get_header();
 ?>
-<!--================Breadcrumb Area =================-->
+
 <section class="breadcrumb_link">
     <div class="container">
         <a href="/">Главная</a>
         <a class="active" href="#">Проекты</a>
     </div>
 </section>
-<!--================End Breadcrumb Area =================-->
-<!--================About Studio Area =================-->
-<section class="about_studio_area pattern-section">
+
+<section class="about_studio_area section-pad-bot pattern-section">
     <div class="container">
         <?php get_template_part('template-parts/animation/pattern'); ?>
         <div class="ab_studio_text">
@@ -18,7 +17,7 @@ get_header();
         </div>
     </div>
 </section>
-<!--================End About Studio Area =================-->
+
 <section class="about_map_area">
     <div class="container">
         <div class="row">
@@ -43,6 +42,7 @@ get_header();
         </div>
     </div>
 </section>
+
 <?php
 get_template_part('template-parts/sections/section', 'our-projects');
 get_template_part('template-parts/sections/section', 'form-2');

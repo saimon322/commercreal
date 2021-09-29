@@ -78,6 +78,7 @@ h6 {
 
 img {
   max-width: 100%;
+  height: auto;
 }
 
 #success {
@@ -201,14 +202,14 @@ i:before {
 }
 
 .spinner {
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 50%;
   width: 50px;
   height: 50px;
   -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .double-bounce1,
@@ -1397,12 +1398,10 @@ nav li:hover .mega-menu {
   height: 100vh;
 }
 .project_breadcrumb_area .breadcrumb_inner .breadcrumb_link {
+  padding-top: 20px;
   position: absolute;
   left: 0px;
-  top: 40%;
-  -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
+  top: 50%;
 }
 .project_breadcrumb_area .breadcrumb_inner .breadcrumb_link a {
   font-size: 18px;
@@ -1424,7 +1423,7 @@ nav li:hover .mega-menu {
   height: 6px;
   background: #f1d299;
   position: absolute;
-  bottom: 40px;
+  top: 0;
   left: 0;
 }
 .project_breadcrumb_area .bread_bottom_text {
@@ -2458,6 +2457,11 @@ nav li:hover .mega-menu {
 .advantages .spec_item {
   padding-right: 30px;
 }
+@media (min-width: 1200px) {
+  .advantages .spec_item {
+    padding-right: 55px;
+  }
+}
 @media (max-width: 767px) {
   .advantages .spec_item {
     padding-right: 0;
@@ -3179,40 +3183,56 @@ nav li:hover .mega-menu {
   position: relative;
   z-index: 2;
 }
-.prev_next_area .prev {
+.prev_next_area .prev,
+.prev_next_area .next {
+  position: relative;
+  display: block;
   -webkit-box-flex: 0;
       -ms-flex: 0 0 50%;
           flex: 0 0 50%;
   max-width: 50%;
   background: #eaf0f3;
+  background-size: cover;
   text-align: center;
-  padding: 48px 0px;
+  padding: 48px 10px;
 }
-.prev_next_area .prev a {
+@media (max-width: 767px) {
+  .prev_next_area .prev,
+.prev_next_area .next {
+    padding: 10px;
+  }
+}
+.prev_next_area .prev:hover span,
+.prev_next_area .next:hover span {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
+}
+.prev_next_area .prev span,
+.prev_next_area .next span {
+  position: relative;
+  z-index: 1;
+  display: block;
   text-transform: uppercase;
   font-size: 18px;
   letter-spacing: 6px;
   color: #1b1b1b;
-  position: relative;
-  z-index: 999;
   font-weight: 700;
+  -webkit-transition: -webkit-transform 0.25s;
+  transition: -webkit-transform 0.25s;
+  -o-transition: transform 0.25s;
+  transition: transform 0.25s;
+  transition: transform 0.25s, -webkit-transform 0.25s;
 }
-.prev_next_area .next {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 50%;
-          flex: 0 0 50%;
-  max-width: 50%;
-  background-size: cover;
-  padding: 48px 0px;
+@media (max-width: 767px) {
+  .prev_next_area .prev span,
+.prev_next_area .next span {
+    font-size: 12px;
+    letter-spacing: 3px;
+  }
 }
-.prev_next_area .next a {
-  text-transform: uppercase;
-  font-size: 18px;
-  letter-spacing: 6px;
+.prev_next_area .next span {
   color: #fff;
-  position: relative;
-  z-index: 999;
-  font-weight: 700;
 }
 
 /* End Project Details css
@@ -5720,7 +5740,7 @@ label {
 }
 @media (min-width: 992px) {
   .contact-card {
-    max-width: 400px;
+    max-width: 370px;
   }
 }
 .contact-card__image {
@@ -6006,10 +6026,6 @@ ul.custom-ul li:hover:before {
   font-size: 17px;
 }
 
-.services-content--text {
-  padding: 60px 0;
-}
-
 .about_office_area img {
   max-width: 100%;
 }
@@ -6227,5 +6243,19 @@ a.press_img_item:hover span {
 .page404 {
   max-width: 800px;
   margin: 0 auto;
+}
+
+.modal-dialog {
+  height: 100%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 /*# sourceMappingURL=style.css.map */

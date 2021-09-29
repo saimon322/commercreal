@@ -110,7 +110,7 @@ ul.custom-ul {
 }
 
 .services-content--text {
-    padding: 60px 0;
+    // padding: 60px 0;
 }
 
 .about_office_area img {
@@ -322,4 +322,12 @@ a.press_img_item:hover span {
 .page404 {
     max-width: 800px;
     margin: 0 auto;
+}
+
+.modal-dialog {
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

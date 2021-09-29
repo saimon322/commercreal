@@ -527,35 +527,45 @@
 	text-align: center;
 	position: relative;
 	z-index: 2;
-	.prev{
+	.prev,
+	.next{
+		position: relative;
+		display: block;
 		flex: 0 0 50%;
 		max-width: 50%;
 		background: #eaf0f3;
+		background-size: cover;
 		text-align: center;
-		padding: 48px 0px;
-		a{
+		padding: 48px 10px;
+
+		@include media-down(sm) {
+			padding: 10px;
+		}
+
+		&:hover span {
+			transform: scale(1.1);
+		}
+
+		span{
+			position: relative;
+			z-index: 1;
+			display: block;
 			text-transform: uppercase;
 			font-size: 18px;
 			letter-spacing: 6px;
 			color: $black;
-            position: relative;
-            z-index: 999;
-            font-weight: 700;
+			font-weight: 700;
+			transition: transform .25s;
+
+			@include media-down(sm) {
+				font-size: 12px;
+				letter-spacing: 3px;
+			}
 		}
 	}
 	.next{
-		flex: 0 0 50%;
-		max-width: 50%;
-		background-size: cover;
-		padding: 48px 0px;
-		a{
-			text-transform: uppercase;
-			font-size: 18px;
-			letter-spacing: 6px;
+		span{
 			color: #fff;
-            position: relative;
-            z-index: 999;
-            font-weight: 700;
 		}
 	}
 }
