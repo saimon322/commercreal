@@ -29,7 +29,24 @@
         </div>
         <div class="row services-content">
             <div class="col-12 col-md-8">
-                <?php echo term_description(); ?>
+                <div class="services-content--text">
+                    <?php echo term_description(); ?>
+                </div>
+                <div class="row">
+                    <?php if (have_posts()) :
+                        $counter = 1;
+                        while (have_posts()) : the_post();
+                            echo $counter === 1 ? '<div class="col-12 col-md-6"><ul class="custom-ul">' : ''; 
+                            echo $counter % 9 === 0 ? '</ul></div><div class="col-12 col-md-6"><ul class="custom-ul">' : ''; ?>
+                            <li>
+                                <a href="<?php echo get_the_permalink(); ?>"><?php the_title(); ?></a>
+                            </li>
+                        <?php 
+                        $counter++;
+                        endwhile;
+                    endif;
+                    ?>
+                </div>
             </div>
         </div>
     </div>

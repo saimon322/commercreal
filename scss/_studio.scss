@@ -160,6 +160,10 @@
 .advantages .spec_item {
     padding-right: 30px;
 
+    @include media-up(xl) {
+        padding-right: 55px;
+    }
+
     @include media-down(sm) {
         padding-right: 0;
     }

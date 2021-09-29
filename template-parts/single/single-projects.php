@@ -148,23 +148,23 @@
     if ($prevPost): ?>
         <?php $prevthumbnail = get_the_post_thumbnail_url($prevPost->ID, 'full');
         $prev_url            = get_permalink($prevPost->ID); ?>
-        <div class="prev">
+        <a href="<?php echo $prev_url; ?>" class="prev">
             <div class="prev-hover">
                 <div class="prev_next_area__cover" style="background: url(<?php echo $prevthumbnail; ?>) scroll center center;"></div>
             </div>
-            <a href="<?php echo $prev_url; ?>">Предыдущий проект</a>
-        </div>
+            <span>Предыдущий проект</span>
+        </a>
     <?php endif;
     $nextPost = get_next_post();
     if ($nextPost) : ?>
         <?php $nextthumbnail = get_the_post_thumbnail_url($nextPost->ID, 'full');
         $next_url            = get_permalink($nextPost->ID); ?>
-        <div class="next">
+        <a href="<?php echo $next_url; ?>" class="next">
             <div class="next-hover">
                 <div class="prev_next_area__cover" style="background: url(<?php echo $nextthumbnail; ?>) scroll center center;"></div>
             </div>
-            <a href="<?php echo $next_url; ?>">Следующий проект</a>
-        </div>
+            <span>Следующий проект</span>
+        </a>
     <?php endif; ?>
 </section>
 <!--================End Prev Next Area =================-->

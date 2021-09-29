@@ -200,15 +200,17 @@ if ($main_video): ?>
                     <?php get_template_part('template-parts/animation/diamond'); ?>
                 </div>
             </div>
-            <div class="presentation__content">
-                <h2>Презентация</h2>
-                <p class="mt-4">
-                    Мы расскажем все о наших лучших проектах, принципах работы, и плюсах работы с нами.
-                </p>
-                <div class="presentation__icon">
-                    <img src="<?= get_template_directory_uri(); ?>/img/icon/presentation.svg">
+            <div class="col-12 col-md-6">
+                <div class="presentation__content">
+                    <h2>Презентация</h2>
+                    <p class="mt-4">
+                        Мы расскажем все о наших лучших проектах, принципах работы, и плюсах работы с нами.
+                    </p>
+                    <div class="presentation__icon">
+                        <img src="<?= get_template_directory_uri(); ?>/img/icon/presentation.svg">
+                    </div>
+                    <button class="btn btn" download>Скачать PDF</button>
                 </div>
-                <button class="btn btn" download>Скачать PDF</button>
             </div>
         </div>
     </div>

@@ -263,9 +263,11 @@
     /*----------------------------------------------------*/
     /*  Explor Room Slider
     /*----------------------------------------------------*/
+    let filterSlider, filterClone;
     function fillter_slider() {
         if ($('.fillter_slider').length) {
-            $('.fillter_slider').owlCarousel({
+            filterClone = $('.fillter_slider').clone();
+            filterSlider = $('.fillter_slider').owlCarousel({
                 loop: true,
                 margin: 6,
                 items: 4,
@@ -329,12 +331,8 @@
             testSlider.on('changed.owl.carousel', function(event) {
                 activeSlide = event.item.index;
             })
-            testSlider.find('.item').on('click', function() {
-                const index = parseInt($(this).parent().index());
-                console.log(index + ' ' + activeSlide);
-                if (index != activeSlide) {
-                    $('.testimonials_slider').trigger('next.owl.carousel');
-                }
+            testSlider.find('.test_item').on('click', function() {
+                $('.testimonials_slider').trigger('next.owl.carousel');
             })
         }
     }
@@ -451,11 +449,19 @@
         $('.portfolio_filter .active').removeClass('active');
         $(this).closest('li').addClass('active');
         var selector = $(this).attr('data-filter');
+        console.log('.item' + selector);
         $('.fillter_slider').fadeOut(300);
         $('.fillter_slider').fadeIn(300);
         setTimeout(function () {
-            $('.fillter_slider .owl-item').hide();
-            $(selector).closest('.fillter_slider .owl-item').show();
+            const itemsCount = filterClone.find('.item').length;
+            for (let i = 0; i < itemsCount; i++) {
+                filterSlider.trigger('remove.owl.carousel', i);
+            }
+            filterClone.find('.item' + selector).each(function() {
+                console.log($(this));
+                filterSlider.trigger('add.owl.carousel', $(this).clone());
+            })
+            filterSlider.trigger('refresh.owl.carousel');
         }, 300);
         return false;
     });
