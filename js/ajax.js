@@ -1,11 +1,12 @@
 (function ($) {
     'use strict';
-
+    
     $('.form-contact').submit(function () {
 
         let formData = $(this).serialize();
 
         if (!$('body').hasClass('loading')) {
+            
             $.ajax({
                 type: "POST",
                 url: ajax_data.ajax_url,
@@ -28,7 +29,7 @@
                 }
             });
         }
-
+        
         return false;
 
     });

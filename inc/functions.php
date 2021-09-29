@@ -135,10 +135,36 @@ function get_post_primary_category_name()
     return null;
 }
 
-// Strings prepos
-function str_prepos($text) {
+
+function str_prepos($text)
+{
     $text = preg_replace('!\s+!', ' ', $text);
-    $text = preg_replace('/\x20([а-яА-ЯёЁыЫa-zA-Z]{1,8})\x20/i', ' \\1&nbsp;', $text);
-    $text = preg_replace('/&nbsp;([а-яА-ЯёЁыЫa-zA-Z]{1,8})\x20/i', '&nbsp;\\1&nbsp;', $text);
+    $text = preg_replace('/\x20([а-яА-ЯёЁыЫ]{1,8})\x20/i', ' \\1&nbsp;', $text);
+    $text = preg_replace('/&nbsp;([а-яА-ЯёЁыЫ]{1,8})\x20/i', '&nbsp;\\1&nbsp;', $text);
+    
     return $text;
 }
+
+function get_random_post_from_cpt($post_type)
+{
+    $args = array(
+        'post_type'      => $post_type,
+        'posts_per_page' => 1,
+        'orderby'        => 'rand'
+    );
+    
+    $post_query = new WP_Query($args);
+    
+    return $post_query->posts[0] ?? null;
+}
+
+function callback($buffer) {
+  return str_prepos($buffer);
+}
+
+function buffer_start() { ob_start("callback"); }
+
+function buffer_end() { ob_end_flush(); }
+
+add_action('wp_head', 'buffer_start');
+add_action('wp_footer', 'buffer_end');

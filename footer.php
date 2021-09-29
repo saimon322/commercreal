@@ -52,9 +52,7 @@
         <!-- <div class="right_text"></div> -->
     </div>
 </footer>
-<?php wp_footer(); ?>
 </div>
-
 
 <div class="modal fade"
         id="modal-form"
@@ -76,9 +74,8 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form class="form-contact js-contact-form"
-                        method="POST"
-                        action="#">
+                <form class="form-contact"
+                        method="POST" >
                     <div class="form-row no-gutters">
                         <div class="form-group w-100">
                             <input class="form-control"
@@ -123,6 +120,8 @@
         </div>
     </div>
 </div>
+
+<?php wp_footer(); ?>
 
 </body>
 </html>
