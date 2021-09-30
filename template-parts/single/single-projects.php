@@ -1,4 +1,8 @@
-<?php $terms = wp_get_post_terms(get_the_ID(), 'projects_cats'); ?>
+<?php
+$terms = wp_get_post_terms(get_the_ID(), 'projects_cats');
+wp_enqueue_script('pannellum-js');
+wp_enqueue_style('pannellum-css');
+?>
 <!--================Project Details Area =================-->
 <section class="project_breadcrumb_area" style="background-image: url(<?php the_field('baner'); ?>);">
     <div class="container">
@@ -89,6 +93,7 @@
             <?php the_field('content'); ?>
         </div>
         <?php if (have_rows('after_content')):
+            $index = 0;
             while (have_rows('after_content')) : the_row();
                 switch (get_row_layout()):
                     case 'video':
@@ -104,7 +109,9 @@
                         break;
                     case '360-pano':
                         get_template_part('template-parts/blocks/360-panorama', null, array(
-                            'img' => get_sub_field('img')
+                            'headline' => get_sub_field('headline'),
+                            'img'      => get_sub_field('img'),
+                            'index'    => $index,
                         ));
                         break;
                     case 'slider':
@@ -113,6 +120,7 @@
                         ));
                         break;
                 endswitch;
+                $index++;
             endwhile;
         endif; ?>
         <div class="acf-block">
@@ -145,6 +153,7 @@
 <!--================Prev Next Area =================-->
 <section class="prev_next_area">
     <?php $prevPost = get_previous_post();
+    $prevPost       = empty($prevPost) ? get_random_post_from_cpt('projects') : $prevPost;
     if ($prevPost): ?>
         <?php $prevthumbnail = get_the_post_thumbnail_url($prevPost->ID, 'full');
         $prev_url            = get_permalink($prevPost->ID); ?>
@@ -156,6 +165,7 @@
         </a>
     <?php endif;
     $nextPost = get_next_post();
+    $nextPost = empty($nextPost) ? get_random_post_from_cpt('projects') : $nextPost;
     if ($nextPost) : ?>
         <?php $nextthumbnail = get_the_post_thumbnail_url($nextPost->ID, 'full');
         $next_url            = get_permalink($nextPost->ID); ?>

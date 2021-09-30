@@ -1,17 +1,18 @@
 <div class="acf-block block-pannellum">
-    <h3>Панорама 360&#176; местности</h3>
-    <?php
-    wp_enqueue_script('pannellum-js');
-    wp_enqueue_style('pannellum-css');
-    ?>
-    <div id="panorama"></div>
+    <?php if( empty($args['headline']) ): ?>
+        <h3>Панорама 360&#176; местности</h3>
+    <?php else: ?>
+            <h3><?= $args['headline']; ?></h3>
+    <?php endif; ?>
+    
+    <div class="panorama" id="panorama-<?= $args['index']; ?>"></div>
     <script>
-        window.onload = function () {
-            pannellum.viewer('panorama', {
+        jQuery(document).ready(function (){
+            pannellum.viewer('panorama-<?= $args['index']; ?>', {
                 "type": "equirectangular",
                 "autoLoad": true,
-                "panorama": "<?php echo $args['img']; ?>"
+                "panorama": "<?= $args['img']; ?>"
             });
-        }
+        });
     </script>
 </div>
