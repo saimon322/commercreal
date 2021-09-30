@@ -676,16 +676,19 @@
     }
 
     // Stage slider
-    if ($('.stage-slider').length) {
-        const stageSlider = $('.stage-slider').owlCarousel({
-            loop: true,
-            items: 1,
-            nav: false,
-            dots: false,
-        })
-        $('.stage-slider').on('click', function(){
-            stageSlider.trigger('next.owl.carousel');
-        })
+    const stageSlider = document.querySelector('.stage-slider');
+    if (stageSlider) {
+        const pageFlip = new St.PageFlip(stageSlider,
+            {
+                width: 307,
+                height: 450,
+                size: "fixed",
+                autoSize: false,
+                mobileScrollSupport: false
+            }
+        );
+
+        pageFlip.loadFromHTML(document.querySelectorAll('.stage-slider__item'));
     }
 
     // Stage lopue

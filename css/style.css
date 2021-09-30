@@ -1999,13 +1999,12 @@ nav li:hover .mega-menu {
 }
 
 .stage-slider {
-  width: 100%;
-  height: 100%;
-  cursor: pointer !important;
-}
-.stage-slider .owl-stage-outer,
-.stage-slider .owl-stage {
-  height: 100%;
+  width: 100% !important;
+  height: 100% !important;
+  min-width: unset !important;
+  min-width: unset !important;
+  cursor: pointer;
+  overflow: hidden;
 }
 .stage-slider:hover .stage-slider__item {
   background: transparent;
@@ -2015,8 +2014,8 @@ nav li:hover .mega-menu {
           filter: none;
 }
 .stage-slider__item {
+  width: 100%;
   height: 100%;
-  cursor: pointer;
   background: #003f46;
 }
 .stage-slider__item img {
@@ -5918,9 +5917,9 @@ label {
   margin-bottom: 20px;
 }
 
-#panorama {
+.panorama {
   width: 100%;
-  height: 500px;
+  height: 500px !important;
 }
 
 .pano-wrap.pnlm-container {
