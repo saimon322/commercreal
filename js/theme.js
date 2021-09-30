@@ -680,8 +680,8 @@
     if (stageSlider) {
         const pageFlip = new St.PageFlip(stageSlider,
             {
-                width: 307,
-                height: 450,
+                width: 387,
+                height: 600,
                 size: "fixed",
                 autoSize: false,
                 mobileScrollSupport: false

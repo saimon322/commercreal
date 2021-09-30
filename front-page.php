@@ -357,23 +357,16 @@ $options = get_field('contacts', 'options');
                 <?php $stage3 = get_field('stage_3'); ?>
                 <div class="stage">
                     <div class="stage__main">
-                        <div class="stage-slider owl-carousel">
-                            <div class="stage-slider__item">
-                                <img src="<?= get_template_directory_uri(); ?>/img/stages/stage-2.jpg" alt="">
+                        <?php $images = $stage3['images'];
+                        if( $images ): ?>
+                            <div class="stage-slider">
+                                <?php foreach( $images as $image ): ?>
+                                    <div class="stage-slider__item">
+                                        <img src="<?= $image ?>" alt="">
+                                    </div>
+                                <?php endforeach; ?>
                             </div>
-                            <div class="stage-slider__item">
-                                <img src="<?= get_template_directory_uri(); ?>/img/stages/stage-3.jpg" alt="">
-                            </div>
-                            <div class="stage-slider__item">
-                                <img src="<?= get_template_directory_uri(); ?>/img/stages/stage-4.jpg" alt="">
-                            </div>
-                            <div class="stage-slider__item">
-                                <img src="<?= get_template_directory_uri(); ?>/img/stages/stage-5.jpg" alt="">
-                            </div>
-                            <div class="stage-slider__item">
-                                <img src="<?= get_template_directory_uri(); ?>/img/stages/stage-6.jpg" alt="">
-                            </div>
-                        </div>
+                        <?php endif; ?>
                         <div class="stage__icon stage__icon--right">
                             <img src="<?= get_template_directory_uri(); ?>/img/icon/stages-corner.svg" alt="">
                         </div>
