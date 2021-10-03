@@ -84,12 +84,12 @@ ul.custom-ul {
             display: inline-block;
             height: 20px;
             width: 20px;
-            background-image: url(/wp-content/themes/commerc-real/scss/../img/icon/list-style.svg);
+            background-image: url(/wp-content/themes/commerc-real/img/icon/list-style.svg);
             background-size: 20px 20px;
         }
 
         &:hover:before {
-            background-image: url(/wp-content/themes/commerc-real/scss/../img/icon/list-style-hover.svg);
+            background-image: url(/wp-content/themes/commerc-real/img/icon/list-style-hover.svg);
             background-size: 21px 21px;
         }
     }
@@ -330,4 +330,18 @@ a.press_img_item:hover span {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+// jivosite
+.sendButton_339b {
+    background-image: url('/wp-content/themes/commerc-real/img/icon/jivo-arrow.svg') !important;
+    background-color: $base !important;
+    border-radius: 50%;
+}
+.messagesLabel_f36f {
+    background-color: $base !important;
+}
+.chatCopyright_d4f7,
+.copy_6c21 {
+    display: none !important;
 }
