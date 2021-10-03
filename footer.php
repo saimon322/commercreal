@@ -123,5 +123,7 @@
 
 <?php wp_footer(); ?>
 
+<script src="//code-ya.jivosite.com/widget/s1IdUoxGtg" async></script>
+
 </body>
 </html>
