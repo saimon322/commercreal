@@ -634,9 +634,9 @@
     }
     
     // Map points animation
-    const map = $('.about-map');
+    const map = $('.map');
     if (map) {
-        $('.about-map__point').each(function() {
+        $('.map__point').each(function() {
             let index = $(this).index();
             let delay = 0.5 + index * 0.2;
             $(this).css({'animation-delay': delay + 's'});

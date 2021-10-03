@@ -37,7 +37,47 @@ get_header();
                 <button class="btn btn" data-toggle="modal" data-target="#modal-form">ЗАКАЗАТЬ ЗВОНОК</button>
             </div>
             <div class="col-12 col-md-8">
-                <?php the_field('map_svg'); ?>
+                <div class="map map--local" data-aos data-aos-offset="200">
+                    <img src="<?= get_template_directory_uri(); ?>/img/map-local.svg" alt="" class="map__bg">
+                    <div class="map__points">
+                        <div class="map__point" style="left: 13%; top: 31%;">
+                            <p>Балтийск</p>
+                            <img src="<?= get_template_directory_uri(); ?>/img/icon/map-point.svg" alt="">
+                        </div>
+                        <div class="map__point" style="left: 19%; top: 27%;">
+                            <p>Янтарный</p>
+                            <img src="<?= get_template_directory_uri(); ?>/img/icon/map-point.svg" alt="">
+                        </div>
+                        <div class="map__point" style="left: 26%; top: 25%;">
+                            <p>Светлогорск</p>
+                            <img src="<?= get_template_directory_uri(); ?>/img/icon/map-point.svg" alt="">
+                        </div>
+                        <div class="map__point" style="left: 32%; top: 30%;">
+                            <p>Зеленогорск</p>
+                            <img src="<?= get_template_directory_uri(); ?>/img/icon/map-point.svg" alt="">
+                        </div>
+                        <div class="map__point" style="left: 24%; top: 38%;">
+                            <p>Калининград</p>
+                            <img src="<?= get_template_directory_uri(); ?>/img/icon/map-point.svg" alt="">
+                        </div>
+                        <div class="map__point" style="left: 66%; top: 44%;">
+                            <p>Советск</p>
+                            <img src="<?= get_template_directory_uri(); ?>/img/icon/map-point.svg" alt="">
+                        </div>
+                        <div class="map__point" style="left: 62%; top: 71%;">
+                            <p>Черняховск</p>
+                            <img src="<?= get_template_directory_uri(); ?>/img/icon/map-point.svg" alt="">
+                        </div>
+                        <div class="map__point" style="left: 71%; top: 75%;">
+                            <p>Гусев</p>
+                            <img src="<?= get_template_directory_uri(); ?>/img/icon/map-point.svg" alt="">
+                        </div>
+                        <div class="map__point" style="left: 76%; top: 79%;">
+                            <p>Нестеров</p>
+                            <img src="<?= get_template_directory_uri(); ?>/img/icon/map-point.svg" alt="">
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
