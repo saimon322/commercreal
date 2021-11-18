@@ -79,6 +79,10 @@ h6 {
 img {
   max-width: 100%;
   height: auto;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 #success {
@@ -373,8 +377,6 @@ i:before {
   background: #f1d299;
 }
 
-/* Home Full Menu css
-============================================================================================ */
 .custom-logo-link {
   display: block;
   height: 32px;
@@ -382,6 +384,7 @@ i:before {
 @media (min-width: 992px) {
   .custom-logo-link {
     height: 48px;
+    margin-top: 5px;
   }
 }
 
@@ -527,10 +530,6 @@ i:before {
   padding-top: 88px;
 }
 
-/* End Home Full Menu css
-============================================================================================ */
-/* End Home Full Menu css
-============================================================================================ */
 .full_header {
   position: absolute;
   left: 0px;
@@ -2439,10 +2438,6 @@ nav li:hover .mega-menu {
   font-weight: 500;
 }
 
-/* End Inter Studio css
-============================================================================================ */
-/* Specialliazition css
-============================================================================================ */
 .speciallization_area {
   padding-top: 130px;
 }
@@ -2451,48 +2446,6 @@ nav li:hover .mega-menu {
 }
 .speciallization_area .s_title {
   margin-bottom: 70px;
-}
-
-.advantages .spec_item {
-  padding-right: 30px;
-}
-@media (min-width: 1200px) {
-  .advantages .spec_item {
-    padding-right: 55px;
-  }
-}
-@media (max-width: 767px) {
-  .advantages .spec_item {
-    padding-right: 0;
-  }
-}
-
-.specs-header {
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-}
-.specs-header .spec_item__top {
-  margin-bottom: 0;
-}
-@media (max-width: 991px) {
-  .specs-header {
-    display: none;
-  }
-}
-
-.spec_wrapper {
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
-}
-
-@media (min-width: 992px) {
-  .specs-content {
-    margin-top: 60px !important;
-  }
-  .specs-content .spec_item__top {
-    display: none;
-  }
 }
 
 .spec_item {
@@ -2507,6 +2460,11 @@ nav li:hover .mega-menu {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+}
+@media (max-width: 991px) {
+  .spec_item {
+    margin-bottom: 30px;
+  }
 }
 .spec_item h4 {
   font-size: 30px;
@@ -2626,6 +2584,48 @@ nav li:hover .mega-menu {
   border-color: #edd09a;
   background-color: #003f46;
   padding: 16px 50px;
+}
+
+.advantages .spec_item {
+  padding-right: 30px;
+}
+@media (min-width: 1200px) {
+  .advantages .spec_item {
+    padding-right: 55px;
+  }
+}
+@media (max-width: 767px) {
+  .advantages .spec_item {
+    padding-right: 0;
+  }
+}
+
+.specs-header {
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+.specs-header .spec_item__top {
+  margin-bottom: 0;
+}
+@media (max-width: 991px) {
+  .specs-header {
+    display: none;
+  }
+}
+
+.spec_wrapper {
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+
+@media (min-width: 992px) {
+  .specs-content {
+    margin-top: 60px !important;
+  }
+  .specs-content .spec_item__top {
+    display: none;
+  }
 }
 
 /* End Specialliazition css
@@ -3910,24 +3910,31 @@ nav li:hover .mega-menu {
   .map--global {
     width: 700px;
   }
+}
+@media (max-width: 1199px) {
+  .map--global .map__point {
+    margin-left: 10px;
+  }
+}
+@media (max-width: 767px) {
   .map--global .map__point {
     margin-left: -3px;
   }
 }
 .map--local {
   left: -100px;
-  width: 1000px;
+  width: 73vw;
+  max-width: 1200px;
 }
-@media (max-width: 991px) {
+@media (max-width: 1199px) {
   .map--local {
     left: 0;
-    width: 600px;
   }
 }
 @media (max-width: 767px) {
   .map--local {
-    left: -50px;
-    width: 140%;
+    left: -18%;
+    width: 145%;
   }
   .map--local .map__point {
     margin-left: -10px;
@@ -3954,10 +3961,14 @@ nav li:hover .mega-menu {
 .map__point {
   position: absolute;
   text-align: center;
-  -webkit-transform: translateY(-1200%);
-      -ms-transform: translateY(-1200%);
-          transform: translateY(-1200%);
+  -webkit-transform: translateY(-1500%);
+      -ms-transform: translateY(-1500%);
+          transform: translateY(-1500%);
   cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 .map__point:hover img {
   width: 30px;
@@ -3974,6 +3985,11 @@ nav li:hover .mega-menu {
   font-size: 16px;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.8);
 }
+@media (max-width: 1199px) {
+  .map__point p {
+    font-size: 12px;
+  }
+}
 @media (max-width: 991px) {
   .map__point p {
     font-size: 10px;
@@ -3984,6 +4000,11 @@ nav li:hover .mega-menu {
   -webkit-transition: width 0.25s;
   -o-transition: width 0.25s;
   transition: width 0.25s;
+}
+@media (max-width: 1199px) {
+  .map__point img {
+    width: 20px;
+  }
 }
 @media (max-width: 991px) {
   .map__point img {
@@ -4130,9 +4151,14 @@ nav li:hover .mega-menu {
   -o-transition: background-color 0.5s;
   transition: background-color 0.5s;
 }
-@media (min-width: 992px) and (max-width: 1199px) {
+@media (min-width: 992px) {
   .test_item__img {
     width: 30%;
+  }
+}
+@media (min-width: 1430px) {
+  .test_item__img {
+    width: 40%;
   }
 }
 .test_item__img img {
@@ -5588,6 +5614,11 @@ nav li:hover .mega-menu {
           filter: none;
 }
 
+.blog_grid_inner {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
 .contact-page {
   padding-top: 88px;
 }
@@ -6067,11 +6098,11 @@ ul.custom-ul li:before {
   display: inline-block;
   height: 20px;
   width: 20px;
-  background-image: url(/wp-content/themes/commerc-real/scss/../img/icon/list-style.svg);
+  background-image: url(/wp-content/themes/commerc-real/img/icon/list-style.svg);
   background-size: 20px 20px;
 }
 ul.custom-ul li:hover:before {
-  background-image: url(/wp-content/themes/commerc-real/scss/../img/icon/list-style-hover.svg);
+  background-image: url(/wp-content/themes/commerc-real/img/icon/list-style-hover.svg);
   background-size: 21px 21px;
 }
 
@@ -6324,5 +6355,20 @@ a.press_img_item:hover span {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.sendButton_339b {
+  background-image: url("/wp-content/themes/commerc-real/img/icon/jivo-arrow.svg") !important;
+  background-color: #f1d299 !important;
+  border-radius: 50%;
+}
+
+.messagesLabel_f36f {
+  background-color: #f1d299 !important;
+}
+
+.chatCopyright_d4f7,
+.copy_6c21 {
+  display: none !important;
 }
 /*# sourceMappingURL=style.css.map */
