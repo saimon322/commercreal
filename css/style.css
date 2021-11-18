@@ -5872,8 +5872,6 @@ label {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  -webkit-filter: grayscale(100%) sepia(100%) hue-rotate(129deg) contrast(140%);
-          filter: grayscale(100%) sepia(100%) hue-rotate(129deg) contrast(140%);
 }
 .contact-card__image:after {
   content: "";
