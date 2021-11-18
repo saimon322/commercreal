@@ -37,7 +37,7 @@ get_header();
                 <button class="btn btn" data-toggle="modal" data-target="#modal-form">ЗАКАЗАТЬ ЗВОНОК</button>
             </div>
             <div class="col-12 col-md-8">
-                <?php the_field('map_svg'); ?>
+                <?php get_template_part('template-parts/sections/section', 'map', array('type' => 'local')); ?>
             </div>
         </div>
     </div>

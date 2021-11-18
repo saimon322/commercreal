@@ -367,7 +367,7 @@
     }
 }
 
-.about-map {
+.map {
     position: relative;
     left: -100px;
     width: 1280px;
@@ -380,60 +380,132 @@
         width: 700px;
         overflow: hidden;
     }
+}
+
+.map {
+    position: relative;
+
+    @include media-down(sm) {
+        overflow: hidden;
+        margin-top: 30px;
+    }
+
+    &--global {
+        left: -100px;
+        width: 1280px;
+
+        @include media-down(md) {
+            width: 900px;
+        }
+    
+        @include media-down(sm) {
+            width: 700px;
+        }
+
+        .map__point {
+            @include media-down(lg) {
+                margin-left: 10px;
+            }
+
+            @include media-down(sm) {
+                margin-left: -3px;
+            }
+        }
+    }
+
+    &--local {
+        left: -100px;
+        width: 73vw;
+        max-width: 1200px;
+
+        @include media-down(lg) {
+            left: 0;
+        }
+    
+        @include media-down(sm) {
+            left: -18%;
+            width: 145%;
+
+            .map__point {
+                margin-left: -10px;
+            }
+        }
+    }
 
     &__bg {
         width: 100%;
     }
 
+    &__points {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        transform: translateY(-100%);
+        transition: transform 1s;
+    }
+
     &__point {
         position: absolute;
         text-align: center;
-        transform: translateY(-700%);
+        transform: translateY(-1500%);
         cursor: pointer;
-
-        @include media-down(sm) {
-            margin-left: -10px;
-        }
+        user-select: none;
 
         &:hover {
             img {
-                width: 35px;
+                width: 30px;
 
                 @include media-down(md) {
-                    width: 25px;
+                    width: 20px;
                 }
             }
         }
 
         p {
-            margin-bottom: 5px;
+            margin-bottom: 0;
             color: #FFFFFF;
             font-weight: 500;
-            font-size: 18px;
+            font-size: 16px;
             text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.8);
 
+            @include media-down(lg) {
+                font-size: 12px;
+            }
+
             @include media-down(md) {
-                font-size: 13px;
+                font-size: 10px;
             }
         }
 
         img {
-            width: 30px;
+            width: 25px;
             transition: width .25s;
 
-            @include media-down(md) {
+            @include media-down(lg) {
                 width: 20px;
+            }
+
+            @include media-down(md) {
+                width: 15px;
             }
         }
     }   
 
-    &.aos-animate .about-map__point {
-        animation: easeOutBounce 0.6s linear forwards;
+    &.aos-animate {
+        .map__points {
+            transform: translateY(0);
+        }
+
+        .map__point {
+            animation: easeOutBounce 0.6s linear forwards;
+        }
     }
 
     @keyframes easeOutBounce {
         0% {
-            transform: translateY(-700%);
+            transform: translateY(-1200%);
         }
     
         60% {

@@ -1,4 +1,3 @@
-<!--================Latest Projects Area =================-->
 <section class="latest_project">
     <div class="container">
         <div class="l_text">
@@ -8,7 +7,7 @@
                 </div>
             </div>
             <div class="float-md-right">
-                <ul class="portfolio_filter list">
+                <ul class="portfolio_filter map_filter list">
                     <li class="active" data-filter="*">
                         <a href="#">Все</a>
                     </li>
@@ -51,4 +50,3 @@
         wp_reset_postdata(); ?>
     </div>
 </section>
-<!--================End Latest Projects Area =================-->

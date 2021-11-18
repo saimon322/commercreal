@@ -112,31 +112,7 @@ if ($main_video): ?>
                 <button class="btn btn" data-toggle="modal" data-target="#modal-form">ЗАКАЗАТЬ ЗВОНОК</button>
             </div>
             <div class="col-12 col-md-8">
-                <div class="about-map" data-aos data-aos-offset="200">
-                    <img src="<?= get_template_directory_uri(); ?>/img/about-map.png" alt="" class="about-map__bg">
-                    <div class="about-map__points">
-                        <div class="about-map__point" style="left: 32%; top: 54%;">
-                            <p>Москва</p>
-                            <img src="<?= get_template_directory_uri(); ?>/img/icon/map-point.svg" alt="">
-                        </div>
-                        <div class="about-map__point" style="left: 15.5%; top: 38%;">
-                            <p>Калининград</p>
-                            <img src="<?= get_template_directory_uri(); ?>/img/icon/map-point.svg" alt="">
-                        </div>
-                        <div class="about-map__point" style="left: 27%; top: 36%;">
-                            <p>Санкт-Петербург</p>
-                            <img src="<?= get_template_directory_uri(); ?>/img/icon/map-point.svg" alt="">
-                        </div>
-                        <div class="about-map__point" style="left: 44%; top: 35%;">
-                            <p>Архангельск</p>
-                            <img src="<?= get_template_directory_uri(); ?>/img/icon/map-point.svg" alt="">
-                        </div>
-                        <div class="about-map__point" style="left: 45%; top: 19%;">
-                            <p>Мурманск</p>
-                            <img src="<?= get_template_directory_uri(); ?>/img/icon/map-point.svg" alt="">
-                        </div>
-                    </div>
-                </div>
+                <?php get_template_part('template-parts/sections/section', 'map', array('type' => 'global')); ?>
             </div>
         </div>
     </div>

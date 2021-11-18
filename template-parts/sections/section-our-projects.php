@@ -1,4 +1,3 @@
-<!--================Our Projects Area =================-->
 <section class="our_projects_area">
     <div class="container">
         <div class="projects_tt">
@@ -8,7 +7,7 @@
                 </div>
             </div>
             <div class="float-md-right">
-                <ul class="isotope_fillter list">
+                <ul class="isotope_fillter map_filter list">
                     <li class="active" data-filter="*">
                         <a href="#">Все</a>
                     </li>
@@ -51,4 +50,3 @@
         wp_reset_postdata(); ?>
     </div>
 </section>
-<!--================End Our Projects Area =================-->

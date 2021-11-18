@@ -320,7 +320,7 @@
                     0: {
                         items: 1,
                     },
-                    1400: {
+                    1430: {
                         items: 2,
                     },
                     2000: {
@@ -449,7 +449,6 @@
         $('.portfolio_filter .active').removeClass('active');
         $(this).closest('li').addClass('active');
         var selector = $(this).attr('data-filter');
-        console.log('.item' + selector);
         $('.fillter_slider').fadeOut(300);
         $('.fillter_slider').fadeIn(300);
         setTimeout(function () {
@@ -458,7 +457,6 @@
                 filterSlider.trigger('remove.owl.carousel', i);
             }
             filterClone.find('.item' + selector).each(function() {
-                console.log($(this));
                 filterSlider.trigger('add.owl.carousel', $(this).clone());
             })
             filterSlider.trigger('refresh.owl.carousel');
@@ -634,13 +632,35 @@
     }
     
     // Map points animation
-    const map = $('.about-map');
+    const map = $('.map');
     if (map) {
-        $('.about-map__point').each(function() {
+        $('.map__point').each(function() {
             let index = $(this).index();
             let delay = 0.5 + index * 0.2;
             $(this).css({'animation-delay': delay + 's'});
         })
+
+        const hashFilter = window.location.hash.substr(1);
+        hashFilter && setTimeout(() => {
+            mapScrollFilter(hashFilter)
+        }, 300);
+
+        $('.map__point').on('click', function(e) {
+            if(this.pathname === window.location.pathname){
+                e.preventDefault();
+                const filter = $(this).attr('href').split('#').pop();
+                mapScrollFilter(filter);
+            }
+        })
+
+        function mapScrollFilter(filter) {
+            const scrollPos = $(".map_filter").offset().top - 200;
+            $('html, body').animate({scrollTop: scrollPos}, 700);
+                
+            setTimeout(() => {
+                $(`.map_filter li[data-filter='.${filter}']`).trigger("click");
+            }, 700);
+        }
     }
 
     // Patterns animation

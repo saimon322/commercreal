@@ -69,8 +69,12 @@
         background: $base;
         transition: background-color .5s;
 
-        @include media-only(lg) {
+        @include media-up(lg) {
             width: 30%;
+        }
+
+        @include media-up(xxl) {
+            width: 40%;
         }
 
         img {
