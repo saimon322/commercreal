@@ -18,9 +18,15 @@
         <div class="testimonials_slider owl-carousel">
         <?php while( have_rows('reviews', 'options') ): the_row(); ?>
             <div class="test_item">
-                <div class="test_item__img">
-                    <img src="<?= get_sub_field('photo'); ?>" alt="">
-                </div>
+                <?php if (get_sub_field('media') == 'photo' && get_sub_field('photo')): ?>
+                    <div class="test_item__img">
+                        <img src="<?= get_sub_field('photo'); ?>" alt="">
+                    </div>
+                <?php elseif ((get_sub_field('media') == 'video') && get_sub_field('video')): ?>
+                    <div class="test_item__video">
+                        <iframe src="<?= get_sub_field('video'); ?>" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                <?php endif; ?>
                 <div class="test_item__content">
                     <?php $data = get_sub_field('data'); ?>
                     <h3 class="test_item__name">
