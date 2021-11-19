@@ -1,114 +1,129 @@
 /* Project Breadcrumb css
 ============================================================================================ */
-.project_breadcrumb_area{
-	background-size: cover;
-	height: 100vh;
-	position: relative;
-	overflow: hidden;
-	z-index: 2;
-    &:before {
-        content: '';
+.project_breadcrumb_area {
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  z-index: 2;
+
+  &:before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: $blue-bg-5;
+  }
+
+  .breadcrumb_inner {
+    position: relative;
+    height: 100vh;
+
+    .breadcrumb_link {
+      padding-top: 20px;
+      position: absolute;
+      left: 0px;
+      top: 50%;
+
+      a {
+        font-size: 18px;
+        color: #fff;
+        font-weight: normal;
+        text-transform: uppercase;
+        letter-spacing: 1.8px;
+        position: relative;
+        @include transition;
+
+        &:hover {
+          color: $base;
+        }
+      }
+
+      &:before {
+        content: "";
+        width: 86px;
+        height: 6px;
+        background: $base;
         position: absolute;
-        z-index: -1;
-        left: 0;
-        right: 0;
         top: 0;
-        bottom: 0;
-        background: $blue-bg-5;
+        left: 0;
+      }
     }
-	.breadcrumb_inner{
-		position: relative;
-		height: 100vh;
-		.breadcrumb_link{
-			padding-top: 20px;
-			position: absolute;
-			left: 0px;
-			top: 50%;
+  }
 
-			a {
-				font-size: 18px;
-				color: #fff;
-				font-weight: normal;
-				text-transform: uppercase;
-				letter-spacing: 1.8px;
-				position: relative;
-				@include transition;
-				&:hover{
-					color: $base;
-				}
-			}
+  .bread_bottom_text {
+    position: absolute;
+    left: -4px;
+    bottom: -5px;
 
-			&:before{
-					content: "";
-					width: 86px;
-					height: 6px;
-					background: $base;
-					position: absolute;
-					top: 0;
-					left: 0;
-			}
-		}
-	}
-	.bread_bottom_text{
-		position: absolute;
-		left: -4px;
-		bottom: -5px;
-		h2{
-			color: #fff;
-			text-transform: uppercase;
-			font-size: 12vh;
-			line-height: 1;
-			margin-bottom: 0px;
-		}
-	}
-	.page_lines.white_br{
-		.line{
-			background: rgba(255, 255, 255, .20);
-		}
-	}
+    h2 {
+      color: #fff;
+      text-transform: uppercase;
+      font-size: 12vh;
+      line-height: 1;
+      margin-bottom: 0px;
+    }
+  }
+
+  .page_lines.white_br {
+    .line {
+      background: rgba(255, 255, 255, .20);
+    }
+  }
 }
 
 
-.breadcrumb_link{
-	padding-top: 220px;
-	a{
-		font-size: 16px;
-		color: $pfont;
-		text-transform: uppercase;
-		letter-spacing: 1.6px;
-		margin-right: 12px;
-		position: relative;
-		font-weight: normal;
-		@include transition;
-		&:before{
-			content: "/";
-			position: absolute;
-			right: -12px;
-			top: 50%;
-			transform: translateY(-50%);
-			color: $pfont;
-		}
-		&:last-child{
-			margin-right: 0px;
-			&:before{
-				display: none;
-			}
-		}
-		&:first-child{
-			color: #fff;
-			font-weight: bold;
-		}
-		&:hover{
-			color: $base;
-		}
-	}
-	&.sinlge_banner{
-		padding-top: 120px;
-		.s_bread_inner{
-			max-width: 770px;
-			margin: auto;
-		}
-	}
+.breadcrumb_link {
+  padding-top: 220px;
+
+  a {
+    font-size: 16px;
+    color: $pfont;
+    text-transform: uppercase;
+    letter-spacing: 1.6px;
+    margin-right: 12px;
+    position: relative;
+    font-weight: normal;
+    @include transition;
+
+    &:before {
+      content: "/";
+      position: absolute;
+      right: -12px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: $pfont;
+    }
+
+    &:last-child {
+      margin-right: 0px;
+
+      &:before {
+        display: none;
+      }
+    }
+
+    &:first-child {
+      color: #fff;
+      font-weight: bold;
+    }
+
+    &:hover {
+      color: $base;
+    }
+  }
+
+  &.sinlge_banner {
+    padding-top: 120px;
+
+    .s_bread_inner {
+      max-width: 770px;
+      margin: auto;
+    }
+  }
 }
 
 
@@ -117,77 +132,88 @@
 
 /* Single Banner Image css
 ============================================================================================ */
-.image_banner_area{
-	background: url(../img/blog/single-blog-3.jpg) no-repeat scroll center center;
-	background-size: cover;
-	.single_banner_text{
-		padding-top: 270px;
-		padding-bottom: 230px;
-		.date{
-			margin-bottom: 28px;
-			a{
-				font-size: 14px;
-				color: #fff;
-				
-				font-weight: 500;
-				font-weight: normal;
-				text-transform: uppercase;
-				&:last-child{
-					font-weight: bold;
-				}
-			}
-			i{
-				font-size: 6px;
-				color: #fff;
-				position: relative;
-				top: -2px;
-				padding-left: 2px;
-				padding-right: 2px;
-			}
-		}
-		h3{
-			color: #fff;
-			font-size: 48px;
-			line-height: 52px;
-			margin-bottom: 0px;
-		}
-	}
+.image_banner_area {
+  background: url(../img/blog/single-blog-3.jpg) no-repeat scroll center center;
+  background-size: cover;
+
+  .single_banner_text {
+    padding-top: 270px;
+    padding-bottom: 230px;
+
+    .date {
+      margin-bottom: 28px;
+
+      a {
+        font-size: 14px;
+        color: #fff;
+
+        font-weight: 500;
+        font-weight: normal;
+        text-transform: uppercase;
+
+        &:last-child {
+          font-weight: bold;
+        }
+      }
+
+      i {
+        font-size: 6px;
+        color: #fff;
+        position: relative;
+        top: -2px;
+        padding-left: 2px;
+        padding-right: 2px;
+      }
+    }
+
+    h3 {
+      color: #fff;
+      font-size: 48px;
+      line-height: 52px;
+      margin-bottom: 0px;
+    }
+  }
 }
 
-.page_link{
-	margin-bottom: 100px;
-	a{
-		font-size: 14px;
-		font-weight: normal;
-		color: $pfont;
-		text-transform: uppercase;
-		margin-right: 15px;
-		position: relative;
-		@include transition;
-		&:before{
-			content: '/';
-			color: $pfont;
-			font-size: 14px;
-			position: absolute;
-			right: -12px;
-			top: 46%;
-			transform: translateY(-50%);
-		}
-		&.active{
-			color: #fff;
-		}	
-		&:last-child{
-			margin-right: 0px;
-			&:before{
-				display: none;
-			}
-		}
-		&:hover{
-			color: $base;
-		}
-	}
+.page_link {
+  margin-bottom: 100px;
+
+  a {
+    font-size: 14px;
+    font-weight: normal;
+    color: $pfont;
+    text-transform: uppercase;
+    margin-right: 15px;
+    position: relative;
+    @include transition;
+
+    &:before {
+      content: '/';
+      color: $pfont;
+      font-size: 14px;
+      position: absolute;
+      right: -12px;
+      top: 46%;
+      transform: translateY(-50%);
+    }
+
+    &.active {
+      color: #fff;
+    }
+
+    &:last-child {
+      margin-right: 0px;
+
+      &:before {
+        display: none;
+      }
+    }
+
+    &:hover {
+      color: $base;
+    }
+  }
 }
 
 /* End Single Banner Image css
 ============================================================================================ */
-
