@@ -1,106 +1,115 @@
 .btn {
-    color: $base !important;
-    background-color: $blue;
-    border: 3px solid $base;
-    background: $blue;
+  color: $base !important;
+  background-color: $blue;
+  border: 3px solid $base;
+  background: $blue;
+  width: 100%;
+  font-family: $bebas;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+  padding: 3px 10px 0;
+  border-radius: 0;
+  cursor: pointer;
+
+  &:hover {
+    background: $base;
+    color: $blue !important;
+  }
+
+  @include media-down(sm) {
+    font-size: 20px;
+  }
+}
+
+.br_btn {
+  display: inline-block;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 24px;
+  font-weight: bold;
+  font-family: $bebas;
+  text-transform: uppercase;
+  position: relative;
+  line-height: 40px;
+  margin-bottom: 0px;
+  @include transition;
+
+  &:before {
+    content: "";
     width: 100%;
-    font-family: $bebas;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 24px;
-    line-height: 28px;
-    padding: 3px 10px 0;
-    border-radius: 0;
-    cursor: pointer;
-    
-	&:hover{
-		background: $base;
-        color: $blue !important;
-	}
+    height: 2px;
+    background: #fff;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    @include transition;
+  }
 
-    @include media-down(sm) {
-        font-size: 20px;
+  &:hover {
+    color: $base;
+
+    &:before {
+      background: $base;
     }
+  }
+
+  &.white {
+    color: $base;
+
+    &:before {
+      background: $base;
+    }
+
+    &:hover {
+      color: $base;
+
+      &:before {
+        background: $base;
+      }
+    }
+  }
 }
 
-.br_btn{
-	display: inline-block;
-	color: #fff;
-	text-transform: uppercase;
-	font-size: 24px;
-	font-weight: bold;
-	font-family: $bebas;
-    text-transform: uppercase;
-	position: relative;
-	line-height: 40px;
-	margin-bottom: 0px;
-	@include transition;
-	&:before{
-		content: "";
-		width: 100%;
-		height: 2px;
-		background: #fff;
-		position: absolute;
-		left: 0px;
-		bottom: 0px;
-		@include transition;
-	}
-	&:hover{
-		color: $base;
-		&:before{
-			background: $base;
-		}
-	}
-	&.white{
-		color: $base;
-		&:before{
-			background: $base;
-		}
-		&:hover{
-			color: $base;
-			&:before{
-				background: $base;
-			}
-		}
-	}
+.view_btn {
+  width: fit-content;
+  font-size: 14px;
+  @include transition;
 }
 
-.view_btn{
-    width: fit-content;
-	font-size: 14px;
-	@include transition;
-}
+.see_btn {
+  font-size: 12px;
+  color: $pfont;
+  font-weight: bold;
+  letter-spacing: .3px;
+  text-transform: uppercase;
+  margin-top: 25px;
+  display: block;
+  @include transition;
 
-.see_btn{
-	font-size: 12px;
-	color: $pfont;
-	font-weight: bold;
-	letter-spacing: .3px;
-	text-transform: uppercase;
-	margin-top: 25px;
-	display: block;
-	@include transition;
-	&:hover{
-		color: $base; 
-	}
+  &:hover {
+    color: $base;
+  }
 }
 
 
-.comment_btn{
-	width: 170px;
-	height: 50px;
-	background: $base;
-	color: #fff;
-	border-radius: 0px;
-	border: none;
-	box-shadow: none !important;
-	outline: none !important;
-	font-size: 14px;
-	font-weight: bold;
-	@include transition;
-	letter-spacing: .35px;
-	text-transform: uppercase;
-	&:hover{
-		background: $base;
-	}
+.comment_btn {
+  width: 170px;
+  height: 50px;
+  background: $base;
+  color: #fff;
+  border-radius: 0px;
+  border: none;
+  box-shadow: none !important;
+  outline: none !important;
+  font-size: 14px;
+  font-weight: bold;
+  @include transition;
+  letter-spacing: .35px;
+  text-transform: uppercase;
+
+  &:hover {
+    background: $base;
+  }
 }
