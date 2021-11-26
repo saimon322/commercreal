@@ -26,10 +26,8 @@ a {
 }
 
 
-h1,
-h2,
-h3,
-h4 {
+h1, h2, h3, h4,
+.h1, .h2, .h3, .h4 {
   font-family: $bebas;
   font-weight: 700;
   letter-spacing: 1px;
@@ -44,11 +42,11 @@ h4 {
   }
 }
 
-h5 {
+h5, .h5 {
   font-weight: 400;
 }
 
-h6 {
+h6, .h6 {
   font-weight: 300;
 }
 
@@ -174,9 +172,20 @@ i {
   }
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 
-/* Proloader css
-============================================================================================ */
+
 .preloader {
   position: fixed;
   overflow: hidden;

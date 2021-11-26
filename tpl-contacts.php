@@ -64,7 +64,7 @@ $options = get_field('contacts', 'options');
                 <div class="col-md-6 col-lg-4">
                     <div class="contact-card">
                         <div class="contact-card__image">
-                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/team/team-4.jpg" class="w-100">
+                            <img src="/wp-content/uploads/2021/11/foto-mal-yusif.png" class="w-100">
                         </div>
                         <div class="contact-card__content">
                             <div class="contact-card__headline">
@@ -88,7 +88,7 @@ $options = get_field('contacts', 'options');
                 <div class="col-md-6 col-lg-4">
                     <div class="contact-card">
                         <div class="contact-card__image">
-                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/team/team-1.jpg" class="w-100">
+                            <img src="/wp-content/uploads/2021/11/foto-mal.-anndrej-.png" class="w-100">
                         </div>
                         <div class="contact-card__content">
                             <div class="contact-card__headline">
@@ -112,7 +112,7 @@ $options = get_field('contacts', 'options');
                 <div class="col-md-6 col-lg-4">
                     <div class="contact-card">
                         <div class="contact-card__image">
-                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/team/team-3.jpg" class="w-100">
+                            <img src="/wp-content/uploads/2021/11/foto-mal-anya-.png" class="w-100">
                         </div>
                         <div class="contact-card__content">
                             <div class="contact-card__headline">

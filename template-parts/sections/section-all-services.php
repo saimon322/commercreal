@@ -1,7 +1,7 @@
 <!--================Our Speciallization Area =================-->
 <section class="speciallization_area ab_spec all_services">
     <div class="container">
-        <h6 class="s_title">Все услуги</h6>
+        <p class="s_title">Все услуги</p>
         <div class="specs">
             <div class="row m0 text-center specs-header">
                 <div class="col-lg-4 col-sm-6 spec_wrapper">

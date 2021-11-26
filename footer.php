@@ -9,7 +9,7 @@
         <aside class="f_widgets_item">
             <div class="f_contact">
                 <div class="f_title">
-                    <h3>Контакты</h3>
+                    <p class="h3">Контакты</p>
                 </div>
                 <?php echo $options['address']; ?>
                 <br>
@@ -115,7 +115,7 @@
             role="document">
         <div class="modal-content">
             <div class="modal-body text-center">
-                <h3>Сообщение успешно отправлено, вскоре с вами свяжутся!</h3>
+                <p class="h3">Сообщение успешно отправлено, вскоре с вами свяжутся!</p>
             </div>
         </div>
     </div>

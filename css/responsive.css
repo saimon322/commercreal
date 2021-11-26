@@ -21,7 +21,7 @@
 }
 
 @media(max-width: 1400px) {
-	.projects_item .hover .project_text h4 {
+	.projects_item .hover .project_text .h4 {
 		font-size: 26px;
 	}
 }
@@ -93,7 +93,7 @@
 		max-width: 33.33%;
 	}
 
-	.ms_project_inner .ms_p_item .hover .project_text h4 {
+	.ms_project_inner .ms_p_item .hover .project_text .h4 {
 		font-size: 26px;
 	}
 

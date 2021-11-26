@@ -16,7 +16,7 @@ class Footer_Walker_Nav_Menu extends Walker_Nav_Menu
             $output .= '<aside class="f_widgets_item">';
             $output .= '<div class="f_link">';
             $output .= '<div class="f_title">';
-            $output .= '<h3>' . $item->title . '</h3>';
+            $output .= '<p class="h3">' . $item->title . '</p>';
             $output .= '</div>';
             $output .= '<ul class="list">';
             

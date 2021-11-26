@@ -38,9 +38,9 @@
                             <i class="ion-android-arrow-forward"></i>
                             <div class="project_text">
                                 <?php if ($cats_names): ?>
-                                    <h5><?php echo $cats_names; ?></h5>
+                                    <p class="h5"><?php echo $cats_names; ?></p>
                                 <?php endif; ?>
-                                <h4><?php the_title(); ?></h4>
+                                <p class="h4"><?php the_title(); ?></p>
                             </div>
                         </div>
                     </a>

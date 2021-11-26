@@ -23,7 +23,7 @@ get_header();
         <div class="row">
             <div class="col-12 col-md-4 s_content">
                 <?php if ($map_sub_headline = get_field('map_sub_headline')): ?>
-                    <h6 class="s_title"><?= $map_sub_headline; ?></h6>
+                    <p class="s_title"><?= $map_sub_headline; ?></p>
                 <?php endif; ?>
                 <div class="s_content--text">
                     <?php if ($map_headline = get_field('map_headline')): ?>

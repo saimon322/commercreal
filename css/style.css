@@ -31,35 +31,29 @@ a:hover, a:focus {
   color: #f1d299;
 }
 
-h1,
-h2,
-h3,
-h4 {
+h1, h2, h3, h4,
+.h1, .h2, .h3, .h4 {
   font-family: "Bebas Neue", sans-serif;
   font-weight: 700;
   letter-spacing: 1px;
   color: #fff;
 }
-h1 span,
-h2 span,
-h3 span,
-h4 span {
+h1 span, h2 span, h3 span, h4 span,
+.h1 span, .h2 span, .h3 span, .h4 span {
   color: #f1d299;
 }
 @media (min-width: 768px) {
-  h1 span,
-h2 span,
-h3 span,
-h4 span {
+  h1 span, h2 span, h3 span, h4 span,
+.h1 span, .h2 span, .h3 span, .h4 span {
     white-space: nowrap;
   }
 }
 
-h5 {
+h5, .h5 {
   font-weight: 400;
 }
 
-h6 {
+h6, .h6 {
   font-weight: 300;
 }
 
@@ -190,8 +184,20 @@ i:before {
   color: #f1d299;
 }
 
-/* Proloader css
-============================================================================================ */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .preloader {
   position: fixed;
   overflow: hidden;
@@ -1069,7 +1075,7 @@ nav li:hover .mega-menu {
   padding: 20px 10px;
   color: #fff;
 }
-.mega-menu__item h5 {
+.mega-menu__item .h5 {
   font-size: 15px;
   font-weight: bold;
   margin-bottom: 15px;
@@ -1102,7 +1108,7 @@ nav li:hover .mega-menu {
     padding: 10px;
   }
 }
-.mega-menu__project h5 {
+.mega-menu__project .h5 {
   position: relative;
   z-index: 1;
   font-family: "Bebas Neue", sans-serif;
@@ -1972,7 +1978,7 @@ nav li:hover .mega-menu {
   -o-transition: 0.3s;
   transition: 0.3s;
 }
-.stage-mini h3 {
+.stage-mini .h3 {
   position: relative;
   z-index: 1;
   max-width: 200px;
@@ -1986,7 +1992,7 @@ nav li:hover .mega-menu {
   transition: 0.3s;
 }
 @media (max-width: 991px) {
-  .stage-mini h3 {
+  .stage-mini .h3 {
     max-width: 150px;
     font-size: 20px;
     line-height: 1.1;
@@ -2302,7 +2308,7 @@ nav li:hover .mega-menu {
   position: relative;
   left: -100px;
 }
-.since_text h5 {
+.since_text .h5 {
   position: absolute;
   left: 0px;
   top: 0;
@@ -2318,7 +2324,7 @@ nav li:hover .mega-menu {
   white-space: nowrap;
 }
 @media (max-width: 767px) {
-  .since_text h5 {
+  .since_text .h5 {
     font-size: 15px;
   }
 }
@@ -2370,18 +2376,18 @@ nav li:hover .mega-menu {
   text-align: center;
   text-transform: uppercase;
 }
-.studio_img .years_text_inner h1 {
+.studio_img .years_text_inner .h1 {
   font-size: 105px;
   line-height: 0.7;
   font-weight: bold;
   margin-left: -10px;
 }
-.studio_img .years_text_inner h2 {
+.studio_img .years_text_inner .h2 {
   font-size: 48px;
   line-height: 0.8;
   font-weight: bold;
 }
-.studio_img .years_text_inner h4 {
+.studio_img .years_text_inner .h4 {
   font-size: 22px;
   line-height: 0.8;
   font-weight: bold;
@@ -2397,7 +2403,7 @@ nav li:hover .mega-menu {
 .studio_text {
   margin-left: -15px;
 }
-.studio_text h3 {
+.studio_text h2 {
   color: #fff;
   font-size: 50px;
   line-height: 48px;
@@ -2405,11 +2411,11 @@ nav li:hover .mega-menu {
   margin-bottom: 85px;
 }
 @media (max-width: 991px) {
-  .studio_text h3 {
+  .studio_text h2 {
     margin-bottom: 30px;
   }
 }
-.studio_text h5 {
+.studio_text .h5 {
   font-size: 24px;
   line-height: 30px;
   color: #fff;
@@ -2418,7 +2424,7 @@ nav li:hover .mega-menu {
   margin-bottom: 70px;
 }
 @media (max-width: 991px) {
-  .studio_text h5 {
+  .studio_text .h5 {
     margin-bottom: 30px;
   }
 }
@@ -2435,7 +2441,6 @@ nav li:hover .mega-menu {
   line-height: 24px;
   color: #999999;
   letter-spacing: 0.21px;
-  font-weight: 500;
 }
 
 .speciallization_area {
@@ -2464,17 +2469,6 @@ nav li:hover .mega-menu {
 @media (max-width: 991px) {
   .spec_item {
     margin-bottom: 30px;
-  }
-}
-.spec_item h4 {
-  font-size: 30px;
-  color: #f1d299;
-  text-transform: uppercase;
-  margin-bottom: 10px;
-}
-@media (max-width: 575px) {
-  .spec_item h4 {
-    padding-right: 0;
   }
 }
 .spec_item img {
@@ -2555,7 +2549,7 @@ nav li:hover .mega-menu {
   -o-transition: 0.25s;
   transition: 0.25s;
 }
-.spec_item__top h4 {
+.spec_item__top .h4 {
   margin: 0;
   padding: 10px 50px;
   border: 2px solid transparent;
@@ -2734,7 +2728,7 @@ nav li:hover .mega-menu {
   bottom: 45px;
   color: #fff;
 }
-.projects_item .hover .project_text h5 {
+.projects_item .hover .project_text .h5 {
   font-size: 14px;
   font-weight: 500;
   opacity: 0;
@@ -2743,7 +2737,7 @@ nav li:hover .mega-menu {
   -o-transition: all 400ms ease;
   transition: all 400ms ease;
 }
-.projects_item .hover .project_text h4 {
+.projects_item .hover .project_text .h4 {
   font-size: 36px;
   max-width: 340px;
   margin-bottom: -5px;
@@ -2768,11 +2762,11 @@ nav li:hover .mega-menu {
 .projects_item:hover .hover i {
   right: 30px;
 }
-.projects_item:hover .hover .project_text h5 {
+.projects_item:hover .hover .project_text .h5 {
   margin-bottom: 15px;
   opacity: 1;
 }
-.projects_item:hover .hover .project_text h4 {
+.projects_item:hover .hover .project_text .h4 {
   margin-bottom: 0px;
   opacity: 1;
 }
@@ -3301,11 +3295,11 @@ nav li:hover .mega-menu {
   padding: 3px 3px;
   overflow: hidden;
 }
-.projects_inner .projects_item .hover .project_text h5 {
+.projects_inner .projects_item .hover .project_text .h5 {
   margin-bottom: 12px;
   opacity: 1;
 }
-.projects_inner .projects_item .hover .project_text h4 {
+.projects_inner .projects_item .hover .project_text .h4 {
   opacity: 1;
   margin-bottom: 0px;
 }
@@ -3456,7 +3450,7 @@ nav li:hover .mega-menu {
   bottom: 45px;
   color: #fff;
 }
-.ms_project_inner .ms_p_item .hover .project_text h5 {
+.ms_project_inner .ms_p_item .hover .project_text .h5 {
   font-size: 14px;
   font-weight: 500;
   opacity: 0;
@@ -3465,7 +3459,7 @@ nav li:hover .mega-menu {
   -o-transition: all 400ms ease;
   transition: all 400ms ease;
 }
-.ms_project_inner .ms_p_item .hover .project_text h4 {
+.ms_project_inner .ms_p_item .hover .project_text .h4 {
   font-size: 36px;
   max-width: 340px;
   margin-bottom: -5px;
@@ -3481,11 +3475,11 @@ nav li:hover .mega-menu {
 .ms_project_inner .ms_p_item:hover .hover i {
   right: 30px;
 }
-.ms_project_inner .ms_p_item:hover .hover .project_text h5 {
+.ms_project_inner .ms_p_item:hover .hover .project_text .h5 {
   margin-bottom: 15px;
   opacity: 1;
 }
-.ms_project_inner .ms_p_item:hover .hover .project_text h4 {
+.ms_project_inner .ms_p_item:hover .hover .project_text .h4 {
   margin-bottom: 0px;
   opacity: 1;
 }
@@ -4081,6 +4075,9 @@ nav li:hover .mega-menu {
   padding-top: 130px;
   background: url(../img/texture-bg.jpg) repeat;
   padding-bottom: 130px;
+}
+.clients_area > .container {
+  z-index: 10;
 }
 .clients_area .main_title {
   margin-bottom: 80px;
@@ -6310,7 +6307,7 @@ a.press_img_item:hover span {
   margin-right: 6px;
 }
 
-#success h3 {
+#success .h3 {
   color: #999999;
 }
 

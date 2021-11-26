@@ -5,6 +5,10 @@
   background: url(../img/texture-bg.jpg) repeat;
   padding-bottom: 130px;
 
+  & > .container {
+    z-index: 10;
+  }
+
   .main_title {
     margin-bottom: 80px;
 

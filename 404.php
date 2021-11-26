@@ -23,7 +23,7 @@ get_header();
                         </div>
                     <?php //endif; ?>
                     <div class="col-12 col-md-6">
-                        <a href="<?=get_template_directory_uri();?>" class="btn mb-2">
+                        <a href="<?=home_url();?>" class="btn mb-2">
                             <?php _e('Главная'); ?>
                         </a>
                     </div>
