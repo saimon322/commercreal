@@ -126,7 +126,7 @@ wp_enqueue_style('pannellum-css');
         <div class="acf-block">
             <div class="contact-card">
                 <div class="contact-card__image">
-                    <img src="https://commercreal.com/wp-content/themes/commerc-real/img/team/team-1.jpg" class="w-100">
+                    <img src="/wp-content/uploads/2021/11/foto-mal.-anndrej-.png" class="w-100">
                 </div>
                 <div class="contact-card__content">
                     <div class="contact-card__headline">

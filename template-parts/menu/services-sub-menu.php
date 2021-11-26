@@ -5,7 +5,7 @@
         <div class="mega-menu__list">
             <div class="mega-menu__item">
                 <a href="<?= get_term_link(13); ?>">
-                    <h5>DEVELOPER</h5>
+                    <p class="h5">DEVELOPER</p>
                 </a>
                 <ul>
                     <?php foreach ($services_sub_menu['developer_links'] as $link_row):
@@ -19,7 +19,7 @@
             </div>
             <div class="mega-menu__item">
                 <a href="<?= get_term_link(15); ?>">
-                    <h5>СОБСТВЕННИК</h5>
+                    <p class="h5">СОБСТВЕННИК</p>
                 </a>
                 <ul>
                     <?php foreach ($services_sub_menu['owner_links'] as $link_row):
@@ -33,7 +33,7 @@
             </div>
             <div class="mega-menu__item">
                 <a href="<?= get_term_link(14); ?>">
-                    <h5>АРЕНДАТОР</h5>
+                    <p class="h5">АРЕНДАТОР</p>
                 </a>
                 <ul>
                     <?php foreach ($services_sub_menu['tenant_links'] as $link_row):
@@ -50,7 +50,7 @@
             <?php if ($services_sub_menu['bottom_services']):
                 foreach ($services_sub_menu['bottom_services'] as $service): ?>
                     <a href="<?= get_post_permalink($service); ?>" class="mega-menu__project">
-                        <h5><?= get_the_title($service); ?></h5>
+                        <p class="h5"><?= get_the_title($service); ?></p>
                         <img src="<?= get_the_post_thumbnail_url($service); ?>" alt="">
                     </a>
                 <?php endforeach;

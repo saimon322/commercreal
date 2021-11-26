@@ -25,7 +25,7 @@ if ($main_video): ?>
             'type' => ' pattern--vertical'
         )); ?>
         <div class="ab_studio_text ab_studio_text_big">
-            <h6 class="s_title"><?php the_field('main_title'); ?></h6>
+            <p class="s_title"><?php the_field('main_title'); ?></p>
             <?php the_field('main_text'); ?>
         </div>
     </div>
@@ -33,26 +33,26 @@ if ($main_video): ?>
             
 <section class="speciallization_area advantages section-pad">
     <div class="container">
-        <h6 class="s_title">Наши преимущества</h6>
+        <p class="s_title">Наши преимущества</p>
         <div class="row">
             <div class="col-lg-4 col-sm-6">
                 <div class="spec_item">
                     <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/icon/spec-4.svg" alt="">
-                    <h4>Только уникальные объекты</h4>
+                    <div class="h4">Только уникальные объекты</div>
                     <p>Мы предлагаем Вам коммерческую недвижимость, представленную только у нас. Каждый объект полностью подготовлен к запуску или уже приносит прибыль.</p>
                 </div>
             </div>
             <div class="col-lg-4 col-sm-6">
                 <div class="spec_item">
                     <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/icon/spec-5.svg" alt="">
-                    <h4>Индивидуальные условия</h4>
+                    <div class="h4">Индивидуальные условия</div>
                     <p>Мы работаем только на особых, договорных условиях, идеально подходящих Вам и выгодных для обеих сторон.</p>
                 </div>
             </div>
             <div class="col-lg-4 col-sm-6">
                 <div class="spec_item">
                     <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/icon/spec-6.svg" alt="">
-                    <h4>Услуги высшего качества</h4>
+                    <div class="h4">Услуги высшего качества</div>
                     <p>Мы стремимся к сервису высочайшего уровня. Наша первостепенная задача - обеспечить Вам свободное время, когда недвижимость приносит Вам прибыль.</p>
                 </div>
             </div>
@@ -103,7 +103,7 @@ if ($main_video): ?>
         <?php get_template_part('template-parts/animation/pattern'); ?>
         <div class="row">
             <div class="col-12 col-md-4 s_content">
-                <h6 class="s_title">Наши филиалы в России</h6>
+                <p class="s_title">Наши филиалы в России</p>
                 <div class="s_content--text">
                     <h2>группа компаний <span>Commerc Real</span></h2>
                     <p>Мы специализируемся на развитии северо-западного региона России.  Но вы можете обратиться в нашу группу компаний из любого города,  мы с удовольствием встретимся с вами в удобном для вас месте. </p>
@@ -121,7 +121,7 @@ if ($main_video): ?>
 <section class="meet_team_area">
     <div class="container">
         <div class="team_inner">
-            <h6 class="s_title">Наши награды</h6>
+            <p class="s_title">Наши награды</p>
             <div class="team_slider owl-carousel">
                 <div class="team_item">
                     <img src="<?= get_template_directory_uri(); ?>/img/awards/award-1.jpg" alt="">

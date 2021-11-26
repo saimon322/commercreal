@@ -3,6 +3,12 @@ get_header();
 $options = get_field('contacts', 'options');
 ?>
 
+
+
+<h1 class="visually-hidden">
+    Комплексное управление коммерческой недвижимостью | Commerc Real
+</h1>
+
 <section class="home_slider">
     <?php if (have_rows('main_slider')): ?>
         <div class="page_lines">
@@ -23,7 +29,7 @@ $options = get_field('contacts', 'options');
         </div>
         <?php $count = count(get_field('main_slider')); ?>
         <?php $counter = 1; ?>
-        <div id="home_full_slider" class="rev_slider fullscreenbanner" data-version="5.3.1.6">
+        <div id="home_full_slider" style="height: 100vh" class="rev_slider fullscreenbanner" data-version="5.3.1.6">
             <ul>
                 <?php while (have_rows('main_slider')): the_row(); ?>
                     <li data-transition="slotzoom-horizontal" data-slotamount="5" data-masterspeed="1000" data-fsmasterspeed="1000">
@@ -177,7 +183,7 @@ $options = get_field('contacts', 'options');
             'type' => ' pattern--vertical'
         )); ?>
         <div class="since_text">
-            <h5><?php the_field('about_desc'); ?></h5>
+            <p class="h5"><?php the_field('about_desc'); ?></p>
         </div>
         <div class="row">
             <?php $img = get_field('about_img');
@@ -190,9 +196,9 @@ $options = get_field('contacts', 'options');
                             if ($years): ?>
                                 <div class="years_text">
                                     <div class="years_text_inner">
-                                        <h1 data-aos="fade-up" data-aos-delay="200"><?php echo $years['about_year_1']; ?></h1>
-                                        <h2 data-aos="fade-up" data-aos-delay="300"><?php echo $years['about_year_2']; ?></h2>
-                                        <h4 data-aos="fade-up" data-aos-delay="400"><?php echo $years['about_year_3']; ?></h4>
+                                        <p data-aos="fade-up" data-aos-delay="200" class="h1"><?php echo $years['about_year_1']; ?></h1>
+                                        <p data-aos="fade-up" data-aos-delay="300" class="h2"><?php echo $years['about_year_2']; ?></h2>
+                                        <p data-aos="fade-up" data-aos-delay="400" class="h4"><?php echo $years['about_year_3']; ?></p>
                                     </div>
                                     <?php get_template_part('template-parts/animation/diamond', null, array()); ?>
                                 </div>
@@ -202,10 +208,14 @@ $options = get_field('contacts', 'options');
                 </div>
             <?php endif; ?>
             <div class="col-lg-5">
-                <div class="studio_text">
-                    <h6 class="s_title"><?php the_field('about_subtitle'); ?></h6>
-                    <h3><?php the_field('about_title'); ?></h3>
-                    <h5><?php the_field('about_caption'); ?></h5>
+                <div class="studio_text">                   
+                    <p class="s_title">
+                        <?php the_field('about_subtitle'); ?>
+                    </p>
+                    <div class="main_title">
+                        <h2><?php the_field('about_title'); ?></h2>
+                    </div>
+                    <p class="h5"><?php the_field('about_caption'); ?></p>
                     <div class="studio_text__text">
                         <?php the_field('about_text'); ?>
                     </div>
@@ -224,14 +234,14 @@ $options = get_field('contacts', 'options');
 
 <section class="speciallization_area">
     <div class="container">
-        <h6 class="s_title">Услуги</h6>
+        <p class="s_title">Услуги</p>
         <div class="specs">
             <div class="row m0 text-center specs-header">
                 <div class="col-lg-4 col-sm-6 spec_wrapper">
                     <div class="spec_item">
                         <a href="<?php echo get_term_link(13); ?>" class="spec_item__top">
                             <img src="<?= get_template_directory_uri(); ?>/img/icon/spec-1.svg" alt="">
-                            <h4>DEVELOPER</h4>
+                            <p class="h4">DEVELOPER</p>
                         </a>
                     </div>
                 </div>
@@ -239,7 +249,7 @@ $options = get_field('contacts', 'options');
                     <div class="spec_item">
                         <a href="<?php echo get_term_link(15); ?>" class="spec_item__top">
                             <img src="<?= get_template_directory_uri(); ?>/img/icon/spec-2.svg" alt="">
-                            <h4>СОБСТВЕННИК</h4>
+                            <p class="h4">СОБСТВЕННИК</p>
                         </a>
                     </div>
                 </div>
@@ -247,7 +257,7 @@ $options = get_field('contacts', 'options');
                     <div class="spec_item">
                         <a href="<?php echo get_term_link(14); ?>" class="spec_item__top">
                             <img src="<?= get_template_directory_uri(); ?>/img/icon/spec-3.svg" alt="">
-                            <h4>RETAILER</h4>
+                            <p class="h4">RETAILER</p>
                         </a>
                     </div>
                 </div>
@@ -257,7 +267,7 @@ $options = get_field('contacts', 'options');
                     <div class="spec_item">
                         <a href="<?php echo get_term_link(13); ?>" class="spec_item__top">
                             <img src="<?= get_template_directory_uri(); ?>/img/icon/spec-1.svg" alt="">
-                            <h4>DEVELOPER</h4>
+                            <p class="h4">DEVELOPER</p>
                         </a>
                         <p>Вы занимаетесь созданием новых объектов недвижимости и вам требуется решить ряд коммерческих задач. Сотрудничество лучший способ создать максимально эффективный проект.</p>
                         <a class="view_btn" href="/proekty/">Последние проекты</a>
@@ -267,7 +277,7 @@ $options = get_field('contacts', 'options');
                     <div class="spec_item">
                         <a href="<?php echo get_term_link(15); ?>" class="spec_item__top">
                             <img src="<?= get_template_directory_uri(); ?>/img/icon/spec-2.svg" alt="">
-                            <h4>СОБСТВЕННИК</h4>
+                            <p class="h4">СОБСТВЕННИК</p>
                         </a>
                         <p>Вы строите торговые центры или владеете коммерческой недвижимостью и ваша цель достичь максимальных экономических результатов мы с удовольствием сделаем это за вас.</p>
                         <a class="view_btn" href="/proekty/">Последние проекты</a>
@@ -277,7 +287,7 @@ $options = get_field('contacts', 'options');
                     <div class="spec_item">
                         <a href="<?php echo get_term_link(14); ?>" class="spec_item__top">
                             <img src="<?= get_template_directory_uri(); ?>/img/icon/spec-3.svg" alt="">
-                            <h4>RETAILER</h4>
+                            <p class="h4">RETAILER</p>
                         </a>
                         <p>Вы имеете собственный бизнес или развиваете сетевую ритейл-компанию, и выходе в конкретный город или регион, ищите подходящие именно вам варианты помещений.</p>
                         <a class="view_btn" href="/proekty/">Последние проекты</a>
@@ -290,7 +300,7 @@ $options = get_field('contacts', 'options');
 
 <section class="stages_area">
     <div class="container">
-        <h6 class="s_title"><?php the_field('stages_subtitle'); ?></h6>
+        <p class="s_title"><?php the_field('stages_subtitle'); ?></p>
         <div class="row">
             <div class="col-sm-4">
                 <!-- Loupe stage -->
@@ -313,9 +323,9 @@ $options = get_field('contacts', 'options');
                         </div>
                     </div>
                     <div class="stage__content">
-                        <h2 class="stage__title">
+                        <p class="h2 stage__title">
                             <?= $stage1['title']; ?>
-                        </h2>
+                        </p>
                         <div class="stage__text">
                             <?= $stage1['text']; ?>
                         </div>
@@ -335,16 +345,16 @@ $options = get_field('contacts', 'options');
                                     <?php $is_white = get_sub_field('is_white') ? ' stage-mini--white' : ''; ?>
                                     <div class="stage-mini<?= $is_white; ?>">
                                         <img src="<?= get_sub_field('img'); ?>" alt="">
-                                        <h3><?= get_sub_field('title'); ?></h3>
+                                        <p class="h3"><?= get_sub_field('title'); ?></p>
                                     </div>
                                 <?php endwhile; endif;
                             endwhile; endif; ?>
                         </div>
                     </div>
                     <div class="stage__content">
-                        <h2 class="stage__title">
+                        <p class="h2 stage__title">
                             <?= $stage2['title']; ?>
-                        </h2>
+                        </p>
                         <div class="stage__text">
                             <?= $stage2['text']; ?>
                         </div>
@@ -372,9 +382,9 @@ $options = get_field('contacts', 'options');
                         </div>
                     </div>
                     <div class="stage__content">
-                        <h2 class="stage__title">
+                        <p class="h2 stage__title">
                             <?= $stage3['title']; ?>
-                        </h2>
+                        </p>
                         <div class="stage__text">
                             <?= $stage3['text']; ?>
                         </div>

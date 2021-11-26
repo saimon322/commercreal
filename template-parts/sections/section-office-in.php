@@ -1,6 +1,6 @@
 <section class="about_office_area">
     <div class="container">
-        <h6 class="s_title">Офис в Калининграде</h6>
+        <p class="s_title">Офис в Калининграде</p>
     </div>
     <div class="container">
         <?php get_template_part('template-parts/animation/pattern', null, array(

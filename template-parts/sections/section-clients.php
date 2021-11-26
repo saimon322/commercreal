@@ -29,12 +29,12 @@
                 <?php endif; ?>
                 <div class="test_item__content">
                     <?php $data = get_sub_field('data'); ?>
-                    <h3 class="test_item__name">
+                    <p class="test_item__name h3">
                         <?= $data['name']; ?>
-                    </h3>
-                    <h4 class="test_item__post">
+                    </p>
+                    <p class="test_item__post h4">
                         <?= $data['post']; ?>
-                    </h4>
+                    </p>
                     <div class="test_item__text">
                         <?= get_sub_field('text'); ?>
                     </div>
@@ -46,7 +46,7 @@
 
     <div class="clients_block">
         <div class="container">
-            <h6 class="s_title"><?= get_field('partners_title', 'options'); ?></h6>
+            <p class="s_title"><?= get_field('partners_title', 'options'); ?></p>
         </div>
         <?php if( have_rows('partners', 'options') ): ?>
             <div class="clients_slider owl-carousel">

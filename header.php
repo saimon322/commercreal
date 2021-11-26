@@ -27,11 +27,7 @@
     </head>
 <body <?php body_class(); ?>>
 
-<div class="layout animsition">
-
-    <div id="small-dialog" class="zoom-anim-dialog mfp-hide embed-responsive embed-responsive-16by9">
-        <iframe src="https://player.vimeo.com/video/34741214?color=ffffff&title=0&byline=0&portrait=0"></iframe>
-    </div>
+<div class="layout">
     <!--================Header Menu Area =================-->
     <header class="header_menu_area">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
