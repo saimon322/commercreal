@@ -32,15 +32,17 @@ h1, h2, h3, h4,
   font-weight: 700;
   letter-spacing: 1px;
   color: #fff;
+}
 
-  span {
-    color: $base;
+h1, .h1 {
+  font-size: 20px;
 
-    @include media-up(md) {
-      white-space: nowrap;
-    }
+  @include media-up(md) {
+    font-size: 48px;
   }
 }
+
+// ...
 
 h5, .h5 {
   font-weight: 400;
