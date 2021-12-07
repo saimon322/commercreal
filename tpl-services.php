@@ -5,7 +5,7 @@ get_header();
 <section class="breadcrumb_link">
     <div class="container">
         <a href="/">Главная</a>
-        <a class="active" href="#">Услуги</a>
+        <span>Услуги</span>
     </div>
 </section>
 <!--================End Breadcrumb Area =================-->

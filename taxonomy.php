@@ -4,7 +4,7 @@
     <div class="container">
         <a href="/">Главная</a>
         <a class="active" href="/uslugi/">Услуги</a>
-        <a class="active" href="#"><?php single_term_title(); ?></a>
+        <span><?php single_term_title(); ?></span>
     </div>
 </section>
 

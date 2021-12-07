@@ -24,7 +24,7 @@
                                         <?php if ($primary_cat): ?>
                                             <a class="tag" href="<?= get_term_link($primary_cat->term_id); ?>"><?= $primary_cat->name; ?></a>
                                         <?php endif; ?>
-                                        <a href=""><h4><?php the_title(); ?></h4></a>
+                                        <a href="<?php echo get_the_permalink(); ?>"><p class="h4"><?php the_title(); ?></p></a>
                                         <a class="time" href="<?php echo get_the_permalink(); ?>"><?php echo get_the_date('n.j.Y'); ?></a>
                                     </div>
                                 </div>

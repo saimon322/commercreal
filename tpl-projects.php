@@ -5,7 +5,7 @@ get_header();
 <section class="breadcrumb_link">
     <div class="container">
         <a href="/">Главная</a>
-        <a class="active" href="#">Проекты</a>
+        <span>Проекты</span>
     </div>
 </section>
 

@@ -1448,15 +1448,16 @@ nav li:hover .mega-menu {
 
 .breadcrumb_link {
   padding-top: 220px;
-}
-.breadcrumb_link a {
   font-size: 16px;
   color: #999999;
   text-transform: uppercase;
   letter-spacing: 1.6px;
-  margin-right: 12px;
-  position: relative;
   font-weight: normal;
+}
+.breadcrumb_link a {
+  margin-right: 12px;
+  color: #999999;
+  position: relative;
   -webkit-transition: all 250ms ease 0s;
   -o-transition: all 250ms ease 0s;
   transition: all 250ms ease 0s;
@@ -1464,7 +1465,7 @@ nav li:hover .mega-menu {
 .breadcrumb_link a:before {
   content: "/";
   position: absolute;
-  right: -12px;
+  right: -15px;
   top: 50%;
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
@@ -5243,7 +5244,7 @@ nav li:hover .mega-menu {
 .blog_side_item .media .media-body .tag:hover {
   color: #f1d299;
 }
-.blog_side_item .media .media-body h4 {
+.blog_side_item .media .media-body .h4 {
   font-family: "Raleway", sans-serif;
   color: #fff;
   font-size: 20px;
@@ -5252,7 +5253,7 @@ nav li:hover .mega-menu {
   -o-transition: all 250ms ease 0s;
   transition: all 250ms ease 0s;
 }
-.blog_side_item .media .media-body h4:hover {
+.blog_side_item .media .media-body .h4:hover {
   color: #f1d299;
 }
 .blog_side_item .media .media-body .time {
