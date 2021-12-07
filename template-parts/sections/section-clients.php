@@ -53,14 +53,14 @@
             <?php while( have_rows('partners', 'options') ): the_row(); ?>
                 <div class="item">
                     <a href="<?= get_sub_field('link'); ?>" target="_blank" rel="noopener noreferrer">
-                        <img src="<?= get_sub_field('logo'); ?>" alt="">
+                        <img data-src="<?= get_sub_field('logo'); ?>" class="owl-lazy exclude-lazy">
                     </a>
                 </div>
             <?php endwhile; ?>
             <?php while( have_rows('partners', 'options') ): the_row(); ?>
                 <div class="item">
                     <a href="<?= get_sub_field('link'); ?>" target="_blank" rel="noopener noreferrer">
-                        <img src="<?= get_sub_field('logo'); ?>" alt="">
+                        <img data-src="<?= get_sub_field('logo'); ?>" class="owl-lazy exclude-lazy">
                     </a>
                 </div>
             <?php endwhile; ?>
