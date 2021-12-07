@@ -34,7 +34,7 @@
 }
 
 @media(max-width: 1300px) {
-	.since_text h5 {
+	.since_text .h5 {
 		position: relative;
 		left: 0px;
 		top: 0px;
@@ -816,7 +816,7 @@
 		margin-bottom: 65px;
 	}
 
-	.about_studio_area .ab_studio_text h5 {
+	.about_studio_area .ab_studio_text .h5 {
 		font-size: 24px;
 		line-height: 33px;
 	}
@@ -875,7 +875,7 @@
 		font-size: 28px;
 	}
 
-	.spec_item h4 {
+	.spec_item .h4 {
 		font-size: 24px;
 	}
 }

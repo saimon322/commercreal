@@ -38,14 +38,13 @@ h1, h2, h3, h4,
   letter-spacing: 1px;
   color: #fff;
 }
-h1 span, h2 span, h3 span, h4 span,
-.h1 span, .h2 span, .h3 span, .h4 span {
-  color: #f1d299;
+
+h1, .h1 {
+  font-size: 20px;
 }
 @media (min-width: 768px) {
-  h1 span, h2 span, h3 span, h4 span,
-.h1 span, .h2 span, .h3 span, .h4 span {
-    white-space: nowrap;
+  h1, .h1 {
+    font-size: 48px;
   }
 }
 
@@ -1228,7 +1227,7 @@ nav li:hover .mega-menu {
 .f_title {
   margin-bottom: 25px;
 }
-.f_title h3 {
+.f_title .h3 {
   color: #fff;
   font-size: 18px;
   text-transform: uppercase;
@@ -1957,7 +1956,7 @@ nav li:hover .mega-menu {
   -webkit-filter: none;
           filter: none;
 }
-.stage-mini:hover h3 {
+.stage-mini:hover .h3 {
   opacity: 1;
   -webkit-transform: translateY(0);
       -ms-transform: translateY(0);
@@ -1998,7 +1997,7 @@ nav li:hover .mega-menu {
     line-height: 1.1;
   }
 }
-.stage-mini--white h3 {
+.stage-mini--white .h3 {
   color: #fff;
   text-shadow: 0px 4px 4px #222222;
 }
