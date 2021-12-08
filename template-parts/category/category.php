@@ -10,6 +10,7 @@
         <div class="row row_direction">
             <div class="col-lg-8 offset-lg-1">
                 <div class="blog_side_inner">
+                    <h1><?= single_cat_title(); ?></h1>
                     <?php if (have_posts()) :
                         while (have_posts()) : the_post();
                             $primary_cat = get_post_primary_category(); ?>

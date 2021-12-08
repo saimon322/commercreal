@@ -173,11 +173,11 @@ a.press_img_item {
   margin-bottom: 5px;
 }
 
-a.press_img_item h4 {
+a.press_img_item .h4 {
   font-weight: 400;
 }
 
-a.press_img_item:hover h4 {
+a.press_img_item:hover .h4 {
   color: #f1d299;
 }
 
@@ -236,7 +236,7 @@ a.press_img_item:hover span {
   margin: 8.75rem auto;
 }
 
-.about_office_area h2 {
+.about_office_area .h2 {
   font-size: 1.8rem;
 }
 
@@ -276,7 +276,7 @@ a.press_img_item:hover span {
   height: 100%;
 }
 
-.acf-block h3 {
+.acf-block .h3 {
   padding-bottom: 50px;
 }
 

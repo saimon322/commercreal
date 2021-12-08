@@ -1,4 +1,4 @@
 <div class="acf-block block-iframe">
-    <h3><?php echo $args['headline']; ?></h3>
+    <p class="h3"><?php echo $args['headline']; ?></p>
     <?php echo $args['html']; ?>
 </div>

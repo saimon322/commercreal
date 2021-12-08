@@ -27,7 +27,7 @@
     </head>
 <body <?php body_class(); ?>>
 
-<div class="layout">
+<div class="layout animsition">
     <!--================Header Menu Area =================-->
     <header class="header_menu_area">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">

@@ -1,8 +1,8 @@
 <div class="acf-block block-pannellum">
     <?php if( empty($args['headline']) ): ?>
-        <h3>Панорама 360&#176; местности</h3>
+        <p class="h3">Панорама 360&#176; местности</p>
     <?php else: ?>
-            <h3><?= $args['headline']; ?></h3>
+        <p class="h3"><?= $args['headline']; ?></p>
     <?php endif; ?>
     
     <div class="panorama" id="panorama-<?= $args['index']; ?>"></div>

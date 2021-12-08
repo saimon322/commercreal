@@ -1,6 +1,6 @@
 <section class="about_office_area">
     <div class="container">
-        <p class="s_title">Офис в Калининграде</p>
+        <h2 class="s_title">Офис в Калининграде</h2>
     </div>
     <div class="container">
         <?php get_template_part('template-parts/animation/pattern', null, array(
@@ -13,9 +13,9 @@
                 </div>
             </div>
             <div class="about_office_area__content">
-                <h2>БУДЕМ РАДЫ ПОЗНАКОМИТЬСЯ <br>
+                <p class="h2">БУДЕМ РАДЫ ПОЗНАКОМИТЬСЯ <br>
                     <span>С ВАМИ ЛИЧНО</span>
-                </h2>
+                </p>
                 <p class="mt-4">Юсифов Юсиф</p>
                 <div class="about_office_area__signatures">
                     <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/pod1.png" class="signature1">

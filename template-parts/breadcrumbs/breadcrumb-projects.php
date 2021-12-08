@@ -3,6 +3,6 @@
         <a href="<?= $args['parent_slug']; ?>"><?= $args['parent_name'] ?></a>
     </div>
     <div class="bread_bottom_text">
-        <h2><?= $args['title']; ?></h2>
+        <h1><?= $args['title']; ?></h1>
     </div>
 </div>

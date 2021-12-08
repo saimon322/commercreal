@@ -12,6 +12,7 @@
     <div class="container">
         <?php get_template_part('template-parts/animation/pattern'); ?>
         <div class="ab_studio_text">
+            <h1><?php single_term_title(); ?></h1>
             <?= term_description(); ?>
         </div>
     </div>

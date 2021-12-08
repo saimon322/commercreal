@@ -46,7 +46,7 @@
 
     <div class="clients_block">
         <div class="container">
-            <p class="s_title"><?= get_field('partners_title', 'options'); ?></p>
+            <h2 class="s_title"><?= get_field('partners_title', 'options'); ?></h2>
         </div>
         <?php if( have_rows('partners', 'options') ): ?>
             <div class="clients_slider owl-carousel">

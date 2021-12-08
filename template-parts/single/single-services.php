@@ -40,7 +40,7 @@
                 <div class="col-lg-3 offset-lg-1">
                     <aside class="l_widget categories_wd">
                         <div class="l_wd_title">
-                            <h3><?php _e('Категории'); ?></h3>
+                            <p class="h3"><?php _e('Категории'); ?></p>
                         </div>
                         <ul class="list">
                             <?php foreach ($services as $service): ?>
@@ -77,7 +77,7 @@
             <?php $post_objects = get_field('related_services');
             if ($post_objects): ?>
                 <div class="related_post">
-                    <h4><?php _e('Похожие услуги'); ?></h4>
+                    <p class="h4"><?php _e('Похожие услуги'); ?></p>
                     <div class="row">
                         <?php foreach ($post_objects as $post_object): ?>
                             <div class="col-lg-4 col-sm-6">
@@ -90,7 +90,7 @@
                                         <div class="date">
                                             <span><?php the_field('type', $post_object->ID); ?></span>
                                         </div>
-                                        <h4><?php echo get_the_title($post_object->ID); ?></h4>
+                                        <p class="h4"><?php echo get_the_title($post_object->ID); ?></p>
                                     </a>
                                 </div>
                             </div>

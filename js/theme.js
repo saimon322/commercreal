@@ -635,6 +635,7 @@
     if (map) {
         $('.map__point').each(function() {
             let index = $(this).index();
+            console.log('Map index ' + index);
             let delay = 0.5 + index * 0.2;
             $(this).css({'animation-delay': delay + 's'});
         })

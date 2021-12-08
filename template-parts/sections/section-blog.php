@@ -5,7 +5,7 @@
 ]); ?>
 <section class="blog-section">
     <div class="container">
-        <p class="s_title">Наш блог</p>
+        <h2 class="s_title">Наш блог</h2>
         <div class="blog-section__list">
             <?php foreach ($result as $post): ?>
                 <a href="<?= get_permalink($post['ID']); ?>" class="blog-item">

@@ -5,7 +5,7 @@ get_header();
 <section class="breadcrumb_link">
     <div class="container">
         <a href="/">Главная</a>
-        <span>Проекты</span>
+        <span><?= the_title(); ?></span>
     </div>
 </section>
 
@@ -13,6 +13,7 @@ get_header();
     <div class="container">
         <?php get_template_part('template-parts/animation/pattern'); ?>
         <div class="ab_studio_text">
+            <h1><?= the_title(); ?></h1>
             <?php the_content(); ?>
         </div>
     </div>
@@ -23,11 +24,11 @@ get_header();
         <div class="row">
             <div class="col-12 col-md-4 s_content">
                 <?php if ($map_sub_headline = get_field('map_sub_headline')): ?>
-                    <p class="s_title"><?= $map_sub_headline; ?></p>
+                    <h2 class="s_title"><?= $map_sub_headline; ?></h2>
                 <?php endif; ?>
                 <div class="s_content--text">
                     <?php if ($map_headline = get_field('map_headline')): ?>
-                        <h2><?= $map_headline; ?></h2>
+                        <p class="h2"><?= $map_headline; ?></p>
                     <?php endif;
                     if ($map_text = get_field('map_text')): ?>
                         <p><?= $map_text; ?></p>
