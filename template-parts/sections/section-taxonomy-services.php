@@ -6,7 +6,7 @@
                 <div class="spec_item">
                     <a href="<?php echo get_term_link(13); ?>" class="spec_item__top">
                         <img src="<?php echo get_template_directory_uri(); ?>/img/icon/spec-1.svg" alt="">
-                        <h4>DEVELOPER</h4>
+                        <div class="h4">DEVELOPER</div>
                     </a>
                 </div>
             </div>
@@ -14,7 +14,7 @@
                 <div class="spec_item">
                     <a href="<?php echo get_term_link(15); ?>" class="spec_item__top">
                         <img src="<?php echo get_template_directory_uri(); ?>/img/icon/spec-2.svg" alt="">
-                        <h4>СОБСТВЕННИК</h4>
+                        <div class="h4">СОБСТВЕННИК</div>
                     </a>
                 </div>
             </div>
@@ -22,7 +22,7 @@
                 <div class="spec_item">
                     <a href="<?php echo get_term_link(14); ?>" class="spec_item__top">
                         <img src="<?php echo get_template_directory_uri(); ?>/img/icon/spec-3.svg" alt="">
-                        <h4>RETAILER</h4>
+                        <div class="h4">RETAILER</div>
                     </a>
                 </div>
             </div>

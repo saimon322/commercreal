@@ -27,7 +27,7 @@ get_template_part('template-parts/breadcrumb', 'breadcrumb',
                     </div>
                     <?php if ($related_news = get_field('related_news')): ?>
                         <div class="related_post">
-                            <h4>Похожие новости</h4>
+                            <p class="h4">Похожие новости</p>
                             <div class="row">
                                 <?php foreach ($related_news as $post):
                                     $primary_cat = get_post_primary_category($post); ?>
@@ -44,7 +44,7 @@ get_template_part('template-parts/breadcrumb', 'breadcrumb',
                                                         <a class="tag" href="<?= get_term_link($primary_cat->term_id); ?>"><?= $primary_cat->name; ?></a>
                                                     <?php endif; ?>
                                                 </div>
-                                                <a href="#"><h4><?= get_the_title($post); ?></h4></a>
+                                                <a href="#"><p class="h4"><?= get_the_title($post); ?></p></a>
                                             </div>
                                         </div>
                                     </div>

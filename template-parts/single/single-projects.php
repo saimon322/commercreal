@@ -53,17 +53,17 @@ wp_enqueue_style('pannellum-css');
                             }
                             switch (get_row_layout()):
                                 case 'characteristic': ?>
-                                    <h5><?php the_sub_field('name'); ?>: <span><?php the_sub_field('text'); ?></span></h5>
+                                    <p class="h5"><?php the_sub_field('name'); ?>: <span><?php the_sub_field('text'); ?></span></p>
                                     <?php break;
                                 case 'file': ?>
-                                    <h5><?php the_sub_field('name'); ?>:
+                                    <p class="h5"><?php the_sub_field('name'); ?>:
                                         <a href="<?php the_sub_field('file'); ?>" download>Скачать</a>
-                                    </h5>
+                                    </p>
                                     <?php break;
                                 case 'broker': ?>
-                                    <h5>Брокер проекта: <span><?php the_sub_field('broker_name'); ?></span></h5>
-                                    <h5>Тел: <span><a href="tel: <?php the_sub_field('phone'); ?>"><?php the_sub_field('phone'); ?></a></span></h5>
-                                    <h5>Email: <span><a href="mailto: <?php the_sub_field('email'); ?>"><?php the_sub_field('email'); ?></a></span></h5>
+                                    <p class="h5">Брокер проекта: <span><?php the_sub_field('broker_name'); ?></span></p>
+                                    <p class="h5">Тел: <span><a href="tel: <?php the_sub_field('phone'); ?>"><?php the_sub_field('phone'); ?></a></span></p>
+                                    <p class="h5">Email: <span><a href="mailto: <?php the_sub_field('email'); ?>"><?php the_sub_field('email'); ?></a></span></p>
                                     <?php break;
                             endswitch;
                             $counter++;
@@ -71,16 +71,6 @@ wp_enqueue_style('pannellum-css');
                     </div>
                 </div>
             <?php endif; ?>
-            <!--<div class="col-lg-4 col-sm-6">
-                <div class="pd_item">
-                    <h5>Area: <span>1,560 sqr</span></h5>
-                    <h5 class="share_link">Share:
-                        <a href="https://twitter.com/intent/tweet?url=<?php /*echo get_permalink(get_the_ID()); */ ?>">Twitter</a>
-                        <a href="https://www.facebook.com/sharer/sharer.php?u=<?php /*echo get_permalink(get_the_ID()); */ ?>">Facebook</a>
-                        <a href="https://vk.com/share.php?url=<?php /*echo get_permalink(get_the_ID()); */ ?>">VK</a>
-                    </h5>
-                </div>
-            </div>-->
         </div>
     </div>
 </section>

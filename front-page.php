@@ -209,11 +209,11 @@ $options = get_field('contacts', 'options');
             <?php endif; ?>
             <div class="col-lg-5">
                 <div class="studio_text">                   
-                    <p class="s_title">
+                    <h2 class="s_title">
                         <?php the_field('about_subtitle'); ?>
-                    </p>
+                    </h2>
                     <div class="main_title">
-                        <h2><?php the_field('about_title'); ?></h2>
+                        <p class="h2"><?php the_field('about_title'); ?></h2>
                     </div>
                     <p class="h5"><?php the_field('about_caption'); ?></p>
                     <div class="studio_text__text">
@@ -234,7 +234,7 @@ $options = get_field('contacts', 'options');
 
 <section class="speciallization_area">
     <div class="container">
-        <p class="s_title">Услуги</p>
+        <h2 class="s_title">Услуги</h2>
         <div class="specs">
             <div class="row m0 text-center specs-header">
                 <div class="col-lg-4 col-sm-6 spec_wrapper">
@@ -300,7 +300,7 @@ $options = get_field('contacts', 'options');
 
 <section class="stages_area">
     <div class="container">
-        <p class="s_title"><?php the_field('stages_subtitle'); ?></p>
+        <h2 class="s_title"><?php the_field('stages_subtitle'); ?></h2>
         <div class="row">
             <div class="col-sm-4">
                 <!-- Loupe stage -->

@@ -1,16 +1,16 @@
 <section class="our_press_area">
     <div class="container">
         <?php $form = get_field('block_form', 'option') ?>
-        <h6 class="s_title">
+        <p class="s_title">
             <?= $form['title']; ?>
-        </h6>
+        </p>
         <div class="our_press_area_text">
             <?= $form['text']; ?>
         </div>
         <div class="row">
             <div class="col-lg-6">
                 <div class="press_img_item">
-                    <h2 class="press_img_title"><?= $form['img_text']; ?></h2>
+                    <p class="press_img_title h2"><?= $form['img_text']; ?></p>
                     <div class="press_img">
                         <img class="img-fluid" src="<?= $form['img_2']; ?>" alt="">
                     </div>
@@ -19,7 +19,7 @@
             <div class="col-lg-6">
                 <div class="press_content">
                     <div class="press_form">
-                        <h3>Заказать <span>Индивидуальное предложение</span></h3>
+                        <h2>Заказать <span>Индивидуальное предложение</span></h2>
                         <p>Мы предоставляем нашим клиентам только уникальные предложения и условия сотрудничества.</p>
                         <form class="press_form__form form-contact">
                             <input type="text" name="phone" required placeholder="Номер телефона">

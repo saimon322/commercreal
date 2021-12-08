@@ -10,6 +10,7 @@
         <div class="row row_direction">
             <div class="col-lg-8 offset-lg-1">
                 <div class="blog_side_inner">
+                    <h1><?= single_cat_title(); ?></h1>
                     <?php if (have_posts()) :
                         while (have_posts()) : the_post();
                             $primary_cat = get_post_primary_category(); ?>
@@ -24,7 +25,7 @@
                                         <?php if ($primary_cat): ?>
                                             <a class="tag" href="<?= get_term_link($primary_cat->term_id); ?>"><?= $primary_cat->name; ?></a>
                                         <?php endif; ?>
-                                        <a href=""><h4><?php the_title(); ?></h4></a>
+                                        <a href="<?php echo get_the_permalink(); ?>"><p class="h4"><?php the_title(); ?></p></a>
                                         <a class="time" href="<?php echo get_the_permalink(); ?>"><?php echo get_the_date('n.j.Y'); ?></a>
                                     </div>
                                 </div>

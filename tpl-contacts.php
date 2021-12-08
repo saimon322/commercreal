@@ -37,7 +37,7 @@ $options = get_field('contacts', 'options');
                 </div>
                 <div class="col-lg-7">
                     <div class="right_contact_form">
-                        <h4>Связаться с нами</h4>
+                        <h2>Связаться с нами</h2>
                         <form class="row contact_us_form form-contact">
                             <div class="form-group col-md-6">
                                 <input type="text" class="form-control" id="name" name="name" placeholder="Имя" required>

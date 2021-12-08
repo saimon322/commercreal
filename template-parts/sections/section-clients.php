@@ -46,21 +46,21 @@
 
     <div class="clients_block">
         <div class="container">
-            <p class="s_title"><?= get_field('partners_title', 'options'); ?></p>
+            <h2 class="s_title"><?= get_field('partners_title', 'options'); ?></h2>
         </div>
         <?php if( have_rows('partners', 'options') ): ?>
             <div class="clients_slider owl-carousel">
             <?php while( have_rows('partners', 'options') ): the_row(); ?>
                 <div class="item">
                     <a href="<?= get_sub_field('link'); ?>" target="_blank" rel="noopener noreferrer">
-                        <img src="<?= get_sub_field('logo'); ?>" alt="">
+                        <img data-src="<?= get_sub_field('logo'); ?>" class="owl-lazy exclude-lazy">
                     </a>
                 </div>
             <?php endwhile; ?>
             <?php while( have_rows('partners', 'options') ): the_row(); ?>
                 <div class="item">
                     <a href="<?= get_sub_field('link'); ?>" target="_blank" rel="noopener noreferrer">
-                        <img src="<?= get_sub_field('logo'); ?>" alt="">
+                        <img data-src="<?= get_sub_field('logo'); ?>" class="owl-lazy exclude-lazy">
                     </a>
                 </div>
             <?php endwhile; ?>

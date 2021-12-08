@@ -59,7 +59,7 @@
     left: -4px;
     bottom: -5px;
 
-    h2 {
+    h1 {
       color: #fff;
       text-transform: uppercase;
       font-size: 12vh;
@@ -78,21 +78,22 @@
 
 .breadcrumb_link {
   padding-top: 220px;
+  font-size: 16px;
+  color: $pfont;
+  text-transform: uppercase;
+  letter-spacing: 1.6px;
+  font-weight: normal;
 
   a {
-    font-size: 16px;
-    color: $pfont;
-    text-transform: uppercase;
-    letter-spacing: 1.6px;
     margin-right: 12px;
+    color: $pfont;
     position: relative;
-    font-weight: normal;
     @include transition;
 
     &:before {
       content: "/";
       position: absolute;
-      right: -12px;
+      right: -15px;
       top: 50%;
       transform: translateY(-50%);
       color: $pfont;

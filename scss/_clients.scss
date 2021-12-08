@@ -5,11 +5,10 @@
   background: url(../img/texture-bg.jpg) repeat;
   padding-bottom: 130px;
 
-  & > .container {
-    z-index: 10;
-  }
-
   .main_title {
+    position: relative;
+    z-index: 10;
+    width: fit-content;
     margin-bottom: 80px;
 
     @include media-down(sm) {

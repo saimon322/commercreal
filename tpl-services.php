@@ -5,7 +5,7 @@ get_header();
 <section class="breadcrumb_link">
     <div class="container">
         <a href="/">Главная</a>
-        <a class="active" href="#">Услуги</a>
+        <span><?= the_title(); ?></span>
     </div>
 </section>
 <!--================End Breadcrumb Area =================-->
@@ -13,6 +13,7 @@ get_header();
 <section class="about_studio_area pattern-section">
     <div class="container">
         <?php get_template_part('template-parts/animation/pattern'); ?>
+        <h1><?= the_title(); ?></h1>
         <div class="ab_studio_text">
             <?= the_content(); ?>
         </div>

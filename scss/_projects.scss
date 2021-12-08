@@ -343,7 +343,7 @@
 .press_form {
   max-width: 430px;
 
-  h3 {
+  h2 {
     font-size: 30px;
     margin-bottom: 30px;
   }
@@ -399,7 +399,7 @@
 }
 
 .pd_item {
-  h5 {
+  .h5 {
     font-size: 14px;
     color: $pfont;
     margin-bottom: 15px;
@@ -713,11 +713,9 @@
       .project_text {
         .h5 {
           margin-bottom: 12px;
-          opacity: 1;
         }
 
         .h4 {
-          opacity: 1;
           margin-bottom: 0px;
         }
       }
