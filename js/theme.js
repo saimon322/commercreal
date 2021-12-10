@@ -527,6 +527,8 @@
     // Stage lopue
     const stageLoupe = document.querySelector('.stage-loupe');
     if (stageLoupe) {
+        stageLoupe.classList.add('show');
+
         const el = stageLoupe.querySelector('.stage-loupe__el');
         const img = stageLoupe.querySelector('.stage-loupe__img img');
 
