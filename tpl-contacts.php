@@ -5,7 +5,16 @@ $options = get_field('contacts', 'options');
 
 <section class="contact-page">
     <div class="container-fluid p-0">
-        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A102296ec2d47f557bcc149d200dc115ebaa71a3178d5c04aa61ba2862afe6aec&amp;source=constructor" width="100%" height="400" frameborder="0"></iframe>
+        <div class="contact-maps">
+            <div class="contact-map">
+                <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A102296ec2d47f557bcc149d200dc115ebaa71a3178d5c04aa61ba2862afe6aec&amp;source=constructor" width="100%" height="400" frameborder="0"></iframe>
+                <p class="h4">Калининград</p>
+            </div>
+            <div class="contact-map">
+                <iframe src="https://yandex.ru/map-widget/v1/-/CCUyEBHl~B" width="100%" height="400" frameborder="0"></iframe>
+                <p class="h4">Москва</p>
+            </div>
+        </div>
     </div>
 
     <div class="container">

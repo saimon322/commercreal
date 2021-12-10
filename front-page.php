@@ -321,6 +321,9 @@ $options = get_field('contacts', 'options');
                                 </div>
                             </div>
                         </div>
+                        <div class="stage__icon stage__icon--left">
+                            <img src="<?=get_template_directory_uri();?>/img/icon/stages-eye.svg" alt="">
+                        </div>
                     </div>
                     <div class="stage__content">
                         <p class="h2 stage__title">

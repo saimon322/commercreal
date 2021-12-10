@@ -12,7 +12,7 @@
                 <div class="press_img_item">
                     <p class="press_img_title h2"><?= $form['img_text']; ?></p>
                     <div class="press_img">
-                        <img class="img-fluid" src="<?= $form['img_2']; ?>" alt="">
+                        <img class="img-fluid" src="<?= $form['img']; ?>" alt="">
                     </div>
                 </div>
             </div>

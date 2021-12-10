@@ -6,12 +6,38 @@
   }
 }
 
+.contact-maps {
+  display: grid;
+
+  @include media-up(md) {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+  }
+
+  iframe {
+    width: 100%;
+    height: 200px;
+
+    @include media-up(md) {
+      height: 400px;
+    }
+  }
+
+  p {
+    padding: 20px;
+  }
+}
+
+.contact-map:last-child p {
+  @include media-up(md) {
+    text-align: right;
+  }
+}
+
 .comment_form {
   background: #ebf0f4;
   padding: 130px 0px;
 }
-
-.fomment_form_inner {}
 
 .comment_title {
   padding-bottom: 45px;
