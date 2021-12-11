@@ -5681,6 +5681,55 @@ nav li:hover .mega-menu {
   }
 }
 
+.contact-maps {
+  display: -ms-grid;
+  display: grid;
+}
+@media (min-width: 768px) {
+  .contact-maps {
+    -ms-grid-columns: 1fr 30px 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+  }
+}
+
+.contact-map {
+  position: relative;
+}
+.contact-map iframe {
+  position: relative;
+  width: 100%;
+  height: 200px;
+}
+@media (min-width: 768px) {
+  .contact-map iframe {
+    height: 400px;
+  }
+}
+.contact-map img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  mix-blend-mode: luminosity;
+}
+@media (min-width: 768px) {
+  .contact-map img {
+    height: 400px;
+  }
+}
+.contact-map p {
+  padding: 20px;
+}
+@media (min-width: 768px) {
+  .contact-map:last-child p {
+    text-align: right;
+  }
+}
+
 .comment_form {
   background: #ebf0f4;
   padding: 130px 0px;

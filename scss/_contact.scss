@@ -13,10 +13,29 @@
     grid-template-columns: 1fr 1fr;
     grid-gap: 30px;
   }
+}
+
+.contact-map { 
+  position: relative;
 
   iframe {
+    position: relative;
     width: 100%;
     height: 200px;
+
+    @include media-up(md) {
+      height: 400px;
+    }
+  }
+
+  img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    mix-blend-mode: luminosity;
 
     @include media-up(md) {
       height: 400px;
@@ -26,11 +45,11 @@
   p {
     padding: 20px;
   }
-}
 
-.contact-map:last-child p {
-  @include media-up(md) {
-    text-align: right;
+  &:last-child p {
+    @include media-up(md) {
+      text-align: right;
+    }
   }
 }
 
