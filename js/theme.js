@@ -271,7 +271,6 @@
                 autoplayHoverPause: true,
                 smartSpeed: 1500,
                 dots: true,
-                navContainer: '.villa_slider',
                 navText: ['<i class="ion-ios-arrow-left"></i>', '<i class="ion-ios-arrow-right"></i>'],
                 responsiveClass: true,
             })
