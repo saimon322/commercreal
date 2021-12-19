@@ -52,7 +52,7 @@ $options = get_field('contacts', 'options');
                                  data-bgrepeat="no-repeat"
                                  data-bgparallax="10"
                                  data-no-retina>
-                            <div class="rs-background-video-layer"
+                            <!-- <div class="rs-background-video-layer"
                                  data-forcerewind="on"
                                  data-volume="mute"
                                  data-videowidth="100%"
@@ -66,7 +66,7 @@ $options = get_field('contacts', 'options');
                                  data-autoplayonlyfirsttime="false"
                                  data-videocontrols="none"
                                  data-videoloop="loopandnoslidestop">
-                            </div>
+                            </div> -->
                         <?php endif; ?>
                         <div class="slider_text_box">
                             <div class="tp-caption tp-resizeme count"
