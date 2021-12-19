@@ -2079,6 +2079,25 @@ nav li:hover .mega-menu {
   -o-transition: opacity 0.5s;
   transition: opacity 0.5s;
   z-index: 6 !important;
+}
+.home_slider .rev_slider li .slotholder:before {
+  content: "";
+  position: absolute;
+  z-index: 35;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(0, 60, 70, 0.75);
+  opacity: 0;
+  -webkit-transition: opacity 0.5s 0.5s;
+  -o-transition: opacity 0.5s 0.5s;
+  transition: opacity 0.5s 0.5s;
+}
+.home_slider .rev_slider li.active-revslide .slotholder:before {
+  opacity: 1;
+}
+.home_slider .rev_slider li.processing-revslide {
   opacity: 1 !important;
 }
 .home_slider .rev_slider li .slider_text_box {

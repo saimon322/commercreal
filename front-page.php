@@ -31,7 +31,8 @@ $options = get_field('contacts', 'options');
         <?php $counter = 1; ?>
         <div id="home_full_slider" style="height: 100vh" class="rev_slider fullscreenbanner" data-version="5.3.1.6">
             <ul>
-                <?php while (have_rows('main_slider')): the_row(); ?>
+                <?php while (have_rows('main_slider')): the_row(); 
+                if ($counter == 1):?>
                     <li data-transition="slotzoom-horizontal" data-slotamount="5" data-masterspeed="1000" data-fsmasterspeed="1000">
                         <?php if (get_sub_field('media') == 'img'): ?>
                             <img class="rev-slidebg"
@@ -52,7 +53,7 @@ $options = get_field('contacts', 'options');
                                  data-bgrepeat="no-repeat"
                                  data-bgparallax="10"
                                  data-no-retina>
-                            <!-- <div class="rs-background-video-layer"
+                            <div class="rs-background-video-layer"
                                  data-forcerewind="on"
                                  data-volume="mute"
                                  data-videowidth="100%"
@@ -66,7 +67,7 @@ $options = get_field('contacts', 'options');
                                  data-autoplayonlyfirsttime="false"
                                  data-videocontrols="none"
                                  data-videoloop="loopandnoslidestop">
-                            </div> -->
+                            </div>
                         <?php endif; ?>
                         <div class="slider_text_box">
                             <div class="tp-caption tp-resizeme count"
@@ -151,8 +152,9 @@ $options = get_field('contacts', 'options');
                             </div>
                         </div>
                     </li>
-                    <?php $counter++; ?>
-                <?php endwhile; ?>
+                <?php $counter++;
+                endif;
+                endwhile; ?>
             </ul>
         </div>
     <?php endif; ?>
