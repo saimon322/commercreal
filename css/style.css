@@ -1540,7 +1540,16 @@ nav li:hover .mega-menu {
 }
 
 .page_link {
-  margin-bottom: 100px;
+  margin-bottom: 30px;
+  font-size: 14px;
+  font-weight: normal;
+  color: #999999;
+  text-transform: uppercase;
+}
+@media (min-width: 768px) {
+  .page_link {
+    margin-bottom: 60px;
+  }
 }
 .page_link a {
   font-size: 14px;
@@ -5438,12 +5447,38 @@ nav li:hover .mega-menu {
   line-height: 30px;
   color: #999999;
 }
-.s_blog_text_inner .blog_main_text img {
-  margin: 65px 0;
+.s_blog_text_inner .blog_main_text p img {
+  width: 100%;
 }
-@media (max-width: 767px) {
-  .s_blog_text_inner .blog_main_text img {
+@media (min-width: 768px) {
+  .s_blog_text_inner .blog_main_text p img {
     margin: 30px 0;
+  }
+}
+@media (min-width: 768px) {
+  .s_blog_text_inner .blog_main_text p img {
+    width: auto;
+  }
+  .s_blog_text_inner .blog_main_text p img.alignleft {
+    float: left;
+    margin-right: 30px;
+  }
+  .s_blog_text_inner .blog_main_text p img.alignright {
+    float: right;
+    margin-left: 30px;
+  }
+  .s_blog_text_inner .blog_main_text p img.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.s_blog_text_inner .blog_main_text img {
+  margin: 30px 0;
+}
+@media (min-width: 768px) {
+  .s_blog_text_inner .blog_main_text img {
+    margin: 60px 0;
   }
 }
 .s_blog_text_inner .blog_main_text img.blog_main_img {
@@ -6470,5 +6505,46 @@ a.press_img_item:hover span {
 .chatCopyright_d4f7,
 .copy_6c21 {
   display: none !important;
+}
+
+@media (min-width: 992px) {
+  .sidebar {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 0px;
+            flex: 1 1 0;
+    margin-left: 30px;
+    max-width: unset;
+    padding: 0;
+  }
+}
+@media (min-width: 1200px) {
+  .sidebar {
+    margin-left: 50px;
+  }
+}
+
+.form-control:focus {
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-color: #f1d299 !important;
+}
+
+.page-form {
+  max-width: 700px;
+  margin-bottom: 30px;
+}
+@media (min-width: 768px) {
+  .page-form {
+    margin-bottom: 60px;
+  }
+}
+.page-form__title {
+  margin-bottom: 20px;
+}
+.page-form .form-control {
+  background: transparent;
+  color: #fff;
+  border-color: #999999;
 }
 /*# sourceMappingURL=style.css.map */

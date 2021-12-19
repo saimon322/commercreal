@@ -348,10 +348,10 @@ $options = get_field('contacts', 'options');
                             if( have_rows('stage_2') ): while( have_rows('stage_2') ): the_row(); 
                                 if( have_rows('substages') ):  while( have_rows('substages') ): the_row(); ?>
                                     <?php $is_white = get_sub_field('is_white') ? ' stage-mini--white' : ''; ?>
-                                    <div class="stage-mini<?= $is_white; ?>">
+                                    <a href="<?= get_sub_field('link'); ?>" class="stage-mini<?= $is_white; ?>">
                                         <img src="<?= get_sub_field('img'); ?>" alt="">
                                         <p class="h3"><?= get_sub_field('title'); ?></p>
-                                    </div>
+                                    </a>
                                 <?php endwhile; endif;
                             endwhile; endif; ?>
                         </div>
