@@ -2,89 +2,57 @@
 <section class="speciallization_area ab_spec all_services">
     <div class="container">
         <h2 class="s_title">Все услуги</h2>
+        <?php $services = get_terms('services-cats'); ?>
         <div class="specs">
             <div class="row m0 text-center specs-header">
-                <div class="col-lg-4 col-sm-6 spec_wrapper">
-                    <div class="spec_item">
-                        <a href="<?= get_term_link(13); ?>" class="spec_item__top">
-                            <img src="<?= get_template_directory_uri(); ?>/img/icon/spec-1.svg" alt="">
-                            <div class="h4">DEVELOPER</div>
-                        </a>
+                <?php $i = 1;
+                foreach ($services as $service): ?>     
+                    <div class="col-lg-4 col-sm-6 spec_wrapper">
+                        <div class="spec_item">
+                            <a href="<?= get_term_link($service->term_id); ?>" class="spec_item__top">
+                                <img src="<?= get_template_directory_uri(); ?>/img/icon/spec-<?= $i; ?>.svg" alt="">
+                                <div class="h4"><?= $service->name ?></div>
+                            </a>
+                        </div>
                     </div>
-                </div>
-                <div class="col-lg-4 col-sm-6 spec_wrapper">
-                    <div class="spec_item">
-                        <a href="<?= get_term_link(15); ?>" class="spec_item__top">
-                            <img src="<?= get_template_directory_uri(); ?>/img/icon/spec-2.svg" alt="">
-                            <div class="h4">СОБСТВЕННИК</div>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6 spec_wrapper">
-                    <div class="spec_item">
-                        <a href="<?= get_term_link(14); ?>" class="spec_item__top">
-                            <img src="<?= get_template_directory_uri(); ?>/img/icon/spec-3.svg" alt="">
-                            <div class="h4">RETAILER</div>
-                        </a>
-                    </div>
-                </div>
+                <?php $i++;
+                endforeach; ?>
             </div>
             <div class="row text-left specs-content">
-                <div class="col-lg-4 col-sm-6">
-                    <div class="spec_item">
-                        <a href="<?= get_term_link(13); ?>" class="spec_item__top">
-                            <img src="<?= get_template_directory_uri(); ?>/img/icon/spec-1.svg" alt="">
-                            <div class="h4">DEVELOPER</div>
-                        </a>
-                        <p>Вы занимаетесь созданием новых объектов недвижимости и вам требуется решить ряд коммерческих задач. Сотрудничество лучший способ создать максимально эффективный проект.</p>
-                        <ul class="custom-ul">
-                            <li>Управление арендными отношениями</li>
-                            <li>Стратегический консалтинг</li>
-                            <li>Поиск и продажа активов</li>
-                            <li>Разработка концепции развития</li>
-                            <li>Маркетинговые исследования</li>
-                            <li>Архитектурное проектирование</li>
-                            <li>Разработка коммерческой концепции</li>
-                            <li>Подготовка объекта к сдаче в эксплуатацию</li>
-                        </ul>
+                <?php foreach ($services as $service): ?> 
+                    <div class="col-lg-4 col-sm-6">
+                        <div class="spec_item">
+                            <a href="<?= get_term_link($service->term_id); ?>" class="spec_item__top">
+                                <img src="<?= get_field('logo', 'services-cats_' . $service->term_id); ?>" alt="">
+                                <div class="h4"><?= $service->name; ?></div>
+                            </a>
+                            <?php echo term_description(); ?>
+                            <ul class="custom-ul">
+                                <?php $the_query = new WP_Query(array(
+                                    'post_type' => 'services',
+                                    'tax_query' => array(
+                                        array (
+                                            'taxonomy' => 'services-cats',
+                                            'field' => 'term_id',
+                                            'terms' => $service->term_id,
+                                        )
+                                    ),
+                                ));
+                                if ($the_query->have_posts()):
+                                    $i = 1;
+                                    while ( $the_query->have_posts() ): $the_query->the_post();
+                                        if($i < 10): ?>
+                                            <li>
+                                                <a href="<?php echo get_the_permalink(); ?>"><?php the_title(); ?></a>
+                                            </li>
+                                        <?php endif;
+                                        $i++;
+                                    endwhile;
+                                endif; ?>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <div class="spec_item">
-                        <a href="<?= get_term_link(15); ?>" class="spec_item__top">
-                            <img src="<?= get_template_directory_uri(); ?>/img/icon/spec-2.svg" alt="">
-                            <div class="h4">СОБСТВЕННИК</div>
-                        </a>
-                        <p>Вы строите торговые центры или владеете коммерческой недвижимостью и ваша цель достичь максимальных экономических результатов мы с удовольствием сделаем это за вас.</p>
-                        <ul class="custom-ul">
-                            <li>Полное ведение ТРЦ без вашего участия</li>
-                            <li>Координация и контроль СМР арендаторов</li>
-                            <li>Аудит действующего объекта</li>
-                            <li>Брокеридж</li>
-                            <li>Управление эксплуатацией</li>
-                            <li>Юридическое сопровождение</li>
-                            <li>Финансовое управление</li>
-                            <li>Администрирование объектов</li>
-                            <li>Маркетинг и реклама</li>
-                            <li>Продвижение на профессиональном рынке</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <div class="spec_item">
-                        <a href="<?= get_term_link(14); ?>" class="spec_item__top">
-                            <img src="<?= get_template_directory_uri(); ?>/img/icon/spec-3.svg" alt="">
-                            <div class="h4">RETAILER</div>
-                        </a>
-                        <p>Вы имеете собственный бизнес или развиваете сетевую ритейл-компанию, и выходе в конкретный город или регион, ищите подходящие именно вам варианты помещений.</p>
-                        <ul class="custom-ul">
-                            <li>Разработка стратегии развития</li>
-                            <li>Подбор площадок для развития сети</li>
-                            <li>Анализ эффективности работы сети</li>
-                            <li>Представление интересов сети</li>
-                        </ul>
-                    </div>
-                </div>
+                <?php endforeach; ?>
             </div>
         </div>
     </div>

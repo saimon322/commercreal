@@ -5,7 +5,7 @@
             <h2>
                 <span>
                     <?= $clients_title['sign']; ?>
-                    <span class="counter-number">
+                    <span class=js-counter>
                         <?= $clients_title['number']; ?>
                     </span>
                 </span>

@@ -44,8 +44,7 @@
                         <?php 
                         $counter++;
                         endwhile;
-                    endif;
-                    ?>
+                    endif; ?>
                 </div>
             </div>
         </div>

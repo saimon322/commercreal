@@ -249,7 +249,7 @@ a.press_img_item:hover span {
   padding: 0px 16px;
   text-decoration: none;
   box-shadow: none;
-  transition: all 250ms ease 0s;
+  transition: 250ms ease 0s;
   margin-right: 6px;
 }
 
@@ -346,4 +346,43 @@ a.press_img_item:hover span {
 .chatCopyright_d4f7,
 .copy_6c21 {
   display: none !important;
+}
+
+.sidebar {
+  @include media-up(lg) {
+    flex: 1 1 0;
+    margin-left: 30px;
+    max-width: unset;
+    padding: 0;
+  }
+
+  @include media-up(xl) {
+    margin-left: 50px;
+  }
+}
+
+
+.form-control:focus {
+  outline: none;
+  box-shadow: none;
+  border-color: $base !important;
+}
+
+.page-form {
+  max-width: 700px;
+  margin-bottom: 30px;
+
+  @include media-up(md) {
+    margin-bottom: 60px;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  .form-control {
+    background: transparent;
+    color: #fff;
+    border-color: #999999;
+  }
 }

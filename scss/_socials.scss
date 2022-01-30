@@ -1,0 +1,33 @@
+.socials {
+  display: flex;
+  align-items: center;
+}
+
+.social {
+  position: relative;
+  height: 20px;
+
+  &:not(:last-child) {
+    margin-right: 20px;
+  }
+
+  img {
+    display: block;
+    height: 100%;
+    transition: opacity .25s;
+
+    &:last-child {
+      opacity: 0;
+      position: absolute;
+      z-index: 1;
+      left: 0;
+      top: 0;
+    }
+  }
+
+  &:hover img {
+    &:last-child {
+      opacity: 1;
+    }
+  }
+}

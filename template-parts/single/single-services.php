@@ -24,8 +24,40 @@
                             <?php if (isset($services[0])): ?>
                                 <a href="<?php echo get_term_link($services[0]->term_id); ?>"><?php echo $services[0]->name; ?></a>
                             <?php endif; ?>
-                            <a href="#"><?php the_title(); ?></a>
+                            <span><?php the_title(); ?></span>
                         </div>
+
+                        
+                        <div class="page-form">
+                            <div class="page-form__title h4">
+                                Закажите обратный звонок
+                            </div>
+                            <div class="page-form__body">
+                                <form class="form-contact" method="POST" >
+                                    <div class="form-group w-100">
+                                        <input class="form-control"
+                                            type="text"
+                                            name="name"
+                                            placeholder="Как к Вам обращаться?"
+                                            required="required">
+                                    </div>
+                                    <div class="form-group w-100">
+                                        <input class="form-control"
+                                            type="text"
+                                            name="phone"
+                                            placeholder="Телефон для связи"
+                                            required="required">
+                                    </div>
+                                    <div class="w-100">
+                                        <p>Наш представитель свяжется с вами для консультации</p>
+                                    </div>
+                                    <div class="text-center w-100 mt-3">
+                                        <button class="btn btn" type="submit">Отправить</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
                         <?php the_content(); ?>
                         <?php $tags = wp_get_post_terms(get_the_ID(), 'services-tags');
                         if ( ! empty($tags)): ?>
@@ -37,7 +69,7 @@
                         <?php endif; ?>
                     </div>
                 </div>
-                <div class="col-lg-3 offset-lg-1">
+                <div class="col-lg-3 offset-lg-1 sidebar">
                     <aside class="l_widget categories_wd">
                         <div class="l_wd_title">
                             <p class="h3"><?php _e('Категории'); ?></p>
@@ -52,7 +84,7 @@
                     </aside>
                     <div class="contact-card">
                         <div class="contact-card__image">
-                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/team/team-1.jpg" class="w-100">
+                            <img src="/wp-content/uploads/2021/11/foto-mal.-anndrej-.png" class="w-100">
                         </div>
                         <div class="contact-card__content">
                             <div class="contact-card__headline">

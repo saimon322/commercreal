@@ -6,175 +6,11 @@ $options = get_field('contacts', 'options');
 
 
 <h1 class="visually-hidden">
-    Комплексное управление коммерческой недвижимостью | Commerc Real
+    Commerc Real – Комплексное управление коммерческой недвижимостью
 </h1>
 
 <section class="home_slider">
-    <?php if (have_rows('main_slider')): ?>
-        <div class="page_lines">
-            <div class="container">
-                <div class="row m0">
-                    <div class="col-lg-4">
-                        <div class="line"></div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="line"></div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="line"></div>
-                        <div class="line"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <?php $count = count(get_field('main_slider')); ?>
-        <?php $counter = 1; ?>
-        <div id="home_full_slider" style="height: 100vh" class="rev_slider fullscreenbanner" data-version="5.3.1.6">
-            <ul>
-                <?php while (have_rows('main_slider')): the_row(); ?>
-                    <li data-transition="slotzoom-horizontal" data-slotamount="5" data-masterspeed="1000" data-fsmasterspeed="1000">
-                        <?php if (get_sub_field('media') == 'img'): ?>
-                            <img class="rev-slidebg"
-                                 src="<?php echo get_sub_field('img'); ?>"
-                                 alt=""
-                                 data-bgposition="center center"
-                                 data-bgfit="cover"
-                                 data-bgrepeat="no-repeat"
-                                 data-bgparallax="10"
-                                 data-no-retina>
-                        <?php endif; ?>
-                        <?php if (get_sub_field('media') == 'video'): ?>
-                            <img class="rev-slidebg"
-                                 src="<?php echo get_sub_field('video_poster'); ?>"
-                                 alt=""
-                                 data-bgposition="center center"
-                                 data-bgfit="cover"
-                                 data-bgrepeat="no-repeat"
-                                 data-bgparallax="10"
-                                 data-no-retina>
-                            <div class="rs-background-video-layer"
-                                 data-forcerewind="on"
-                                 data-volume="mute"
-                                 data-videowidth="100%"
-                                 data-videoheight="100%"
-                                 data-videomp4="<?php echo get_sub_field('video'); ?>"
-                                 data-videopreload="auto"
-                                 data-videorate="1"
-                                 data-forceCover="1"
-                                 data-aspectratio="16:9"
-                                 data-autoplay="on"
-                                 data-autoplayonlyfirsttime="false"
-                                 data-videocontrols="none"
-                                 data-videoloop="loopandnoslidestop">
-                            </div>
-                        <?php endif; ?>
-                        <div class="slider_text_box">
-                            <div class="tp-caption tp-resizeme count"
-                                 data-x="['left']" data-hoffset="['0','0','15','15','15']"
-                                 data-y="['top']" data-voffset="['355','330','200','200','150']"
-                                 data-textAlign="['left']"
-                                 data-fontsize="['60', '60','60','60']"
-                                 data-lineheight="['60','60', '60','60']"
-                                 data-height="none"
-                                 data-whitespace="nowrap"
-                                 data-transform_idle="o:1;"
-                                 data-transform_in="y:[155%];x:0;z:0;rX:0deg;rY:0deg;rZ:0deg;sX:1;sY:1;skX:0;skY:0;s:1000;e:Power2.easeInOut;"
-                                 data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;"
-                                 data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"
-                                 data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;"
-                                 data-start="1000"
-                                 data-splitin="none"
-                                 data-splitout="none"
-                                 data-responsive_offset="on"
-                                 data-elementdelay="0.05">
-                                <?php echo $counter . '/' . $count ?>
-                            </div>
-                            <?php if (get_sub_field('title')): ?>
-                                <div class="tp-caption tp-resizeme text_1"
-                                     data-x="['left']" data-hoffset="['-5','0','15','15','15']"
-                                     data-y="['bottom']" data-voffset="['10','0','0','0','0']"
-                                     data-textAlign="['left']"
-                                     data-fontsize="['100', '100','70','70','50']"
-                                     data-lineheight="['100','100', '70','70','50']"
-                                     data-height="none"
-                                     data-whitespace="nowrap"
-                                     data-transform_idle="o:1;"
-                                     data-transform_in="y:[155%];x:0;z:0;rX:0deg;rY:0deg;rZ:0deg;sX:1;sY:1;skX:0;skY:0;s:1000;e:Power2.easeInOut;"
-                                     data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;"
-                                     data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"
-                                     data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;"
-                                     data-start="1500"
-                                     data-splitin="none"
-                                     data-splitout="none"
-                                     data-responsive_offset="on"
-                                     data-elementdelay="0.05">
-                                    <?php echo get_sub_field('title'); ?>
-                                </div>
-                            <?php endif; ?>
-                            <?php if (get_sub_field('subtitle')): ?>
-                                <div class="tp-caption tp-resizeme text_3"
-                                     data-x="['left']" data-hoffset="['0','0','15','15','15']"
-                                     data-y="['bottom']" data-voffset="['240','340','240','240','170']"
-                                     data-textAlign="['left']"
-                                     data-fontsize="['18, 18, 20,22']"
-                                     data-lineheight="['32','32', '32','32']"
-                                     data-height="none"
-                                     data-whitespace="nowrap"
-                                     data-transform_idle="o:1;"
-                                     data-transform_in="x:[-155%];z:0;rX:0deg;rY:0deg;rZ:0deg;sX:1;sY:1;skX:0;skY:0;s:2000;e:Power2.easeInOut;"
-                                     data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;"
-                                     data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"
-                                     data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;"
-                                     data-start="1500"
-                                     data-splitin="chars"
-                                     data-splitout="none"
-                                     data-responsive_offset="on"
-                                     data-elementdelay="0.05">
-                                    <?php echo get_sub_field('subtitle'); ?>
-                                </div>
-                            <?php endif; ?>
-                            <div class="tp-caption tp-shape tp-shapewrapper tp-resizeme text_2"
-                                 data-x="['left']" data-hoffset="['0','0','15','15','15']"
-                                 data-y="['top','top','top','top']" data-voffset="['325','230','160','160','110']"
-                                 data-width="86"
-                                 data-height="6"
-                                 data-whitespace="nowrap"
-                                 data-type="shape"
-                                 data-responsive_offset="on"
-                                 data-frames='[{"from":"x:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;","speed":1000,"to":"o:1;","delay":500,"ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"}]'
-                                 data-textAlign="['left','left','left','left']"
-                                 data-paddingtop="[0,0,0,0]"
-                                 data-paddingright="[0,0,0,0]"
-                                 data-paddingbottom="[0,0,0,0]"
-                                 data-paddingleft="[0,0,0,0]"
-                                 style="background-color:#f1d299;">
-                            </div>
-                        </div>
-                    </li>
-                    <?php $counter++; ?>
-                <?php endwhile; ?>
-            </ul>
-        </div>
-    <?php endif; ?>
-    <?php $options = get_field('contacts', 'options'); ?>
-    <?php if ($options['socials']): ?>
-        <div class="socials">
-            <ul class="list">
-            <?php foreach ($options['socials'] as $social): ?>
-                <li>
-                    <a href="<?php echo esc_url($social['link']); ?>" target="_blank" rel="noopener noreferrer">
-                        <i class="ion-social-<?php echo strtolower($social['type']); ?>"></i>
-                    </a>
-                </li>
-            <?php endforeach; ?>
-            </ul>
-        </div>
-    <?php endif; ?>
-    <div class="contacts">
-        <a href="mailto:<?php echo $options['email']; ?>">
-            <?php echo $options['email']; ?>
-        </a>
-    </div>
+    
 </section>
 
 <section class="intes_studio_area pattern-section">
@@ -346,10 +182,10 @@ $options = get_field('contacts', 'options');
                             if( have_rows('stage_2') ): while( have_rows('stage_2') ): the_row(); 
                                 if( have_rows('substages') ):  while( have_rows('substages') ): the_row(); ?>
                                     <?php $is_white = get_sub_field('is_white') ? ' stage-mini--white' : ''; ?>
-                                    <div class="stage-mini<?= $is_white; ?>">
+                                    <a href="<?= get_sub_field('link'); ?>" class="stage-mini<?= $is_white; ?>">
                                         <img src="<?= get_sub_field('img'); ?>" alt="">
                                         <p class="h3"><?= get_sub_field('title'); ?></p>
-                                    </div>
+                                    </a>
                                 <?php endwhile; endif;
                             endwhile; endif; ?>
                         </div>

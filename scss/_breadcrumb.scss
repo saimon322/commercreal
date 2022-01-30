@@ -177,7 +177,15 @@
 }
 
 .page_link {
-  margin-bottom: 100px;
+  margin-bottom: 30px;
+  font-size: 14px;
+  font-weight: normal;
+  color: $pfont;
+  text-transform: uppercase;
+
+  @include media-up(md) {
+    margin-bottom: 60px;
+  }
 
   a {
     font-size: 14px;

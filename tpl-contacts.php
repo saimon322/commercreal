@@ -6,14 +6,21 @@ $options = get_field('contacts', 'options');
 <section class="contact-page">
     <div class="container-fluid p-0">
         <div class="contact-maps">
-            <div class="contact-map">
-                <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A102296ec2d47f557bcc149d200dc115ebaa71a3178d5c04aa61ba2862afe6aec&amp;source=constructor" width="100%" height="400" frameborder="0"></iframe>
-                <p class="h4">Калининград</p>
-            </div>
-            <div class="contact-map">
-                <iframe src="https://yandex.ru/map-widget/v1/-/CCUyEBHl~B" width="100%" height="400" frameborder="0"></iframe>
-                <p class="h4">Москва</p>
-            </div>
+            <?php $maps = get_field('maps');
+            for ($i = 1; $i <= 2; $i++):
+                $map = $maps['map_' . $i]; ?>
+                <div class="contact-map">
+                    <?php if($map['bg']): ?>
+                        <img src="<?= $map['bg']; ?>" alt="">
+                    <?php endif; 
+                    if($map['iframe']): ?>
+                        <iframe src="<?= $map['iframe']; ?>" width="100%" height="400" frameborder="0"></iframe> 
+                    <?php endif; 
+                    if($map['title']): ?>
+                        <p class="h4"><?= $map['title']; ?></p>
+                    <?php endif; ?>
+                </div>
+            <?php endfor; ?>
         </div>
     </div>
 
@@ -22,7 +29,7 @@ $options = get_field('contacts', 'options');
             <div class="row">
                 <div class="col-lg-5">
                     <div class="contacts-info">
-                        <h1>Контакты</h1>
+                        <h1><?= the_title(); ?></h1>
                         <div class="contacts-info__address">
                             <?php echo $options['address']; ?>
                         </div>
@@ -46,7 +53,7 @@ $options = get_field('contacts', 'options');
                 </div>
                 <div class="col-lg-7">
                     <div class="right_contact_form">
-                        <h2>Связаться с нами</h2>
+                        <h2><?= get_field('form_title'); ?></h2>
                         <form class="row contact_us_form form-contact">
                             <div class="form-group col-md-6">
                                 <input type="text" class="form-control" id="name" name="name" placeholder="Имя" required>

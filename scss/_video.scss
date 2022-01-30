@@ -10,7 +10,7 @@
   transform: translateY(120%);
   opacity: 0px;
   visibility: hidden;
-  transition: all 700ms ease;
+  transition: 700ms ease;
 
   .close_icon {
     position: absolute;
@@ -85,10 +85,10 @@
 /* at start */
 .my-mfp-slide-bottom .zoom-anim-dialog {
   opacity: 0;
-  -webkit-transition: all 0.2s ease-out;
-  -moz-transition: all 0.2s ease-out;
-  -o-transition: all 0.2s ease-out;
-  transition: all 0.2s ease-out;
+  -webkit-transition: 0.2s ease-out;
+  -moz-transition: 0.2s ease-out;
+  -o-transition: 0.2s ease-out;
+  transition: 0.2s ease-out;
 
   -webkit-transform: translateY(-40px) perspective(600px) rotateX(10deg);
   -moz-transform: translateY(-40px) perspective(600px) rotateX(10deg);

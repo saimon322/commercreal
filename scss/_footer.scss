@@ -1,18 +1,23 @@
+.footer {
+  margin-top: 100px;
+
+  @include media-down(sm) {
+    margin-top: 50px;
+  }
+}
+
 .footer_area {
-  background: $black;
-  padding-left: 76px;
-  padding-right: 76px;
-  padding-top: 120px;
+  padding: 50px;
+  border-top: 1px solid $base;
+
+  @include media-down(sm) {
+    padding: 20px;
+  }
 }
 
 .footer_widgets {
   position: relative;
-  padding-bottom: 100px;
   justify-content: space-between;
-
-  @include media-down(sm) {
-    padding: 50px 0 30px;
-  }
 }
 
 .f_widgets_item {
@@ -70,15 +75,6 @@
   }
 }
 
-.f_logo {
-  color: #fff;
-  font-family: $bebas;
-  font-weight: 700;
-  letter-spacing: 1px;
-  font-size: 24px;
-  line-height: 1;
-}
-
 .f_title {
   margin-bottom: 25px;
 
@@ -100,10 +96,10 @@
 
   a {
     font-family: $bebas;
+    font-weight: bold;
     display: block;
     font-size: 16px;
     line-height: 1.2;
-    font-weight: normal;
     @include transition;
 
     &:not(:hover) {
@@ -134,106 +130,53 @@
   }
 }
 
+.footer-logo span {
+  @include media-up(md) {
+    font-size: 20px;
+  }
+}
 
 .footer_bottom {
   overflow: hidden;
   border-top: 2px solid #282828;
   display: flex;
-  justify-content: space-between;
-  padding: 48px 0px;
+  justify-content: center;
+  padding: 50px;
+  border-top: 1px solid $base;
+
+  @include media-down(md) {
+    justify-content: space-between;
+  }
 
   @include media-down(sm) {
-    padding: 20px 0;
+    padding: 20px;
+  }
+}
+
+.footer-copy {
+  @include media-up(lg) {
+    position: absolute;
+    left: 50px;
   }
 
-  .left_text {
-    display: inline-flex;
-    width: 50%;
-    flex-direction: row;
+  p {
+    font-size: 14px;
+    line-height: 24px;
+    color: $pfont;
+    font-weight: normal;
+    margin-bottom: 0px;
 
-    p {
+    a {
+      margin-left: 3px;
       font-size: 14px;
       line-height: 24px;
-      color: $pfont;
-      font-weight: normal;
-      margin-bottom: 0px;
+      font-family: $bebas;
+      font-weight: bold;
+      letter-spacing: 1px;
+      @include transition;
 
-      a {
-        margin-left: 3px;
-        font-size: 14px;
-        line-height: 24px;
-        font-family: $bebas;
-        font-weight: bold;
-        letter-spacing: 1px;
-        @include transition;
-
-        &:not(:hover) {
-          color: #fff;
-        }
-      }
-    }
-  }
-
-  .middle_text {
-    flex-shrink: 0;
-    // width: 100%;
-    text-align: center;
-
-    .list {
-      display: inline-block;
-      width: 100%;
-      text-align: center;
-
-      li {
-        display: inline-block;
-        margin-right: 25px;
-
-        a {
-          font-size: 14px;
-          line-height: 24px;
-          font-weight: normal;
-          @include transition;
-
-          &:not(:hover) {
-            color: #fff;
-          }
-        }
-
-        &:last-child {
-          margin-right: 0px;
-        }
-      }
-    }
-  }
-
-  .right_text {
-    display: inline-flex;
-    width: 50%;
-    flex-direction: row-reverse;
-
-    .list {
-      li {
-        display: inline-block;
-        margin-right: 25px;
-
-        a {
-          font-size: 14px;
-          line-height: 24px;
-          color: $pfont;
-          font-weight: normal;
-          @include transition;
-        }
-
-        &:hover,
-        &.active {
-          a {
-            color: #fff;
-          }
-        }
-
-        &:last-child {
-          margin-right: 0px;
-        }
+      &:not(:hover) {
+        color: #fff;
       }
     }
   }

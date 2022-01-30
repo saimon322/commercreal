@@ -303,7 +303,7 @@
 }
 
 .specs-content {
-  @media (min-width: 992px) {
+  @include media-up(lg) {
     margin-top: 60px !important;
 
     .spec_item__top {

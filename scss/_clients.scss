@@ -133,41 +133,40 @@
     }
 
     &:before {
-      content: "\7b";
-      font-family: 'ElegantIcons';
+      content: url('../img/icon/quotes.svg');
       position: absolute;
       z-index: 1;
       right: 22px;
       top: 20px;
-      color: $base;
-      font-size: 60px;
+      width: 50px;
+      height: 50px;
       line-height: 50px;
 
       @include media-down(sm) {
         top: 0;
         right: 5px;
-        font-size: 35px;
-        display: none;
+        width: 25px;
+        height: 25px;
       }
     }
   }
 
   &__name {
     color: #fff;
-    font-weight: 500;
+    font-weight: bold;
     font-size: 18px;
     margin-bottom: 0;
 
     @include media-down(sm) {
       font-size: 16px;
-      // padding-right: 30px;
+      padding-right: 30px;
     }
   }
 
   &__post {
     font-size: 14px;
     color: $pfont;
-    font-weight: normal;
+    font-weight: bold;
     margin-bottom: 20px;
 
     @include media-down(sm) {
