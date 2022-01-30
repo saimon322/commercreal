@@ -55,6 +55,11 @@ h6, .h6 {
   font-weight: 300;
 }
 
+ul, ol {
+  margin: 0;
+  padding: 0;
+}
+
 .container {
   position: relative;
   padding: 0 20px;
@@ -71,7 +76,6 @@ h6, .h6 {
 img {
   max-width: 100%;
   height: auto;
-  user-select: none;
 }
 
 #success {
@@ -118,7 +122,6 @@ i {
   flex-direction: row-reverse;
 }
 
-
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
@@ -149,117 +152,4 @@ i {
   .container {
     max-width: 1200px;
   }
-}
-
-.s_title {
-  color: $pfont;
-  font-family: $raleway;
-  font-weight: 300;
-  font-size: 18px;
-  margin-bottom: 45px;
-
-  &.white {
-    color: $gray;
-  }
-}
-
-.main_title {
-  h2 {
-    color: #fff;
-    font-size: 42px;
-    text-transform: uppercase;
-    margin-bottom: 0px;
-  }
-
-  &.white {
-    h2 {
-      color: $base;
-    }
-  }
-}
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-
-
-.preloader {
-  position: fixed;
-  overflow: hidden;
-  z-index: 100;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: #fff;
-  color: #4b4b4b;
-  text-align: center;
-}
-
-.spinner {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  width: 50px;
-  height: 50px;
-  transform: translate(-50%, -50%);
-}
-
-.double-bounce1,
-.double-bounce2 {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  background-color: #f1d299;
-  opacity: 0.6;
-  position: absolute;
-  top: 0;
-  left: 0;
-  -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
-  animation: sk-bounce 2.0s infinite ease-in-out;
-}
-
-.double-bounce2 {
-  -webkit-animation-delay: -1.0s;
-  animation-delay: -1.0s;
-}
-
-@-webkit-keyframes sk-bounce {
-
-  0%,
-  100% {
-    -webkit-transform: scale(0.0)
-  }
-
-  50% {
-    -webkit-transform: scale(1.0)
-  }
-}
-
-@keyframes sk-bounce {
-
-  0%,
-  100% {
-    transform: scale(0.0);
-    -webkit-transform: scale(0.0);
-  }
-
-  50% {
-    transform: scale(1.0);
-    -webkit-transform: scale(1.0);
-  }
-}
-
-.col-md-offset-right-1,
-.col-lg-offset-right-1 {
-  margin-right: 8.33333333%;
 }

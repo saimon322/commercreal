@@ -12,23 +12,22 @@
 ?>
     <!doctype html>
 <html <?php language_attributes(); ?>>
-    <head>
-        <meta charset="<?php bloginfo('charset'); ?>">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="apple-touch-icon" sizes="180x180" href="<?php echo get_stylesheet_directory_uri(); ?>/img/favicon/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="<?php echo get_stylesheet_directory_uri(); ?>/img/favicon/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="<?php echo get_stylesheet_directory_uri(); ?>/img/favicon/favicon-16x16.png">
-        <link rel="manifest" href="<?php echo get_stylesheet_directory_uri(); ?>/img/favicon/site.webmanifest">
-        <link rel="mask-icon" href="<?php echo get_stylesheet_directory_uri(); ?>/img/favicon/safari-pinned-tab.svg" color="#5bbad5">
-        <meta name="msapplication-TileColor" content="#00aba9">
-        <meta name="theme-color" content="#ffffff">
-        <?php wp_head(); ?>
-    </head>
+<head>
+    <meta charset="<?php bloginfo('charset'); ?>">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" sizes="180x180" href="<?php echo get_stylesheet_directory_uri(); ?>/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="<?php echo get_stylesheet_directory_uri(); ?>/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="<?php echo get_stylesheet_directory_uri(); ?>/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="<?php echo get_stylesheet_directory_uri(); ?>/img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="<?php echo get_stylesheet_directory_uri(); ?>/img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="theme-color" content="#ffffff">
+    <?php wp_head(); ?>
+</head>
 <body <?php body_class(); ?>>
 
-<div class="layout animsition">
-    <!--================Header Menu Area =================-->
+<div class="layout">
     <header class="header_menu_area">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <a class="custom-logo-link" href="/">
@@ -69,16 +68,16 @@
     </header>
     <div class="click-capture"></div>
     <div class="side_menu dark_s_menu">
-        <span class="close-menu lnr lnr-cross right-boxed"></span>
+        <span class="close-menu lnr lnr-cross"></span>
         <?php wp_nav_menu([
             'theme_location' => 'top-menu',
             'container'      => '',
-            'menu_class'     => 'menu-list right-boxed',
+            'menu_class'     => 'menu-list',
             'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
             'walker'         => new Header_Mobile_Walker_Nav_Menu(),
         ]); ?>
         <?php $options = get_field('contacts', 'options'); ?>
-        <div class="menu-footer right-boxed">
+        <div class="menu-footer">
             <div class="copy"><?php echo $options['copyright']; ?></div>
         </div>
     </div>
