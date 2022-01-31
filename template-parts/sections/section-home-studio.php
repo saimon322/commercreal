@@ -33,13 +33,20 @@
             <div class="col-lg-7">
                 <div class="studio_img_wrapper">
                     <div class="studio_img">
-                        <img src="<?= get_stylesheet_directory_uri(); ?>/img/studio.jpg" alt="">
+                        <?php
+                        $image = get_field('about_img');
+                        if ( ! empty($image)): ?>
+                            <img src="<?= esc_url($image['url']); ?>" alt="<?= esc_attr($image['alt']); ?>"/>
+                        <?php endif; ?>
                         <div class="years_text">
-                            <div class="years_text_inner">
-                                <p data-aos="fade-up" data-aos-delay="200" class="h1">12</p>
-                                <p data-aos="fade-up" data-aos-delay="300" class="h2">лет</p>
-                                <p data-aos="fade-up" data-aos-delay="400" class="h4">работы</p>
-                            </div>
+                            <?php $years = get_field('about_years');
+                            if ($years): ?>
+                                <div class="years_text_inner">
+                                    <p data-aos="fade-up" data-aos-delay="200" class="h1"><?= $years['about_year_1']; ?></p>
+                                    <p data-aos="fade-up" data-aos-delay="300" class="h2"><?= $years['about_year_2']; ?></p>
+                                    <p data-aos="fade-up" data-aos-delay="400" class="h4"><?= $years['about_year_3']; ?></p>
+                                </div>
+                            <?php endif; ?>
                             <div class="diamond" data-aos>
                                 <svg viewBox="0 0 234 1" xmlns="http://www.w3.org/2000/svg">
                                     <line x1="113" y1="0" x2="119" y2="0" stroke="#F1D299"/>
@@ -142,19 +149,14 @@
             <div class="col-lg-5">
                 <div class="studio_content">
                     <h2 class="studio_title">
-                        Добро пожаловать<br> на сайт <span>Commerc Real</span>
+                        <?php the_field('about_title'); ?>
                     </h2>
                     <div class="studio_block">
-                        <p class="h5">Мы команда профессионалов в&nbsp;сфере коммерческой недвижимости.</p>
-                        <p>Предоставляем услуги девелоперам и собственникам объектов торговой недвижимости, инвестиционным компаниям и ритейлерам.</p>
+                        <p class="h5"><?php the_field('about_subtitle'); ?></p>
+                        <p><?php the_field('about_text'); ?></p>
                     </div>
                     <div class="studio_block">
-                        <p class="h5">Чем мы отличаемся</p>
-                        <ul class="studio_list">
-                            <li>Реконструируем неликвидные объекты, делаем их центром притяжения для посетителей и выгодной локацияей для retailra(а).</li>
-                            <li><span>“Мы работаем, а Вы отдыхаете!”</span> Выберите между участием в работе или передайте всю ответственность нам. И получайте стабильный доход, наблюдая за развитием проекта.</li>
-                            <li>Сопровождаем retailra(а) от подачи заявки на сайте до экономической стабильности нового торгового объекта.</li>
-                        </ul>
+                        <?php the_field('about_desc'); ?>
                     </div>
                 </div>
             </div>
