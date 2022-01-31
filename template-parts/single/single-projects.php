@@ -147,9 +147,9 @@ wp_enqueue_style('pannellum-css');
     if ($prevPost): ?>
         <?php $prevthumbnail = get_the_post_thumbnail_url($prevPost->ID, 'full');
         $prev_url            = get_permalink($prevPost->ID); ?>
-        <a href="<?php echo $prev_url; ?>" class="prev">
+        <a href="<?= $prev_url; ?>" class="prev">
             <div class="prev-hover">
-                <div class="prev_next_area__cover" style="background: url(<?php echo $prevthumbnail; ?>) scroll center center;"></div>
+                <div class="prev_next_area__cover" style="background: url(<?= $prevthumbnail; ?>) scroll center center;"></div>
             </div>
             <span>Предыдущий проект</span>
         </a>
@@ -159,9 +159,9 @@ wp_enqueue_style('pannellum-css');
     if ($nextPost) : ?>
         <?php $nextthumbnail = get_the_post_thumbnail_url($nextPost->ID, 'full');
         $next_url            = get_permalink($nextPost->ID); ?>
-        <a href="<?php echo $next_url; ?>" class="next">
+        <a href="<?= $next_url; ?>" class="next">
             <div class="next-hover">
-                <div class="prev_next_area__cover" style="background: url(<?php echo $nextthumbnail; ?>) scroll center center;"></div>
+                <div class="prev_next_area__cover" style="background: url(<?= $nextthumbnail; ?>) scroll center center;"></div>
             </div>
             <span>Следующий проект</span>
         </a>

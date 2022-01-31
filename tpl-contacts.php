@@ -31,22 +31,22 @@ $options = get_field('contacts', 'options');
                     <div class="contacts-info">
                         <h1><?= the_title(); ?></h1>
                         <div class="contacts-info__address">
-                            <?php echo $options['address']; ?>
+                            <?= $options['address']; ?>
                         </div>
                         <div class="contacts-info__time">
-                            <?php echo $options['work_time']; ?>
+                            <?= $options['work_time']; ?>
                         </div>
                         <div class="contacts-info__days">
-                            <?php echo $options['work_days']; ?>
+                            <?= $options['work_days']; ?>
                         </div>
                         <div class="contacts-info__btns">
-                            <a href="mailto:<?php echo $options['email']; ?>"
+                            <a href="mailto:<?= $options['email']; ?>"
                                 class="btn btn">
-                                <?php echo $options['email']; ?>
+                                <?= $options['email']; ?>
                             </a>
-                            <a href="tel:<?php echo $options['phone']; ?>"
+                            <a href="tel:<?= $options['phone']; ?>"
                                 class="btn btn">
-                                <?php echo $options['phone']; ?>
+                                <?= $options['phone']; ?>
                             </a>
                         </div>                        
                     </div>

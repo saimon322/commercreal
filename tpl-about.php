@@ -8,12 +8,12 @@ if ($main_video): ?>
     <section class="about_banner">
         <div class="about_banner_wrapper">
             <video class="about_banner_video about_banner_video--desktop"
-                autoplay muted loop preload playsinline poster="<?php echo $main_video['poster_desktop']; ?>">
-                <source src="<?php echo $main_video['desktop']; ?>" type='video/mp4'>
+                autoplay muted loop preload playsinline poster="<?= $main_video['poster_desktop']; ?>">
+                <source src="<?= $main_video['desktop']; ?>" type='video/mp4'>
             </video>
             <video class="about_banner_video about_banner_video--mobile"
-                autoplay muted loop preload playsinline poster="<?php echo $main_video['poster_mobile']; ?>">
-                <source src="<?php echo $main_video['mobile']; ?>" type='video/mp4'>
+                autoplay muted loop preload playsinline poster="<?= $main_video['poster_mobile']; ?>">
+                <source src="<?= $main_video['mobile']; ?>" type='video/mp4'>
             </video>
         </div>
     </section>
@@ -37,21 +37,21 @@ if ($main_video): ?>
         <div class="row">
             <div class="col-lg-4 col-sm-6">
                 <div class="spec_item">
-                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/icon/spec-4.svg" alt="">
+                    <img src="<?= get_stylesheet_directory_uri(); ?>/img/icon/spec-4.svg" alt="">
                     <h3 class="h4">Только уникальные объекты</h3>
                     <p>Мы предлагаем Вам коммерческую недвижимость, представленную только у нас. Каждый объект полностью подготовлен к запуску или уже приносит прибыль.</p>
                 </div>
             </div>
             <div class="col-lg-4 col-sm-6">
                 <div class="spec_item">
-                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/icon/spec-5.svg" alt="">
+                    <img src="<?= get_stylesheet_directory_uri(); ?>/img/icon/spec-5.svg" alt="">
                     <h3 class="h4">Индивидуальные условия</h3>
                     <p>Мы работаем только на особых, договорных условиях, идеально подходящих Вам и выгодных для обеих сторон.</p>
                 </div>
             </div>
             <div class="col-lg-4 col-sm-6">
                 <div class="spec_item">
-                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/icon/spec-6.svg" alt="">
+                    <img src="<?= get_stylesheet_directory_uri(); ?>/img/icon/spec-6.svg" alt="">
                     <h3 class="h4">Услуги высшего качества</h3>
                     <p>Мы стремимся к сервису высочайшего уровня. Наша первостепенная задача - обеспечить Вам свободное время, когда недвижимость приносит Вам прибыль.</p>
                 </div>
@@ -82,8 +82,8 @@ if ($main_video): ?>
                             <?php if (have_rows('socials')): ?>
                                 <?php while (have_rows('socials')) : the_row(); ?>
                                     <li>
-                                        <a href="<?php echo esc_url(get_sub_field('link')); ?>" target="_blank" rel="noopener noreferrer">
-                                            <i class="ion-social-<?php echo strtolower(get_sub_field('type')); ?>"></i>
+                                        <a href="<?= esc_url(get_sub_field('link')); ?>" target="_blank" rel="noopener noreferrer">
+                                            <i class="ion-social-<?= strtolower(get_sub_field('type')); ?>"></i>
                                         </a>
                                     </li>
                                 <?php endwhile; ?>

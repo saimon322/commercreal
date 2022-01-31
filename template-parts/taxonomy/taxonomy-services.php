@@ -5,7 +5,7 @@
                 while (have_posts()) : the_post(); ?>
                     <div class="col-lg-3 col-md-4 col-sm-6 news">
                         <div class="blog_g_item">
-                            <a href="<?php echo get_the_permalink(); ?>" class="press_img_item">
+                            <a href="<?= get_the_permalink(); ?>" class="press_img_item">
                                 <div class="press_img">
                                     <?php the_post_thumbnail('project-thumb', ['class' => 'img-fluid']); ?>
                                     <div class="hover"></div>
