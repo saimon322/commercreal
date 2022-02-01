@@ -13,8 +13,8 @@
                     </li>
                     <?php $projects_cats = get_terms(['taxonomy' => 'projects_cats', 'hide_empty' => false]);
                     foreach ($projects_cats as $cat): ?>
-                        <li data-filter=".<?php echo $cat->slug; ?>">
-                            <a href="#"><?php echo $cat->name; ?></a>
+                        <li data-filter=".<?= $cat->slug; ?>">
+                            <a href="#"><?= $cat->name; ?></a>
                         </li>
                     <?php endforeach; ?>
                 </ul>
@@ -31,14 +31,14 @@
                 $terms      = wp_get_post_terms(get_the_ID(), 'projects_cats');
                 $cats_slugs = terms_slugs_to_string($terms);
                 $cats_names = terms_names_to_string($terms); ?>
-                <div class="item <?php echo $cats_slugs; ?>">
-                    <a href="<?php echo get_the_permalink(); ?>" class="projects_item">
+                <div class="item <?= $cats_slugs; ?>">
+                    <a href="<?= get_the_permalink(); ?>" class="projects_item">
                         <?php the_post_thumbnail('project-thumb', ['class' => 'img-fluid']); ?>
                         <div class="hover">
                             <i class="ion-android-arrow-forward"></i>
                             <div class="project_text">
                                 <?php if ($cats_names): ?>
-                                    <p class="h5"><?php echo $cats_names; ?></p>
+                                    <p class="h5"><?= $cats_names; ?></p>
                                 <?php endif; ?>
                                 <p class="h4"><?php the_title(); ?></p>
                             </div>

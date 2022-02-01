@@ -22,7 +22,7 @@
                         <div class="page_link">
                             <a class="active" href="/">Главная</a>
                             <?php if (isset($services[0])): ?>
-                                <a href="<?php echo get_term_link($services[0]->term_id); ?>"><?php echo $services[0]->name; ?></a>
+                                <a href="<?= get_term_link($services[0]->term_id); ?>"><?= $services[0]->name; ?></a>
                             <?php endif; ?>
                             <span><?php the_title(); ?></span>
                         </div>
@@ -63,7 +63,7 @@
                         if ( ! empty($tags)): ?>
                             <div class="s_blog_tag">
                                 <?php foreach ($tags as $tag): ?>
-                                    <a href="<?= get_term_link($tag->term_id); ?>"><?php echo $tag->name; ?></a>
+                                    <a href="<?= get_term_link($tag->term_id); ?>"><?= $tag->name; ?></a>
                                 <?php endforeach; ?>
                             </div>
                         <?php endif; ?>
@@ -114,15 +114,15 @@
                         <?php foreach ($post_objects as $post_object): ?>
                             <div class="col-lg-4 col-sm-6">
                                 <div class="blog_g_item">
-                                    <a href="<?php echo get_permalink($post_object->ID); ?>" class="press_img_item">
+                                    <a href="<?= get_permalink($post_object->ID); ?>" class="press_img_item">
                                         <div class="press_img">
-                                            <?php echo get_the_post_thumbnail($post_object->ID, 'project-thumb', ['class' => 'img-fluid']); ?>
+                                            <?= get_the_post_thumbnail($post_object->ID, 'project-thumb', ['class' => 'img-fluid']); ?>
                                             <div class="hover"></div>
                                         </div>
                                         <div class="date">
                                             <span><?php the_field('type', $post_object->ID); ?></span>
                                         </div>
-                                        <p class="h4"><?php echo get_the_title($post_object->ID); ?></p>
+                                        <p class="h4"><?= get_the_title($post_object->ID); ?></p>
                                     </a>
                                 </div>
                             </div>

@@ -26,7 +26,7 @@
                                 <img src="<?= get_field('logo', 'services-cats_' . $service->term_id); ?>" alt="">
                                 <div class="h4"><?= $service->name; ?></div>
                             </a>
-                            <?php echo term_description(); ?>
+                            <?= term_description(); ?>
                             <ul class="custom-ul">
                                 <?php $the_query = new WP_Query(array(
                                     'post_type' => 'services',
@@ -43,7 +43,7 @@
                                     while ( $the_query->have_posts() ): $the_query->the_post();
                                         if($i < 10): ?>
                                             <li>
-                                                <a href="<?php echo get_the_permalink(); ?>"><?php the_title(); ?></a>
+                                                <a href="<?= get_the_permalink(); ?>"><?php the_title(); ?></a>
                                             </li>
                                         <?php endif;
                                         $i++;
