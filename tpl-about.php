@@ -31,7 +31,7 @@ if ($main_video): ?>
     </div>
 </section>
             
-<section class="speciallization_area advantages section-pad">
+<section class="spec_area advantages section-pad">
     <div class="container">
         <h2 class="s_title">Наши преимущества</h2>
         <div class="row">
@@ -109,7 +109,7 @@ if ($main_video): ?>
                     <p>Мы специализируемся на развитии северо-западного региона России.  Но вы можете обратиться в нашу группу компаний из любого города,  мы с удовольствием встретимся с вами в удобном для вас месте. </p>
                 </div>
                 <button class="btn btn mb-4" data-toggle="modal" data-target="#modal-form">НАПИШИТЕ НАМ</button>
-                <button class="btn btn" data-toggle="modal" data-target="#modal-form">ЗАКАЗАТЬ ЗВОНОК</button>
+                <button class="btn" data-toggle="modal" data-target="#modal-form">ЗАКАЗАТЬ ЗВОНОК</button>
             </div>
             <div class="col-12 col-md-8">
                 <?php get_template_part('template-parts/sections/section', 'map', array('type' => 'global')); ?>
@@ -185,7 +185,7 @@ if ($main_video): ?>
                     <div class="presentation__icon">
                         <img src="<?= get_template_directory_uri(); ?>/img/icon/presentation.svg">
                     </div>
-                    <button class="btn btn" download>Скачать PDF</button>
+                    <button class="btn" download>Скачать PDF</button>
                 </div>
             </div>
         </div>

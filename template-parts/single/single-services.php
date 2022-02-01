@@ -52,7 +52,7 @@
                                         <p>Наш представитель свяжется с вами для консультации</p>
                                     </div>
                                     <div class="text-center w-100 mt-3">
-                                        <button class="btn btn" type="submit">Отправить</button>
+                                        <button class="btn" type="submit">Отправить</button>
                                     </div>
                                 </form>
                             </div>

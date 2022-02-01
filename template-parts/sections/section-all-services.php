@@ -1,5 +1,5 @@
-<!--================Our Speciallization Area =================-->
-<section class="speciallization_area ab_spec all_services">
+<!--================Our spec Area =================-->
+<section class="spec_area ab_spec all_services">
     <div class="container">
         <h2 class="s_title">Все услуги</h2>
         <?php $services = get_terms('services-cats'); ?>
@@ -57,4 +57,4 @@
         </div>
     </div>
 </section>
-<!--================End Our Speciallization Area =================-->
+<!--================End Our spec Area =================-->

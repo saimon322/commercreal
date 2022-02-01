@@ -5,7 +5,7 @@
 ]); ?>
 <section class="blog-section">
     <div class="container">
-        <h2 class="s_title">Наш блог</h2>
+        <h2 class="s_title">Новости <span>компании и индустрии</span></h2>
         <div class="blog-section__list">
             <?php foreach ($result as $post): ?>
                 <a href="<?= get_permalink($post['ID']); ?>" class="blog-item">
@@ -18,5 +18,6 @@
                 </a>
             <?php endforeach; ?>
         </div>
+        <a class="view_btn" href="#">Подробнее</a>
     </div>
 </section>

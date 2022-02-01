@@ -1,7 +1,6 @@
 .btn {
   color: $base !important;
   background-color: $blue;
-  border: 3px solid $base;
   background: $blue;
   width: 100%;
   font-family: $bebas;
@@ -12,6 +11,7 @@
   padding: 3px 10px 0;
   border-radius: 0;
   cursor: pointer;
+  @include transition;
 
   &:hover {
     background: $base;
@@ -73,9 +73,20 @@
 }
 
 .view_btn {
+  display: block;
   width: fit-content;
-  font-size: 14px;
+  font-family: $bebas;
+  font-size: 24px;
+  line-height: 1;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-bottom: 1px solid #fff;
+  margin-top: 30px;
   @include transition;
+
+  &:hover {
+    border-bottom-color: $base;
+  }
 }
 
 .see_btn {

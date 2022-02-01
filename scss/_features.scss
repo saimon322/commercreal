@@ -1,0 +1,428 @@
+.features_area {
+  padding: 130px 0;
+
+  @include media-down(md) {
+    padding: 100px 0;
+  }
+
+  @include media-down(sm) {
+    padding: 50px 0;
+  }
+
+  .row {
+    @include media-up(md) {
+      margin: 0;
+
+      &>div {
+        padding: 0;
+
+        &:not(:last-child) .feature {
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+}
+
+.features {
+  @include media-up(md) {
+    display: flex;
+  }
+}
+
+.feature {
+  margin-bottom: 30px;
+
+  @include media-up(lg) {
+    margin-bottom: 0;
+  }
+
+  &__main {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background: $blue;
+    transition: box-shadow .25s;
+
+    @include media-up(md) {
+      height: 350px;
+    }
+
+    @include media-up(lg) {
+      height: 450px;
+    }
+
+    @include media-up(xl) {
+      height: 600px;
+    }
+
+    &:hover {
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    }
+
+    &--auto {
+      @include media-down(md) {
+        height: auto;
+      }
+    }
+  }
+
+  &__title {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    max-width: 280px;
+    padding: 15px;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 1;
+    pointer-events: none;
+    color: #fff;
+
+    @include media-down(lg) {
+      font-size: 20px;
+    }
+
+    @include media-only(md) {
+      font-size: 16px;
+    }
+
+    span {
+      color: $base;
+    }
+
+    img {
+      display: block;
+      height: 56px;
+      position: relative;
+      left: -2px;
+      top: -3px;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    pointer-events: none;
+
+    &--left {
+      left: 15px;
+      bottom: 10px;
+    }
+
+    &--right {
+      right: 0;
+      bottom: 0;
+    }
+
+    &--pointer-1 {
+      left: 15px;
+      bottom: 10%;
+      transform: rotate(90deg);
+    }
+
+    &--pointer-2 {
+      right: 7%;
+      bottom: 20%;
+      z-index: 1;
+      transition: opacity .25s;
+
+      &.started {
+        opacity: 0;
+      }
+    }
+  }
+
+  &__content {
+    padding-top: 20px;
+
+    @include media-up(md) {
+      padding-top: 40px;
+    }
+  }
+
+  &__for {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #fff;
+
+    @include media-up(md) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__text {
+    font-size: 16px;
+
+    @include media-up(lg) {
+      padding-right: 50px;
+    }
+  }
+}
+
+.feature-pointer {
+  position: absolute;
+  pointer-events: none;
+  z-index: 1;
+  transition: opacity .25s;
+
+  &.hidden {
+    opacity: 0;
+  }
+
+  &-1 {
+    left: 15px;
+    bottom: 10%;
+    transform: rotate(90deg);
+  }
+
+  &-2 {
+    right: 7%;
+    bottom: 20%;
+  }
+}
+
+// Slider block
+.feature-slider {
+  width: 100% !important;
+  height: 100% !important;
+  min-width: unset !important;
+  min-height: unset !important;
+  cursor: pointer;
+  overflow: hidden;
+
+  &:hover .feature-slider__item {
+    // background: transparent;
+
+    & > img {
+      filter: none;
+      mix-blend-mode: unset;
+    }
+  }
+
+  .feature__title {
+    @include media-down(lg) {
+      left: 40px;
+      top: 75px;
+    }
+
+    @include media-down(md) {
+      left: 80px;
+      top: 125px;
+    }
+
+    @include media-down(sm) {
+      left: 0;
+      top: 100px;
+    }
+
+    @include media-down(xs) {
+      left: calc(210px - 50vw);
+    }
+  }
+
+  &__item {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: $blue;
+
+    & > img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(0.5);
+      mix-blend-mode: luminosity;
+      transition: .3s;
+    }
+  }
+}
+
+// Mini block
+.feature-minies {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column-reverse;
+  list-style: none;
+  counter-reset: list;
+}
+
+.feature-mini {
+  flex: 1 1 0;
+  width: 100%;
+  position: relative;
+  background: $blue;
+  padding: 10px 15px;
+  border-bottom: 1px solid $base;
+  counter-increment: list;
+  cursor: pointer;
+
+  @include media-up(xl) { 
+    padding: 15px;
+  }
+
+  &:hover {
+    background: transparent;
+
+    img {
+      filter: none;
+      mix-blend-mode: unset;
+    }
+
+    .feature-mini__title {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.5);
+    mix-blend-mode: luminosity;
+    transition: .3s;
+  }
+
+  &__title {
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 15px;
+    z-index: 1;
+    width: 90%;
+    color: $blue;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 1;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: .3s;
+
+    @include media-only(md) {
+      font-size: 14px;
+    }
+
+    @include media-down(sm) {
+      font-size: 18px;
+    }
+  }
+
+  &:after {
+    content: counter(list);
+    position: absolute;
+    right: -4px;
+    bottom: -16px;
+    font-family: $bebas;
+    font-size: 80px;
+    line-height: 1;
+    font-weight: bold;
+    color: $base;
+
+    @include media-only(md) {
+      font-size: 60px;
+      right: -2px;
+      bottom: -12px;
+    }
+  }
+}
+
+// Loupe block
+.feature-loupe {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+
+  &__bg {
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+
+    img {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &.show &__el {
+    opacity: 1;
+  }
+
+  &__el {
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    bottom: 30px;
+    width: 120px;
+    height: 139px;
+    cursor: grab;
+    opacity: 0;
+    transition: opacity .5s;
+    will-change: transform;
+
+    @include media-up(lg) {
+      width: 190px;
+      height: 220px;
+    }
+
+    &.animated {
+      transition: transform .25s;
+    }
+  }
+
+  &__icon {
+    width: 100%;
+    position: relative;
+    z-index: 1;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__img {
+    position: absolute;
+    left: 2px;
+    top: 0;
+    width: 92px;
+    height: 92px;
+    border-radius: 50%;
+    overflow: hidden;
+    pointer-events: none;
+
+    @include media-up(lg) {
+      left: 4px;
+      width: 145px;
+      height: 145px;
+    }
+
+    img {
+      position: absolute;
+      right: -28px;
+      bottom: -78px;
+      width: 100%;
+      height: 100%;
+      max-width: unset;
+      object-fit: cover;
+
+      @include media-up(lg) {
+        right: -41px;
+        bottom: -107px;
+      }
+
+      &.animated {
+        transition: transform .25s;
+      }
+    }
+  }
+}

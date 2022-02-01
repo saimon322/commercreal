@@ -41,11 +41,11 @@ $options = get_field('contacts', 'options');
                         </div>
                         <div class="contacts-info__btns">
                             <a href="mailto:<?= $options['email']; ?>"
-                                class="btn btn">
+                                class="btn">
                                 <?= $options['email']; ?>
                             </a>
                             <a href="tel:<?= $options['phone']; ?>"
-                                class="btn btn">
+                                class="btn">
                                 <?= $options['phone']; ?>
                             </a>
                         </div>                        
