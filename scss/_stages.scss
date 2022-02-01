@@ -160,6 +160,7 @@
     cursor: grab;
     opacity: 0;
     transition: opacity .5s;
+    will-change: transform;
 
     @include media-up(lg) {
       width: 190px;
