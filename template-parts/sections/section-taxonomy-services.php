@@ -1,5 +1,5 @@
 <?php $current_term = get_queried_object(); ?>
-<section class="speciallization_area ab_spec services_block">
+<section class="spec_area ab_spec services_block">
     <div class="container">
         <div class="row text-center">
             <div class="<?= $current_term->term_id == 13 ? 'col-lg-6 col-sm-6 current' : 'col-lg-3 col-sm-6'; ?> spec_item--container">

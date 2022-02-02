@@ -264,7 +264,7 @@
 		margin-top: 0;
 	}
 
-	.speciallization_area .row {
+	.spec_area .row {
 		margin-bottom: -30px;
 		overflow: hidden;
 	}
@@ -280,10 +280,6 @@
 		margin-top: 20px;
 	}
 
-	.latest_project {
-		padding-top: 100px;
-	}
-
 	.press_item {
 		margin-left: 0px;
 		margin-top: 30px;
@@ -294,7 +290,7 @@
 	}
 
 	.footer_widgets {
-		margin-bottom: -30px !important;
+		margin-bottom: -20px !important;
 		overflow: hidden;
 	}
 
@@ -647,20 +643,12 @@
 		font-size: 26px;
 	}
 
-	.footer_area {
-		padding: 50px 50px 0;
-	}
-
-	.speciallization_area {
+	.spec_area {
 		padding-top: 70px;
 	}
 
-	.speciallization_area .s_title {
+	.spec_area .s_title {
 		margin-bottom: 30px;
-	}
-
-	.latest_project {
-		padding-top: 70px;
 	}
 
 	.clients_area {
@@ -770,7 +758,7 @@
 		line-height: 33px;
 	}
 
-	.speciallization_area.ab_spec {
+	.spec_area.ab_spec {
 		padding-top: 70px;
 		padding-bottom: 70px;
 	}

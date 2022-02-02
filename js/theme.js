@@ -1,6 +1,15 @@
 ; (function ($) {
     "use strict";
 
+    const appHeight = () => {
+        document.documentElement.style.setProperty('--app-height', `${window.innerHeight}px`)
+    }
+    window.addEventListener('DOMContentLoaded', appHeight)
+    window.addEventListener('resize', appHeight)
+    
+    const mobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    mobileDevice && window.addEventListener('scroll', appHeight)    
+
     var nav_offset_top = $('header').height() + 100;
     /*-------------------------------------------------------------------------------
       Navbar 
@@ -423,10 +432,10 @@
         window.addEventListener('scroll', scrollPatterns);
     }
 
-    // Stage slider
-    const stageSlider = document.querySelector('.stage-slider');
-    if (stageSlider) {
-        const pageFlip = new St.PageFlip(stageSlider,
+    // Feature slider
+    const featureSlider = document.querySelector('.feature-slider');
+    if (featureSlider) {
+        const pageFlip = new St.PageFlip(featureSlider,
             {
                 width: 387,
                 height: 600,
@@ -435,17 +444,22 @@
                 mobileScrollSupport: false
             }
         );
+        pageFlip.loadFromHTML(document.querySelectorAll('.feature-slider__item'));
 
-        pageFlip.loadFromHTML(document.querySelectorAll('.stage-slider__item'));
+        const featurePointer = featureSlider.closest('.feature').querySelector('.feature-pointer');
+        pageFlip.on('flip', () => {
+            featurePointer.classList.add('hidden');
+        });
     }
 
-    // Stage lopue
-    const stageLoupe = document.querySelector('.stage-loupe');
-    if (stageLoupe) {
-        stageLoupe.classList.add('show');
+    // Feature lopue
+    const featureLoupe = document.querySelector('.feature-loupe');
+    if (featureLoupe) {
+        featureLoupe.classList.add('show');
 
-        const el = stageLoupe.querySelector('.stage-loupe__el');
-        const img = stageLoupe.querySelector('.stage-loupe__img img');
+        const el = featureLoupe.querySelector('.feature-loupe__el');
+        const img = featureLoupe.querySelector('.feature-loupe__img img');
+        const featurePointer = featureLoupe.closest('.feature').querySelector('.feature-pointer');
 
         let elW, elH, 
             wrapperW, wrapperH, 
@@ -456,8 +470,8 @@
         const loupeInit = () => {
             elW = el.offsetWidth,
             elH = el.offsetHeight,
-            wrapperW = stageLoupe.offsetWidth,
-            wrapperH = stageLoupe.offsetHeight,
+            wrapperW = featureLoupe.offsetWidth,
+            wrapperH = featureLoupe.offsetHeight,
             diffW = wrapperW - elW,
             diffH = wrapperH - elH,
             startX = 0,
@@ -480,6 +494,7 @@
         function dragStart(e) {
             e = e || window.event;
             e.preventDefault();
+            featurePointer.classList.add('hidden');
             if (e.touches) {
                 e = e.touches[0];
                 el.addEventListener("touchmove", dragMove, false);
@@ -535,8 +550,8 @@
         }
 
         function moveEl() {
-            el.style.transform = `translate(${moveX}px, ${moveY}px`;
-            img.style.transform = `translate(${-moveX}px, ${-moveY}px`;
+            el.style.transform = `translate(${moveX}px, ${moveY}px)`;
+            img.style.transform = `translate(${-moveX}px, ${-moveY}px)`;
         }
 
         function animateEl() {
@@ -574,7 +589,7 @@ const initCounters = () => {
                     item.classList.add('active');
                     setTimeout(() => {
                         animateValue(item, 0, value, 4000);                        
-                    }, 500);
+                    }, 300);
                 }
             });
         };

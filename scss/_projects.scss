@@ -1,11 +1,17 @@
-/* Latest Projects css
-============================================================================================ */
 .latest_project {
-  padding-top: 160px;
+  padding-bottom: 50px;
 
   .l_text {
     padding-bottom: 70px;
     overflow: hidden;
+  }
+
+  .pattern {
+    top: 50px;
+
+    @include media-down(sm) {
+      top: 30px;
+    }
   }
 }
 
@@ -211,159 +217,81 @@
 /* End Latest Projects css
 ============================================================================================ */
 .press_img_item {
-  .date {
-    margin-bottom: 15px;
-    margin-top: 15px;
-
-    a {
-      font-size: 12px;
-      font-weight: bold;
-      color: #fff;
-      text-transform: uppercase;
-      @include transition;
-
-      &:first-child {
-        color: $pfont;
-        font-weight: 500;
-
-        &:hover {
-          color: #fff;
-        }
-      }
-
-      &:hover {
-        color: $base;
-      }
-    }
-
-    i {
-      color: $pfont;
-      font-size: 6px;
-      position: relative;
-      top: -2px;
-    }
-  }
-
-  h4 {
-    font-size: 24px;
-    line-height: 30px;
-    color: #fff;
-    margin-bottom: 0px;
-    @include transition;
-
-    &:hover {
-      color: $base;
-    }
-  }
-}
-
-.press_img_item {
   position: relative;
+  height: 540px;
+
+  @include media-down(sm) {
+    height: 300px;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    @include media-down(md) {
+      object-position: top;      
+    }
+  }
 }
 
-.press_img_title {
+.press_img_name {
   position: absolute;
   left: 0;
   top: 0;
   z-index: 1;
   color: #fff;
   padding: 10px 15px;
-  font-size: 48px;
+  font-size: 24px;
   font-weight: bold;
   line-height: 1;
 
   @include media-down(sm) {
-    font-size: 30px;
-  }
-}
-
-.press_item {
-  margin-bottom: 25px;
-  max-width: 465px;
-  margin-left: 70px;
-
-  .date {
-    margin-bottom: 12px;
-
-    a {
-      font-size: 12px;
-      font-weight: bold;
-      color: #fff;
-      text-transform: uppercase;
-      @include transition;
-
-      &:first-child {
-        color: $pfont;
-
-        &:hover {
-          color: #fff;
-        }
-      }
-
-      &:hover {
-        color: $base;
-      }
-    }
-
-    i {
-      color: $pfont;
-      font-size: 6px;
-      position: relative;
-      top: -2px;
-    }
+    font-size: 20px;
   }
 
-  h4 {
-    font-size: 24px;
-    line-height: 30px;
-    color: #fff;
-    margin-bottom: 0px;
-    @include transition;
-
-    &:hover {
-      color: $base;
-    }
-  }
-
-  &:last-child {
-    margin-bottom: 0px;
+  span {
+    display: block;
+    color: $base;
   }
 }
 
 .press_content {
-  display: flex;
-  justify-content: center;
+  max-width: 500px;
 
-  @media (max-width: 991px) {
+  @include media-down(sm) {
     margin-top: 50px;
-    justify-content: flex-end;
+  }
+
+  img {
+    display: block;
+    margin: 20px auto;
+  }
+
+  h2 {
+    margin-bottom: 0;
+
+    span {
+      display: block;
+    }
   }
 }
 
 .press_form {
-  max-width: 430px;
+  margin-top: 30px;
 
-  h2 {
-    font-size: 30px;
-    margin-bottom: 30px;
-  }
-
-  &__form {
-    margin-top: 30px;
-
-    input {
-      display: block;
-      width: 100%;
-      height: 30px;
-      box-shadow: none;
-      outline: none;
-      border: 1px solid $base-bg;
-      margin-bottom: 10px;
-      background: transparent;
-      color: #fff;
-      font-size: 14px;
-      padding: 5px;
-    }
+  input {
+    display: block;
+    width: 100%;
+    height: 30px;
+    box-shadow: none;
+    outline: none;
+    border: 1px solid $base-bg;
+    margin-bottom: 10px;
+    background: transparent;
+    color: #fff;
+    font-size: 14px;
+    padding: 5px;
   }
 }
 

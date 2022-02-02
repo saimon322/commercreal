@@ -35,7 +35,7 @@ get_header();
                     <?php endif; ?>
                 </div>
                 <button class="btn btn mb-4" data-toggle="modal" data-target="#modal-form">НАПИШИТЕ НАМ</button>
-                <button class="btn btn" data-toggle="modal" data-target="#modal-form">ЗАКАЗАТЬ ЗВОНОК</button>
+                <button class="btn" data-toggle="modal" data-target="#modal-form">ЗАКАЗАТЬ ЗВОНОК</button>
             </div>
             <div class="col-12 col-md-8">
                 <?php get_template_part('template-parts/sections/section', 'map', array('type' => 'local')); ?>
@@ -46,6 +46,6 @@ get_header();
 
 <?php
 get_template_part('template-parts/sections/section', 'our-projects');
-get_template_part('template-parts/sections/section', 'form-2');
+get_template_part('template-parts/sections/section', 'form');
 get_footer();
 ?>

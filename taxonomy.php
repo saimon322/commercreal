@@ -23,5 +23,5 @@ if (get_query_var('taxonomy') === 'services-cats'):
     get_template_part('template-parts/sections/section', 'taxonomy-services');
 endif;
 get_template_part('template-parts/taxonomy/taxonomy', 'services');
-get_template_part('template-parts/sections/section', 'form-3');
+get_template_part('template-parts/sections/section', 'form');
 get_footer(); ?>

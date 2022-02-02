@@ -49,4 +49,8 @@
         <?php endif;
         wp_reset_postdata(); ?>
     </div>
+    <div class="container">
+        <a class="view_btn" href="#">Подробнее</a>
+        <?php get_template_part('template-parts/animation/pattern'); ?>
+    </div>
 </section>
