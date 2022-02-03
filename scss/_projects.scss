@@ -207,11 +207,6 @@
   }
 }
 
-/* End Latest Projects css
-============================================================================================ */
-
-/* End Latest Projects css
-============================================================================================ */
 .press_img_item {
   position: relative;
   height: 540px;
@@ -253,15 +248,38 @@
 }
 
 .press_content {
-  max-width: 500px;
+  height: 540px;
+  display: flex;
+  flex-direction: column;
 
   @include media-down(sm) {
-    margin-top: 50px;
+    height: auto;
+    margin-top: 30px;
   }
 
-  img {
+  .img-phone {
     display: block;
     margin: 20px auto;
+  }
+
+  .img-sign {
+    display: block;
+    margin: 20px 30px;
+    width: 70%;
+  }
+
+  .img-coffee {
+    position: absolute;
+    z-index: -1;
+    right: 0;
+    top: 40%;
+    width: 54%;
+
+    @include media-down(sm) {
+      position: relative;
+      margin-left: auto;
+      margin-top: -50px;
+    }
   }
 
   h2 {
@@ -271,11 +289,15 @@
       display: block;
     }
   }
+
+  p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    margin-top: auto;
+  }
 }
 
 .press_form {
-  margin-top: 30px;
-
   input {
     display: block;
     width: 100%;

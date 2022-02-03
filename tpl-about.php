@@ -200,7 +200,7 @@ if ($main_video): ?>
 <section class="section-pad-bot">
 </section>
 
-<?php get_template_part('template-parts/sections/section', 'office-in'); ?>
+<?php get_template_part('template-parts/sections/section', 'office'); ?>
 
 <section class="section-pad-bot">
 </section>

@@ -134,4 +134,4 @@
     </div>
 </section>
 <!--================End Blog Single Area =================-->
-<?php get_template_part('template-parts/sections/section', 'office-in'); ?>
+<?php get_template_part('template-parts/sections/section', 'office'); ?>
