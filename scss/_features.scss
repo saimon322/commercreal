@@ -115,23 +115,6 @@
       right: 0;
       bottom: 0;
     }
-
-    &--pointer-1 {
-      left: 15px;
-      bottom: 10%;
-      transform: rotate(90deg);
-    }
-
-    &--pointer-2 {
-      right: 7%;
-      bottom: 20%;
-      z-index: 1;
-      transition: opacity .25s;
-
-      &.started {
-        opacity: 0;
-      }
-    }
   }
 
   &__content {
@@ -158,28 +141,6 @@
     @include media-up(lg) {
       padding-right: 50px;
     }
-  }
-}
-
-.feature-pointer {
-  position: absolute;
-  pointer-events: none;
-  z-index: 1;
-  transition: opacity .25s;
-
-  &.hidden {
-    opacity: 0;
-  }
-
-  &-1 {
-    left: 15px;
-    bottom: 10%;
-    transform: rotate(90deg);
-  }
-
-  &-2 {
-    right: 7%;
-    bottom: 20%;
   }
 }
 

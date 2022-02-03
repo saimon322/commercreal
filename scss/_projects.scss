@@ -8,10 +8,6 @@
 
   .pattern {
     top: 50px;
-
-    @include media-down(sm) {
-      top: 30px;
-    }
   }
 }
 

@@ -445,11 +445,6 @@
             }
         );
         pageFlip.loadFromHTML(document.querySelectorAll('.feature-slider__item'));
-
-        const featurePointer = featureSlider.closest('.feature').querySelector('.feature-pointer');
-        pageFlip.on('flip', () => {
-            featurePointer.classList.add('hidden');
-        });
     }
 
     // Feature lopue
@@ -459,7 +454,6 @@
 
         const el = featureLoupe.querySelector('.feature-loupe__el');
         const img = featureLoupe.querySelector('.feature-loupe__img img');
-        const featurePointer = featureLoupe.closest('.feature').querySelector('.feature-pointer');
 
         let elW, elH, 
             wrapperW, wrapperH, 
@@ -494,7 +488,6 @@
         function dragStart(e) {
             e = e || window.event;
             e.preventDefault();
-            featurePointer.classList.add('hidden');
             if (e.touches) {
                 e = e.touches[0];
                 el.addEventListener("touchmove", dragMove, false);
@@ -583,13 +576,15 @@ const initCounters = () => {
 
             counterItems.forEach((item) => {
                 if (!item.classList.contains('active') && isInViewport(item)) {
-                    let value = parseInt(item.getAttribute('data-count'));
-                    console.log(value);
+                    let value = parseInt(item.getAttribute('data-count').replace(/\s/g, ''));
                     countersStarted++;
                     item.classList.add('active');
+
+                    let timeout = 0;
+                    if (item.closest('.banner-feature')) timeout = 500;
                     setTimeout(() => {
-                        animateValue(item, 0, value, 4000);                        
-                    }, 300);
+                        animateValue(item, 0, value, 3000);                        
+                    }, timeout);
                 }
             });
         };

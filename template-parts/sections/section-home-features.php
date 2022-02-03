@@ -44,9 +44,6 @@
                         <div class="feature__icon feature__icon--right">
                             <img src="<?= get_template_directory_uri(); ?>/img/icon/feature-corner.svg" alt="">
                         </div>
-                        <div class="feature-pointer feature-pointer-1">
-                            <img src="<?= get_template_directory_uri(); ?>/img/icon/feature-pointer.png" alt="">
-                        </div>
                     </div>
                     <div class="feature__content">
                         <p class="feature__for">
@@ -110,9 +107,6 @@
                         </div>
                         <div class="feature__icon feature__icon--left">
                             <img src="<?= get_template_directory_uri(); ?>/img/icon/feature-eye.svg" alt="">
-                        </div>
-                        <div class="feature-pointer feature-pointer-2">
-                            <img src="<?= get_template_directory_uri(); ?>/img/icon/feature-pointer.png" alt="">
                         </div>
                     </div>
                     <div class="feature__content">

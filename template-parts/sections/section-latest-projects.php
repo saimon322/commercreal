@@ -50,7 +50,7 @@
         wp_reset_postdata(); ?>
     </div>
     <div class="container">
-        <a class="view_btn" href="#">Подробнее</a>
+        <a class="view_btn" href="/proekty/">Подробнее</a>
         <?php get_template_part('template-parts/animation/pattern'); ?>
     </div>
 </section>
