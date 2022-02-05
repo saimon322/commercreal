@@ -25,7 +25,7 @@ $map_point = get_field('map_point', 'option');
 
         foreach ($mapItems as $mapItem): ?>
             <a href="<?=site_url();?>/proekty/#<?=$mapItem->filter?>"
-                class="map__point"
+                class="map__point target"
                 style="left: <?=$mapItem->left?>%; top: <?=$mapItem->top?>%;">
                     <p><?=$mapItem->name?></p>
                     <img src="<?=$map_point?>" alt="">

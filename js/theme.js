@@ -613,3 +613,60 @@ function isInViewport (el) {
     const rect = el.getBoundingClientRect();
     return (rect.top >= 0 && rect.bottom <= window.innerHeight);
 }
+
+class Cursor {
+    constructor() {
+        this.cursor = document.querySelector(".cursor");
+        this.inited = false;
+    }
+
+    isMobile() {
+        return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    }
+
+    init() {
+        const cursor = this.cursor;
+        let inited = this.inited;
+
+        if (this.isMobile()) return;
+
+        const targets = 'a, button, input, textarea, .target, .owl-prev, .owl-next';
+
+        document.addEventListener("mouseover", function (e) {
+            e.target.closest(targets) && cursor.classList.add('cursor--hovered');
+        });
+
+        document.addEventListener("mouseout", (e) => {
+            e.target.closest(targets) && cursor.classList.remove('cursor--hovered');
+        });
+
+        window.onmousemove = function (e) {
+            let mouseX = e.clientX;
+            let mouseY = e.clientY;
+            if (!inited) {
+                cursor.style.opacity = 1;
+                TweenLite.to(cursor, 0.3, {
+                    opacity: 1
+                });
+                inited = true;
+            }
+            TweenLite.to(cursor, 0, {
+                top: mouseY + 10 + "px",
+                left: mouseX + 10 + "px"
+            });
+        };
+
+        window.onmouseout = function (e) {
+            cursor.style.opacity = 0;
+            TweenLite.to(cursor, 0.3, {
+                opacity: 0
+            });
+            inited = false;
+        }
+    }
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+    initCounters();
+    new Cursor().init();
+});

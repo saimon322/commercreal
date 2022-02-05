@@ -150,12 +150,9 @@
   height: 100% !important;
   min-width: unset !important;
   min-height: unset !important;
-  cursor: pointer;
   overflow: hidden;
 
   &:hover .feature-slider__item {
-    // background: transparent;
-
     & > img {
       filter: none;
       mix-blend-mode: unset;
@@ -218,7 +215,6 @@
   padding: 10px 15px;
   border-bottom: 1px solid $base;
   counter-increment: list;
-  cursor: pointer;
 
   @include media-up(xl) { 
     padding: 15px;
@@ -326,7 +322,6 @@
     bottom: 30px;
     width: 120px;
     height: 139px;
-    cursor: grab;
     opacity: 0;
     transition: opacity .5s;
     will-change: transform;

@@ -116,7 +116,6 @@
     font-size: 36px;
     color: $pfont;
     @include transition;
-    cursor: pointer;
 
     &:hover {
       color: $base;
@@ -403,7 +402,6 @@
     position: absolute;
     text-align: center;
     transform: translateY(-1500%);
-    cursor: pointer;
     user-select: none;
 
     &:hover {
