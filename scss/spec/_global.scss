@@ -1,3 +1,7 @@
+* {
+  cursor: none;
+}
+
 body {
   font-family: $raleway;
   color: $pfont;
@@ -140,7 +144,6 @@ i {
 }
 
 ::-webkit-scrollbar-thumb {
-  cursor: pointer;
   background: $base;
 }
 

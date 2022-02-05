@@ -13,34 +13,34 @@
         <div class="home-banner__content">
             <div class="home-banner__features row">
                 <div class="col-md-4">
-                    <div class="feature" data-aos="fade-up" data-aos-delay="100">
-                        <div class="feature__title">
+                    <div class="banner-feature" data-aos="fade-up" data-aos-delay="100">
+                        <div class="banner-feature__title">
                             <span class="js-counter" data-count="<?php the_field('volume_rented'); ?>">0</span>
                             м<sup>2</sup>
                         </div>
-                        <div class="feature__text">
+                        <div class="banner-feature__text">
                             сдано в аренду
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="feature" data-aos="fade-up" data-aos-delay="200">
-                        <div class="feature__title">
+                    <div class="banner-feature" data-aos="fade-up" data-aos-delay="200">
+                        <div class="banner-feature__title">
                             <span class="js-counter" data-count="<?php the_field('volume_income'); ?>">0</span>
                             руб.
                         </div>
-                        <div class="feature__text">
+                        <div class="banner-feature__text">
                             арендный доход<br> наших клиентов
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="feature" data-aos="fade-up" data-aos-delay="300">
-                        <div class="feature__title">
+                    <div class="banner-feature" data-aos="fade-up" data-aos-delay="300">
+                        <div class="banner-feature__title">
                             <span class="js-counter" data-count="<?php the_field('volume_stores'); ?>">0</span>
                             шт.
                         </div>
-                        <div class="feature__text">
+                        <div class="banner-feature__text">
                             открыто магазинов
                         </div>
                     </div>

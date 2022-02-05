@@ -51,6 +51,8 @@
     </div>
 </footer>
 </div>
+
+<!-- Modals -->
 <div class="modal fade"
      id="modal-form"
      tabindex="-1"
@@ -118,7 +120,12 @@
         </div>
     </div>
 </div>
+
+<!-- Custom cursor -->
+<div class="cursor"></div>
+
 <?php wp_footer(); ?>
+
 <script src="//code-ya.jivosite.com/widget/s1IdUoxGtg" async></script>
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">

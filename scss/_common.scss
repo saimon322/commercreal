@@ -3,6 +3,25 @@
   position: relative;
 }
 
+.cursor {
+  width: 40px;
+  height: 40px;
+  top: -100px;
+  left: -100px;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  background-image: url('../img/cursor.svg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  transition: background-image 0.15s;
+  z-index: 99999;
+
+  &--hovered {
+    background-image: url('../img/cursor-hover.svg');
+  }
+}
+
 .page_lines {
   position: absolute;
   left: 0;

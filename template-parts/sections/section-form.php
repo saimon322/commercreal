@@ -14,7 +14,7 @@
                     <h2>
                         Остались вопросы? <span>закажте звонок</span>
                     </h2>
-                    <img src="<?= get_template_directory_uri(); ?>/img/phone.png" alt="">
+                    <img src="<?= get_template_directory_uri(); ?>/img/phone.png" alt="" class="img-phone">
                     <p>Вероника перезвонит Вам в течении одной минуты.</p>
                     <form class="press_form form-contact">
                         <input type="text" name="phone" placeholder="Телефон для связи">

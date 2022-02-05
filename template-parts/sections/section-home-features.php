@@ -9,7 +9,7 @@
                     <div class="feature__main">
                         <?php $images = $feature1['images'];
                         if ($images): ?>
-                            <div class="feature-slider">
+                            <div class="feature-slider target">
                                 <?php /* foreach ($images as $image): ?>
                                     <div class="feature-slider__item">
                                         <img src="<?= $image ?>" alt="">
@@ -44,9 +44,6 @@
                         <div class="feature__icon feature__icon--right">
                             <img src="<?= get_template_directory_uri(); ?>/img/icon/feature-corner.svg" alt="">
                         </div>
-                        <div class="feature-pointer feature-pointer-1">
-                            <img src="<?= get_template_directory_uri(); ?>/img/icon/feature-pointer.png" alt="">
-                        </div>
                     </div>
                     <div class="feature__content">
                         <p class="feature__for">
@@ -68,7 +65,7 @@
                             <?php
                             if (have_rows('feature_2')): while (have_rows('feature_2')): the_row();
                                 if (have_rows('substages')): while (have_rows('substages')): the_row(); ?>
-                                    <a href="<?= get_sub_field('link'); ?>" class="feature-mini">
+                                    <a href="<?= get_sub_field('link'); ?>" class="feature-mini target">
                                         <img src="<?= get_sub_field('img'); ?>" alt="">
                                         <p class="feature-mini__title"><?= get_sub_field('title'); ?></p>
                                     </a>
@@ -99,7 +96,7 @@
                             <div class="feature-loupe__bg">
                                 <img src="<?= $feature3['img']; ?>" alt="">
                             </div>
-                            <div class="feature-loupe__el">
+                            <div class="feature-loupe__el target">
                                 <div class="feature-loupe__icon">
                                     <img src="<?= get_template_directory_uri(); ?>/img/icon/feature-loupe.png" alt="">
                                 </div>
@@ -110,9 +107,6 @@
                         </div>
                         <div class="feature__icon feature__icon--left">
                             <img src="<?= get_template_directory_uri(); ?>/img/icon/feature-eye.svg" alt="">
-                        </div>
-                        <div class="feature-pointer feature-pointer-2">
-                            <img src="<?= get_template_directory_uri(); ?>/img/icon/feature-pointer.png" alt="">
                         </div>
                     </div>
                     <div class="feature__content">

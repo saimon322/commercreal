@@ -113,22 +113,6 @@ ul.custom-ul {
   // padding: 60px 0;
 }
 
-.about_office_area img {
-  max-width: 100%;
-}
-
-.about_office_area img.signature1 {
-  max-width: 85%;
-}
-
-.about_office_area img.signature2 {
-  max-width: 35%;
-}
-
-.about_office_area .btn {
-  margin-top: 21px;
-}
-
 .signatures-container {
   margin-top: 40px;
   margin-bottom: 50px;
@@ -233,22 +217,14 @@ a.press_img_item:hover span {
 
 .our_press_area {
   position: relative;
-  padding: 160px 0 135px;
+  padding: 130px 0;
 
   @include media-down(md) {
     padding: 100px 0;
   }
 
-  @include media-down(xs) {
+  @include media-down(sm) {
     padding: 50px 0;
-  }
-
-  .s_title {
-    margin-bottom: 50px;
-
-    @include media-down(sm) {
-      margin-bottom: 20px;
-    }
   }
 
   &_text {
@@ -269,21 +245,12 @@ a.press_img_item:hover span {
   margin-bottom: 0;
 }
 
-.single-services .about_office_area {
-  background-color: #292929;
-  padding: 60px 0;
-}
-
 .modal {
   z-index: 999999999;
 }
 
 .modal-dialog {
   margin: 8.75rem auto;
-}
-
-.about_office_area .h2 {
-  font-size: 1.8rem;
 }
 
 .s_blog_text_inner .blog_main_text .s_blog_tag span {

@@ -128,7 +128,6 @@
   width: 40px;
   background: $base;
   text-align: center;
-  cursor: pointer;
 
   @include media-up(lg) {
     display: none;
@@ -483,7 +482,6 @@ nav li:hover .mega-menu {
     height: 105px;
     padding: 5px;
     background: $blue;
-    transition: .25s;
 
     @include media-up(xl) {
       height: 130px;
@@ -508,10 +506,12 @@ nav li:hover .mega-menu {
       object-fit: cover;
       opacity: 0.5;
       mix-blend-mode: luminosity;
+      transition: .25s;
     }
 
-    &:hover {
-      background: transparent;
+    &:hover img {
+      opacity: 1;
+      mix-blend-mode: unset;
     }
   }
 

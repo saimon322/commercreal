@@ -115,23 +115,6 @@
       right: 0;
       bottom: 0;
     }
-
-    &--pointer-1 {
-      left: 15px;
-      bottom: 10%;
-      transform: rotate(90deg);
-    }
-
-    &--pointer-2 {
-      right: 7%;
-      bottom: 20%;
-      z-index: 1;
-      transition: opacity .25s;
-
-      &.started {
-        opacity: 0;
-      }
-    }
   }
 
   &__content {
@@ -161,40 +144,15 @@
   }
 }
 
-.feature-pointer {
-  position: absolute;
-  pointer-events: none;
-  z-index: 1;
-  transition: opacity .25s;
-
-  &.hidden {
-    opacity: 0;
-  }
-
-  &-1 {
-    left: 15px;
-    bottom: 10%;
-    transform: rotate(90deg);
-  }
-
-  &-2 {
-    right: 7%;
-    bottom: 20%;
-  }
-}
-
 // Slider block
 .feature-slider {
   width: 100% !important;
   height: 100% !important;
   min-width: unset !important;
   min-height: unset !important;
-  cursor: pointer;
   overflow: hidden;
 
   &:hover .feature-slider__item {
-    // background: transparent;
-
     & > img {
       filter: none;
       mix-blend-mode: unset;
@@ -257,7 +215,6 @@
   padding: 10px 15px;
   border-bottom: 1px solid $base;
   counter-increment: list;
-  cursor: pointer;
 
   @include media-up(xl) { 
     padding: 15px;
@@ -365,7 +322,6 @@
     bottom: 30px;
     width: 120px;
     height: 139px;
-    cursor: grab;
     opacity: 0;
     transition: opacity .5s;
     will-change: transform;

@@ -1,5 +1,5 @@
 <?php $result = wp_get_recent_posts([
-    'numberposts' => 4,
+    'numberposts' => 8,
     'post_status' => 'publish',
     'orderby'     => 'post_date',
 ]); ?>
@@ -18,6 +18,6 @@
                 </a>
             <?php endforeach; ?>
         </div>
-        <a class="view_btn" href="#">Подробнее</a>
+        <a class="view_btn" href="/category/all">Подробнее</a>
     </div>
 </section>
