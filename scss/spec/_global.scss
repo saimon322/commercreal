@@ -1,5 +1,14 @@
 * {
   cursor: none;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -ms-overflow-style: scrollbar;
+  -webkit-tap-highlight-color: transparent
 }
 
 body {
@@ -28,6 +37,12 @@ a {
     outline: none;
     color: $base;
   }
+}
+
+button {
+  outline: none;
+  border: 0;
+  box-shadow: none;
 }
 
 

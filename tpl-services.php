@@ -2,17 +2,26 @@
 get_header();
 ?>
 
-<section class="breadcrumb_link">
+<section class="single-banner">
+    <img src="<?php the_field('baner'); ?>" alt="">
     <div class="container">
-        <a href="/">Главная</a>
-        <span><?= the_title(); ?></span>
+        <h1 class="single-banner__title">
+            <?php if ($headline = get_field('headline_h1')): ?>
+                <?= $headline; ?>
+            <?php else: ?>
+                <?php the_title(); ?>
+            <?php endif; ?>
+        </h1>
     </div>
 </section>
 
-<section class="about_studio_area pattern-section">
+<section class="about_studio_area">
     <div class="container">
+        <div class="breadcrumb_link">
+            <a href="/">Главная</a>
+            <span><?= the_title(); ?></span>
+        </div>
         <?php get_template_part('template-parts/animation/pattern'); ?>
-        <h1><?= the_title(); ?></h1>
         <div class="ab_studio_text">
             <?= the_content(); ?>
         </div>

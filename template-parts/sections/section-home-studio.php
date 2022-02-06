@@ -152,11 +152,18 @@
                         <?php the_field('about_title'); ?>
                     </h2>
                     <div class="studio_block">
-                        <p class="h5"><?php the_field('about_subtitle'); ?></p>
+                        <p class="h5"><?php the_field('about_subtitle_1'); ?></p>
                         <p><?php the_field('about_text'); ?></p>
                     </div>
                     <div class="studio_block">
-                        <?php the_field('about_desc'); ?>
+                        <p class="h5"><?php the_field('about_subtitle_2'); ?></p>
+                        <?php if( have_rows('about_list') ): ?>
+                            <ul class="studio_list counter-list">
+                            <?php while( have_rows('about_list') ): the_row(); ?>
+                                <li><?= get_sub_field('item'); ?></li>
+                            <?php endwhile; ?>
+                            </ul>
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>

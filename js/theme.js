@@ -77,10 +77,10 @@
     /*  Explor Room Slider
     /*----------------------------------------------------*/
     let filterSlider, filterClone;
-    function fillter_slider() {
-        if ($('.fillter_slider').length) {
-            filterClone = $('.fillter_slider').clone();
-            filterSlider = $('.fillter_slider').owlCarousel({
+    function filter_slider() {
+        if ($('.filter_slider').length) {
+            filterClone = $('.filter_slider').clone();
+            filterSlider = $('.filter_slider').owlCarousel({
                 loop: true,
                 margin: 6,
                 items: 4,
@@ -89,7 +89,7 @@
                 autoplayHoverPause: true,
                 smartSpeed: 1500,
                 dots: true,
-                navContainer: '.fillter_slider',
+                navContainer: '.filter_slider',
                 navText: ['<i class="ion-ios-arrow-left"></i>', '<i class="ion-ios-arrow-right"></i>'],
                 responsiveClass: true,
                 responsive: {
@@ -109,7 +109,7 @@
             })
         }
     }
-    fillter_slider();
+    filter_slider();
 
     /*----------------------------------------------------*/
     /*  Explor Room Slider
@@ -243,8 +243,8 @@
         $(this).closest('li').addClass('active');
         var selector = $(this).attr('data-filter');
         console.log('.item' + selector);
-        $('.fillter_slider').fadeOut(300);
-        $('.fillter_slider').fadeIn(300);
+        $('.filter_slider').fadeOut(300);
+        $('.filter_slider').fadeIn(300);
         setTimeout(function () {
             const itemsCount = filterClone.find('.item').length;
             for (let i = 0; i < itemsCount; i++) {

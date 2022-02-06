@@ -1,7 +1,6 @@
-<!--================Our spec Area =================-->
 <section class="spec_area ab_spec all_services">
     <div class="container">
-        <h2 class="s_title">Все услуги</h2>
+        <h2 class="s_title">Все <span>услуги</span></h2>
         <?php $services = get_terms('services-cats'); ?>
         <div class="specs">
             <div class="row m0 text-center specs-header">
@@ -57,4 +56,3 @@
         </div>
     </div>
 </section>
-<!--================End Our spec Area =================-->

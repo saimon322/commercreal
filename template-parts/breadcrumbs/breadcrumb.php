@@ -1,4 +1,3 @@
-<!--================Breadcrumb Area =================-->
 <section class="breadcrumb_link">
     <div class="container">
         <a href="/">Главная</a>
@@ -6,4 +5,3 @@
         <span><?= $args['title']; ?></span>
     </div>
 </section>
-<!--================End Breadcrumb Area =================-->

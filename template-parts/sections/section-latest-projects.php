@@ -3,7 +3,7 @@
         <div class="l_text">
             <div class="float-md-left">
                 <div class="main_title">
-                    <h2>Реализованные проекты</h2>
+                    <h2 class="s_title">Реализованные <span>проекты</span></h2>
                 </div>
             </div>
             <div class="float-md-right">
@@ -21,7 +21,7 @@
             </div>
         </div>
     </div>
-    <div class="fillter_slider owl-carousel">
+    <div class="filter_slider owl-carousel">
         <?php $query = new WP_Query(array(
             'post_type'      => 'projects',
             'posts_per_page' => -1,
@@ -51,6 +51,5 @@
     </div>
     <div class="container">
         <a class="view_btn" href="/proekty/">Подробнее</a>
-        <?php get_template_part('template-parts/animation/pattern'); ?>
     </div>
 </section>

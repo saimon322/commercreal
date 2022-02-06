@@ -1,10 +1,9 @@
-<!--================End Header Menu Area =================-->
 <div class="blog-banner">
     <div class="blog-banner__img">
         <img src="<?= get_template_directory_uri(); ?>/img/blog/blog-banner.jpg" alt="">
     </div>
 </div>
-<!--================Blog Sidebar Area =================-->
+
 <section class="blog_sidebar_area">
     <div class="container">
         <div class="row row_direction">
@@ -42,4 +41,3 @@
         </div>
     </div>
 </section>
-<!--================End Blog Sidebar Area =================-->
