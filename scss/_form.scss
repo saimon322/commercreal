@@ -1,7 +1,7 @@
 .press_img_item {
   position: relative;
   height: 100%;
-  box-shadow: 0px 4px 4px rgb(0, 0, 0, 0.25);
+  box-shadow: $shadow;
 
   @include media-down(sm) {
     height: 300px;
