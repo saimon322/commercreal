@@ -11,7 +11,7 @@
                     <li class="active" data-filter="*">
                         <a href="#">Все</a>
                     </li>
-                    <?php $projects_cats = get_terms(['taxonomy' => 'projects_cats', 'hide_empty' => false]);
+                    <?php $projects_cats = get_terms(['taxonomy' => 'projects_cats', 'hide_empty' => true]);
                     foreach ($projects_cats as $cat): ?>
                         <li data-filter=".<?= $cat->slug; ?>">
                             <a href="<?= $cat->slug; ?>"><?= $cat->name; ?></a>
@@ -26,26 +26,32 @@
             'post_type'      => 'projects',
             'posts_per_page' => -1,
         ));
+        $count       = 0;
         if ($query->have_posts()) : ?>
-            <?php while ($query->have_posts()) : $query->the_post();
-                $terms      = wp_get_post_terms(get_the_ID(), 'projects_cats');
-                $cats_slugs = terms_slugs_to_string($terms);
-                $cats_names = terms_names_to_string($terms); ?>
-                <div class="item <?= $cats_slugs; ?>">
-                    <a href="<?= get_the_permalink(); ?>" class="projects_item">
-                        <?php the_post_thumbnail('project-thumb', ['class' => 'img-fluid']); ?>
-                        <div class="hover">
-                            <i class="ion-android-arrow-forward"></i>
-                            <div class="project_text">
-                                <?php if ($cats_names): ?>
-                                    <p class="h5"><?= $cats_names; ?></p>
-                                <?php endif; ?>
-                                <p class="h4"><?php the_title(); ?></p>
+            <div class="items">
+                <?php while ($query->have_posts()) : $query->the_post();
+                    $terms      = wp_get_post_terms(get_the_ID(), 'projects_cats');
+                    $cats_slugs = terms_slugs_to_string($terms);
+                    $cats_names = terms_names_to_string($terms);
+                    echo ($count % 2) == 0 && $count != 0 ? '</div><div class="items">' : '';
+                    ?>
+                    <div class="item <?= $cats_slugs; ?>">
+                        <a href="<?= get_the_permalink(); ?>" class="projects_item">
+                            <?php the_post_thumbnail('project-thumb', ['class' => 'img-fluid']); ?>
+                            <div class="hover">
+                                <i class="ion-android-arrow-forward"></i>
+                                <div class="project_text">
+                                    <?php if ($cats_names): ?>
+                                        <p class="h5"><?= $cats_names; ?></p>
+                                    <?php endif; ?>
+                                    <p class="h4"><?php the_title(); ?></p>
+                                </div>
                             </div>
-                        </div>
-                    </a>
-                </div>
-            <?php endwhile; ?>
+                        </a>
+                    </div>
+                    <?php $count++;
+                endwhile; ?>
+            </div>
         <?php endif;
         wp_reset_postdata(); ?>
     </div>

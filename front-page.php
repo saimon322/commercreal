@@ -10,6 +10,7 @@ $options = get_field('contacts', 'options');
 <?php get_template_part('template-parts/sections/section', 'latest-projects'); ?>
 <?php get_template_part('template-parts/sections/section', 'stages'); ?>
 <?php get_template_part('template-parts/sections/section', 'form'); ?>
+<?php get_template_part('template-parts/sections/section', 'clients'); ?>
 <?php get_template_part('template-parts/sections/section', 'blog'); ?>
 
 <?php get_footer(); ?>

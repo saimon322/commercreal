@@ -33,7 +33,7 @@
                 <div class="stage__icon">
                     <img src="<?= get_template_directory_uri(); ?>/img/icon/stage-home.png" alt="">
                 </div>
-                <div class="stage__content">
+                <div class="stage__content"> 
                     <div class="stage__title">Размещаем<br> арендаторов</div>
                     <p class="stage__text">Профессиональный брокеридж и B2B продвижение объекта.</p>
                 </div>

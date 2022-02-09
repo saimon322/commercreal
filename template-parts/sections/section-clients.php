@@ -5,9 +5,7 @@
             <h2>
                 <span>
                     <?= $clients_title['sign']; ?>
-                    <span class=js-counter>
-                        <?= $clients_title['number']; ?>
-                    </span>
+                    <span class=js-counter data-count="<?= $clients_title['number']; ?>">0</span>
                 </span>
                 <?= $clients_title['text']; ?>
             </h2>
