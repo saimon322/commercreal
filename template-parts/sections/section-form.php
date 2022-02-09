@@ -6,7 +6,7 @@
                     <div class="press_img_name">
                         Ларионова <span>Вероника</span>
                     </div>
-                    <img src="<?= get_template_directory_uri(); ?>/img/helen.jpg" alt="">
+                    <img src="<?= get_template_directory_uri(); ?>/img/veronica.jpg" alt="">
                 </div>
             </div>
             <div class="col-md-6">

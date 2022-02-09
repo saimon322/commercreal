@@ -1,6 +1,4 @@
-/* Project Breadcrumb css
-============================================================================================ */
-.project_breadcrumb_area {
+.project-banner {
   background-size: cover;
   height: 100vh;
   position: relative;
@@ -123,55 +121,6 @@
     .s_bread_inner {
       max-width: 770px;
       margin: auto;
-    }
-  }
-}
-
-
-/* End Project Breadcrumb css
-============================================================================================ */
-
-/* Single Banner Image css
-============================================================================================ */
-.image_banner_area {
-  background: url(../img/blog/single-blog-3.jpg) no-repeat scroll center center;
-  background-size: cover;
-
-  .single_banner_text {
-    padding-top: 270px;
-    padding-bottom: 230px;
-
-    .date {
-      margin-bottom: 28px;
-
-      a {
-        font-size: 14px;
-        color: #fff;
-
-        font-weight: 500;
-        font-weight: normal;
-        text-transform: uppercase;
-
-        &:last-child {
-          font-weight: bold;
-        }
-      }
-
-      i {
-        font-size: 6px;
-        color: #fff;
-        position: relative;
-        top: -2px;
-        padding-left: 2px;
-        padding-right: 2px;
-      }
-    }
-
-    h3 {
-      color: #fff;
-      font-size: 48px;
-      line-height: 52px;
-      margin-bottom: 0px;
     }
   }
 }

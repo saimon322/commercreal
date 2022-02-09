@@ -61,17 +61,19 @@
                 <?php $feature2 = get_field('feature_2'); ?>
                 <div class="feature">
                     <div class="feature__main">
-                        <div class="feature-minies">
+                        <ul class="feature-minies counter-list">
                             <?php
                             if (have_rows('feature_2')): while (have_rows('feature_2')): the_row();
                                 if (have_rows('substages')): while (have_rows('substages')): the_row(); ?>
-                                    <a href="<?= get_sub_field('link'); ?>" class="feature-mini target">
-                                        <img src="<?= get_sub_field('img'); ?>" alt="">
-                                        <p class="feature-mini__title"><?= get_sub_field('title'); ?></p>
-                                    </a>
+                                    <li class="feature-mini">
+                                        <a href="<?= get_sub_field('link'); ?>">
+                                            <img src="<?= get_sub_field('img'); ?>" alt="">
+                                            <p class="feature-mini__title"><?= get_sub_field('title'); ?></p>
+                                        </a>
+                                    </li>
                                 <?php endwhile; endif;
                             endwhile; endif; ?>
-                        </div>
+                        </ul>
                     </div>
                     <div class="feature__content">
                         <p class="feature__for">

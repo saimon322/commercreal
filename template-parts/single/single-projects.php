@@ -3,8 +3,8 @@ $terms = wp_get_post_terms(get_the_ID(), 'projects_cats');
 wp_enqueue_script('pannellum-js');
 wp_enqueue_style('pannellum-css');
 ?>
-<!--================Project Details Area =================-->
-<section class="project_breadcrumb_area" style="background-image: url(<?php the_field('baner'); ?>);">
+
+<section class="project-banner" style="background-image: url(<?php the_field('baner'); ?>);">
     <div class="container">
         <?php get_template_part('template-parts/breadcrumbs/breadcrumb-projects', null,
             array(
@@ -31,8 +31,7 @@ wp_enqueue_style('pannellum-css');
         </div>
     </div>
 </section>
-<!--================End Project Details Area =================-->
-<!--================End Project Details Area =================-->
+
 <section class="project_details_area">
     <div class="container">
         <div class="back_btn">
@@ -74,8 +73,7 @@ wp_enqueue_style('pannellum-css');
         </div>
     </div>
 </section>
-<!--================End Project Details Area =================-->
-<!--================Project Villa Area =================-->
+
 <section class="project_villa_area">
     <div class="container">
         <div class="villa_text">
@@ -139,8 +137,7 @@ wp_enqueue_style('pannellum-css');
         </div>
     </div>
 </section>
-<!--================End Project Villa Area =================-->
-<!--================Prev Next Area =================-->
+
 <section class="prev_next_area">
     <?php $prevPost = get_previous_post();
     $prevPost       = empty($prevPost) ? get_random_post_from_cpt('projects') : $prevPost;
@@ -167,4 +164,3 @@ wp_enqueue_style('pannellum-css');
         </a>
     <?php endif; ?>
 </section>
-<!--================End Prev Next Area =================-->

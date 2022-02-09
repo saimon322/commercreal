@@ -89,7 +89,6 @@
     z-index: 0;
 
     .line {
-      height: 100vh;
       background: #fff;
       opacity: 0.2;
     }
@@ -293,18 +292,6 @@
 
         @include media-up(md) {
           padding-right: 70px;
-        }
-
-        &:after {
-          content: counter(list);
-          position: absolute;
-          right: -4px;
-          bottom: -16px;
-          font-family: $bebas;
-          font-size: 80px;
-          line-height: 1;
-          font-weight: bold;
-          color: $base;
         }
       }
     }

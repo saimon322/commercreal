@@ -12,20 +12,4 @@ $options = get_field('contacts', 'options');
 <?php get_template_part('template-parts/sections/section', 'form'); ?>
 <?php get_template_part('template-parts/sections/section', 'blog'); ?>
 
-<div class="page_lines">
-    <div class="container">
-        <div class="row m0">
-            <div class="col-lg-4">
-                <div class="line"></div>
-            </div>
-            <div class="col-lg-4">
-                <div class="line"></div>
-            </div>
-            <div class="col-lg-4">
-                <div class="line"></div>
-                <div class="line"></div>
-            </div>
-        </div>
-    </div>
-</div>
 <?php get_footer(); ?>

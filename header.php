@@ -94,6 +94,5 @@
             <span></span>
         </span>
     </div>
-    <!--================End Header Menu Area =================-->
 
 <?php wp_body_open(); ?>

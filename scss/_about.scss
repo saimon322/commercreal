@@ -1,3 +1,20 @@
+.about_studio_area {
+  padding-top: 50px;
+
+  .breadcrumb_link {
+    padding-top: 0;
+    margin-bottom: 80px;
+
+    @include media-down(sm) {
+      margin-bottom: 50px;
+    }
+  }
+
+  .pattern {
+    top: 40px;
+  }
+}
+
 .about_banner {
   padding-top: 88px;
   height: 620px;

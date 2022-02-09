@@ -50,6 +50,23 @@
         <?php endif; ?>
     </div>
 </footer>
+
+<div class="page_lines">
+    <div class="container">
+        <div class="row m0">
+            <div class="col-lg-4">
+                <div class="line"></div>
+            </div>
+            <div class="col-lg-4">
+                <div class="line"></div>
+            </div>
+            <div class="col-lg-4">
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </div>
+    </div>
+</div>
 </div>
 
 <!-- Modals -->

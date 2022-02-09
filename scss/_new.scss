@@ -136,6 +136,7 @@ ul.custom-ul {
 .blog_g_item:hover .press_img .hover {
   opacity: 0;
 }
+
 .press_img_item {
   .date {
     margin-bottom: 15px;
@@ -253,7 +254,7 @@ a.press_img_item:hover span {
   margin: 8.75rem auto;
 }
 
-.s_blog_text_inner .blog_main_text .s_blog_tag span {
+.blog_main_text .s_blog_tag span {
   display: inline-block;
   border: 1px solid #8d9aa8;
   color: #8d9aa8;
@@ -332,11 +333,6 @@ a.press_img_item:hover span {
   padding-top: 0;
 }
 
-.page404 {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
 .modal-dialog {
   height: 100%;
   margin: 0 auto;
@@ -360,20 +356,6 @@ a.press_img_item:hover span {
 .copy_6c21 {
   display: none !important;
 }
-
-.sidebar {
-  @include media-up(lg) {
-    flex: 1 1 0;
-    margin-left: 30px;
-    max-width: unset;
-    padding: 0;
-  }
-
-  @include media-up(xl) {
-    margin-left: 50px;
-  }
-}
-
 
 .form-control:focus {
   outline: none;

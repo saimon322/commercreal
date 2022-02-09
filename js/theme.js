@@ -10,7 +10,7 @@
     const mobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
     mobileDevice && window.addEventListener('scroll', appHeight)    
 
-    var nav_offset_top = $('header').height() + 100;
+    let nav_offset_top = $('header').height() + 100;
     /*-------------------------------------------------------------------------------
       Navbar 
     -------------------------------------------------------------------------------*/
@@ -19,30 +19,30 @@
     function navbarFixed() {
         if ($('.header').length) {
             $(window).scroll(function () {
-                var scroll = $(window).scrollTop();
+                let scroll = $(window).scrollTop();
                 if (scroll >= nav_offset_top) {
                     $(".header").addClass("navbar_fixed");
                 } else {
                     $(".header").removeClass("navbar_fixed");
                 }
-            });
+            })
         };
     };
     navbarFixed();
 
 
     $('.menu-list li a').each(function () {
-        var $this = $(this);
+        let $this = $(this);
         $this.on('click', function (e) {
-            var has = $this.hasClass('open');
+            let has = $this.hasClass('open');
             $('.menu-list li a').removeClass('open');
             if (has) {
                 $this.removeClass('open');
             } else {
                 $this.addClass('open');
             }
-        });
-    });
+        })
+    })
 
 
     /*-------------------------------------------------------------------------------
@@ -67,49 +67,73 @@
                         error: function () {
                             $('.error-message').show();
                         }
-                    });
+                    })
                 }
-            });
-        });
+            })
+        })
     }
 
     /*----------------------------------------------------*/
-    /*  Explor Room Slider
+    /*  Projects Slider
     /*----------------------------------------------------*/
-    let filterSlider, filterClone;
-    function fillter_slider() {
-        if ($('.fillter_slider').length) {
-            filterClone = $('.fillter_slider').clone();
-            filterSlider = $('.fillter_slider').owlCarousel({
-                loop: true,
-                margin: 6,
-                items: 4,
-                nav: true,
-                autoplay: true,
-                autoplayHoverPause: true,
-                smartSpeed: 1500,
-                dots: true,
-                navContainer: '.fillter_slider',
-                navText: ['<i class="ion-ios-arrow-left"></i>', '<i class="ion-ios-arrow-right"></i>'],
-                responsiveClass: true,
-                responsive: {
-                    0: {
-                        items: 1,
-                    },
-                    575: {
-                        items: 2,
-                    },
-                    800: {
-                        items: 3,
-                    },
-                    1200: {
-                        items: 4,
-                    }
+    const filterSliderEl = $('.filter_slider');
+    if (filterSliderEl.length) {            
+        const sliderClone = filterSliderEl.clone();
+        let slidesCount = sliderClone.find('.items').length;
+        const filterSlider = filterSliderEl.owlCarousel({
+            loop: true,
+            margin: 6,
+            items: 4,
+            nav: true,
+            autoplay: true,
+            autoplayHoverPause: true,
+            smartSpeed: 1500,
+            dots: true,
+            // navContainer: '.filter_slider',
+            navText: [
+                '<i class="ion-ios-arrow-left"></i>', 
+                '<i class="ion-ios-arrow-right"></i>'
+            ],
+            responsiveClass: true,
+            responsive: {
+                0: {
+                    items: 1,
+                },
+                575: {
+                    items: 2,
+                },
+                800: {
+                    items: 3,
+                },
+                1200: {
+                    items: 4,
                 }
-            })
-        }
+            }
+        })
+    
+        $('.portfolio_filter li').on('click', function () {
+            $('.portfolio_filter li.active').removeClass('active');
+            $(this).addClass('active');
+            let filter = $(this).attr('data-filter');
+            filterSlider.fadeOut(300);
+            filterSlider.fadeIn(300);
+            setTimeout(() => {
+                for (let i = 0; i < slidesCount; i++) {
+                    filterSlider.trigger('remove.owl.carousel', i);
+                }
+
+                let selector = (filter == "*") ? '.items' : ('.item' + filter);
+                let newSlides = sliderClone.find(selector);
+                slidesCount = newSlides.length;
+                newSlides.each(function() {
+                    filterSlider.trigger('add.owl.carousel', $(this).clone());
+                })
+
+                filterSlider.trigger('refresh.owl.carousel');
+            }, 300);
+            return false;
+        })
     }
-    fillter_slider();
 
     /*----------------------------------------------------*/
     /*  Explor Room Slider
@@ -233,33 +257,6 @@
     }
     clients_slider();
 
-
-
-    /*----------------------------------------------------*/
-    /* Owl Carousel Cutome Fillter js
-    /*----------------------------------------------------*/
-    $('.portfolio_filter li').on('click', function () {
-        $('.portfolio_filter .active').removeClass('active');
-        $(this).closest('li').addClass('active');
-        var selector = $(this).attr('data-filter');
-        console.log('.item' + selector);
-        $('.fillter_slider').fadeOut(300);
-        $('.fillter_slider').fadeIn(300);
-        setTimeout(function () {
-            const itemsCount = filterClone.find('.item').length;
-            for (let i = 0; i < itemsCount; i++) {
-                filterSlider.trigger('remove.owl.carousel', i);
-            }
-            filterClone.find('.item' + selector).each(function() {
-                console.log($(this));
-                filterSlider.trigger('add.owl.carousel', $(this).clone());
-            })
-            filterSlider.trigger('refresh.owl.carousel');
-        }, 300);
-        return false;
-    });
-
-
     /*-------------------------------------------------------------------------------
       Full screen sections 
     -------------------------------------------------------------------------------*/
@@ -274,8 +271,8 @@
                         duration: 750,
                         easing: 'linear'
                     }
-                });
-            });
+                })
+            })
 
             $(".blog_inner_fillter").imagesLoaded(function () {
                 $(".blog_inner_fillter").isotope({
@@ -284,15 +281,15 @@
                         duration: 750,
                         easing: 'linear'
                     }
-                });
-            });
+                })
+            })
 
             // Add isotope click function
             $(".isotope_fillter li").on('click', function () {
                 $(".isotope_fillter li").removeClass("active");
                 $(this).addClass("active");
 
-                var selector = $(this).attr("data-filter");
+                let selector = $(this).attr("data-filter");
                 $(".projects_inner, .project_full_inner, .blog_inner_fillter, .blog_ms_inner").isotope({
                     layoutMode: 'fitRows',
                     filter: selector,
@@ -301,9 +298,9 @@
                         easing: "linear",
                         queue: false,
                     }
-                });
+                })
                 return false;
-            });
+            })
         }
     }
     latest_project();
@@ -316,22 +313,22 @@
             masonry: {
                 columnWidth: '.grid_sizer',
             }
-        });
-    });
+        })
+    })
 
     $('.open-menu').on('click', function () {
         $('body').addClass('menu-is-opened');
-    });
+    })
     $('.close-menu, .click-capture').on('click', function () {
         $('body').removeClass('menu-is-opened');
         $('.menu-list ul').slideUp(300);
-    });
-    var dropToggle = $('.menu-list > li').has('ul').children('a');
+    })
+    let dropToggle = $('.menu-list > li').has('ul').children('a');
     dropToggle.on('click', function () {
         dropToggle.not(this).closest('li').find('ul').slideUp(200);
         $(this).closest('li').children('ul').slideToggle(200);
         return false;
-    });
+    })
 
     $('#pp-nav').remove().appendTo('.animsition').prepend('<div class="pp-nav-up icon-chevron-up"></div>').append('<div class="pp-nav-down icon-chevron-down"></div>').addClass('white hidden-xs');
 
@@ -343,13 +340,13 @@
     }, function () {
         $('.spec_wrapper').removeClass('col-lg-3 col-lg-4 col-lg-6');
         $('.spec_wrapper').addClass('col-lg-4');
-    });
+    })
 
-    AOS.init({
+    AOS && AOS.init({
         duration: 500,
         once: false,
         mirror: true,
-    });
+    })
 
     // Forms inputs
     $("input, textarea").change(function () {
@@ -364,7 +361,7 @@
         $('.diamond svg').each(function() {
             let index = $(this).index();
             let delay = 0.3 + Math.abs(index - lines / 2) * 0.05;
-            $(this).css({'transition-delay': delay + 's'});
+            $(this).css({'transition-delay': delay + 's'})
         })
     }
     
@@ -374,7 +371,7 @@
         $('.map__point').each(function() {
             let index = $(this).index();
             let delay = 0.5 + index * 0.2;
-            $(this).css({'animation-delay': delay + 's'});
+            $(this).css({'animation-delay': delay + 's'})
         })
 
         const hashFilter = window.location.hash.substr(1);
@@ -404,7 +401,7 @@
     const patterns = $('.pattern');
     if (patterns) {
         const widthTo = patterns.eq(0).width();
-        patterns.css({width: '100%'});
+        patterns.css({width: '100%'})
         const widthFrom = patterns.eq(0).width();
         const widthDiff = widthFrom - widthTo;
         const winHeight = window.innerHeight;
@@ -419,11 +416,11 @@
                     const newWidth = widthTo + widthDiff * index;
                     TweenLite.to(pattern, 0.5, {
                         width: newWidth
-                    });
+                    })
                 }
                 
                 if (state == 'init' && index < 0) {
-                    patterns.css({width: widthTo + 'px'});
+                    patterns.css({width: widthTo + 'px'})
                 }
             })
         };
@@ -561,6 +558,35 @@
 
 })(jQuery)
 
+// Blog text toggle full
+const toggleBtns = document.querySelectorAll('.toggle_btn');
+const toggleTexts = document.querySelectorAll('.toggle_text');
+
+toggleBtns && toggleTexts && toggleBtns.forEach(toggleBtn => {
+    toggleBtn.addEventListener('click', e => {
+        accordion(e, toggleBtn);
+    })
+})
+
+function accordion(e, toggleBtn) {
+    e.preventDefault();
+    const toggleText = toggleBtn.previousElementSibling;
+
+    toggleBtn.classList.toggle('active');
+    toggleText.classList.toggle('active');
+
+    if (toggleText.style.maxHeight) {
+        toggleText.style.maxHeight = null;
+    } else {
+        toggleText.style.maxHeight = toggleText.scrollHeight + "px";
+    }
+
+    setTimeout(() => {
+        AOS && AOS.refresh();
+    }, 500)
+}
+
+
 // Counter numbers
 const initCounters = () => {
     const counterItems = document.querySelectorAll('.js-counter');
@@ -586,7 +612,7 @@ const initCounters = () => {
                         animateValue(item, 0, value, 3000);                        
                     }, timeout);
                 }
-            });
+            })
         };
 
         scrollCounters();
@@ -634,11 +660,11 @@ class Cursor {
 
         document.addEventListener("mouseover", function (e) {
             e.target.closest(targets) && cursor.classList.add('cursor--hovered');
-        });
+        })
 
         document.addEventListener("mouseout", (e) => {
             e.target.closest(targets) && cursor.classList.remove('cursor--hovered');
-        });
+        })
 
         window.onmousemove = function (e) {
             let mouseX = e.clientX;
@@ -647,20 +673,20 @@ class Cursor {
                 cursor.style.opacity = 1;
                 TweenLite.to(cursor, 0.3, {
                     opacity: 1
-                });
+                })
                 inited = true;
             }
             TweenLite.to(cursor, 0, {
                 top: mouseY + 10 + "px",
                 left: mouseX + 10 + "px"
-            });
+            })
         };
 
         window.onmouseout = function (e) {
             cursor.style.opacity = 0;
             TweenLite.to(cursor, 0.3, {
                 opacity: 0
-            });
+            })
             inited = false;
         }
     }
@@ -669,4 +695,4 @@ class Cursor {
 window.addEventListener('DOMContentLoaded', () => {
     initCounters();
     new Cursor().init();
-});
+})
