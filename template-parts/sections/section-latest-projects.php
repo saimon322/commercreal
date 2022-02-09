@@ -14,7 +14,7 @@
                     <?php $projects_cats = get_terms(['taxonomy' => 'projects_cats', 'hide_empty' => false]);
                     foreach ($projects_cats as $cat): ?>
                         <li data-filter=".<?= $cat->slug; ?>">
-                            <a href="#"><?= $cat->name; ?></a>
+                            <a href="<?= $cat->slug; ?>"><?= $cat->name; ?></a>
                         </li>
                     <?php endforeach; ?>
                 </ul>

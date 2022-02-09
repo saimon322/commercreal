@@ -1,5 +1,4 @@
 .layout {
-  overflow: hidden;
   position: relative;
 }
 
@@ -24,24 +23,29 @@
 
 .page_lines {
   position: absolute;
+  z-index: -1;
   left: 0;
   top: 0;
   width: 100%;
-  z-index: -1;
   height: 100%;
 
   @include media-down(md) {
     display: none !important;
   }
 
+  .container,
+  .row {
+    height: 100%;
+  }
+
   .line {
     position: absolute;
     left: 0;
     width: 2px;
-    height: 50000px;
+    height: 100%;
     background: #222222;
 
-    &+.line {
+    & +.line {
       left: auto;
       right: 0px;
     }
@@ -85,9 +89,10 @@
 }
 
 .counter-list {
+  list-style: none;
   counter-reset: list;
 
-  li {
+  & > li {
     counter-increment: list;
 
     &:after {
@@ -112,6 +117,53 @@
 
     &:nth-child(3):after {
       right: -2px;
+    }
+  }
+}
+
+.toggle_text {
+  position: relative;
+  max-height: 350px;
+  overflow: hidden;
+  transition: max-height .5s;
+
+  &:after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 30px;
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, #1b1b1b 100%);
+    pointer-events: none;
+    transition: 0.5;
+  }
+
+  &.active:after {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.toggle_btn {
+  @include media-up(md) {
+    margin-top: 50px;
+  }
+
+  span {
+    &:last-child {
+      display: none;
+    }
+  }
+
+  &.active span {
+    &:first-child {
+      display: none;
+    }
+
+    &:last-child {
+      display: block;
     }
   }
 }

@@ -31,8 +31,7 @@ a {
   color: #fff;
   text-decoration: none;
 
-  &:hover,
-  &:focus {
+  &:hover {
     text-decoration: none;
     outline: none;
     color: $base;
@@ -40,9 +39,12 @@ a {
 }
 
 button {
-  outline: none;
+  outline: none !important;
   border: 0;
   box-shadow: none;
+  padding: 0;
+  color: inherit;
+  background: none;
 }
 
 

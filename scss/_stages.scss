@@ -9,7 +9,8 @@
     padding: 50px 0;
   }
 
-  & + .our_press_area {
+  & + .our_press_area,
+  & + .features_area {
     padding-top: 0;
   }
 }
