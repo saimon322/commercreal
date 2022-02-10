@@ -55,8 +55,6 @@ function commerc_real_scripts()
     wp_enqueue_script('bootstrap-js', get_template_directory_uri() . '/js/bootstrap.min.js', array(), _S_VERSION, true);
     
     wp_enqueue_script('owl-carousel-js', get_template_directory_uri() . '/vendors/owl-carousel/owl.carousel.min.js', array(), _S_VERSION, true);
-    wp_enqueue_script('isotope-imagesloaded-js', get_template_directory_uri() . '/vendors/isotope/imagesloaded.pkgd.min.js', array(), _S_VERSION, true);
-    wp_enqueue_script('isotope-isotope-js', get_template_directory_uri() . '/vendors/isotope/isotope.pkgd.min.js', array(), _S_VERSION, true);
     wp_enqueue_script('aos-js', get_template_directory_uri() . '/vendors/aos/aos.js', array(), _S_VERSION, true);
     wp_enqueue_script('gsap-js', get_template_directory_uri() . '/vendors/gsap/TweenMax.min.js', array(), _S_VERSION, true);
     wp_enqueue_script('page-flip-js', get_template_directory_uri() . '/js/page-flip.js', array(), _S_VERSION, true);

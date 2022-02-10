@@ -257,63 +257,16 @@
     }
     clients_slider();
 
-    /*-------------------------------------------------------------------------------
-      Full screen sections 
-    -------------------------------------------------------------------------------*/
-
-    function latest_project() {
-        if ($('.our_projects_area, .project_full_inner, .blog_inner_fillter, .blog_ms_inner').length) {
-            // Activate isotope in container
-            $(".projects_inner, .project_full_inner, .blog_ms_inner").imagesLoaded(function () {
-                $(".projects_inner, .project_full_inner, .blog_ms_inner").isotope({
-                    layoutMode: 'fitRows',
-                    animationOptions: {
-                        duration: 750,
-                        easing: 'linear'
-                    }
-                })
-            })
-
-            $(".blog_inner_fillter").imagesLoaded(function () {
-                $(".blog_inner_fillter").isotope({
-                    layoutMode: 'fitRows',
-                    animationOptions: {
-                        duration: 750,
-                        easing: 'linear'
-                    }
-                })
-            })
-
-            // Add isotope click function
-            $(".isotope_fillter li").on('click', function () {
-                $(".isotope_fillter li").removeClass("active");
-                $(this).addClass("active");
-
-                let selector = $(this).attr("data-filter");
-                $(".projects_inner, .project_full_inner, .blog_inner_fillter, .blog_ms_inner").isotope({
-                    layoutMode: 'fitRows',
-                    filter: selector,
-                    animationOptions: {
-                        duration: 450,
-                        easing: "linear",
-                        queue: false,
-                    }
-                })
-                return false;
-            })
-        }
-    }
-    latest_project();
-
-
-    $(".ms_project_inner").imagesLoaded(function () {
-        $(".ms_project_inner").isotope({
-            layoutMode: 'masonry',
-            percentPosition: true,
-            masonry: {
-                columnWidth: '.grid_sizer',
-            }
-        })
+    // Add isotope click function
+    $(".isotope_fillter li").on('click', function (e) {
+        e.preventDefault();
+        $(".isotope_fillter li").removeClass("active");
+        $(this).addClass("active");
+        
+        let selector = $(this).attr("data-filter");
+        $(".projects_column").hide();
+        $(".projects_column" + selector).fadeIn();
+        return false;
     })
 
     $('.open-menu').on('click', function () {
