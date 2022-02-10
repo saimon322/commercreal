@@ -116,7 +116,6 @@
             $(this).addClass('active');
             let filter = $(this).attr('data-filter');
             filterSlider.fadeOut(300);
-            filterSlider.fadeIn(300);
             setTimeout(() => {
                 for (let i = 0; i < slidesCount; i++) {
                     filterSlider.trigger('remove.owl.carousel', i);
@@ -130,6 +129,7 @@
                 })
 
                 filterSlider.trigger('refresh.owl.carousel');
+                filterSlider.fadeIn(300);
             }, 300);
             return false;
         })

@@ -155,31 +155,30 @@
 }
 
 .portfolio_filter {
-  position: relative;
-  top: 10px;
+  display: flex;
+  margin-top: 30px;
+  list-style: none;
 
   li {
-    display: inline-block;
-    margin-right: 30px;
-
-    a {
-      color: $pfont;
-      font-weight: 600;
-      @include transition;
-
-      @include media-up(lg) {
-        font-size: 12px;
-      }
-    }
+    flex: 1 1 0;
+    margin-right: 10px;
+    transition: flex-basis .25s;
 
     &:last-child {
       margin-right: 0px;
     }
 
-    &:hover,
     &.active {
-      a {
-        color: #fff;
+      flex-basis: 20%;
+    }
+
+    a {
+      color: #fff !important;
+      border: 1px solid $base;
+      background: none;
+  
+      @include media-down(sm) {
+        font-size: 20px;
       }
     }
   }

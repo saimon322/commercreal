@@ -1,7 +1,6 @@
 .btn {
   display: block;
   color: $base !important;
-  background-color: $blue;
   background: $blue;
   width: 100%;
   font-family: $bebas;
@@ -13,7 +12,7 @@
   border-radius: 0;
   text-align: center;
   outline: none !important;
-  box-shadow: none;
+  box-shadow: none !important;
   border: 0;
   text-shadow: $shadow;
   @include transition;
