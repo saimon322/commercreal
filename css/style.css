@@ -216,7 +216,6 @@ i:before {
 .btn {
   display: block;
   color: #f1d299 !important;
-  background-color: #003f46;
   background: #003f46;
   width: 100%;
   font-family: "Bebas Neue", sans-serif;
@@ -228,8 +227,8 @@ i:before {
   border-radius: 0;
   text-align: center;
   outline: none !important;
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
   border: 0;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   -webkit-transition: all 250ms ease 0s;
@@ -2503,30 +2502,39 @@ nav li:hover .mega-menu {
 }
 
 .portfolio_filter {
-  position: relative;
-  top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 30px;
+  list-style: none;
 }
 .portfolio_filter li {
-  display: inline-block;
-  margin-right: 30px;
-}
-.portfolio_filter li a {
-  color: #999999;
-  font-weight: 600;
-  -webkit-transition: all 250ms ease 0s;
-  -o-transition: all 250ms ease 0s;
-  transition: all 250ms ease 0s;
-}
-@media (min-width: 992px) {
-  .portfolio_filter li a {
-    font-size: 12px;
-  }
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 0px;
+          flex: 1 1 0;
+  margin-right: 10px;
+  -webkit-transition: -webkit-flex-basis 0.25s;
+  transition: -webkit-flex-basis 0.25s;
+  -o-transition: flex-basis 0.25s;
+  transition: flex-basis 0.25s;
+  transition: flex-basis 0.25s, -webkit-flex-basis 0.25s, -ms-flex-preferred-size 0.25s;
 }
 .portfolio_filter li:last-child {
   margin-right: 0px;
 }
-.portfolio_filter li:hover a, .portfolio_filter li.active a {
-  color: #fff;
+.portfolio_filter li.active {
+  -ms-flex-preferred-size: 20%;
+      flex-basis: 20%;
+}
+.portfolio_filter li a {
+  color: #fff !important;
+  border: 1px solid #f1d299;
+  background: none;
+}
+@media (max-width: 767px) {
+  .portfolio_filter li a {
+    font-size: 20px;
+  }
 }
 
 .back_btn {
@@ -2954,89 +2962,6 @@ nav li:hover .mega-menu {
           transform: scale(1.4);
 }
 
-/* End Our Projects css
-============================================================================================ */
-/* Masonry Project css
-============================================================================================ */
-.ms_project_area .pagination_dotted {
-  background: #fff;
-}
-
-.grid_sizer {
-  width: 25%;
-}
-
-.ms_project_inner .ms_p_item {
-  width: calc(100% / 4);
-  float: left;
-}
-.ms_project_inner .ms_p_item img {
-  width: 100%;
-  max-width: none;
-}
-.ms_project_inner .ms_p_item .hover {
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  width: 100%;
-  height: 100%;
-  -webkit-transition: 300ms ease;
-  -o-transition: 300ms ease;
-  transition: 300ms ease;
-  overflow: hidden;
-}
-.ms_project_inner .ms_p_item .hover i {
-  position: absolute;
-  right: -50px;
-  top: 20px;
-  color: #fff;
-  font-size: 48px;
-  -webkit-transition: 400ms ease;
-  -o-transition: 400ms ease;
-  transition: 400ms ease;
-}
-.ms_project_inner .ms_p_item .hover .project_text {
-  position: absolute;
-  left: 40px;
-  bottom: 45px;
-  color: #fff;
-}
-.ms_project_inner .ms_p_item .hover .project_text .h5 {
-  font-size: 14px;
-  font-weight: 500;
-  opacity: 0;
-  margin-bottom: -5px;
-  -webkit-transition: 400ms ease;
-  -o-transition: 400ms ease;
-  transition: 400ms ease;
-}
-.ms_project_inner .ms_p_item .hover .project_text .h4 {
-  font-size: 36px;
-  max-width: 340px;
-  margin-bottom: -5px;
-  opacity: 0;
-  -webkit-transition: 400ms ease;
-  -o-transition: 400ms ease;
-  transition: 400ms ease;
-  color: #fff;
-}
-.ms_project_inner .ms_p_item:hover .hover {
-  background: rgba(0, 0, 0, 0.5);
-}
-.ms_project_inner .ms_p_item:hover .hover i {
-  right: 30px;
-}
-.ms_project_inner .ms_p_item:hover .hover .project_text .h5 {
-  margin-bottom: 15px;
-  opacity: 1;
-}
-.ms_project_inner .ms_p_item:hover .hover .project_text .h4 {
-  margin-bottom: 0px;
-  opacity: 1;
-}
-
-/* End Masonry Project css
-============================================================================================ */
 .about_studio_area {
   padding-top: 50px;
 }
