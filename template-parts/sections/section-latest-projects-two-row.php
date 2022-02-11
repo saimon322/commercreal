@@ -8,15 +8,9 @@
             </div>
             <div class="float-md-right">
                 <ul class="portfolio_filter map_filter list">
-                    <li class="active" data-filter="*">
-                        <a href="#">Все</a>
-                    </li>
-                    <?php $projects_cats = get_terms(['taxonomy' => 'projects_cats', 'hide_empty' => true]);
-                    foreach ($projects_cats as $cat): ?>
-                        <li data-filter=".<?= $cat->slug; ?>">
-                            <a href="<?= $cat->slug; ?>"><?= $cat->name; ?></a>
-                        </li>
-                    <?php endforeach; ?>
+                    <li class="active" data-filter="*"><a class="btn" href="#">Все</a></li>
+                    <li data-filter=".realizovannye-proekty"><a class="btn" href="#">Реализованные</a></li>
+                    <li data-filter=".arenda"><a class="btn" href="#">Аренда</a></li>
                 </ul>
             </div>
         </div>
