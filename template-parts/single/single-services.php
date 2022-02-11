@@ -90,5 +90,5 @@ setup_postdata($post);
 get_template_part('template-parts/sections/section', 'home-features');
 wp_reset_postdata();
 
-get_template_part('template-parts/sections/section-latest-projects-two-row');
+get_template_part('template-parts/sections/section-latest-projects');
 get_template_part('template-parts/sections/section', 'form');

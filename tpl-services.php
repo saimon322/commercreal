@@ -32,5 +32,5 @@ get_header();
 get_template_part('template-parts/sections/section', 'all-services');
 get_template_part('template-parts/sections/section', 'stages');
 get_template_part('template-parts/sections/section', 'office');
-get_template_part('template-parts/sections/section-latest-projects-two-row');
+get_template_part('template-parts/sections/section-latest-projects');
 get_footer(); ?>
