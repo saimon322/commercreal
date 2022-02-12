@@ -25,6 +25,7 @@
       position: absolute;
       left: 0px;
       top: 50%;
+      color: #fff;
 
       a {
         font-size: 18px;
@@ -48,6 +49,10 @@
         position: absolute;
         top: 0;
         left: 0;
+      }
+
+      span br {
+        display: none;
       }
     }
   }

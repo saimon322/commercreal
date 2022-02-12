@@ -251,7 +251,7 @@ i:before {
   width: -moz-fit-content;
   width: fit-content;
   font-family: "Bebas Neue", sans-serif;
-  font-size: 24px;
+  font-size: 18px;
   line-height: 1;
   font-weight: bold;
   text-transform: uppercase;
@@ -1346,6 +1346,7 @@ nav li:hover .mega-menu {
   position: absolute;
   left: 0px;
   top: 50%;
+  color: #fff;
 }
 .project-banner .breadcrumb_inner .breadcrumb_link a {
   font-size: 18px;
@@ -1369,6 +1370,9 @@ nav li:hover .mega-menu {
   position: absolute;
   top: 0;
   left: 0;
+}
+.project-banner .breadcrumb_inner .breadcrumb_link span br {
+  display: none;
 }
 .project-banner .bread_bottom_text {
   position: absolute;
@@ -2221,7 +2225,7 @@ nav li:hover .mega-menu {
   color: #999999;
   letter-spacing: 0.21px;
   font-weight: normal;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   text-align: left;
 }
 @media (max-width: 575px) {
@@ -2354,13 +2358,6 @@ nav li:hover .mega-menu {
 
 .latest_project {
   padding-bottom: 50px;
-}
-.latest_project .l_text {
-  padding-bottom: 70px;
-  overflow: hidden;
-}
-.latest_project .pattern {
-  top: 50px;
 }
 
 .filter_slider {
@@ -2505,7 +2502,7 @@ nav li:hover .mega-menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 30px;
+  padding: 30px 0 70px;
   list-style: none;
 }
 .portfolio_filter li {
@@ -2736,12 +2733,10 @@ nav li:hover .mega-menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex: wrap;
-      -ms-flex: wrap;
-          flex: wrap;
   text-align: center;
   position: relative;
   z-index: 2;
+  overflow: hidden;
 }
 .prev_next_area .prev,
 .prev_next_area .next {
@@ -2973,9 +2968,6 @@ nav li:hover .mega-menu {
   .about_studio_area .breadcrumb_link {
     margin-bottom: 50px;
   }
-}
-.about_studio_area .pattern {
-  top: 40px;
 }
 
 .about_banner {
@@ -3267,13 +3259,7 @@ nav li:hover .mega-menu {
 }
 
 .about_map_area {
-  padding-bottom: 140px;
   overflow: hidden;
-}
-@media (max-width: 767px) {
-  .about_map_area {
-    padding-bottom: 70px;
-  }
 }
 .about_map_area .row {
   -webkit-box-align: center;
@@ -4501,16 +4487,19 @@ nav li:hover .mega-menu {
   color: #8d9aa8;
 }
 
-.s_blog_tag {
-  margin-top: 50px;
+.tags_area {
+  padding-bottom: 50px;
 }
-@media (max-width: 767px) {
-  .s_blog_tag {
-    margin-top: 30px;
-  }
+
+.s_blog_tag {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 .s_blog_tag a {
-  display: inline-block;
+  display: block;
   border: 1px solid #f1d299;
   color: #999999;
   font-size: 14px;
@@ -4522,8 +4511,7 @@ nav li:hover .mega-menu {
   -webkit-transition: all 250ms ease 0s;
   -o-transition: all 250ms ease 0s;
   transition: all 250ms ease 0s;
-  margin-right: 6px;
-  margin-bottom: 6px;
+  margin: 0 10px 10px 0;
 }
 .s_blog_tag a:hover {
   background: #f1d299;
@@ -5374,7 +5362,7 @@ label {
   width: 90%;
   color: #003f46;
   font-weight: bold;
-  font-size: 22px;
+  font-size: 20px;
   line-height: 1;
   opacity: 0;
   -webkit-transform: translateY(10px);
@@ -5698,22 +5686,6 @@ a.press_img_item:hover span {
   margin: 8.75rem auto;
 }
 
-.blog_main_text .s_blog_tag span {
-  display: inline-block;
-  border: 1px solid #8d9aa8;
-  color: #8d9aa8;
-  font-size: 14px;
-  line-height: 28px;
-  padding: 0px 16px;
-  text-decoration: none;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  -webkit-transition: 250ms ease 0s;
-  -o-transition: 250ms ease 0s;
-  transition: 250ms ease 0s;
-  margin-right: 6px;
-}
-
 #success .h3 {
   color: #999999;
 }
@@ -5776,10 +5748,6 @@ a.press_img_item:hover span {
 .prev_next_area .next .prev_next_area__cover {
   -webkit-filter: sepia(100%) hue-rotate(135deg) brightness(85%);
           filter: sepia(100%) hue-rotate(135deg) brightness(85%);
-}
-
-.page-template-tpl-projects .our_projects_area {
-  padding-top: 0;
 }
 
 .modal-dialog {

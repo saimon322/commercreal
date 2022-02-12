@@ -496,15 +496,16 @@
   }
 }
 
-.s_blog_tag {
-  margin-top: 50px;
+.tags_area {
+  padding-bottom: 50px;
+}
 
-  @include media-down(sm) {
-    margin-top: 30px;
-  }
+.s_blog_tag {
+  display: flex;
+  flex-wrap: wrap;
 
   a {
-    display: inline-block;
+    display: block;
     border: 1px solid $base;
     color: $pfont;
     font-size: 14px;
@@ -513,8 +514,7 @@
     text-decoration: none;
     box-shadow: none;
     @include transition;
-    margin-right: 6px;
-    margin-bottom: 6px;
+    margin: 0 10px 10px 0;
 
     &:hover {
       background: $base;

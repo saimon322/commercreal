@@ -30,14 +30,6 @@ $services = get_terms('services-cats'); ?>
                         <span>Подробнее</span>
                         <span>Свернуть</span>
                     </button>
-                    <?php $tags = wp_get_post_terms(get_the_ID(), 'services-tags');
-                    if ( ! empty($tags)): ?>
-                        <div class="s_blog_tag">
-                            <?php foreach ($tags as $tag): ?>
-                                <a href="<?= get_term_link($tag->term_id); ?>"><?= $tag->name; ?></a>
-                            <?php endforeach; ?>
-                        </div>
-                    <?php endif; ?>
                 </div>
                 <div class="col-lg-4">
                     <div class="sidebar">
@@ -92,3 +84,16 @@ wp_reset_postdata();
 
 get_template_part('template-parts/sections/section-latest-projects');
 get_template_part('template-parts/sections/section', 'form');
+    
+$tags = wp_get_post_terms(get_the_ID(), 'services-tags');
+if ( ! empty($tags)): ?>
+    <div class="tags_area">
+        <div class="container">
+            <div class="s_blog_tag">
+                <?php foreach ($tags as $tag): ?>
+                    <a href="<?= get_term_link($tag->term_id); ?>"><?= $tag->name; ?></a>
+                <?php endforeach; ?>
+            </div>
+        </div>
+    </div>
+<?php endif; ?>

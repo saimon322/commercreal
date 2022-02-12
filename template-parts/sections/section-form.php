@@ -17,9 +17,9 @@
                     <img src="<?= get_template_directory_uri(); ?>/img/phone.png" alt="" class="img-phone">
                     <p>Вероника перезвонит Вам в течении одной минуты.</p>
                     <form class="press_form form-contact">
-                        <input type="text" name="phone" placeholder="Телефон для связи">
-                        <input type="text" name="name" placeholder="Как к Вам обращаться?">
-                        <input type="email" name="email" placeholder="Электронная почта">
+                        <input type="text" name="phone" placeholder="Телефон для связи" required>
+                        <input type="text" name="name" placeholder="Как к Вам обращаться?" required>
+                        <input type="email" name="email" placeholder="Электронная почта" required>
                         <button type="submit" class="btn">
                             Отправить
                         </button>
