@@ -1,25 +1,27 @@
 <section class="our_projects_area">
-    <div class="blog_grid_inner">
-        <div class="row blog_inner_fillter">
-            <?php if (have_posts()) :
-                while (have_posts()) : the_post(); ?>
-                    <div class="col-lg-3 col-md-4 col-sm-6 news">
-                        <div class="blog_g_item">
-                            <a href="<?= get_the_permalink(); ?>" class="press_img_item">
-                                <div class="press_img">
-                                    <?php the_post_thumbnail('project-thumb', ['class' => 'img-fluid']); ?>
-                                    <div class="hover"></div>
+    <div class="filter_slider owl-carousel">      
+        <?php if (have_posts()) :
+            $count = 0; ?>
+            <div class="items">
+                <?php while (have_posts()) : the_post();
+                    echo ($count % 2) == 0 && $count != 0 ? '</div><div class="items">' : ''; ?>
+                    <div class="item">
+                        <a href="<?= get_the_permalink(); ?>" class="projects_item">
+                            <?php the_post_thumbnail('project-thumb', ['class' => 'img-fluid']); ?>
+                            <div class="hover">
+                                <i class="ion-android-arrow-forward"></i>
+                                <div class="project_text">
+                                    <p class="h4"><?php the_title(); ?></p>
                                 </div>
-                                <div class="date">
-                                    <span><?php the_field('type'); ?></span>
-                                </div>
-                                <h4><?php the_title(); ?></h4>
-                            </a>
-                        </div>
+                            </div>
+                        </a>
                     </div>
-                <?php endwhile;
-            endif;
-            ?>
-        </div>
+                    <?php $count++;
+                endwhile; ?>
+            </div>
+        <?php endif; ?>
+    </div>
+    <div class="container">
+        <a class="view_btn" href="/uslugi/">Подробнее</a>
     </div>
 </section>

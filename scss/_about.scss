@@ -9,10 +9,6 @@
       margin-bottom: 50px;
     }
   }
-
-  .pattern {
-    top: 40px;
-  }
 }
 
 .about_banner {
@@ -301,12 +297,7 @@
 }
 
 .about_map_area {
-  padding-bottom: 140px;
   overflow: hidden;
-
-  @include media-down(sm) {
-    padding-bottom: 70px;
-  }
 
   .row {
     align-items: center;

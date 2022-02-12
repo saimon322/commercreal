@@ -44,13 +44,6 @@
         })
     })
 
-
-    /*-------------------------------------------------------------------------------
-      Ajax Forms
-    -------------------------------------------------------------------------------*/
-
-
-
     if ($('.js-form').length) {
         $('.js-form').each(function () {
             $(this).validate({
@@ -116,6 +109,7 @@
             $(this).addClass('active');
             let filter = $(this).attr('data-filter');
             filterSlider.fadeOut(300);
+            console.log(filterSlider.items);
             setTimeout(() => {
                 for (let i = 0; i < slidesCount; i++) {
                     filterSlider.trigger('remove.owl.carousel', i);

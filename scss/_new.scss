@@ -254,19 +254,6 @@ a.press_img_item:hover span {
   margin: 8.75rem auto;
 }
 
-.blog_main_text .s_blog_tag span {
-  display: inline-block;
-  border: 1px solid #8d9aa8;
-  color: #8d9aa8;
-  font-size: 14px;
-  line-height: 28px;
-  padding: 0px 16px;
-  text-decoration: none;
-  box-shadow: none;
-  transition: 250ms ease 0s;
-  margin-right: 6px;
-}
-
 #success .h3 {
   color: #999999;
 }
@@ -327,10 +314,6 @@ a.press_img_item:hover span {
 
 .prev_next_area .next .prev_next_area__cover {
   filter: sepia(100%) hue-rotate(135deg) brightness(85%);
-}
-
-.page-template-tpl-projects .our_projects_area {
-  padding-top: 0;
 }
 
 .modal-dialog {

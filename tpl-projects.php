@@ -9,7 +9,7 @@ get_header();
     </div>
 </section>
 
-<section class="about_studio_area section-pad-bot pattern-section">
+<section class="about_studio_area pattern-section">
     <div class="container">
         <?php get_template_part('template-parts/animation/pattern'); ?>
         <div class="ab_studio_text">

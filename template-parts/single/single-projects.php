@@ -6,13 +6,16 @@ wp_enqueue_style('pannellum-css');
 
 <section class="project-banner" style="background-image: url(<?php the_field('baner'); ?>);">
     <div class="container">
-        <?php get_template_part('template-parts/breadcrumbs/breadcrumb-projects', null,
-            array(
-                'title'       => get_field('baner_headline'),
-                'parent_name' => terms_names_to_string($terms),
-                'parent_slug' => '#'
-            )
-        ); ?>
+        <div class="breadcrumb_inner">
+            <div class="breadcrumb_link">
+                <a href="/">Главная</a>
+                <a class="active" href="/proekty/">Проекты</a>
+                <span><?= get_field('baner_headline') ?></span>
+            </div>
+            <div class="bread_bottom_text">
+                <h1><?= get_field('baner_headline') ?></h1>
+            </div>
+        </div>
     </div>
     <div class="page_lines white_br">
         <div class="container">
