@@ -105,47 +105,47 @@
             $('.portfolio_filter li.active').removeClass('active');
             $(this).addClass('active');
             let filter = $(this).attr('data-filter');
-            filterSlider.fadeOut(300);
-            setTimeout(() => {
-                for (let i = 0; i < slidesCount; i++) {
-                    filterSlider.trigger('remove.owl.carousel', i);
-                }
 
-                if (filter == "*") {
-                    const newSlides = sliderClone.find('.items');
-                    slidesCount = newSlides.length;
-                    newSlides.each(function() {
-                        filterSlider.trigger('add.owl.carousel', $(this).clone());
-                    })
-                } else {
-                    const newSlides = sliderClone.find('.item' + filter);
-                    let newSlidesWrap = $('<div class="items"></div>');
-                    let isLastSlideAdded = false;
-                    let newSlide;
-                    slidesCount = 0;
-                    for (let i = 0; i < newSlides.length; i++) {
-                        newSlide = $(newSlides[i]).clone();
-                        if (i % 2 == 0) {
-                            newSlidesWrap = $('<div class="items"></div>');
-                            newSlidesWrap.append(newSlide);
-                            isLastSlideAdded = false;
-                        } else {
-                            newSlidesWrap.append(newSlide);
-                            filterSlider.trigger('add.owl.carousel', newSlidesWrap);
-                            slidesCount ++;
-                            isLastSlideAdded = true;
-                        }
-                    }
-                    if (!isLastSlideAdded) {
-                        newSlidesWrap.append(newSlide.clone());
+            for (let i = 0; i < slidesCount; i++) {
+                filterSlider.trigger('remove.owl.carousel', i);
+            }
+
+            if (filter == "*") {
+                const newSlides = sliderClone.find('.items');
+                slidesCount = newSlides.length;
+                newSlides.each(function() {
+                    filterSlider.trigger('add.owl.carousel', $(this).clone());
+                })
+            } else {
+                const newSlides = sliderClone.find('.item' + filter);
+                let newSlidesWrap = $('<div class="items"></div>');
+                let isLastSlideAdded = false;
+                let newSlide;
+                slidesCount = 0;
+                for (let i = 0; i < newSlides.length; i++) {
+                    newSlide = $(newSlides[i]).clone();
+                    if (i % 2 == 0) {
+                        newSlidesWrap = $('<div class="items"></div>');
+                        newSlidesWrap.append(newSlide);
+                        isLastSlideAdded = false;
+                    } else {
+                        newSlidesWrap.append(newSlide);
                         filterSlider.trigger('add.owl.carousel', newSlidesWrap);
                         slidesCount ++;
+                        isLastSlideAdded = true;
                     }
                 }
+                if (!isLastSlideAdded) {
+                    newSlidesWrap.append(newSlide.clone());
+                    filterSlider.trigger('add.owl.carousel', newSlidesWrap);
+                    slidesCount ++;
+                }
+            }
 
-                filterSlider.trigger('refresh.owl.carousel');
-                filterSlider.fadeIn(300);
-            }, 300);
+            filterSlider.trigger('refresh.owl.carousel');
+            filterSlider.fadeOut(300);
+            filterSlider.fadeIn(300);
+                
             return false;
         })
     }
