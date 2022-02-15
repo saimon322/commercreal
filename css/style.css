@@ -1057,6 +1057,7 @@ nav li:hover .mega-menu {
   font-size: 15px;
   font-weight: bold;
   margin-bottom: 15px;
+  text-transform: uppercase;
 }
 .mega-menu__item ul {
   font-size: 12px;

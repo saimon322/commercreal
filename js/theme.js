@@ -11,11 +11,7 @@
     mobileDevice && window.addEventListener('scroll', appHeight)    
 
     let nav_offset_top = $('header').height() + 100;
-    /*-------------------------------------------------------------------------------
-      Navbar 
-    -------------------------------------------------------------------------------*/
-
-    //* Navbar Fixed  
+    
     function navbarFixed() {
         if ($('.header').length) {
             $(window).scroll(function () {
@@ -66,9 +62,7 @@
         })
     }
 
-    /*----------------------------------------------------*/
-    /*  Projects Slider
-    /*----------------------------------------------------*/
+    // Portfolio filter slider
     const filterSliderEl = $('.filter_slider');
     if (filterSliderEl.length) {            
         const sliderClone = filterSliderEl.clone();
@@ -76,12 +70,12 @@
         const filterSlider = filterSliderEl.owlCarousel({
             loop: true,
             margin: 6,
-            items: 4,
+            items: 5,
             nav: true,
             autoplay: true,
             autoplayHoverPause: true,
             smartSpeed: 1500,
-            dots: true,
+            dots: false,
             // navContainer: '.filter_slider',
             navText: [
                 '<i class="ion-ios-arrow-left"></i>', 
@@ -100,6 +94,9 @@
                 },
                 1200: {
                     items: 4,
+                },
+                1500: {
+                    items: 5,
                 }
             }
         })
@@ -108,30 +105,51 @@
             $('.portfolio_filter li.active').removeClass('active');
             $(this).addClass('active');
             let filter = $(this).attr('data-filter');
-            filterSlider.fadeOut(300);
-            console.log(filterSlider.items);
-            setTimeout(() => {
-                for (let i = 0; i < slidesCount; i++) {
-                    filterSlider.trigger('remove.owl.carousel', i);
-                }
 
-                let selector = (filter == "*") ? '.items' : ('.item' + filter);
-                let newSlides = sliderClone.find(selector);
+            for (let i = 0; i < slidesCount; i++) {
+                filterSlider.trigger('remove.owl.carousel', i);
+            }
+
+            if (filter == "*") {
+                const newSlides = sliderClone.find('.items');
                 slidesCount = newSlides.length;
                 newSlides.each(function() {
                     filterSlider.trigger('add.owl.carousel', $(this).clone());
                 })
+            } else {
+                const newSlides = sliderClone.find('.item' + filter);
+                let newSlidesWrap = $('<div class="items"></div>');
+                let isLastSlideAdded = false;
+                let newSlide;
+                slidesCount = 0;
+                for (let i = 0; i < newSlides.length; i++) {
+                    newSlide = $(newSlides[i]).clone();
+                    if (i % 2 == 0) {
+                        newSlidesWrap = $('<div class="items"></div>');
+                        newSlidesWrap.append(newSlide);
+                        isLastSlideAdded = false;
+                    } else {
+                        newSlidesWrap.append(newSlide);
+                        filterSlider.trigger('add.owl.carousel', newSlidesWrap);
+                        slidesCount ++;
+                        isLastSlideAdded = true;
+                    }
+                }
+                if (!isLastSlideAdded) {
+                    newSlidesWrap.append(newSlide.clone());
+                    filterSlider.trigger('add.owl.carousel', newSlidesWrap);
+                    slidesCount ++;
+                }
+            }
 
-                filterSlider.trigger('refresh.owl.carousel');
-                filterSlider.fadeIn(300);
-            }, 300);
+            filterSlider.trigger('refresh.owl.carousel');
+            filterSlider.fadeOut(300);
+            filterSlider.fadeIn(300);
+                
             return false;
         })
     }
-
-    /*----------------------------------------------------*/
-    /*  Explor Room Slider
-    /*----------------------------------------------------*/
+    
     function testimonials_slider() {
         const testSlider = $('.testimonials_slider');
         let activeSlide = 1;
@@ -168,10 +186,7 @@
         }
     }
     testimonials_slider();
-
-    /*----------------------------------------------------*/
-    /*  Explor Room Slider
-    /*----------------------------------------------------*/
+    
     function team_slider() {
         if ($('.team_slider').length) {
             $('.team_slider').owlCarousel({
@@ -204,10 +219,7 @@
         }
     }
     team_slider();
-
-    /*----------------------------------------------------*/
-    /*  Villa Slider
-    /*----------------------------------------------------*/
+    
     function villa_slider() {
         if ($('.villa_slider').length) {
             $('.villa_slider').owlCarousel({
@@ -225,14 +237,7 @@
         }
     }
     villa_slider();
-
-    /*----------------------------------------------------*/
-    /*  Villa Slider
-    /*----------------------------------------------------*/
-
-    /*----------------------------------------------------*/
-    /*  Explor Room Slider
-    /*----------------------------------------------------*/
+    
     function clients_slider() {
         const clietnsSlider = $('.clients_slider');
         if (clietnsSlider.length) {
@@ -251,7 +256,6 @@
     }
     clients_slider();
 
-    // Add isotope click function
     $(".isotope_fillter li").on('click', function (e) {
         e.preventDefault();
         $(".isotope_fillter li").removeClass("active");
@@ -276,9 +280,6 @@
         $(this).closest('li').children('ul').slideToggle(200);
         return false;
     })
-
-    $('#pp-nav').remove().appendTo('.animsition').prepend('<div class="pp-nav-up icon-chevron-up"></div>').append('<div class="pp-nav-down icon-chevron-down"></div>').addClass('white hidden-xs');
-
     
     $('.spec_wrapper').hover(function () {
         $('.spec_wrapper').removeClass('col-lg-3 col-lg-4 col-lg-6');
