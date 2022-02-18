@@ -52,6 +52,17 @@
   }
 }
 
+.section-pad-top {
+  padding-top: 120px;
+
+  @include media-down(md) {
+    padding-top: 100px;
+  }
+
+  @include media-down(sm) {
+    padding-top: 70px;
+  }
+}
 
 .section-pad-bot {
   padding-bottom: 120px;
@@ -247,7 +258,7 @@ a.press_img_item:hover span {
 }
 
 .modal {
-  z-index: 999999999;
+  z-index: 99999;
 }
 
 .modal-dialog {

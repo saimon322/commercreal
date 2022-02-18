@@ -29,6 +29,8 @@
 }
 
 .sidebar {
+  margin-top: 50px;
+  
   @include media-up(lg) {
     position: sticky;
     top: 75px;

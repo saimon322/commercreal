@@ -67,18 +67,6 @@
 		margin: 0px auto 20px;
 	}
 
-	.f_widgets_item:nth-child(5) .f_link {
-		margin-left: 40px;
-	}
-
-	.f_widgets_item:nth-child(3) .f_link {
-		margin-left: 40px;
-	}
-
-	.f_widgets_item:nth-child(4) .f_link {
-		margin-left: 40px;
-	}
-
 	.projects_item .hover .project_text {
 		left: 20px;
 		bottom: 40px;
@@ -754,11 +742,6 @@
 
 	.portfolio_filter li {
 		margin-right: 12px;
-	}
-
-	.footer_area {
-		padding-left: 15px;
-		padding-right: 15px;
 	}
 
 	.isotope_fillter li {
