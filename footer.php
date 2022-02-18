@@ -1,53 +1,57 @@
 <?php $options = get_field('contacts', 'options'); ?>
 <footer class="footer">
     <div class="footer_area">
-        <div class="footer_widgets row m0">
-            <div class="f_widgets_item">
-                <a class="logo footer-logo" href="/">
-                    <span>COMMERC REAL</span>
-                </a>
-            </div>
-            <div class="f_widgets_item">
-                <div class="f_contact">
-                    <div class="f_title">
-                        <p class="h3">Контакты</p>
-                    </div>
-                    <?= $options['address']; ?>
-                    <br>
-                    <a href="mailto:<?= $options['email']; ?>">
-                        <?= $options['email']; ?>
+        <div class="container">
+            <div class="footer_widgets row m0">
+                <div class="f_widgets_item">
+                    <a class="logo footer-logo" href="/">
+                        <span>COMMERC REAL</span>
                     </a>
-                    <a href="tel:<?= $options['phone']; ?>">
-                        <?= $options['phone']; ?>
-                    </a>
-                    <br>
-                    Время работы:
-                    <p><?= $options['work_time']; ?></p>
-                    <p><?= $options['work_days']; ?></p>
                 </div>
+                <div class="f_widgets_item">
+                    <div class="f_contact">
+                        <div class="f_title">
+                            <p class="h3">Контакты</p>
+                        </div>
+                        <?= $options['address']; ?>
+                        <br>
+                        <a href="mailto:<?= $options['email']; ?>">
+                            <?= $options['email']; ?>
+                        </a>
+                        <a href="tel:<?= $options['phone']; ?>">
+                            <?= $options['phone']; ?>
+                        </a>
+                        <br>
+                        Время работы:
+                        <p><?= $options['work_time']; ?></p>
+                        <p><?= $options['work_days']; ?></p>
+                    </div>
+                </div>
+                <?php wp_nav_menu([
+                    'theme_location' => 'footer-menu',
+                    'container'      => '',
+                    'items_wrap'     => '%3$s',
+                    'walker'         => new Footer_Walker_Nav_Menu(),
+                ]); ?>
             </div>
-            <?php wp_nav_menu([
-                'theme_location' => 'footer-menu',
-                'container'      => '',
-                'items_wrap'     => '%3$s',
-                'walker'         => new Footer_Walker_Nav_Menu(),
-            ]); ?>
         </div>
     </div>
     <div class="footer_bottom">
-        <div class="footer-copy">
-            <?= $options['copyright']; ?>
-        </div>
-        <?php if ($options['socials']): ?>
-            <div class="footer-socials socials">
-                <?php foreach ($options['socials'] as $social): ?>
-                    <a href="<?= esc_url($social['link']); ?>" class="social">
-                        <img src="<?= get_stylesheet_directory_uri(); ?>/img/icon/social-<?= $social['type']; ?>.png" alt="">
-                        <img src="<?= get_stylesheet_directory_uri(); ?>/img/icon/social-<?= $social['type']; ?>-hover.png" alt="">
-                    </a>
-                <?php endforeach; ?>
+        <div class="container">
+            <div class="footer-copy">
+                <?= $options['copyright']; ?>
             </div>
-        <?php endif; ?>
+            <?php if ($options['socials']): ?>
+                <div class="footer-socials socials">
+                    <?php foreach ($options['socials'] as $social): ?>
+                        <a href="<?= esc_url($social['link']); ?>" class="social">
+                            <img src="<?= get_stylesheet_directory_uri(); ?>/img/icon/social-<?= $social['type']; ?>.png" alt="">
+                            <img src="<?= get_stylesheet_directory_uri(); ?>/img/icon/social-<?= $social['type']; ?>-hover.png" alt="">
+                        </a>
+                    <?php endforeach; ?>
+                </div>
+            <?php endif; ?>
+        </div>
     </div>
 </footer>
 

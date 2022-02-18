@@ -15,7 +15,7 @@ get_header();
     </div>
 </section>
 
-<section class="about_studio_area">
+<section class="about_studio_area section-pad-top">
     <div class="container">
         <div class="breadcrumb_link">
             <a href="/">Главная</a>

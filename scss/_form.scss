@@ -1,7 +1,11 @@
 .press_img_item {
   position: relative;
-  height: 100%;
+  height: 615px;
   box-shadow: $shadow;
+
+  @include media-down(md) {
+    height: 575px;
+  }
 
   @include media-down(sm) {
     height: 300px;
