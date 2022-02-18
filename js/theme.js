@@ -102,49 +102,52 @@
         })
     
         $('.portfolio_filter li').on('click', function () {
+            filterSlider.fadeOut(500);
+
             $('.portfolio_filter li.active').removeClass('active');
             $(this).addClass('active');
-            let filter = $(this).attr('data-filter');
 
-            for (let i = 0; i < slidesCount; i++) {
-                filterSlider.trigger('remove.owl.carousel', i);
-            }
+            setTimeout(() => {     
+                let filter = $(this).attr('data-filter');           
+                for (let i = 0; i < slidesCount; i++) {
+                    filterSlider.trigger('remove.owl.carousel', i);
+                }
 
-            if (filter == "*") {
-                const newSlides = sliderClone.find('.items');
-                slidesCount = newSlides.length;
-                newSlides.each(function() {
-                    filterSlider.trigger('add.owl.carousel', $(this).clone());
-                })
-            } else {
-                const newSlides = sliderClone.find('.item' + filter);
-                let newSlidesWrap = $('<div class="items"></div>');
-                let isLastSlideAdded = false;
-                let newSlide;
-                slidesCount = 0;
-                for (let i = 0; i < newSlides.length; i++) {
-                    newSlide = $(newSlides[i]).clone();
-                    if (i % 2 == 0) {
-                        newSlidesWrap = $('<div class="items"></div>');
-                        newSlidesWrap.append(newSlide);
-                        isLastSlideAdded = false;
-                    } else {
-                        newSlidesWrap.append(newSlide);
+                if (filter == "*") {
+                    const newSlides = sliderClone.find('.items');
+                    slidesCount = newSlides.length;
+                    newSlides.each(function() {
+                        filterSlider.trigger('add.owl.carousel', $(this).clone());
+                    })
+                } else {
+                    const newSlides = sliderClone.find('.item' + filter);
+                    let newSlidesWrap = $('<div class="items"></div>');
+                    let isLastSlideAdded = false;
+                    let newSlide;
+                    slidesCount = 0;
+                    for (let i = 0; i < newSlides.length; i++) {
+                        newSlide = $(newSlides[i]).clone();
+                        if (i % 2 == 0) {
+                            newSlidesWrap = $('<div class="items"></div>');
+                            newSlidesWrap.append(newSlide);
+                            isLastSlideAdded = false;
+                        } else {
+                            newSlidesWrap.append(newSlide);
+                            filterSlider.trigger('add.owl.carousel', newSlidesWrap);
+                            slidesCount ++;
+                            isLastSlideAdded = true;
+                        }
+                    }
+                    if (!isLastSlideAdded) {
+                        newSlidesWrap.append(newSlide.clone());
                         filterSlider.trigger('add.owl.carousel', newSlidesWrap);
                         slidesCount ++;
-                        isLastSlideAdded = true;
                     }
                 }
-                if (!isLastSlideAdded) {
-                    newSlidesWrap.append(newSlide.clone());
-                    filterSlider.trigger('add.owl.carousel', newSlidesWrap);
-                    slidesCount ++;
-                }
-            }
 
-            filterSlider.trigger('refresh.owl.carousel');
-            filterSlider.fadeOut(300);
-            filterSlider.fadeIn(300);
+                filterSlider.trigger('refresh.owl.carousel');
+                filterSlider.fadeIn(500);
+            }, 500)
                 
             return false;
         })
@@ -527,6 +530,12 @@ function accordion(e, toggleBtn) {
         toggleText.style.maxHeight = null;
     } else {
         toggleText.style.maxHeight = toggleText.scrollHeight + "px";
+    }
+
+    if (!toggleBtn.classList.contains('active')) {
+        const scrollPos = jQuery(toggleText).offset().top - 200;
+        console.log(scrollPos);
+        jQuery('html, body').animate({scrollTop: scrollPos}, 500);
     }
 
     setTimeout(() => {

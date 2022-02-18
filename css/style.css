@@ -251,7 +251,7 @@ i:before {
   width: -moz-fit-content;
   width: fit-content;
   font-family: "Bebas Neue", sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1;
   font-weight: bold;
   text-transform: uppercase;
@@ -287,7 +287,7 @@ i:before {
   -webkit-transition: background-image 0.15s;
   -o-transition: background-image 0.15s;
   transition: background-image 0.15s;
-  z-index: 99999;
+  z-index: 999999;
 }
 .cursor--hovered {
   background-image: url("../img/cursor-hover.svg");
@@ -461,9 +461,14 @@ i:before {
 
 .press_img_item {
   position: relative;
-  height: 100%;
+  height: 615px;
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+@media (max-width: 991px) {
+  .press_img_item {
+    height: 575px;
+  }
 }
 @media (max-width: 767px) {
   .press_img_item {
@@ -1124,12 +1129,12 @@ nav li:hover .mega-menu {
 }
 
 .footer_area {
-  padding: 50px;
+  padding: 50px 0;
   border-top: 1px solid #f1d299;
 }
 @media (max-width: 767px) {
   .footer_area {
-    padding: 20px;
+    padding: 20px 0;
   }
 }
 
@@ -1140,19 +1145,16 @@ nav li:hover .mega-menu {
           justify-content: space-between;
 }
 
+.f_widgets_item {
+  min-width: 100px;
+}
 @media (min-width: 1430px) {
   .f_widgets_item {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 20%;
-            flex: 0 0 20%;
     max-width: 20%;
   }
 }
 @media (max-width: 1199px) {
   .f_widgets_item {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 20%;
-            flex: 0 0 20%;
     max-width: 20%;
   }
 }
@@ -1248,6 +1250,9 @@ nav li:hover .mega-menu {
   margin-bottom: 0px;
 }
 
+.footer-logo span {
+  margin-left: 0;
+}
 @media (min-width: 768px) {
   .footer-logo span {
     font-size: 20px;
@@ -1262,29 +1267,36 @@ nav li:hover .mega-menu {
 .footer_bottom {
   overflow: hidden;
   border-top: 2px solid #282828;
+  padding: 50px 0;
+  border-top: 1px solid #f1d299;
+}
+.footer_bottom .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 50px;
-  border-top: 1px solid #f1d299;
 }
 @media (max-width: 991px) {
-  .footer_bottom {
+  .footer_bottom .container {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
 }
 @media (max-width: 767px) {
-  .footer_bottom {
+  .footer_bottom .container {
     padding: 30px 20px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
+  }
+}
+@media (max-width: 767px) {
+  .footer_bottom {
+    padding: 30px 0;
   }
 }
 
@@ -1296,7 +1308,7 @@ nav li:hover .mega-menu {
 @media (min-width: 992px) {
   .footer-copy {
     position: absolute;
-    left: 50px;
+    left: 20px;
   }
 }
 .footer-copy p {
@@ -2520,9 +2532,15 @@ nav li:hover .mega-menu {
 .portfolio_filter li:last-child {
   margin-right: 0px;
 }
-.portfolio_filter li.active {
+.portfolio_filter li:hover, .portfolio_filter li.active {
   -ms-flex-preferred-size: 20%;
       flex-basis: 20%;
+}
+.portfolio_filter li:hover a, .portfolio_filter li.active a {
+  color: #fff !important;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(-78.85%, rgba(0, 63, 70, 0)), to(rgba(0, 63, 70, 0.3)));
+  background: -o-linear-gradient(top, rgba(0, 63, 70, 0) -78.85%, rgba(0, 63, 70, 0.3) 100%);
+  background: linear-gradient(180deg, rgba(0, 63, 70, 0) -78.85%, rgba(0, 63, 70, 0.3) 100%);
 }
 .portfolio_filter li a {
   color: #fff !important;
@@ -4066,6 +4084,9 @@ nav li:hover .mega-menu {
      object-fit: cover;
 }
 
+.sidebar {
+  margin-top: 50px;
+}
 @media (min-width: 992px) {
   .sidebar {
     position: -webkit-sticky;
@@ -5489,6 +5510,20 @@ label {
   }
 }
 
+.section-pad-top {
+  padding-top: 120px;
+}
+@media (max-width: 991px) {
+  .section-pad-top {
+    padding-top: 100px;
+  }
+}
+@media (max-width: 767px) {
+  .section-pad-top {
+    padding-top: 70px;
+  }
+}
+
 .section-pad-bot {
   padding-bottom: 120px;
 }
@@ -5680,7 +5715,7 @@ a.press_img_item:hover span {
 }
 
 .modal {
-  z-index: 999999999;
+  z-index: 99999;
 }
 
 .modal-dialog {
