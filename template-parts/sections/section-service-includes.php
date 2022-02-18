@@ -10,7 +10,6 @@
                                 <?php if ( ! empty($include['img'])): ?>
                                     <img src="<?= esc_url($include['img']['url']); ?>" alt="<?= esc_attr($include['img']['alt']); ?>"/>
                                 <?php endif; ?>
-                                <img src="<?= get_template_directory_uri(); ?>/img/features/feature-mini-1.jpg" alt="">
                                 <p><?= $include['title']; ?></p>
                             </div>
                             <div class="service-part__content">
