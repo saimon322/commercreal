@@ -82,8 +82,6 @@
     }
 
     img {
-      max-width: unset;
-
       @include media-down(sm) {
         margin: 0 !important;
       }
