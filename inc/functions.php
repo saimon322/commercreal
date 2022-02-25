@@ -116,7 +116,7 @@ add_action('acf/init', 'init_services_menu');
 
 function get_post_primary_category($post_id = null)
 {
-    $post_id = is_null($post_id) ? get_the_ID() : $post_id; 
+    $post_id         = is_null($post_id) ? get_the_ID() : $post_id;
     $primary_term_id = yoast_get_primary_term_id('category', $post_id);
     
     if ($primary_term_id) {
@@ -158,13 +158,106 @@ function get_random_post_from_cpt($post_type)
     return $post_query->posts[0] ?? null;
 }
 
-function callback($buffer) {
-  return str_prepos($buffer);
+function callback($buffer)
+{
+    return str_prepos($buffer);
 }
 
-function buffer_start() { ob_start("callback"); }
+function buffer_start()
+{
+    ob_start("callback");
+}
 
-function buffer_end() { ob_end_flush(); }
+function buffer_end()
+{
+    ob_end_flush();
+}
 
 add_action('wp_head', 'buffer_start');
 add_action('wp_footer', 'buffer_end');
+
+
+function acf_load_broker_field_choices($field)
+{
+    
+    $field['choices'] = array();
+    
+    $choices = get_field('brokers', 'option');
+    
+    if (is_array($choices)) {
+        
+        foreach ($choices as $choice) {
+            
+            $field['choices'][$choice['id']] = $choice['name'];
+            
+        }
+        
+    }
+    
+    return $field;
+}
+
+add_filter('acf/load_field/name=broker', 'acf_load_broker_field_choices');
+
+
+function acf_load_stages_of_cooperation_field_choices($field)
+{
+    
+    $field['choices'] = array();
+    
+    $choices = get_field('stages_of_cooperation_option', 'option');
+    
+    if (is_array($choices)) {
+        
+        foreach ($choices as $choice) {
+            
+            $field['choices'][$choice['id']] = 'Id: ' . $choice['id'];
+            
+        }
+        
+    }
+    
+    return $field;
+}
+
+add_filter('acf/load_field/name=stages_of_cooperation', 'acf_load_stages_of_cooperation_field_choices');
+
+function get_broker()
+{
+    $broker_id = get_field('broker');
+    
+    if ( ! $broker_id) {
+        return [];
+    }
+    
+    $brokers = get_field('brokers', 'option');
+    
+    if (is_array($brokers)) {
+        
+        foreach ($brokers as $broker) {
+            if ($broker['id'] == $broker_id) {
+                return $broker;
+            }
+        }
+    }
+    
+    return [];
+}
+
+function get_stages_of_cooperation()
+{
+    $stage_id = get_field('stages_of_cooperation');
+    
+    $stages = get_field('stages_of_cooperation_option', 'option');
+    
+    if (is_array($stages)) {
+        
+        foreach ($stages as $stage) {
+            if ($stage['id'] == $stage_id) {
+                return $stage['stage'];
+            }
+        }
+    }
+    
+    return [];
+}

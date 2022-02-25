@@ -5524,6 +5524,20 @@ label {
   }
 }
 
+.section-pad-top {
+  padding-top: 120px;
+}
+@media (max-width: 991px) {
+  .section-pad-top {
+    padding-top: 100px;
+  }
+}
+@media (max-width: 767px) {
+  .section-pad-top {
+    padding-top: 70px;
+  }
+}
+
 .section-pad-bot {
   padding-bottom: 120px;
 }

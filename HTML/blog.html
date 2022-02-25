@@ -499,6 +499,59 @@
         </div>
     </div>
     
+    <!-- Modals -->
+    <div class="modal fade"
+         id="modal-form"
+         tabindex="-1"
+         role="dialog"
+         aria-labelledby="exampleModalLongTitle"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-title h5"
+                            id="exampleModalLongTitle">Закажите обратный звонок
+                    </div>
+                    <button type="button"
+                            class="close"
+                            data-dismiss="modal"
+                            aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form class="form-contact"
+                            method="POST">
+                        <div class="form-row no-gutters">
+                            <div class="form-group w-100">
+                                <input class="form-control"
+                                        type="text"
+                                        name="name"
+                                        placeholder="Как к Вам обращаться?"
+                                        required="required">
+                            </div>
+                            <div class="form-group w-100">
+                                <input class="form-control"
+                                        type="text"
+                                        name="phone"
+                                        placeholder="Телефон для связи"
+                                        required="required">
+                            </div>
+                            <div class="w-100">
+                                <p>Наш представитель свяжется с вами для консультации</p>
+                            </div>
+                            <div class="text-center w-100 mt-3">
+                                <button class="btn"
+                                        type="submit">Отправить
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
     <!-- Custom cursor -->
     <div class="cursor"></div>
 
