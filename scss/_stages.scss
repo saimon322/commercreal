@@ -26,7 +26,7 @@
     background-size: auto calc(100% - 20px);
 
     &.aos-animate {
-      background-position: 0 20px;
+      background-position: 0 15px;
     }
   }
 
@@ -65,15 +65,11 @@
 
   &__icon {
     flex-shrink: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 100%;
     width: 80px;
-    height: 70px;
+    height: 80px;
     margin-right: 10px;
-    margin-bottom: 10px;
-    max-width: 100px !important;
-    margin-left: 0 !important;
+    margin-bottom: 15px;
 
     @include media-down(sm) {
       text-align: center;
@@ -82,6 +78,10 @@
     }
 
     img {
+      max-width: 100%;
+      height: 100%;
+      object-fit: contain;
+
       @include media-down(sm) {
         margin: 0 !important;
       }
