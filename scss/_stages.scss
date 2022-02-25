@@ -72,6 +72,8 @@
     height: 70px;
     margin-right: 10px;
     margin-bottom: 10px;
+    max-width: 100px !important;
+    margin-left: 0 !important;
 
     @include media-down(sm) {
       text-align: center;
@@ -79,16 +81,7 @@
       margin-top: -10px;
     }
 
-    .stage:nth-child(1) & img {width: 70px;}
-    .stage:nth-child(2) & img {width: 82px;}
-    .stage:nth-child(3) & img {width: 104px; margin-left: -30px;}
-    .stage:nth-child(4) & img {width: 116px; margin-left: -10px;}
-    .stage:nth-child(5) & img {width: 63px; margin-left: -20px;}
-    .stage:nth-child(6) & img {width: 68px; margin-left: -30px;}
-
     img {
-      max-width: unset;
-
       @include media-down(sm) {
         margin: 0 !important;
       }
