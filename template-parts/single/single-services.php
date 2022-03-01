@@ -54,7 +54,7 @@ $services = get_terms('services-cats'); ?>
                             <?php endif; ?>
                             <div class="contact-card__content">
                                 <div class="contact-card__headline">
-                                    По вопросам <span>сопровождения и аренды</span>
+                                    <?= $broker['headline']; ?>
                                 </div>
                                 <div class="contact-card__name">
                                     <?= $broker['name']; ?>

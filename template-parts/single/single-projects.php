@@ -3,7 +3,6 @@ $terms = wp_get_post_terms(get_the_ID(), 'projects_cats');
 wp_enqueue_script('pannellum-js');
 wp_enqueue_style('pannellum-css');
 ?>
-
 <section class="project-banner" style="background-image: url(<?php the_field('baner'); ?>);">
     <div class="container">
         <div class="breadcrumb_inner">
@@ -34,7 +33,6 @@ wp_enqueue_style('pannellum-css');
         </div>
     </div>
 </section>
-
 <section class="project_details_area">
     <div class="container">
         <div class="back_btn">
@@ -76,7 +74,6 @@ wp_enqueue_style('pannellum-css');
         </div>
     </div>
 </section>
-
 <section class="project_villa_area">
     <div class="container">
         <div class="villa_text">
@@ -115,32 +112,56 @@ wp_enqueue_style('pannellum-css');
             endwhile;
         endif; ?>
         <div class="acf-block">
-            <div class="contact-card">
-                <div class="contact-card__image">
-                    <img src="/wp-content/uploads/2021/11/foto-mal.-anndrej-.png" class="w-100">
+            <?php if ($broker = get_broker()): ?>
+                <div class="contact-card">
+                    <?php if ( ! empty($broker['photo'])): ?>
+                        <div class="contact-card__image">
+                            <img src="<?= esc_url($broker['photo']['url']); ?>" alt="<?= esc_attr($broker['photo']['alt']); ?>" class="w-100"/>
+                        </div>
+                    <?php endif; ?>
+                    <div class="contact-card__content">
+                        <div class="contact-card__headline">
+                            <?= $broker['headline']; ?>
+                        </div>
+                        <div class="contact-card__name">
+                            <?= $broker['name']; ?>
+                        </div>
+                        <div class="contact-card__position">
+                            <?= $broker['position']; ?>
+                        </div>
+                        <div class="contact-card__contacts">
+                            <a class="contact-card__phone" href="tel: <?= $broker['phone']; ?>"><?= $broker['phone']; ?></a>
+                            <a class="contact-card__email" href="mailto:<?= $broker['email']; ?>"><?= $broker['email']; ?></a>
+                        </div>
+                    </div>
                 </div>
-                <div class="contact-card__content">
-                    <div class="contact-card__headline">
-                        По вопросам <span>сопровождения и аренды</span>
+            <?php else: ?>
+                <div class="contact-card">
+                    <div class="contact-card__image">
+                        <img src="/wp-content/uploads/2021/11/foto-mal.-anndrej-.png" class="w-100">
                     </div>
-                    <div class="contact-card__name">
-                        Андрей Кийатов<br>
-                        Andrey Kiiatov
-                    </div>
-                    <div class="contact-card__position">
-                        ССO<br>
-                        Коммерческий директор
-                    </div>
-                    <div class="contact-card__contacts">
-                        <a class="contact-card__phone" href="tel: 89210770330">8-921-077-033-0</a>
-                        <a class="contact-card__email" href="mailto:сommercreal@gmail.com">сommercreal@gmail.com</a>
+                    <div class="contact-card__content">
+                        <div class="contact-card__headline">
+                            По вопросам <span>сопровождения и аренды</span>
+                        </div>
+                        <div class="contact-card__name">
+                            Андрей Кийатов<br>
+                            Andrey Kiiatov
+                        </div>
+                        <div class="contact-card__position">
+                            ССO<br>
+                            Коммерческий директор
+                        </div>
+                        <div class="contact-card__contacts">
+                            <a class="contact-card__phone" href="tel: 89210770330">8-921-077-033-0</a>
+                            <a class="contact-card__email" href="mailto:сommercreal@gmail.com">сommercreal@gmail.com</a>
+                        </div>
                     </div>
                 </div>
-            </div>
+            <?php endif; ?>
         </div>
     </div>
 </section>
-
 <section class="prev_next_area">
     <?php $prevPost = get_previous_post();
     $prevPost       = empty($prevPost) ? get_random_post_from_cpt('projects') : $prevPost;
