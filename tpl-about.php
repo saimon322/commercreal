@@ -37,21 +37,21 @@ if ($main_video): ?>
         <div class="row">
             <div class="col-lg-4 col-sm-6">
                 <div class="spec_item">
-                    <img src="<?= get_stylesheet_directory_uri(); ?>/img/icon/spec-4.svg" alt="">
+                    <img src="<?= get_stylesheet_directory_uri(); ?>/img/icon/stage-deal.png" alt="">
                     <h3 class="h4">Только уникальные объекты</h3>
                     <p>Мы предлагаем Вам коммерческую недвижимость, представленную только у нас. Каждый объект полностью подготовлен к запуску или уже приносит прибыль.</p>
                 </div>
             </div>
             <div class="col-lg-4 col-sm-6">
                 <div class="spec_item">
-                    <img src="<?= get_stylesheet_directory_uri(); ?>/img/icon/spec-5.svg" alt="">
+                    <img src="<?= get_stylesheet_directory_uri(); ?>/img/icon/stage-profit.png" alt="">
                     <h3 class="h4">Индивидуальные условия</h3>
                     <p>Мы работаем только на особых, договорных условиях, идеально подходящих Вам и выгодных для обеих сторон.</p>
                 </div>
             </div>
             <div class="col-lg-4 col-sm-6">
                 <div class="spec_item">
-                    <img src="<?= get_stylesheet_directory_uri(); ?>/img/icon/spec-6.svg" alt="">
+                    <img src="<?= get_stylesheet_directory_uri(); ?>/img/icon/stage-calc.png" alt="">
                     <h3 class="h4">Услуги высшего качества</h3>
                     <p>Мы стремимся к сервису высочайшего уровня. Наша первостепенная задача - обеспечить Вам свободное время, когда недвижимость приносит Вам прибыль.</p>
                 </div>
@@ -103,9 +103,9 @@ if ($main_video): ?>
         <?php get_template_part('template-parts/animation/pattern'); ?>
         <div class="row">
             <div class="col-12 col-md-4 s_content">
-                <h2 class="s_title">Наши филиалы в России</h2>
+                <h2 class="s_title">Наши филиалы <span>в России</span></h2>
                 <div class="s_content--text">
-                    <p class="h2">группа компаний <span>Commerc Real</span></p>
+                    <p class="h5">группа компаний Commerc&nbsp;Real</p>
                     <p>Мы специализируемся на развитии северо-западного региона России.  Но вы можете обратиться в нашу группу компаний из любого города,  мы с удовольствием встретимся с вами в удобном для вас месте. </p>
                 </div>
                 <button class="btn btn mb-4" data-toggle="modal" data-target="#modal-form">НАПИШИТЕ НАМ</button>

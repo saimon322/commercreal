@@ -23,12 +23,15 @@
   img {
     height: 100px;
     transition: .25s;
-    margin: 0 auto;
     margin-bottom: 40px;
 
     @include media-down(sm) {
       height: 70px;
     }
+  }
+
+  .h4 {
+    color: $base;
   }
 
   p {

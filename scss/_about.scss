@@ -309,12 +309,16 @@
   }
 
   .s_content--text {
-    width: 280px;
+    width: 320px;
     margin-bottom: 100px;
 
     @include media-down(sm) {
       width: 100%;
       margin-bottom: 50px;
+    }
+
+    .h5 {
+      margin-bottom: 30px;
     }
   }
 
