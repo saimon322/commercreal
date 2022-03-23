@@ -5410,6 +5410,7 @@ label {
 }
 .service-part__content img {
   width: 100%;
+  margin: 20px 0;
 }
 @media (min-width: 768px) {
   .service-part__content img {
