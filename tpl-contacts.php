@@ -48,6 +48,10 @@ $options = get_field('contacts', 'options');
                                 class="btn">
                                 <?= $options['phone']; ?>
                             </a>
+                            <a href="<?= $options['telegram']; ?>"
+                                class="btn">
+                                Telegram
+                            </a>
                         </div>                        
                     </div>
                 </div>

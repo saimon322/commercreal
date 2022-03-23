@@ -12,7 +12,7 @@
 }
 
 .about_banner {
-  padding-top: 88px;
+  padding-top: 70px;
   height: 620px;
 
   @include media-down(lg) {
@@ -21,7 +21,6 @@
 
   @include media-down(md) {
     height: 400px;
-    padding-top: 76px;
   }
 
   @include media-down(sm) {
@@ -326,7 +325,7 @@
     top: 0;
 
     @include media-down(sm) {
-      top: 30px;
+      top: 55px;
     }
   }
 }
@@ -418,33 +417,36 @@
 
     &:hover {
       img {
-        width: 30px;
-
-        @include media-down(md) {
-          width: 20px;
-        }
+        transform: scale(1.1);
       }
     }
 
     p {
+      position: absolute;
+      left: 50%;
+      bottom: 52px;
+      transform: translateX(-50%);
       margin-bottom: 0;
       color: #FFFFFF;
       font-weight: 500;
       font-size: 16px;
+      line-height: 1;
       text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.8);
 
       @include media-down(lg) {
         font-size: 12px;
+        bottom: 42px;
       }
 
       @include media-down(md) {
         font-size: 10px;
+        bottom: 32px;
       }
     }
 
     img {
       width: 25px;
-      transition: width .25s;
+      transition: transform .25s;
 
       @include media-down(lg) {
         width: 20px;
