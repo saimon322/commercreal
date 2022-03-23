@@ -106,10 +106,11 @@ if ($main_video): ?>
                 <h2 class="s_title">Наши филиалы <span>в России</span></h2>
                 <div class="s_content--text">
                     <p class="h5">группа компаний Commerc&nbsp;Real</p>
-                    <p>Мы специализируемся на развитии северо-западного региона России.  Но вы можете обратиться в нашу группу компаний из любого города,  мы с удовольствием встретимся с вами в удобном для вас месте. </p>
+                    <p>Мы специализируемся на развитии северо-западного региона России. Но вы можете обратиться в нашу группу компаний из любого города,  мы с удовольствием встретимся с вами в удобном для вас месте. </p>
                 </div>
-                <button class="btn btn mb-4" data-toggle="modal" data-target="#modal-form">НАПИШИТЕ НАМ</button>
-                <button class="btn" data-toggle="modal" data-target="#modal-form">ЗАКАЗАТЬ ЗВОНОК</button>
+                <button class="btn mb-3" data-toggle="modal" data-target="#modal-form">НАПИШИТЕ НАМ</button>
+                <button class="btn mb-3" data-toggle="modal" data-target="#modal-form">ЗАКАЗАТЬ ЗВОНОК</button>
+                <a href="https://t.me/commercreal" class="btn">Telegram</a>
             </div>
             <div class="col-12 col-md-8">
                 <?php get_template_part('template-parts/sections/section', 'map', array('type' => 'global')); ?>
