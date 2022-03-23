@@ -1,3 +1,4 @@
+<?php $options = get_field('contacts', 'options'); ?>
 <section class="our_press_area">
     <div class="container">
         <div class="row">
@@ -22,7 +23,7 @@
                         <li>ответны на самые волнующие вопросы,</li>
                         <li>и конечно живое общение с нами.</li>
                     </ul>
-                    <a href="https://t.me/commercreal" class="btn">Подписаться</a>
+                    <a href="<?= $options['telegram']; ?>" class="btn">Подписаться</a>
                 </div>
             </div>
         </div>

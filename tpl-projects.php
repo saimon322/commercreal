@@ -1,5 +1,6 @@
 <?php /* Template Name: Проекты */
 get_header();
+$options = get_field('contacts', 'options');
 ?>
 
 <section class="breadcrumb_link">
@@ -36,7 +37,7 @@ get_header();
                 </div>
                 <button class="btn mb-3" data-toggle="modal" data-target="#modal-form">НАПИШИТЕ НАМ</button>
                 <button class="btn mb-3" data-toggle="modal" data-target="#modal-form">ЗАКАЗАТЬ ЗВОНОК</button>
-                <a href="https://t.me/commercreal" class="btn">Telegram</a>
+                <a href="<?= $options['telegram']; ?>" class="btn">Telegram</a>
             </div>
             <div class="col-12 col-md-8">
                 <?php get_template_part('template-parts/sections/section', 'map', array('type' => 'local')); ?>
