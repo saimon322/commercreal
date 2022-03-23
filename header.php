@@ -80,7 +80,7 @@
             <?php if ($options['socials']): ?>
                 <div class="menu-socials socials">
                     <?php foreach ($options['socials'] as $social): ?>
-                        <a href="<?= esc_url($social['link']); ?>" class="social">
+                        <a href="<?= esc_url($social['link']); ?>" target="blank" class="social">
                             <img src="<?= get_stylesheet_directory_uri(); ?>/img/icon/social-<?= $social['type']; ?>.png" alt="">
                             <img src="<?= get_stylesheet_directory_uri(); ?>/img/icon/social-<?= $social['type']; ?>-hover.png" alt="">
                         </a>
