@@ -83,7 +83,7 @@ $options = get_field('contacts', 'options');
         <div class="contact-cards">
             <div class="row">
                 <?php while(have_rows('brokers')): the_row();?>
-                <?php if ($broker = get_broker()): ?>
+                <?php if ($broker = get_broker(get_sub_field('broker'))): ?> 
                 <div class="col-md-6 col-lg-4">
                     <div class="contact-card">
                         <?php if ( ! empty($broker['photo'])): ?>
