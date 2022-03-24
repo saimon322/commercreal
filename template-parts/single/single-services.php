@@ -58,6 +58,8 @@ $services = get_terms('services-cats'); ?>
                                 </div>
                                 <div class="contact-card__name">
                                     <?= $broker['name']; ?>
+                                    <br>
+                                    <?= $broker['name_eng']; ?>
                                 </div>
                                 <div class="contact-card__position">
                                     <?= $broker['position']; ?>

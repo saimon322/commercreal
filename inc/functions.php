@@ -224,7 +224,8 @@ add_filter('acf/load_field/name=stages_of_cooperation', 'acf_load_stages_of_coop
 
 function get_broker()
 {
-    $broker_id = get_field('broker');
+    $broker_id = get_field('broker') ? get_field('broker');
+    $broker_id = get_sub_field('broker') ? get_sub_field('broker');
     
     if ( ! $broker_id) {
         return [];
