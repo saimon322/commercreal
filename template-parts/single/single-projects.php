@@ -125,6 +125,8 @@ wp_enqueue_style('pannellum-css');
                         </div>
                         <div class="contact-card__name">
                             <?= $broker['name']; ?>
+                            <br>
+                            <?= $broker['name_eng']; ?>
                         </div>
                         <div class="contact-card__position">
                             <?= $broker['position']; ?>

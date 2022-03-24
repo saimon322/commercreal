@@ -79,82 +79,42 @@ $options = get_field('contacts', 'options');
             </div>
         </div>
     
+        <?php if(have_rows('brokers')): ?>
         <div class="contact-cards">
             <div class="row">
+                <?php while(have_rows('brokers')): the_row();?>
+                <?php if ($broker = get_broker()): ?>
                 <div class="col-md-6 col-lg-4">
                     <div class="contact-card">
-                        <div class="contact-card__image">
-                            <img src="/wp-content/uploads/2021/11/foto-mal-yusif.png" class="w-100">
-                        </div>
+                        <?php if ( ! empty($broker['photo'])): ?>
+                            <div class="contact-card__image">
+                                <img src="<?= esc_url($broker['photo']['url']); ?>" alt="<?= esc_attr($broker['photo']['alt']); ?>" class="w-100"/>
+                            </div>
+                        <?php endif; ?>
                         <div class="contact-card__content">
                             <div class="contact-card__headline">
-                                По вопросам <span>сотрудничества</span>
+                                <?= $broker['headline']; ?>
                             </div>
                             <div class="contact-card__name">
-                                Юсифов Юсиф<br>
-                                Yusif Yusifov
+                                <?= $broker['name']; ?>
+                                <br>
+                                <?= $broker['name_eng']; ?>
                             </div>
                             <div class="contact-card__position">
-                                DG<br>
-                                Генеральный директор
+                                <?= $broker['position']; ?>
                             </div>
                             <div class="contact-card__contacts">
-                                <a class="contact-card__phone" href="tel:8-981-555-555-9">8-981-555-555-9</a>
-                                <a class="contact-card__email" href="mailto:сommercreal@gmail.com">сommercreal@gmail.com</a>
+                                <a class="contact-card__phone" href="tel: <?= $broker['phone']; ?>"><?= $broker['phone']; ?></a>
+                                <a class="contact-card__email" href="mailto:<?= $broker['email']; ?>"><?= $broker['email']; ?></a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="contact-card">
-                        <div class="contact-card__image">
-                            <img src="/wp-content/uploads/2021/11/foto-mal.-anndrej-.png" class="w-100">
-                        </div>
-                        <div class="contact-card__content">
-                            <div class="contact-card__headline">
-                                По вопросам <span>сопровождения и аренды</span>
-                            </div>
-                            <div class="contact-card__name">
-                                Андрей Кийатов<br>
-                                Andrey Kiiatov
-                            </div>
-                            <div class="contact-card__position">
-                                ССO<br>
-                                Коммерческий директор
-                            </div>
-                            <div class="contact-card__contacts">
-                                <a class="contact-card__phone" href="tel: 89210770330">8-921-077-033-0</a>
-                                <a class="contact-card__email" href="mailto:сommercreal@gmail.com">сommercreal@gmail.com</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="contact-card">
-                        <div class="contact-card__image">
-                            <img src="/wp-content/uploads/2021/11/foto-mal-anya-.png" class="w-100">
-                        </div>
-                        <div class="contact-card__content">
-                            <div class="contact-card__headline">
-                                По вопросам <span>маркетинга</span>
-                            </div>
-                            <div class="contact-card__name">
-                                Анна Иванова<br>
-                                Anna Ivanova
-                            </div>
-                            <div class="contact-card__position">
-                                AD<br>
-                                Арт директор
-                            </div>
-                            <div class="contact-card__contacts">
-                                <a class="contact-card__phone" href="tel:8-914-88-00-389">8-914-88-00-389</a>
-                                <a class="contact-card__email" href="mailto:сommercreal@gmail.com">сommercreal@gmail.com</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <?php endif; ?>
+                <?php endwhile; ?>
             </div>
         </div>
+        <?php endif; ?>
     </div>
 </section>
 
