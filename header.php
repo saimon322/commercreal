@@ -43,14 +43,9 @@
             'items_wrap'      => '<ul class="nav-list">%3$s</ul>',
             'walker'          => new Header_Walker_Nav_Menu(),
         ]); ?>
-        <?php
-        $options = get_field('contacts', 'options');
-        if ($options['socials']):
-            ?>
-            <div class="header__socials">
-                <?php include 'template-parts/socials.php' ?>
-            </div>
-        <?php endif; ?>
+        <div class="header__socials">
+            <?php include 'template-parts/socials.php' ?>
+        </div>
         <div class="open-menu">
             <span></span>
             <span></span>
@@ -70,13 +65,10 @@
             'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
             'walker'         => new Header_Mobile_Walker_Nav_Menu(),
         ]); ?>
-        <?php $options = get_field('contacts', 'options'); ?>
-        <div class="menu-footer menu-item">            
-            <?php if ($options['socials']): ?>
-                <div class="menu-socials">
-                    <?php include 'template-parts/socials.php' ?>
-                </div>
-            <?php endif; ?>
+        <div class="menu-footer menu-item">
+            <div class="menu-socials">
+                <?php include 'template-parts/socials.php' ?>
+            </div>
             <div class="menu-copy"><?= $options['copyright']; ?></div>
         </div>
         <span class="close-menu">

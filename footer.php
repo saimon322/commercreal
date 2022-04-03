@@ -41,11 +41,12 @@
             <div class="footer-copy">
                 <?= $options['copyright']; ?>
             </div>
-            <?php if ($options['socials']): ?>
-                <div class="footer-socials">
-                    <?php include 'template-parts/socials.php' ?>
-                </div>
-            <?php endif; ?>
+            <div class="footer-socials">
+                <?php include 'template-parts/socials.php' ?>
+            </div>
+            <div class="footer-danger">
+                * - организация, запрещённая на территории РФ
+            </div>
         </div>
     </div>
 </footer>

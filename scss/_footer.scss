@@ -147,15 +147,11 @@
 
   .container {
     display: flex;
-    justify-content: center;
-
-    @include media-down(md) {
-      justify-content: space-between;
-    }
+    justify-content: space-between;
   
     @include media-down(sm) {
+      flex-direction: column;
       padding: 30px 20px;
-      flex-direction: column-reverse;
     }
   }
 
@@ -171,11 +167,7 @@
 .footer-copy {
   @include media-down(sm) {
     margin-top: 20px;
-  }
-  
-  @include media-up(lg) {
-    position: absolute;
-    left: 20px;
+    order: 1;
   }
 
   p {
@@ -198,5 +190,20 @@
         color: #fff;
       }
     }
+  }
+}
+
+.footer-socials {
+  flex-shrink: 0;
+}
+
+.footer-danger {
+  font-size: 12px;
+  margin-top: 20px;
+
+  @include media-up(md) {
+    max-width: 33%;
+    text-align: right;
+    margin-top: 0;
   }
 }
