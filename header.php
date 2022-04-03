@@ -43,19 +43,9 @@
             'items_wrap'      => '<ul class="nav-list">%3$s</ul>',
             'walker'          => new Header_Walker_Nav_Menu(),
         ]); ?>
-        <?php
-        $options = get_field('contacts', 'options');
-        if ($options['socials']):
-            ?>
-            <div class="header__socials socials">
-                <?php foreach ($options['socials'] as $social): ?>
-                    <a href="<?= esc_url($social['link']); ?>" target="blank" class="social">
-                        <img src="<?= get_stylesheet_directory_uri(); ?>/img/icon/social-<?= $social['type']; ?>.png" alt="">
-                        <img src="<?= get_stylesheet_directory_uri(); ?>/img/icon/social-<?= $social['type']; ?>-hover.png" alt="">
-                    </a>
-                <?php endforeach; ?>
-            </div>
-        <?php endif; ?>
+        <div class="header__socials">
+            <?php include 'template-parts/socials.php' ?>
+        </div>
         <div class="open-menu">
             <span></span>
             <span></span>
@@ -75,18 +65,10 @@
             'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
             'walker'         => new Header_Mobile_Walker_Nav_Menu(),
         ]); ?>
-        <?php $options = get_field('contacts', 'options'); ?>
-        <div class="menu-footer menu-item">            
-            <?php if ($options['socials']): ?>
-                <div class="menu-socials socials">
-                    <?php foreach ($options['socials'] as $social): ?>
-                        <a href="<?= esc_url($social['link']); ?>" target="blank" class="social">
-                            <img src="<?= get_stylesheet_directory_uri(); ?>/img/icon/social-<?= $social['type']; ?>.png" alt="">
-                            <img src="<?= get_stylesheet_directory_uri(); ?>/img/icon/social-<?= $social['type']; ?>-hover.png" alt="">
-                        </a>
-                    <?php endforeach; ?>
-                </div>
-            <?php endif; ?>
+        <div class="menu-footer menu-item">
+            <div class="menu-socials">
+                <?php include 'template-parts/socials.php' ?>
+            </div>
             <div class="menu-copy"><?= $options['copyright']; ?></div>
         </div>
         <span class="close-menu">
