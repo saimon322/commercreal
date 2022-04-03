@@ -42,13 +42,8 @@
                 <?= $options['copyright']; ?>
             </div>
             <?php if ($options['socials']): ?>
-                <div class="footer-socials socials">
-                    <?php foreach ($options['socials'] as $social): ?>
-                        <a href="<?= esc_url($social['link']); ?>" target="blank" class="social">
-                            <img src="<?= get_stylesheet_directory_uri(); ?>/img/icon/social-<?= $social['type']; ?>.png" alt="">
-                            <img src="<?= get_stylesheet_directory_uri(); ?>/img/icon/social-<?= $social['type']; ?>-hover.png" alt="">
-                        </a>
-                    <?php endforeach; ?>
+                <div class="footer-socials">
+                    <?php include 'template-parts/socials.php' ?>
                 </div>
             <?php endif; ?>
         </div>

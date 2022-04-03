@@ -6,6 +6,7 @@
 .social {
   position: relative;
   height: 20px;
+  color: $base;
 
   &:not(:last-child) {
     margin-right: 20px;
@@ -16,7 +17,7 @@
     height: 100%;
     transition: opacity .25s;
 
-    &:last-child {
+    &:nth-child(2) {
       opacity: 0;
       position: absolute;
       z-index: 1;
@@ -26,8 +27,21 @@
   }
 
   &:hover img {
-    &:last-child {
+    &:nth-child(2) {
       opacity: 1;
+    }
+  }
+
+  span {
+    position: absolute;
+    right: -6px;
+    top: -6px;
+    font-size: 24px;
+    line-height: 1;
+
+    @include media-up(md) {
+      right: -9px;
+      font-size: 30px;
     }
   }
 }
