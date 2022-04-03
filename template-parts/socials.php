@@ -5,7 +5,7 @@ if ($options['socials']): ?>
             <?php $target = 
                     $social['type'] == 'phone' || 
                     $social['type'] == 'email'
-                    ? '_blank' : ''; ?>
+                    ? '' : '_blank'; ?>
             <a href="<?= esc_url($social['link']); ?>" target="<?= $target; ?>" class="social">
                 <img src="<?= get_stylesheet_directory_uri(); ?>/img/icon/social-<?= $social['type']; ?>.png" alt="">
                 <img src="<?= get_stylesheet_directory_uri(); ?>/img/icon/social-<?= $social['type']; ?>-hover.png" alt="">
