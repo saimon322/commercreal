@@ -46,9 +46,9 @@
                     </div>
                 </div>
             </div>
-            <h1 class="home-banner__title" data-aos="fade-up" data-aos-offset="-100">
+            <div class="home-banner__title h2" data-aos="fade-up" data-aos-offset="-100">
                 <?php the_field('headline'); ?>
-            </h1>
+            </div>
         </div>
     </div>
     <div class="page_lines">

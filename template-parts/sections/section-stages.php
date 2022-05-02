@@ -20,7 +20,7 @@
 <?php else: ?>
     <section class="stages_area">
         <div class="container">
-            <h2 class="s_title">Этапы сотрудничества <span>с нами</span></h2>
+            <div class="s_title h2">Этапы сотрудничества <span>с нами</span></div>
             <div class="stages" data-aos>
                 <div class="stage" data-aos="fade-down" data-aos-delay="0">
                     <div class="stage__icon">

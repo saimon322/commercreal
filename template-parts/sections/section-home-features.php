@@ -1,6 +1,8 @@
 <section class="features_area">
     <div class="container">
-        <h2 class="s_title"><?php the_field('features_title'); ?></h2>
+        <div class="s_title h2">
+            <?php the_field('features_title'); ?>
+        </div>
         <div class="row">            
             <!-- Slider feature -->
             <div class="col-sm-4">

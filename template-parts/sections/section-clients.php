@@ -2,13 +2,13 @@
     <div class="container">
         <div class="main_title">
             <?php $clients_title = get_field('clients_title', 'options'); ?>
-            <h2>
+            <div class="h2">
                 <span>
                     <?= $clients_title['sign']; ?>
                     <span class=js-counter data-count="<?= $clients_title['number']; ?>">0</span>
                 </span>
                 <?= $clients_title['text']; ?>
-            </h2>
+            </div>
         </div>
     </div>
 
@@ -17,7 +17,8 @@
         <?php while( have_rows('reviews', 'options') ): the_row(); ?>
             <div class="test_item">
                 <?php if (get_sub_field('media') == 'photo' && get_sub_field('photo')): ?>
-                    <div class="test_item__img">
+                    <?php $img_class = get_sub_field('screenshot') ? ' screenshot' : '' ?>
+                    <div class="test_item__img<?= $img_class ?>">
                         <img src="<?= get_sub_field('photo'); ?>" alt="">
                     </div>
                 <?php elseif ((get_sub_field('media') == 'video') && get_sub_field('video')): ?>
@@ -44,7 +45,7 @@
 
     <div class="clients_block">
         <div class="container">
-            <h2 class="s_title"><?= get_field('partners_title', 'options'); ?></h2>
+            <div class="s_title h2"><?= get_field('partners_title', 'options'); ?></div>
         </div>
         <?php if( have_rows('partners', 'options') ): ?>
             <div class="clients_slider owl-carousel">

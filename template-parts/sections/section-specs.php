@@ -1,6 +1,6 @@
 <section class="spec_area">
     <div class="container">
-        <h2 class="s_title">Услуги</h2>
+        <div class="s_title h2">Услуги</div>
         <div class="specs">
             <div class="row m0 text-center specs-header">
                 <div class="col-lg-4 col-sm-6 spec_wrapper">

@@ -507,6 +507,11 @@
         }
     }
 
+    // Blog tables wrapper
+    $('.blog_main_text table').each(function(){
+        $(this).wrap('<div class="table">');
+    })
+
 })(jQuery)
 
 // Blog text toggle full
@@ -542,7 +547,6 @@ function accordion(e, toggleBtn) {
         AOS && AOS.refresh();
     }, 500)
 }
-
 
 // Counter numbers
 const initCounters = () => {
