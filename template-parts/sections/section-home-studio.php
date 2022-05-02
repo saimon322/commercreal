@@ -148,9 +148,9 @@
             </div>
             <div class="col-lg-5">
                 <div class="studio_content">
-                    <h2 class="studio_title">
+                    <div class="studio_title h2">
                         <?php the_field('about_title'); ?>
-                    </h2>
+                    </div>
                     <div class="studio_block">
                         <p class="h5"><?php the_field('about_subtitle_1'); ?></p>
                         <p><?php the_field('about_text'); ?></p>

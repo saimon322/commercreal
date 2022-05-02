@@ -11,9 +11,9 @@
             </div>
             <div class="col-md-6">
                 <div class="press_content">
-                    <h2>
+                    <div class="h2">
                         Остались вопросы? <span>закажте звонок</span>
-                    </h2>
+                    </div>
                     <img src="<?= get_template_directory_uri(); ?>/img/phone.png" alt="" class="img-phone">
                     <p>Вероника перезвонит Вам в течении одной минуты.</p>
                     <form class="press_form form-contact">

@@ -12,11 +12,11 @@
             </div>
             <div class="col-md-6">
                 <div class="press_content">
-                    <h2>
+                    <div class="h2">
                         Telegram канал <span>Commerc real</span>
-                    </h2>
+                    </div>
                     <img src="<?= get_template_directory_uri(); ?>/img/telegram-hands.png" alt="" class="img-telegram">
-                    <h5>Самые свежие новости коммерческой недвижимости:</h5>
+                    <div class="h5">Самые свежие новости коммерческой недвижимости:</div>
                     <ul>
                         <li>важные события ритейла. </li>
                         <li>анонсы событий и мероприятий отрасли,</li>

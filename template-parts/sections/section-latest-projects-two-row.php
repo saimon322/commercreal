@@ -3,7 +3,7 @@
         <div class="l_text">
             <div class="float-md-left">
                 <div class="main_title">
-                    <h2 class="s_title">Реализованные <span>проекты</span></h2>
+                    <div class="s_title h2">Реализованные <span>проекты</span></div>
                 </div>
             </div>
             <div class="float-md-right">
