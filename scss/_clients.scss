@@ -86,6 +86,15 @@
       object-fit: cover;
       mix-blend-mode: multiply;
     }
+
+    &.screenshot {
+      background: #fff;
+
+      img {
+        object-fit: contain;
+        mix-blend-mode: unset;
+      }
+    }
   }
 
   &__video {

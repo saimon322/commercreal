@@ -17,7 +17,8 @@
         <?php while( have_rows('reviews', 'options') ): the_row(); ?>
             <div class="test_item">
                 <?php if (get_sub_field('media') == 'photo' && get_sub_field('photo')): ?>
-                    <div class="test_item__img">
+                    <?php $img_class = get_sub_field('screenshot') ? ' screenshot' : '' ?>
+                    <div class="test_item__img<?= $img_class ?>">
                         <img src="<?= get_sub_field('photo'); ?>" alt="">
                     </div>
                 <?php elseif ((get_sub_field('media') == 'video') && get_sub_field('video')): ?>
